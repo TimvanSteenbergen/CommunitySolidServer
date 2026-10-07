@@ -1,0 +1,92 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/conversion/ChainedConverter.jsonld#ChainedConverter",
+      "@type": "Class",
+      "requireElement": "ChainedConverter",
+      "extends": [
+        "css:dist/storage/conversion/RepresentationConverter.jsonld#RepresentationConverter"
+      ],
+      "comment": "A meta converter that takes an array of other converters as input. It chains these converters by finding a path of converters that can go from the given content-type to the given type preferences. In case there are multiple paths, the one with the highest weight gets found. Will error in case no path can be found.  This is not a TypedRepresentationConverter since the supported output types might depend on what is the input content-type.  This converter should be the last in a WaterfallHandler if there are multiple, since it will try to convert any representation with a content-type.  Some suggestions on how this class can be even more optimized should this ever be needed in the future. Most of these decrease computation time at the cost of more memory. - The algorithm could start on both ends of a possible path and work towards the middle. - When creating a path, store the list of unused converters instead of checking every step. - Caching: https://github.com/CommunitySolidServer/CommunitySolidServer/issues/832 - Making sure each intermediate type is only used once. - The TypedRepresentationConverter interface could potentially be updated so paths only differing in intermediate types can be combined.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/conversion/ChainedConverter.jsonld#ChainedConverter_converters",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": "css:dist/storage/conversion/TypedRepresentationConverter.jsonld#TypedRepresentationConverter"
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/conversion/ChainedConverter.jsonld#ChainedConverter__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/storage/conversion/ChainedConverter.jsonld#ChainedConverter__member_converters",
+          "memberFieldName": "converters"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ChainedConverter.jsonld#ChainedConverter__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ChainedConverter.jsonld#ChainedConverter__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ChainedConverter.jsonld#ChainedConverter__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ChainedConverter.jsonld#ChainedConverter__member_findPath",
+          "memberFieldName": "findPath"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ChainedConverter.jsonld#ChainedConverter__member_generatePath",
+          "memberFieldName": "generatePath"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ChainedConverter.jsonld#ChainedConverter__member_updatePathWeights",
+          "memberFieldName": "updatePathWeights"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ChainedConverter.jsonld#ChainedConverter__member_findBest",
+          "memberFieldName": "findBest"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ChainedConverter.jsonld#ChainedConverter__member_removeBadPaths",
+          "memberFieldName": "removeBadPaths"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ChainedConverter.jsonld#ChainedConverter__member_takeStep",
+          "memberFieldName": "takeStep"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ChainedConverter.jsonld#ChainedConverter__member_modifyTypeWeights",
+          "memberFieldName": "modifyTypeWeights"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ChainedConverter.jsonld#ChainedConverter__member_supportedConverters",
+          "memberFieldName": "supportedConverters"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ChainedConverter.jsonld#ChainedConverter__member_findConverterPreference",
+          "memberFieldName": "findConverterPreference"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/conversion/ChainedConverter.jsonld#ChainedConverter_converters"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/handlers/StaticThrowHandler.jsonld#StaticThrowHandler",
+      "@type": "Class",
+      "requireElement": "StaticThrowHandler",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeWildcard"
+            },
+            {
+              "@type": "ParameterRangeWildcard"
+            }
+          ]
+        }
+      ],
+      "comment": "Utility handler that can handle all input and always throws an instance of the given error.",
+      "parameters": [
+        {
+          "@id": "css:dist/util/handlers/StaticThrowHandler.jsonld#StaticThrowHandler_error",
+          "range": "css:dist/util/errors/HttpError.jsonld#HttpError"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/handlers/StaticThrowHandler.jsonld#StaticThrowHandler__member_error",
+          "memberFieldName": "error",
+          "range": "css:dist/util/errors/HttpError.jsonld#HttpError"
+        },
+        {
+          "@id": "css:dist/util/handlers/StaticThrowHandler.jsonld#StaticThrowHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/util/handlers/StaticThrowHandler.jsonld#StaticThrowHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/handlers/StaticThrowHandler.jsonld#StaticThrowHandler_error"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/LocationInteractionHandler.jsonld#LocationInteractionHandler",
+      "@type": "Class",
+      "requireElement": "LocationInteractionHandler",
+      "extends": [
+        "css:dist/identity/interaction/JsonInteractionHandler.jsonld#JsonInteractionHandler"
+      ],
+      "comment": "Transforms an HTTP redirect into a hypermedia document with a redirection link, such that scripts running in a browser can redirect the user to the next page.  This handler addresses the situation where: - the user visits a first page - this first page contains a script that performs interactions with a JSON API - as a result of a certain interaction, the user needs to be redirected to a second page  Regular HTTP redirects are performed via responses with 3xx status codes. However, since the consumer of the API in this case is a browser script, a 3xx response would only reach that script and not move the page for the user.  Therefore, this handler changes a 3xx response into a 200 response with an explicit link to the next page, enabling the script to move the user to the next page.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/LocationInteractionHandler.jsonld#LocationInteractionHandler_source",
+          "range": "css:dist/identity/interaction/JsonInteractionHandler.jsonld#JsonInteractionHandler"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/LocationInteractionHandler.jsonld#LocationInteractionHandler__member_logger",
+          "memberFieldName": "logger"
+        },
+        {
+          "@id": "css:dist/identity/interaction/LocationInteractionHandler.jsonld#LocationInteractionHandler__member_source",
+          "memberFieldName": "source"
+        },
+        {
+          "@id": "css:dist/identity/interaction/LocationInteractionHandler.jsonld#LocationInteractionHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/LocationInteractionHandler.jsonld#LocationInteractionHandler__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/identity/interaction/LocationInteractionHandler.jsonld#LocationInteractionHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/LocationInteractionHandler.jsonld#LocationInteractionHandler_source"
+        }
+      ]
+    }
+  ]
+}

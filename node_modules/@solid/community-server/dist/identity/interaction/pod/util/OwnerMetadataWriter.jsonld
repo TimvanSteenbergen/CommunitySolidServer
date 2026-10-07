@@ -1,0 +1,62 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/pod/util/OwnerMetadataWriter.jsonld#OwnerMetadataWriter",
+      "@type": "Class",
+      "requireElement": "OwnerMetadataWriter",
+      "extends": [
+        "css:dist/http/output/metadata/MetadataWriter.jsonld#MetadataWriter"
+      ],
+      "comment": "Adds link headers indicating who the owners are when accessing the base URL of a pod. Only owners that have decided to be visible will be shown.  Solid, §4.1: \"When a server wants to advertise the owner of a storage, the server MUST include the Link header with rel=\"http://www.w3.org/ns/solid/terms#owner\" targeting the URI of the owner in the response of HTTP HEAD or GET requests targeting the root container.\" https://solidproject.org/TR/2022/protocol-20221231#server-storage-link-owner",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/pod/util/OwnerMetadataWriter.jsonld#OwnerMetadataWriter_podStore",
+          "range": "css:dist/identity/interaction/pod/util/PodStore.jsonld#PodStore"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/OwnerMetadataWriter.jsonld#OwnerMetadataWriter_storageStrategy",
+          "range": "css:dist/server/description/StorageLocationStrategy.jsonld#StorageLocationStrategy"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/pod/util/OwnerMetadataWriter.jsonld#OwnerMetadataWriter__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/OwnerMetadataWriter.jsonld#OwnerMetadataWriter__member_podStore",
+          "memberFieldName": "podStore",
+          "range": "css:dist/identity/interaction/pod/util/PodStore.jsonld#PodStore"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/OwnerMetadataWriter.jsonld#OwnerMetadataWriter__member_storageStrategy",
+          "memberFieldName": "storageStrategy",
+          "range": "css:dist/server/description/StorageLocationStrategy.jsonld#StorageLocationStrategy"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/OwnerMetadataWriter.jsonld#OwnerMetadataWriter__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/OwnerMetadataWriter.jsonld#OwnerMetadataWriter__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/pod/util/OwnerMetadataWriter.jsonld#OwnerMetadataWriter_podStore"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/OwnerMetadataWriter.jsonld#OwnerMetadataWriter_storageStrategy"
+        }
+      ]
+    }
+  ]
+}

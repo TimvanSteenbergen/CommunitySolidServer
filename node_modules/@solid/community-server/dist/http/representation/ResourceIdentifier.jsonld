@@ -1,0 +1,22 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/representation/ResourceIdentifier.jsonld#ResourceIdentifier",
+      "@type": "AbstractClass",
+      "requireElement": "ResourceIdentifier",
+      "comment": "The unique identifier of a resource.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/representation/ResourceIdentifier.jsonld#ResourceIdentifier__member_path",
+          "memberFieldName": "path"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

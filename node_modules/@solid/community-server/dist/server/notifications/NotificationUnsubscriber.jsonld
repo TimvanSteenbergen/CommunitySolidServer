@@ -1,0 +1,49 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/notifications/NotificationUnsubscriber.jsonld#NotificationUnsubscriber",
+      "@type": "Class",
+      "requireElement": "NotificationUnsubscriber",
+      "extends": [
+        "css:dist/server/OperationHttpHandler.jsonld#OperationHttpHandler"
+      ],
+      "comment": "Allows clients to unsubscribe from notification channels. Should be wrapped in a route handler that only allows `DELETE` operations.",
+      "parameters": [
+        {
+          "@id": "css:dist/server/notifications/NotificationUnsubscriber.jsonld#NotificationUnsubscriber_storage",
+          "range": "css:dist/server/notifications/NotificationChannelStorage.jsonld#NotificationChannelStorage"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/notifications/NotificationUnsubscriber.jsonld#NotificationUnsubscriber__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationUnsubscriber.jsonld#NotificationUnsubscriber__member_storage",
+          "memberFieldName": "storage"
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationUnsubscriber.jsonld#NotificationUnsubscriber__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationUnsubscriber.jsonld#NotificationUnsubscriber__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/notifications/NotificationUnsubscriber.jsonld#NotificationUnsubscriber_storage"
+        }
+      ]
+    }
+  ]
+}

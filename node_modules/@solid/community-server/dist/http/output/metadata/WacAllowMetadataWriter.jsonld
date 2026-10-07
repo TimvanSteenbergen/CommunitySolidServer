@@ -1,0 +1,33 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/output/metadata/WacAllowMetadataWriter.jsonld#WacAllowMetadataWriter",
+      "@type": "Class",
+      "requireElement": "WacAllowMetadataWriter",
+      "extends": [
+        "css:dist/http/output/metadata/MetadataWriter.jsonld#MetadataWriter"
+      ],
+      "comment": "Add the necessary WAC-Allow header values. Solid, §10.1: \"Servers exposing client’s access privileges on a resource URL MUST advertise by including the WAC-Allow HTTP header in the response of HTTP HEAD and GET requests.\" https://solid.github.io/specification/protocol#web-access-control",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/output/metadata/WacAllowMetadataWriter.jsonld#WacAllowMetadataWriter__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/http/output/metadata/WacAllowMetadataWriter.jsonld#WacAllowMetadataWriter__member_aclToPermission",
+          "memberFieldName": "aclToPermission"
+        },
+        {
+          "@id": "css:dist/http/output/metadata/WacAllowMetadataWriter.jsonld#WacAllowMetadataWriter__member_createAccessParam",
+          "memberFieldName": "createAccessParam"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

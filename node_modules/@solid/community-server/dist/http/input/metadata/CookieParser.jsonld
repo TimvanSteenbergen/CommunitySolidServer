@@ -1,0 +1,62 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/input/metadata/CookieParser.jsonld#CookieParser",
+      "@type": "Class",
+      "requireElement": "CookieParser",
+      "extends": [
+        "css:dist/http/input/metadata/MetadataParser.jsonld#MetadataParser"
+      ],
+      "comment": "Parses the cookie header and stores their values as metadata. The keys of the input `cookieMap` should be the cookie names, and the values the corresponding predicate that should be used to store the value in the metadata. The values of the cookies will be used as objects in the generated triples",
+      "parameters": [
+        {
+          "@id": "css:dist/http/input/metadata/CookieParser.jsonld#CookieParser_cookieMap",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "css:dist/http/input/metadata/CookieParser.jsonld#CookieParser_cookieMap_key"
+              },
+              {
+                "@id": "css:dist/http/input/metadata/CookieParser.jsonld#CookieParser_cookieMap_value",
+                "range": "xsd:string"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/input/metadata/CookieParser.jsonld#CookieParser__member_cookieMap",
+          "memberFieldName": "cookieMap"
+        },
+        {
+          "@id": "css:dist/http/input/metadata/CookieParser.jsonld#CookieParser__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/input/metadata/CookieParser.jsonld#CookieParser__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/input/metadata/CookieParser.jsonld#CookieParser_cookieMap__constructorArgument",
+          "fields": [
+            {
+              "collectEntries": "css:dist/http/input/metadata/CookieParser.jsonld#CookieParser_cookieMap",
+              "key": "css:dist/http/input/metadata/CookieParser.jsonld#CookieParser_cookieMap_key",
+              "value": {
+                "@id": "css:dist/http/input/metadata/CookieParser.jsonld#CookieParser_cookieMap_value"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

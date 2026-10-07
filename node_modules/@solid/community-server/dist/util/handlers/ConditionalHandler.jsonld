@@ -1,0 +1,155 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/handlers/ConditionalHandler.jsonld#ConditionalHandler",
+      "@type": "Class",
+      "requireElement": "ConditionalHandler",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/util/handlers/ConditionalHandler.jsonld#ConditionalHandler__generic_TIn"
+            },
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/util/handlers/ConditionalHandler.jsonld#ConditionalHandler__generic_TOut"
+            }
+          ]
+        }
+      ],
+      "comment": "This handler will pass all requests to the wrapped handler, until a specific value has been set in the given storage. After that all input will be rejected. Once the value has been matched this behaviour will be cached, so changing the value again afterwards will not enable this handler again.  If `handleStorage` is set to `true`, this handler will set the value itself in the given storage after the source handler successfully resolved.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/util/handlers/ConditionalHandler.jsonld#ConditionalHandler__generic_TIn"
+        },
+        {
+          "@id": "css:dist/util/handlers/ConditionalHandler.jsonld#ConditionalHandler__generic_TOut"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/util/handlers/ConditionalHandler.jsonld#ConditionalHandler_storageKey",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/util/handlers/ConditionalHandler.jsonld#ConditionalHandler_storageValue",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/util/handlers/ConditionalHandler.jsonld#ConditionalHandler_handleStorage",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/util/handlers/ConditionalHandler.jsonld#ConditionalHandler_source",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "css:dist/util/handlers/ConditionalHandler.jsonld#ConditionalHandler__generic_TIn"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "css:dist/util/handlers/ConditionalHandler.jsonld#ConditionalHandler__generic_TOut"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/util/handlers/ConditionalHandler.jsonld#ConditionalHandler_storage",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+            "genericTypeInstances": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/handlers/ConditionalHandler.jsonld#ConditionalHandler__member_source",
+          "memberFieldName": "source"
+        },
+        {
+          "@id": "css:dist/util/handlers/ConditionalHandler.jsonld#ConditionalHandler__member_storage",
+          "memberFieldName": "storage"
+        },
+        {
+          "@id": "css:dist/util/handlers/ConditionalHandler.jsonld#ConditionalHandler__member_storageKey",
+          "memberFieldName": "storageKey"
+        },
+        {
+          "@id": "css:dist/util/handlers/ConditionalHandler.jsonld#ConditionalHandler__member_storageValue",
+          "memberFieldName": "storageValue"
+        },
+        {
+          "@id": "css:dist/util/handlers/ConditionalHandler.jsonld#ConditionalHandler__member_handleStorage",
+          "memberFieldName": "handleStorage"
+        },
+        {
+          "@id": "css:dist/util/handlers/ConditionalHandler.jsonld#ConditionalHandler__member_finished",
+          "memberFieldName": "finished"
+        },
+        {
+          "@id": "css:dist/util/handlers/ConditionalHandler.jsonld#ConditionalHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/util/handlers/ConditionalHandler.jsonld#ConditionalHandler__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/util/handlers/ConditionalHandler.jsonld#ConditionalHandler__member_handleSafe",
+          "memberFieldName": "handleSafe"
+        },
+        {
+          "@id": "css:dist/util/handlers/ConditionalHandler.jsonld#ConditionalHandler__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/util/handlers/ConditionalHandler.jsonld#ConditionalHandler__member_checkCondition",
+          "memberFieldName": "checkCondition"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/handlers/ConditionalHandler.jsonld#ConditionalHandler_source"
+        },
+        {
+          "@id": "css:dist/util/handlers/ConditionalHandler.jsonld#ConditionalHandler_storage"
+        },
+        {
+          "@id": "css:dist/util/handlers/ConditionalHandler.jsonld#ConditionalHandler_storageKey"
+        },
+        {
+          "@id": "css:dist/util/handlers/ConditionalHandler.jsonld#ConditionalHandler_storageValue"
+        },
+        {
+          "@id": "css:dist/util/handlers/ConditionalHandler.jsonld#ConditionalHandler_handleStorage"
+        }
+      ]
+    }
+  ]
+}

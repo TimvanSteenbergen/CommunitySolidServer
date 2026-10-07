@@ -1,0 +1,55 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/auxiliary/SuffixAuxiliaryIdentifierStrategy.jsonld#SuffixAuxiliaryIdentifierStrategy",
+      "@type": "Class",
+      "requireElement": "SuffixAuxiliaryIdentifierStrategy",
+      "extends": [
+        "css:dist/http/auxiliary/AuxiliaryIdentifierStrategy.jsonld#AuxiliaryIdentifierStrategy"
+      ],
+      "comment": "Helper class that uses a suffix to determine if a resource is an auxiliary resource or not. Simple string matching is used, so the dot needs to be included if needed, e.g. \".acl\".",
+      "parameters": [
+        {
+          "@id": "css:dist/http/auxiliary/SuffixAuxiliaryIdentifierStrategy.jsonld#SuffixAuxiliaryIdentifierStrategy_suffix",
+          "range": "xsd:string"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/auxiliary/SuffixAuxiliaryIdentifierStrategy.jsonld#SuffixAuxiliaryIdentifierStrategy__member_suffix",
+          "memberFieldName": "suffix",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/SuffixAuxiliaryIdentifierStrategy.jsonld#SuffixAuxiliaryIdentifierStrategy__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/SuffixAuxiliaryIdentifierStrategy.jsonld#SuffixAuxiliaryIdentifierStrategy__member_getAuxiliaryIdentifier",
+          "memberFieldName": "getAuxiliaryIdentifier"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/SuffixAuxiliaryIdentifierStrategy.jsonld#SuffixAuxiliaryIdentifierStrategy__member_getAuxiliaryIdentifiers",
+          "memberFieldName": "getAuxiliaryIdentifiers"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/SuffixAuxiliaryIdentifierStrategy.jsonld#SuffixAuxiliaryIdentifierStrategy__member_isAuxiliaryIdentifier",
+          "memberFieldName": "isAuxiliaryIdentifier"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/SuffixAuxiliaryIdentifierStrategy.jsonld#SuffixAuxiliaryIdentifierStrategy__member_getSubjectIdentifier",
+          "memberFieldName": "getSubjectIdentifier"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/auxiliary/SuffixAuxiliaryIdentifierStrategy.jsonld#SuffixAuxiliaryIdentifierStrategy_suffix"
+        }
+      ]
+    }
+  ]
+}

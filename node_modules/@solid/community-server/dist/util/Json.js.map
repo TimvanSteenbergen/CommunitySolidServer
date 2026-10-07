@@ -1,0 +1,1 @@
+{"version":3,"file":"Json.js","sourceRoot":"","sources":["../../src/util/Json.ts"],"names":[],"mappings":"","sourcesContent":["/**\n * A JSON object.\n */\nexport type Json = string | number | boolean | NodeJS.Dict<Json> | Json[];\n"]}

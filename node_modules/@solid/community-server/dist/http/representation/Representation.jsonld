@@ -1,0 +1,34 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/representation/Representation.jsonld#Representation",
+      "@type": "AbstractClass",
+      "requireElement": "Representation",
+      "comment": "A representation of a resource.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/representation/Representation.jsonld#Representation__member_metadata",
+          "memberFieldName": "metadata"
+        },
+        {
+          "@id": "css:dist/http/representation/Representation.jsonld#Representation__member_data",
+          "memberFieldName": "data"
+        },
+        {
+          "@id": "css:dist/http/representation/Representation.jsonld#Representation__member_binary",
+          "memberFieldName": "binary"
+        },
+        {
+          "@id": "css:dist/http/representation/Representation.jsonld#Representation__member_isEmpty",
+          "memberFieldName": "isEmpty"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

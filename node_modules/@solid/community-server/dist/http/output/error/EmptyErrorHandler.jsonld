@@ -1,0 +1,81 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/output/error/EmptyErrorHandler.jsonld#EmptyErrorHandler",
+      "@type": "Class",
+      "requireElement": "EmptyErrorHandler",
+      "extends": [
+        "css:dist/http/output/error/ErrorHandler.jsonld#ErrorHandler"
+      ],
+      "comment": "An {@link ErrorHandler} that returns an error response without adding a body. For certain status codes, such as 304, it is important to not change anything in the headers, such as content-type.  The `statusCodes` array contains the status codes of error types for which a body should never be added.  The `always` boolean can be set to `true` to indicate that all errors should be handled here.  For errors with different status codes, a metadata field can be added to indicate that this specific error response should not receive a body. The predicate should be `urn:npm:solid:community-server:error:emptyBody` and the value `true`.",
+      "parameters": [
+        {
+          "@id": "css:dist/http/output/error/EmptyErrorHandler.jsonld#EmptyErrorHandler_always",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/http/output/error/EmptyErrorHandler.jsonld#EmptyErrorHandler_statusCodes",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": "xsd:number"
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/output/error/EmptyErrorHandler.jsonld#EmptyErrorHandler__member_statusCodes",
+          "memberFieldName": "statusCodes",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": "xsd:number"
+          }
+        },
+        {
+          "@id": "css:dist/http/output/error/EmptyErrorHandler.jsonld#EmptyErrorHandler__member_always",
+          "memberFieldName": "always",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "css:dist/http/output/error/EmptyErrorHandler.jsonld#EmptyErrorHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/output/error/EmptyErrorHandler.jsonld#EmptyErrorHandler__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/http/output/error/EmptyErrorHandler.jsonld#EmptyErrorHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/output/error/EmptyErrorHandler.jsonld#EmptyErrorHandler_statusCodes"
+        },
+        {
+          "@id": "css:dist/http/output/error/EmptyErrorHandler.jsonld#EmptyErrorHandler_always"
+        }
+      ]
+    }
+  ]
+}

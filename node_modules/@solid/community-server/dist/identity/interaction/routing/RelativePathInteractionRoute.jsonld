@@ -1,0 +1,96 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/routing/RelativePathInteractionRoute.jsonld#RelativePathInteractionRoute",
+      "@type": "Class",
+      "requireElement": "RelativePathInteractionRoute",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/identity/interaction/routing/RelativePathInteractionRoute.jsonld#RelativePathInteractionRoute__generic_TBase"
+            }
+          ]
+        }
+      ],
+      "comment": "A route that is relative to another route. The relative path will be joined to the input base, which can either be an absolute URL or an InteractionRoute of which the path will be used.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/identity/interaction/routing/RelativePathInteractionRoute.jsonld#RelativePathInteractionRoute__generic_TBase",
+          "range": "xsd:string"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/routing/RelativePathInteractionRoute.jsonld#RelativePathInteractionRoute_relativePath",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/RelativePathInteractionRoute.jsonld#RelativePathInteractionRoute_ensureSlash",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/RelativePathInteractionRoute.jsonld#RelativePathInteractionRoute_base",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "css:dist/identity/interaction/routing/RelativePathInteractionRoute.jsonld#RelativePathInteractionRoute__generic_TBase"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/routing/RelativePathInteractionRoute.jsonld#RelativePathInteractionRoute__member_base",
+          "memberFieldName": "base"
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/RelativePathInteractionRoute.jsonld#RelativePathInteractionRoute__member_relativePath",
+          "memberFieldName": "relativePath"
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/RelativePathInteractionRoute.jsonld#RelativePathInteractionRoute__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/RelativePathInteractionRoute.jsonld#RelativePathInteractionRoute__member_getPath",
+          "memberFieldName": "getPath"
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/RelativePathInteractionRoute.jsonld#RelativePathInteractionRoute__member_matchPath",
+          "memberFieldName": "matchPath"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/routing/RelativePathInteractionRoute.jsonld#RelativePathInteractionRoute_base"
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/RelativePathInteractionRoute.jsonld#RelativePathInteractionRoute_relativePath"
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/RelativePathInteractionRoute.jsonld#RelativePathInteractionRoute_ensureSlash"
+        }
+      ]
+    }
+  ]
+}

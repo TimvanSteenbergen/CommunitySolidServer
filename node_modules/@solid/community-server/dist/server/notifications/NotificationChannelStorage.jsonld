@@ -1,0 +1,38 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/notifications/NotificationChannelStorage.jsonld#NotificationChannelStorage",
+      "@type": "AbstractClass",
+      "requireElement": "NotificationChannelStorage",
+      "comment": "Stores all the information necessary to keep track of notification channels. Besides the standard channel info it also stores features specific to a certain channel type.  This storage assumes that a channel can only have a single identifier as its topic.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/notifications/NotificationChannelStorage.jsonld#NotificationChannelStorage__member_get",
+          "memberFieldName": "get"
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationChannelStorage.jsonld#NotificationChannelStorage__member_getAll",
+          "memberFieldName": "getAll"
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationChannelStorage.jsonld#NotificationChannelStorage__member_add",
+          "memberFieldName": "add"
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationChannelStorage.jsonld#NotificationChannelStorage__member_update",
+          "memberFieldName": "update"
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationChannelStorage.jsonld#NotificationChannelStorage__member_delete",
+          "memberFieldName": "delete"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

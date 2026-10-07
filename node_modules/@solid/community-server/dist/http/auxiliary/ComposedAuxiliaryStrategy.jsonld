@@ -1,0 +1,146 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/auxiliary/ComposedAuxiliaryStrategy.jsonld#ComposedAuxiliaryStrategy",
+      "@type": "Class",
+      "requireElement": "ComposedAuxiliaryStrategy",
+      "extends": [
+        "css:dist/http/auxiliary/AuxiliaryStrategy.jsonld#AuxiliaryStrategy"
+      ],
+      "comment": "An {@link AuxiliaryStrategy} that provides its functionality through the combination of an {@link AuxiliaryIdentifierStrategy}, {@link MetadataGenerator} and {@link Validator}.",
+      "parameters": [
+        {
+          "@id": "css:dist/http/auxiliary/ComposedAuxiliaryStrategy.jsonld#ComposedAuxiliaryStrategy_ownAuthorization",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/http/auxiliary/ComposedAuxiliaryStrategy.jsonld#ComposedAuxiliaryStrategy_requiredInRoot",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/http/auxiliary/ComposedAuxiliaryStrategy.jsonld#ComposedAuxiliaryStrategy_identifierStrategy",
+          "range": "css:dist/http/auxiliary/AuxiliaryIdentifierStrategy.jsonld#AuxiliaryIdentifierStrategy"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/ComposedAuxiliaryStrategy.jsonld#ComposedAuxiliaryStrategy_metadataGenerator",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "css:dist/http/auxiliary/MetadataGenerator.jsonld#MetadataGenerator",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/http/auxiliary/ComposedAuxiliaryStrategy.jsonld#ComposedAuxiliaryStrategy_validator",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "css:dist/http/auxiliary/Validator.jsonld#Validator",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/auxiliary/ComposedAuxiliaryStrategy.jsonld#ComposedAuxiliaryStrategy__member_identifierStrategy",
+          "memberFieldName": "identifierStrategy"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/ComposedAuxiliaryStrategy.jsonld#ComposedAuxiliaryStrategy__member_metadataGenerator",
+          "memberFieldName": "metadataGenerator"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/ComposedAuxiliaryStrategy.jsonld#ComposedAuxiliaryStrategy__member_validator",
+          "memberFieldName": "validator"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/ComposedAuxiliaryStrategy.jsonld#ComposedAuxiliaryStrategy__member_ownAuthorization",
+          "memberFieldName": "ownAuthorization"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/ComposedAuxiliaryStrategy.jsonld#ComposedAuxiliaryStrategy__member_requiredInRoot",
+          "memberFieldName": "requiredInRoot"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/ComposedAuxiliaryStrategy.jsonld#ComposedAuxiliaryStrategy__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/ComposedAuxiliaryStrategy.jsonld#ComposedAuxiliaryStrategy__member_getAuxiliaryIdentifier",
+          "memberFieldName": "getAuxiliaryIdentifier"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/ComposedAuxiliaryStrategy.jsonld#ComposedAuxiliaryStrategy__member_getAuxiliaryIdentifiers",
+          "memberFieldName": "getAuxiliaryIdentifiers"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/ComposedAuxiliaryStrategy.jsonld#ComposedAuxiliaryStrategy__member_isAuxiliaryIdentifier",
+          "memberFieldName": "isAuxiliaryIdentifier"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/ComposedAuxiliaryStrategy.jsonld#ComposedAuxiliaryStrategy__member_getSubjectIdentifier",
+          "memberFieldName": "getSubjectIdentifier"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/ComposedAuxiliaryStrategy.jsonld#ComposedAuxiliaryStrategy__member_usesOwnAuthorization",
+          "memberFieldName": "usesOwnAuthorization"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/ComposedAuxiliaryStrategy.jsonld#ComposedAuxiliaryStrategy__member_isRequiredInRoot",
+          "memberFieldName": "isRequiredInRoot"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/ComposedAuxiliaryStrategy.jsonld#ComposedAuxiliaryStrategy__member_addMetadata",
+          "memberFieldName": "addMetadata"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/ComposedAuxiliaryStrategy.jsonld#ComposedAuxiliaryStrategy__member_validate",
+          "memberFieldName": "validate"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/auxiliary/ComposedAuxiliaryStrategy.jsonld#ComposedAuxiliaryStrategy_identifierStrategy"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/ComposedAuxiliaryStrategy.jsonld#ComposedAuxiliaryStrategy_metadataGenerator"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/ComposedAuxiliaryStrategy.jsonld#ComposedAuxiliaryStrategy_validator"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/ComposedAuxiliaryStrategy.jsonld#ComposedAuxiliaryStrategy_ownAuthorization"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/ComposedAuxiliaryStrategy.jsonld#ComposedAuxiliaryStrategy_requiredInRoot"
+        }
+      ]
+    }
+  ]
+}

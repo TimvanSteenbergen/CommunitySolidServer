@@ -1,0 +1,203 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/conversion/ConstantConverter.jsonld#ConstantConverter",
+      "@type": "Class",
+      "requireElement": "ConstantConverter",
+      "extends": [
+        "css:dist/storage/conversion/RepresentationConverter.jsonld#RepresentationConverter"
+      ],
+      "comment": "A {@link RepresentationConverter} that ensures a representation for a certain content type is available.  Representations of the same content type are served as is; others are replaced by a constant document.  This can for example be used to serve an index.html file, which could then interactively load another representation.  Options default to the most permissive values when not defined.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/conversion/ConstantConverter.jsonld#ConstantConverter_filePath",
+          "range": "xsd:string",
+          "comment": "The path to the constant representation."
+        },
+        {
+          "@id": "css:dist/storage/conversion/ConstantConverter.jsonld#ConstantConverter_contentType",
+          "range": "xsd:string",
+          "comment": "The content type of the constant representation."
+        },
+        {
+          "@id": "css:dist/storage/conversion/ConstantConverter.jsonld#ConstantConverter_options_container",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Whether this should trigger on containers."
+        },
+        {
+          "@id": "css:dist/storage/conversion/ConstantConverter.jsonld#ConstantConverter_options_document",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Whether this should trigger on documents."
+        },
+        {
+          "@id": "css:dist/storage/conversion/ConstantConverter.jsonld#ConstantConverter_options_minQuality",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "The minimum requested quality/preference before this should trigger."
+        },
+        {
+          "@id": "css:dist/storage/conversion/ConstantConverter.jsonld#ConstantConverter_options_enabledMediaRanges",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": "xsd:string"
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Media ranges for which the conversion should happen."
+        },
+        {
+          "@id": "css:dist/storage/conversion/ConstantConverter.jsonld#ConstantConverter_options_disabledMediaRanges",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": "xsd:string"
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Media ranges for which the conversion should not happen."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/conversion/ConstantConverter.jsonld#ConstantConverter__member_logger",
+          "memberFieldName": "logger"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ConstantConverter.jsonld#ConstantConverter__member_filePath",
+          "memberFieldName": "filePath"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ConstantConverter.jsonld#ConstantConverter__member_contentType",
+          "memberFieldName": "contentType"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ConstantConverter.jsonld#ConstantConverter__member_options",
+          "memberFieldName": "options"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ConstantConverter.jsonld#ConstantConverter__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ConstantConverter.jsonld#ConstantConverter__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ConstantConverter.jsonld#ConstantConverter__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/conversion/ConstantConverter.jsonld#ConstantConverter_filePath"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ConstantConverter.jsonld#ConstantConverter_contentType"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ConstantConverter.jsonld#ConstantConverter_options__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "container",
+              "value": {
+                "@id": "css:dist/storage/conversion/ConstantConverter.jsonld#ConstantConverter_options_container"
+              }
+            },
+            {
+              "keyRaw": "document",
+              "value": {
+                "@id": "css:dist/storage/conversion/ConstantConverter.jsonld#ConstantConverter_options_document"
+              }
+            },
+            {
+              "keyRaw": "minQuality",
+              "value": {
+                "@id": "css:dist/storage/conversion/ConstantConverter.jsonld#ConstantConverter_options_minQuality"
+              }
+            },
+            {
+              "keyRaw": "enabledMediaRanges",
+              "value": {
+                "@id": "css:dist/storage/conversion/ConstantConverter.jsonld#ConstantConverter_options_enabledMediaRanges"
+              }
+            },
+            {
+              "keyRaw": "disabledMediaRanges",
+              "value": {
+                "@id": "css:dist/storage/conversion/ConstantConverter.jsonld#ConstantConverter_options_disabledMediaRanges"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/storage/conversion/ConstantConverter.jsonld#ConstantConverterOptions",
+      "@type": "AbstractClass",
+      "requireElement": "ConstantConverterOptions",
+      "comment": "Extra options for the ConstantConverter.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/conversion/ConstantConverter.jsonld#ConstantConverterOptions__member_container",
+          "memberFieldName": "container"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ConstantConverter.jsonld#ConstantConverterOptions__member_document",
+          "memberFieldName": "document"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ConstantConverter.jsonld#ConstantConverterOptions__member_minQuality",
+          "memberFieldName": "minQuality"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ConstantConverter.jsonld#ConstantConverterOptions__member_enabledMediaRanges",
+          "memberFieldName": "enabledMediaRanges"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ConstantConverter.jsonld#ConstantConverterOptions__member_disabledMediaRanges",
+          "memberFieldName": "disabledMediaRanges"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

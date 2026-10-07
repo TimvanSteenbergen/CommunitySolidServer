@@ -1,0 +1,41 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/ResourceStore.jsonld#ResourceStore",
+      "@type": "AbstractClass",
+      "requireElement": "ResourceStore",
+      "extends": [
+        "css:dist/storage/ResourceSet.jsonld#ResourceSet"
+      ],
+      "comment": "A ResourceStore represents a collection of resources. It has been designed such that each of its methods can be implemented in an atomic way:  for each CRUD operation, only one dedicated method needs to be called. A fifth method enables the optimization of partial updates with PATCH. It is up to the implementer of the interface to (not) make an implementation atomic.  ResourceStores are also responsible for taking auxiliary resources into account should those be relevant to the store.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/ResourceStore.jsonld#ResourceStore__member_getRepresentation",
+          "memberFieldName": "getRepresentation"
+        },
+        {
+          "@id": "css:dist/storage/ResourceStore.jsonld#ResourceStore__member_setRepresentation",
+          "memberFieldName": "setRepresentation"
+        },
+        {
+          "@id": "css:dist/storage/ResourceStore.jsonld#ResourceStore__member_addResource",
+          "memberFieldName": "addResource"
+        },
+        {
+          "@id": "css:dist/storage/ResourceStore.jsonld#ResourceStore__member_deleteResource",
+          "memberFieldName": "deleteResource"
+        },
+        {
+          "@id": "css:dist/storage/ResourceStore.jsonld#ResourceStore__member_modifyResource",
+          "memberFieldName": "modifyResource"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

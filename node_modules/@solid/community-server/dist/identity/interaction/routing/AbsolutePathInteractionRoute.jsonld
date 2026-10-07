@@ -1,0 +1,61 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/routing/AbsolutePathInteractionRoute.jsonld#AbsolutePathInteractionRoute",
+      "@type": "Class",
+      "requireElement": "AbsolutePathInteractionRoute",
+      "extends": [
+        "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute"
+      ],
+      "comment": "A route that stores a single absolute path.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/routing/AbsolutePathInteractionRoute.jsonld#AbsolutePathInteractionRoute_path",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/AbsolutePathInteractionRoute.jsonld#AbsolutePathInteractionRoute_ensureSlash",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/routing/AbsolutePathInteractionRoute.jsonld#AbsolutePathInteractionRoute__member_path",
+          "memberFieldName": "path"
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/AbsolutePathInteractionRoute.jsonld#AbsolutePathInteractionRoute__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/AbsolutePathInteractionRoute.jsonld#AbsolutePathInteractionRoute__member_getPath",
+          "memberFieldName": "getPath"
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/AbsolutePathInteractionRoute.jsonld#AbsolutePathInteractionRoute__member_matchPath",
+          "memberFieldName": "matchPath"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/routing/AbsolutePathInteractionRoute.jsonld#AbsolutePathInteractionRoute_path"
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/AbsolutePathInteractionRoute.jsonld#AbsolutePathInteractionRoute_ensureSlash"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/authentication/DPoPWebIdExtractor.jsonld#DPoPWebIdExtractor",
+      "@type": "Class",
+      "requireElement": "DPoPWebIdExtractor",
+      "extends": [
+        "css:dist/authentication/CredentialsExtractor.jsonld#CredentialsExtractor"
+      ],
+      "comment": "Credentials extractor that extracts a WebID from a DPoP-bound access token.",
+      "parameters": [
+        {
+          "@id": "css:dist/authentication/DPoPWebIdExtractor.jsonld#DPoPWebIdExtractor_originalUrlExtractor",
+          "range": "css:dist/http/input/identifier/TargetExtractor.jsonld#TargetExtractor",
+          "comment": "Reconstructs the original URL as requested by the client"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/authentication/DPoPWebIdExtractor.jsonld#DPoPWebIdExtractor__member_originalUrlExtractor",
+          "memberFieldName": "originalUrlExtractor"
+        },
+        {
+          "@id": "css:dist/authentication/DPoPWebIdExtractor.jsonld#DPoPWebIdExtractor__member_verify",
+          "memberFieldName": "verify"
+        },
+        {
+          "@id": "css:dist/authentication/DPoPWebIdExtractor.jsonld#DPoPWebIdExtractor__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/authentication/DPoPWebIdExtractor.jsonld#DPoPWebIdExtractor__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/authentication/DPoPWebIdExtractor.jsonld#DPoPWebIdExtractor__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/authentication/DPoPWebIdExtractor.jsonld#DPoPWebIdExtractor__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/authentication/DPoPWebIdExtractor.jsonld#DPoPWebIdExtractor_originalUrlExtractor"
+        }
+      ]
+    }
+  ]
+}

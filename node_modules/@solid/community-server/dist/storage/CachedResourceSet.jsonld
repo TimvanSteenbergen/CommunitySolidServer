@@ -1,0 +1,46 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/CachedResourceSet.jsonld#CachedResourceSet",
+      "@type": "Class",
+      "requireElement": "CachedResourceSet",
+      "extends": [
+        "css:dist/storage/ResourceSet.jsonld#ResourceSet"
+      ],
+      "comment": "Caches resource existence in a `WeakMap` tied to the `ResourceIdentifier` object.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/CachedResourceSet.jsonld#CachedResourceSet_source",
+          "range": "css:dist/storage/ResourceSet.jsonld#ResourceSet"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/CachedResourceSet.jsonld#CachedResourceSet__member_source",
+          "memberFieldName": "source"
+        },
+        {
+          "@id": "css:dist/storage/CachedResourceSet.jsonld#CachedResourceSet__member_cache",
+          "memberFieldName": "cache"
+        },
+        {
+          "@id": "css:dist/storage/CachedResourceSet.jsonld#CachedResourceSet__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/CachedResourceSet.jsonld#CachedResourceSet__member_hasResource",
+          "memberFieldName": "hasResource"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/CachedResourceSet.jsonld#CachedResourceSet_source"
+        }
+      ]
+    }
+  ]
+}

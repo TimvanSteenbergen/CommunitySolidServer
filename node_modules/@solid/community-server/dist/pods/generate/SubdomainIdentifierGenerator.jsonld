@@ -1,0 +1,46 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/pods/generate/SubdomainIdentifierGenerator.jsonld#SubdomainIdentifierGenerator",
+      "@type": "Class",
+      "requireElement": "SubdomainIdentifierGenerator",
+      "extends": [
+        "css:dist/pods/generate/IdentifierGenerator.jsonld#IdentifierGenerator"
+      ],
+      "comment": "Generates identifiers by using the name as a subdomain on the base URL. Non-alphanumeric characters will be replaced with `-`.  When extracting the pod, the base URl is also seen as a pod as there is no issue of nested containers here.",
+      "parameters": [
+        {
+          "@id": "css:dist/pods/generate/SubdomainIdentifierGenerator.jsonld#SubdomainIdentifierGenerator_baseUrl",
+          "range": "xsd:string"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/pods/generate/SubdomainIdentifierGenerator.jsonld#SubdomainIdentifierGenerator__member_baseParts",
+          "memberFieldName": "baseParts"
+        },
+        {
+          "@id": "css:dist/pods/generate/SubdomainIdentifierGenerator.jsonld#SubdomainIdentifierGenerator__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/pods/generate/SubdomainIdentifierGenerator.jsonld#SubdomainIdentifierGenerator__member_generate",
+          "memberFieldName": "generate"
+        },
+        {
+          "@id": "css:dist/pods/generate/SubdomainIdentifierGenerator.jsonld#SubdomainIdentifierGenerator__member_extractPod",
+          "memberFieldName": "extractPod"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/pods/generate/SubdomainIdentifierGenerator.jsonld#SubdomainIdentifierGenerator_baseUrl"
+        }
+      ]
+    }
+  ]
+}

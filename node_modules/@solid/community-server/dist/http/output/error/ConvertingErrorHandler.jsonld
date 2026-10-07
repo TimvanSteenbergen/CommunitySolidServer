@@ -1,0 +1,88 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/output/error/ConvertingErrorHandler.jsonld#ConvertingErrorHandler",
+      "@type": "Class",
+      "requireElement": "ConvertingErrorHandler",
+      "extends": [
+        "css:dist/http/output/error/ErrorHandler.jsonld#ErrorHandler"
+      ],
+      "comment": "Converts an error into a Representation of content type internal/error. Then feeds that representation into its converter to create a representation based on the given preferences.",
+      "parameters": [
+        {
+          "@id": "css:dist/http/output/error/ConvertingErrorHandler.jsonld#ConvertingErrorHandler_showStackTrace",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/http/output/error/ConvertingErrorHandler.jsonld#ConvertingErrorHandler_converter",
+          "range": "css:dist/storage/conversion/RepresentationConverter.jsonld#RepresentationConverter"
+        },
+        {
+          "@id": "css:dist/http/output/error/ConvertingErrorHandler.jsonld#ConvertingErrorHandler_preferenceParser",
+          "range": "css:dist/http/input/preferences/PreferenceParser.jsonld#PreferenceParser"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/output/error/ConvertingErrorHandler.jsonld#ConvertingErrorHandler__member_converter",
+          "memberFieldName": "converter"
+        },
+        {
+          "@id": "css:dist/http/output/error/ConvertingErrorHandler.jsonld#ConvertingErrorHandler__member_preferenceParser",
+          "memberFieldName": "preferenceParser"
+        },
+        {
+          "@id": "css:dist/http/output/error/ConvertingErrorHandler.jsonld#ConvertingErrorHandler__member_showStackTrace",
+          "memberFieldName": "showStackTrace"
+        },
+        {
+          "@id": "css:dist/http/output/error/ConvertingErrorHandler.jsonld#ConvertingErrorHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/output/error/ConvertingErrorHandler.jsonld#ConvertingErrorHandler__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/http/output/error/ConvertingErrorHandler.jsonld#ConvertingErrorHandler__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/http/output/error/ConvertingErrorHandler.jsonld#ConvertingErrorHandler__member_handleSafe",
+          "memberFieldName": "handleSafe"
+        },
+        {
+          "@id": "css:dist/http/output/error/ConvertingErrorHandler.jsonld#ConvertingErrorHandler__member_extractErrorDetails",
+          "memberFieldName": "extractErrorDetails"
+        },
+        {
+          "@id": "css:dist/http/output/error/ConvertingErrorHandler.jsonld#ConvertingErrorHandler__member_createResponse",
+          "memberFieldName": "createResponse"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/output/error/ConvertingErrorHandler.jsonld#ConvertingErrorHandler_converter"
+        },
+        {
+          "@id": "css:dist/http/output/error/ConvertingErrorHandler.jsonld#ConvertingErrorHandler_preferenceParser"
+        },
+        {
+          "@id": "css:dist/http/output/error/ConvertingErrorHandler.jsonld#ConvertingErrorHandler_showStackTrace"
+        }
+      ]
+    }
+  ]
+}

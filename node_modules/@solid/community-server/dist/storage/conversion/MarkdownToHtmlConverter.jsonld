@@ -1,0 +1,44 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/conversion/MarkdownToHtmlConverter.jsonld#MarkdownToHtmlConverter",
+      "@type": "Class",
+      "requireElement": "MarkdownToHtmlConverter",
+      "extends": [
+        "css:dist/storage/conversion/BaseTypedRepresentationConverter.jsonld#BaseTypedRepresentationConverter"
+      ],
+      "comment": "Converts Markdown data to HTML. The generated HTML will be injected into the given template using the parameter `htmlBody`. A standard Markdown string will be converted to a <p> tag, so html and body tags should be part of the template. In case the Markdown body starts with a header (#), that value will also be used as `title` parameter.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/conversion/MarkdownToHtmlConverter.jsonld#MarkdownToHtmlConverter_templateEngine",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/conversion/MarkdownToHtmlConverter.jsonld#MarkdownToHtmlConverter__member_templateEngine",
+          "memberFieldName": "templateEngine"
+        },
+        {
+          "@id": "css:dist/storage/conversion/MarkdownToHtmlConverter.jsonld#MarkdownToHtmlConverter__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/conversion/MarkdownToHtmlConverter.jsonld#MarkdownToHtmlConverter__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/conversion/MarkdownToHtmlConverter.jsonld#MarkdownToHtmlConverter_templateEngine"
+        }
+      ]
+    }
+  ]
+}

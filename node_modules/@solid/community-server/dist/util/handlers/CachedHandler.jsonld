@@ -1,0 +1,117 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/handlers/CachedHandler.jsonld#CachedHandler",
+      "@type": "Class",
+      "requireElement": "CachedHandler",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/util/handlers/CachedHandler.jsonld#CachedHandler__generic_TIn"
+            },
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/util/handlers/CachedHandler.jsonld#CachedHandler__generic_TOut"
+            }
+          ]
+        }
+      ],
+      "comment": "Caches output data from the source handler based on the input object. The `fields` parameter can be used to instead use one or more specific entries from the input object as cache key, so has as actual required typing `(keyof TIn)[]`.  A {@link WeakMap} is used internally so strict object equality determines cache hits, and data will be removed once the key stops existing. This also means that the cache key needs to be an object. Errors will be thrown in case a primitive is used.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/util/handlers/CachedHandler.jsonld#CachedHandler__generic_TIn",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/util/handlers/CachedHandler.jsonld#CachedHandler__generic_TOut"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/util/handlers/CachedHandler.jsonld#CachedHandler_fields",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": "xsd:string"
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/util/handlers/CachedHandler.jsonld#CachedHandler_source",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "css:dist/util/handlers/CachedHandler.jsonld#CachedHandler__generic_TIn"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "css:dist/util/handlers/CachedHandler.jsonld#CachedHandler__generic_TOut"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/handlers/CachedHandler.jsonld#CachedHandler__member_source",
+          "memberFieldName": "source"
+        },
+        {
+          "@id": "css:dist/util/handlers/CachedHandler.jsonld#CachedHandler__member_fields",
+          "memberFieldName": "fields"
+        },
+        {
+          "@id": "css:dist/util/handlers/CachedHandler.jsonld#CachedHandler__member_cache",
+          "memberFieldName": "cache"
+        },
+        {
+          "@id": "css:dist/util/handlers/CachedHandler.jsonld#CachedHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/util/handlers/CachedHandler.jsonld#CachedHandler__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/util/handlers/CachedHandler.jsonld#CachedHandler__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/util/handlers/CachedHandler.jsonld#CachedHandler__member_getKeys",
+          "memberFieldName": "getKeys"
+        },
+        {
+          "@id": "css:dist/util/handlers/CachedHandler.jsonld#CachedHandler__member_findDestination",
+          "memberFieldName": "findDestination"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/handlers/CachedHandler.jsonld#CachedHandler_source"
+        },
+        {
+          "@id": "css:dist/util/handlers/CachedHandler.jsonld#CachedHandler_fields"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"Size.js","sourceRoot":"","sources":["../../../src/storage/size-reporter/Size.ts"],"names":[],"mappings":";;;AAQa,QAAA,UAAU,GAAG,OAAO,CAAC","sourcesContent":["/**\n * Describes the size of something by stating how much of a certain unit is present.\n */\nexport interface Size {\n  unit: string;\n  amount: number;\n}\n\nexport const UNIT_BYTES = 'bytes';\n"]}

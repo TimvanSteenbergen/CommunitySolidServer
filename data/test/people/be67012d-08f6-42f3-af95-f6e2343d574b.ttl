@@ -1,0 +1,7 @@
+<http://localhost:3000/test/people/be67012d-08f6-42f3-af95-f6e2343d574b.ttl> a <https://schema.org/Person>;
+    <https://schema.org/name> "werweq";
+    <https://schema.org/givenName> "qwer";
+    <https://schema.org/familyName> "werwer";
+    <https://schema.org/email> "tim@tieka.nl";
+    <https://schema.org/telephone> "01234";
+    <https://schema.org/birthDate> "1969-08-19Z"^^<http://www.w3.org/2001/XMLSchema#date>.

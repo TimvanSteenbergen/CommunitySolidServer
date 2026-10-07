@@ -1,0 +1,81 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Storer.jsonld#WebSocket2023Storer",
+      "@type": "Class",
+      "requireElement": "WebSocket2023Storer",
+      "extends": [
+        "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Handler.jsonld#WebSocket2023Handler"
+      ],
+      "comment": "Keeps track of the WebSockets that were opened for a WebSocketChannel2023 channel. The WebSockets are stored in the map using the identifier of the matching channel.  `cleanupTimer` defines in minutes how often the stored WebSockets are closed if their corresponding channel has expired. Defaults to 60 minutes. Open WebSockets will not receive notifications if their channel expired.",
+      "parameters": [
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Storer.jsonld#WebSocket2023Storer_socketMap",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Storer.jsonld#WebSocket2023Storer_cleanupTimer",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Storer.jsonld#WebSocket2023Storer_storage",
+          "range": "css:dist/server/notifications/NotificationChannelStorage.jsonld#NotificationChannelStorage"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Storer.jsonld#WebSocket2023Storer__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Storer.jsonld#WebSocket2023Storer__member_storage",
+          "memberFieldName": "storage"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Storer.jsonld#WebSocket2023Storer__member_socketMap",
+          "memberFieldName": "socketMap"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Storer.jsonld#WebSocket2023Storer__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Storer.jsonld#WebSocket2023Storer__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Storer.jsonld#WebSocket2023Storer__member_closeExpiredSockets",
+          "memberFieldName": "closeExpiredSockets"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Storer.jsonld#WebSocket2023Storer_storage"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Storer.jsonld#WebSocket2023Storer_socketMap"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Storer.jsonld#WebSocket2023Storer_cleanupTimer"
+        }
+      ]
+    }
+  ]
+}

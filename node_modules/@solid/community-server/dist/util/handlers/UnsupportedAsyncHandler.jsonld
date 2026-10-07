@@ -1,0 +1,65 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/handlers/UnsupportedAsyncHandler.jsonld#UnsupportedAsyncHandler",
+      "@type": "Class",
+      "requireElement": "UnsupportedAsyncHandler",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeWildcard"
+            },
+            {
+              "@type": "ParameterRangeWildcard"
+            }
+          ]
+        }
+      ],
+      "comment": "Handler that does not support any input and will always throw an error.",
+      "parameters": [
+        {
+          "@id": "css:dist/util/handlers/UnsupportedAsyncHandler.jsonld#UnsupportedAsyncHandler_errorMessage",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/handlers/UnsupportedAsyncHandler.jsonld#UnsupportedAsyncHandler__member_errorMessage",
+          "memberFieldName": "errorMessage"
+        },
+        {
+          "@id": "css:dist/util/handlers/UnsupportedAsyncHandler.jsonld#UnsupportedAsyncHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/util/handlers/UnsupportedAsyncHandler.jsonld#UnsupportedAsyncHandler__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/util/handlers/UnsupportedAsyncHandler.jsonld#UnsupportedAsyncHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/handlers/UnsupportedAsyncHandler.jsonld#UnsupportedAsyncHandler_errorMessage"
+        }
+      ]
+    }
+  ]
+}

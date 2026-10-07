@@ -1,0 +1,46 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/pod/util/PodStore.jsonld#PodStore",
+      "@type": "AbstractClass",
+      "requireElement": "PodStore",
+      "comment": "Can be used to create new pods and find relevant information. Also keeps track of the owners of a pod. The `visible` parameter indicates if an owner should be publicly exposed or not.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/pod/util/PodStore.jsonld#PodStore__member_create",
+          "memberFieldName": "create"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/PodStore.jsonld#PodStore__member_get",
+          "memberFieldName": "get"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/PodStore.jsonld#PodStore__member_findByBaseUrl",
+          "memberFieldName": "findByBaseUrl"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/PodStore.jsonld#PodStore__member_findPods",
+          "memberFieldName": "findPods"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/PodStore.jsonld#PodStore__member_getOwners",
+          "memberFieldName": "getOwners"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/PodStore.jsonld#PodStore__member_updateOwner",
+          "memberFieldName": "updateOwner"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/PodStore.jsonld#PodStore__member_removeOwner",
+          "memberFieldName": "removeOwner"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

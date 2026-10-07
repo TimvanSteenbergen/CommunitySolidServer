@@ -1,0 +1,161 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata",
+      "@type": "Class",
+      "requireElement": "RepresentationMetadata",
+      "comment": "Stores the metadata triples and provides methods for easy access. Most functions return the metadata object to allow for chaining.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_store",
+          "memberFieldName": "store"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_id",
+          "memberFieldName": "id"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_setOverrides",
+          "memberFieldName": "setOverrides"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_quads",
+          "memberFieldName": "quads"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_identifier",
+          "memberFieldName": "identifier"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_identifier",
+          "memberFieldName": "identifier"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_setMetadata",
+          "memberFieldName": "setMetadata"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_addQuad",
+          "memberFieldName": "addQuad"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_addQuads",
+          "memberFieldName": "addQuads"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_removeQuad",
+          "memberFieldName": "removeQuad"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_removeQuads",
+          "memberFieldName": "removeQuads"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_add",
+          "memberFieldName": "add"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_remove",
+          "memberFieldName": "remove"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_forQuads",
+          "memberFieldName": "forQuads"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_removeAll",
+          "memberFieldName": "removeAll"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_has",
+          "memberFieldName": "has"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_getAll",
+          "memberFieldName": "getAll"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_get",
+          "memberFieldName": "get"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_set",
+          "memberFieldName": "set"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_setContentType",
+          "memberFieldName": "setContentType"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_getContentType",
+          "memberFieldName": "getContentType"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_removeContentType",
+          "memberFieldName": "removeContentType"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_contentType",
+          "memberFieldName": "contentType"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_contentType",
+          "memberFieldName": "contentType"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_contentTypeObject",
+          "memberFieldName": "contentTypeObject"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_contentTypeObject",
+          "memberFieldName": "contentTypeObject"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_contentLength",
+          "memberFieldName": "contentLength"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata__member_contentLength",
+          "memberFieldName": "contentLength"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

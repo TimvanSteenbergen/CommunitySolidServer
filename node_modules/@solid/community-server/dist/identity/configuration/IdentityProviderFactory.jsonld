@@ -1,0 +1,323 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory",
+      "@type": "Class",
+      "requireElement": "IdentityProviderFactory",
+      "extends": [
+        "css:dist/identity/configuration/ProviderFactory.jsonld#ProviderFactory"
+      ],
+      "comment": "Creates an OIDC Provider based on the provided configuration and parameters. The provider will be cached and returned on subsequent calls. Cookie and JWT keys will be stored in an internal storage, so they can be re-used over multiple threads. Necessary claims for Solid OIDC interactions will be added. Routes will be updated based on the `baseUrl` and `oidcPath`.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory_config",
+          "range": "rdf:JSON",
+          "comment": "JSON config for the OIDC library"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory_args_promptFactory",
+          "range": "css:dist/identity/configuration/PromptFactory.jsonld#PromptFactory",
+          "comment": "Used to generate new prompt that are needed in addition to the defaults prompts."
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory_args_adapterFactory",
+          "range": "css:dist/identity/storage/AdapterFactory.jsonld#AdapterFactory",
+          "comment": "Factory that creates the adapter used for OIDC data storage."
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory_args_baseUrl",
+          "range": "xsd:string",
+          "comment": "Base URL of the server."
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory_args_oidcPath",
+          "range": "xsd:string",
+          "comment": "Path for all requests targeting the OIDC library."
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory_args_interactionRoute",
+          "range": "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute",
+          "comment": "The route where requests should be redirected to in case of an OIDC interaction."
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory_args_clientCredentialsStore",
+          "range": "css:dist/identity/interaction/client-credentials/util/ClientCredentialsStore.jsonld#ClientCredentialsStore",
+          "comment": "Store containing the generated client credentials with their associated WebID."
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory_args_storage",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+            "genericTypeInstances": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": "xsd:string"
+              }
+            ]
+          },
+          "comment": "Storage used to store cookie keys, so they can be re-used in case of multithreading."
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory_args_jwkGenerator",
+          "range": "css:dist/identity/configuration/JwkGenerator.jsonld#JwkGenerator",
+          "comment": "Generates the JWK used for signing and decryption."
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory_args_showStackTrace",
+          "range": "xsd:boolean",
+          "comment": "Extra information will be added to the error output if this is true."
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory_args_errorHandler",
+          "range": "css:dist/http/output/error/ErrorHandler.jsonld#ErrorHandler",
+          "comment": "Used to convert errors thrown by the OIDC library."
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory_args_responseWriter",
+          "range": "css:dist/http/output/ResponseWriter.jsonld#ResponseWriter",
+          "comment": "Used to write out errors thrown by the OIDC library."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory__member_promptFactory",
+          "memberFieldName": "promptFactory"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory__member_config",
+          "memberFieldName": "config"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory__member_adapterFactory",
+          "memberFieldName": "adapterFactory"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory__member_baseUrl",
+          "memberFieldName": "baseUrl"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory__member_oidcPath",
+          "memberFieldName": "oidcPath"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory__member_interactionRoute",
+          "memberFieldName": "interactionRoute"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory__member_clientCredentialsStore",
+          "memberFieldName": "clientCredentialsStore"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory__member_storage",
+          "memberFieldName": "storage"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory__member_jwkGenerator",
+          "memberFieldName": "jwkGenerator"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory__member_showStackTrace",
+          "memberFieldName": "showStackTrace"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory__member_errorHandler",
+          "memberFieldName": "errorHandler"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory__member_responseWriter",
+          "memberFieldName": "responseWriter"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory__member_provider",
+          "memberFieldName": "provider"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory__member_getProvider",
+          "memberFieldName": "getProvider"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory__member_createProvider",
+          "memberFieldName": "createProvider"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory__member_captureErrorResponses",
+          "memberFieldName": "captureErrorResponses"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory__member_initConfig",
+          "memberFieldName": "initConfig"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory__member_generateCookieKeys",
+          "memberFieldName": "generateCookieKeys"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory__member_isAccessToken",
+          "memberFieldName": "isAccessToken"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory__member_configureClaims",
+          "memberFieldName": "configureClaims"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory__member_createRoute",
+          "memberFieldName": "createRoute"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory__member_configureRoutes",
+          "memberFieldName": "configureRoutes"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory__member_configureErrors",
+          "memberFieldName": "configureErrors"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory_config"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "promptFactory",
+              "value": {
+                "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory_args_promptFactory"
+              }
+            },
+            {
+              "keyRaw": "adapterFactory",
+              "value": {
+                "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory_args_adapterFactory"
+              }
+            },
+            {
+              "keyRaw": "baseUrl",
+              "value": {
+                "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory_args_baseUrl"
+              }
+            },
+            {
+              "keyRaw": "oidcPath",
+              "value": {
+                "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory_args_oidcPath"
+              }
+            },
+            {
+              "keyRaw": "interactionRoute",
+              "value": {
+                "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory_args_interactionRoute"
+              }
+            },
+            {
+              "keyRaw": "clientCredentialsStore",
+              "value": {
+                "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory_args_clientCredentialsStore"
+              }
+            },
+            {
+              "keyRaw": "storage",
+              "value": {
+                "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory_args_storage"
+              }
+            },
+            {
+              "keyRaw": "jwkGenerator",
+              "value": {
+                "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory_args_jwkGenerator"
+              }
+            },
+            {
+              "keyRaw": "showStackTrace",
+              "value": {
+                "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory_args_showStackTrace"
+              }
+            },
+            {
+              "keyRaw": "errorHandler",
+              "value": {
+                "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory_args_errorHandler"
+              }
+            },
+            {
+              "keyRaw": "responseWriter",
+              "value": {
+                "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactory_args_responseWriter"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactoryArgs",
+      "@type": "AbstractClass",
+      "requireElement": "IdentityProviderFactoryArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactoryArgs__member_promptFactory",
+          "memberFieldName": "promptFactory"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactoryArgs__member_adapterFactory",
+          "memberFieldName": "adapterFactory"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactoryArgs__member_baseUrl",
+          "memberFieldName": "baseUrl"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactoryArgs__member_oidcPath",
+          "memberFieldName": "oidcPath"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactoryArgs__member_interactionRoute",
+          "memberFieldName": "interactionRoute"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactoryArgs__member_clientCredentialsStore",
+          "memberFieldName": "clientCredentialsStore"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactoryArgs__member_storage",
+          "memberFieldName": "storage"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactoryArgs__member_jwkGenerator",
+          "memberFieldName": "jwkGenerator"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactoryArgs__member_showStackTrace",
+          "memberFieldName": "showStackTrace"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactoryArgs__member_errorHandler",
+          "memberFieldName": "errorHandler"
+        },
+        {
+          "@id": "css:dist/identity/configuration/IdentityProviderFactory.jsonld#IdentityProviderFactoryArgs__member_responseWriter",
+          "memberFieldName": "responseWriter"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

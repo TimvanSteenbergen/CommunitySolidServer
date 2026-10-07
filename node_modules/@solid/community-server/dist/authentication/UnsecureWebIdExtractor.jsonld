@@ -1,0 +1,36 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/authentication/UnsecureWebIdExtractor.jsonld#UnsecureWebIdExtractor",
+      "@type": "Class",
+      "requireElement": "UnsecureWebIdExtractor",
+      "extends": [
+        "css:dist/authentication/CredentialsExtractor.jsonld#CredentialsExtractor"
+      ],
+      "comment": "Credentials extractor which simply interprets the contents of the Authorization header as a WebID.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/authentication/UnsecureWebIdExtractor.jsonld#UnsecureWebIdExtractor__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/authentication/UnsecureWebIdExtractor.jsonld#UnsecureWebIdExtractor__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/authentication/UnsecureWebIdExtractor.jsonld#UnsecureWebIdExtractor__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

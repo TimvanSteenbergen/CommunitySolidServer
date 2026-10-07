@@ -1,0 +1,86 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/handlers/ParallelHandler.jsonld#ParallelHandler",
+      "@type": "Class",
+      "requireElement": "ParallelHandler",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/util/handlers/ParallelHandler.jsonld#ParallelHandler__generic_TIn"
+            },
+            {
+              "@type": "ParameterRangeArray",
+              "parameterRangeValue": {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "css:dist/util/handlers/ParallelHandler.jsonld#ParallelHandler__generic_TOut"
+              }
+            }
+          ]
+        }
+      ],
+      "comment": "A composite handler that executes handlers in parallel.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/util/handlers/ParallelHandler.jsonld#ParallelHandler__generic_TIn"
+        },
+        {
+          "@id": "css:dist/util/handlers/ParallelHandler.jsonld#ParallelHandler__generic_TOut"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/util/handlers/ParallelHandler.jsonld#ParallelHandler_handlers",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": {
+              "@type": "ParameterRangeGenericComponent",
+              "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+              "genericTypeInstances": [
+                {
+                  "@type": "ParameterRangeGenericTypeReference",
+                  "parameterRangeGenericType": "css:dist/util/handlers/ParallelHandler.jsonld#ParallelHandler__generic_TIn"
+                },
+                {
+                  "@type": "ParameterRangeGenericTypeReference",
+                  "parameterRangeGenericType": "css:dist/util/handlers/ParallelHandler.jsonld#ParallelHandler__generic_TOut"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/handlers/ParallelHandler.jsonld#ParallelHandler__member_handlers",
+          "memberFieldName": "handlers"
+        },
+        {
+          "@id": "css:dist/util/handlers/ParallelHandler.jsonld#ParallelHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/util/handlers/ParallelHandler.jsonld#ParallelHandler__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/util/handlers/ParallelHandler.jsonld#ParallelHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/handlers/ParallelHandler.jsonld#ParallelHandler_handlers"
+        }
+      ]
+    }
+  ]
+}

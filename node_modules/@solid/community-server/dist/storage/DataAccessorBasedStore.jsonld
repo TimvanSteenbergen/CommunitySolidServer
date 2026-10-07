@@ -1,0 +1,186 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore",
+      "@type": "Class",
+      "requireElement": "DataAccessorBasedStore",
+      "extends": [
+        "css:dist/storage/ResourceStore.jsonld#ResourceStore"
+      ],
+      "comment": "ResourceStore which uses a DataAccessor for backend access.  The DataAccessor interface provides elementary store operations such as read and write. This DataAccessorBasedStore uses those elementary store operations to implement the more high-level ResourceStore contact, abstracting all common functionality such that new stores can be added by implementing the more simple DataAccessor contract. DataAccessorBasedStore thereby provides behaviours for reuse across different stores, such as: * Converting container metadata to data * Converting slug to URI * Checking if addResource target is a container * Checking if no containment triples are written to a container * etc.  Currently \"metadata\" is seen as something that is not directly accessible. That means that a consumer can't write directly to the metadata of a resource, only indirectly through headers. (Except for containers where data and metadata overlap).  The one thing this store does not take care of (yet?) are containment triples for containers  Work has been done to minimize the number of required calls to the DataAccessor, but the main disadvantage is that sometimes multiple calls are required where a specific store might only need one.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore_accessor",
+          "range": "css:dist/storage/accessors/DataAccessor.jsonld#DataAccessor"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore_identifierStrategy",
+          "range": "css:dist/util/identifiers/IdentifierStrategy.jsonld#IdentifierStrategy"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore_auxiliaryStrategy",
+          "range": "css:dist/http/auxiliary/AuxiliaryStrategy.jsonld#AuxiliaryStrategy"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore_metadataStrategy",
+          "range": "css:dist/http/auxiliary/AuxiliaryStrategy.jsonld#AuxiliaryStrategy"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_accessor",
+          "memberFieldName": "accessor"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_identifierStrategy",
+          "memberFieldName": "identifierStrategy"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_auxiliaryStrategy",
+          "memberFieldName": "auxiliaryStrategy"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_metadataStrategy",
+          "memberFieldName": "metadataStrategy"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_hasResource",
+          "memberFieldName": "hasResource"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_getRepresentation",
+          "memberFieldName": "getRepresentation"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_addResource",
+          "memberFieldName": "addResource"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_setRepresentation",
+          "memberFieldName": "setRepresentation"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_modifyResource",
+          "memberFieldName": "modifyResource"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_deleteResource",
+          "memberFieldName": "deleteResource"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_validateIdentifier",
+          "memberFieldName": "validateIdentifier"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_validateConditions",
+          "memberFieldName": "validateConditions"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_getNormalizedMetadata",
+          "memberFieldName": "getNormalizedMetadata"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_getSafeNormalizedMetadata",
+          "memberFieldName": "getSafeNormalizedMetadata"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_writeMetadata",
+          "memberFieldName": "writeMetadata"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_writeData",
+          "memberFieldName": "writeData"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_handleContainerData",
+          "memberFieldName": "handleContainerData"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_removeResponseMetadata",
+          "memberFieldName": "removeResponseMetadata"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_updateContainerModifiedDate",
+          "memberFieldName": "updateContainerModifiedDate"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_createURI",
+          "memberFieldName": "createURI"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_validateSlug",
+          "memberFieldName": "validateSlug"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_cleanSlug",
+          "memberFieldName": "cleanSlug"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_createSafeUri",
+          "memberFieldName": "createSafeUri"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_isContainerType",
+          "memberFieldName": "isContainerType"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_hasContainerType",
+          "memberFieldName": "hasContainerType"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_isRootStorage",
+          "memberFieldName": "isRootStorage"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_hasProperChildren",
+          "memberFieldName": "hasProperChildren"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_safelyDeleteAuxiliaryResources",
+          "memberFieldName": "safelyDeleteAuxiliaryResources"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_createRecursiveContainers",
+          "memberFieldName": "createRecursiveContainers"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_addActivityMetadata",
+          "memberFieldName": "addActivityMetadata"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore__member_addContainerActivity",
+          "memberFieldName": "addContainerActivity"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore_accessor"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore_identifierStrategy"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore_auxiliaryStrategy"
+        },
+        {
+          "@id": "css:dist/storage/DataAccessorBasedStore.jsonld#DataAccessorBasedStore_metadataStrategy"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/init/ConfigPodInitializer.jsonld#ConfigPodInitializer",
+      "@type": "Class",
+      "requireElement": "ConfigPodInitializer",
+      "extends": [
+        "css:dist/init/Initializer.jsonld#Initializer"
+      ],
+      "comment": "Initializes all pods that have been stored and loads them in memory. This reads the pod settings from a permanent storage and uses those to create the corresponding ResourceStores in memory, so this is required every time the server starts.  Part of the dynamic pod creation. Reads the contents from the configuration storage, uses those values to instantiate ResourceStores, and then adds them to the routing storage.",
+      "parameters": [
+        {
+          "@id": "css:dist/init/ConfigPodInitializer.jsonld#ConfigPodInitializer_storeFactory",
+          "range": "css:dist/pods/generate/ComponentsJsFactory.jsonld#ComponentsJsFactory"
+        },
+        {
+          "@id": "css:dist/init/ConfigPodInitializer.jsonld#ConfigPodInitializer_configStorage",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+            "genericTypeInstances": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/init/ConfigPodInitializer.jsonld#ConfigPodInitializer_routingStorage",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+            "genericTypeInstances": [
+              "xsd:string",
+              "css:dist/storage/ResourceStore.jsonld#ResourceStore"
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/init/ConfigPodInitializer.jsonld#ConfigPodInitializer__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/init/ConfigPodInitializer.jsonld#ConfigPodInitializer__member_storeFactory",
+          "memberFieldName": "storeFactory"
+        },
+        {
+          "@id": "css:dist/init/ConfigPodInitializer.jsonld#ConfigPodInitializer__member_configStorage",
+          "memberFieldName": "configStorage"
+        },
+        {
+          "@id": "css:dist/init/ConfigPodInitializer.jsonld#ConfigPodInitializer__member_routingStorage",
+          "memberFieldName": "routingStorage"
+        },
+        {
+          "@id": "css:dist/init/ConfigPodInitializer.jsonld#ConfigPodInitializer__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/init/ConfigPodInitializer.jsonld#ConfigPodInitializer__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/init/ConfigPodInitializer.jsonld#ConfigPodInitializer_storeFactory"
+        },
+        {
+          "@id": "css:dist/init/ConfigPodInitializer.jsonld#ConfigPodInitializer_configStorage"
+        },
+        {
+          "@id": "css:dist/init/ConfigPodInitializer.jsonld#ConfigPodInitializer_routingStorage"
+        }
+      ]
+    }
+  ]
+}

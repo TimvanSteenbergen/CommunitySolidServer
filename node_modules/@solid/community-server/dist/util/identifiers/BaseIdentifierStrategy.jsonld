@@ -1,0 +1,37 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/identifiers/BaseIdentifierStrategy.jsonld#BaseIdentifierStrategy",
+      "@type": "AbstractClass",
+      "requireElement": "BaseIdentifierStrategy",
+      "extends": [
+        "css:dist/util/identifiers/IdentifierStrategy.jsonld#IdentifierStrategy"
+      ],
+      "comment": "Provides a default implementation for `getParentContainer` which checks if the identifier is supported and not a root container. If not, the last part before the first relevant slash will be removed to find the parent.  Provides a default implementation for `contains` which does standard slash-semantics based string comparison.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/identifiers/BaseIdentifierStrategy.jsonld#BaseIdentifierStrategy__member_supportsIdentifier",
+          "memberFieldName": "supportsIdentifier"
+        },
+        {
+          "@id": "css:dist/util/identifiers/BaseIdentifierStrategy.jsonld#BaseIdentifierStrategy__member_getParentContainer",
+          "memberFieldName": "getParentContainer"
+        },
+        {
+          "@id": "css:dist/util/identifiers/BaseIdentifierStrategy.jsonld#BaseIdentifierStrategy__member_isRootContainer",
+          "memberFieldName": "isRootContainer"
+        },
+        {
+          "@id": "css:dist/util/identifiers/BaseIdentifierStrategy.jsonld#BaseIdentifierStrategy__member_contains",
+          "memberFieldName": "contains"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

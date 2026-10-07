@@ -1,0 +1,22 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/HttpServerFactory.jsonld#HttpServerFactory",
+      "@type": "AbstractClass",
+      "requireElement": "HttpServerFactory",
+      "comment": "A factory for HTTP servers.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/HttpServerFactory.jsonld#HttpServerFactory__member_createServer",
+          "memberFieldName": "createServer"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

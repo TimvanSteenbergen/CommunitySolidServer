@@ -1,0 +1,97 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/quota/PodQuotaStrategy.jsonld#PodQuotaStrategy",
+      "@type": "Class",
+      "requireElement": "PodQuotaStrategy",
+      "extends": [
+        "css:dist/storage/quota/QuotaStrategy.jsonld#QuotaStrategy"
+      ],
+      "comment": "The PodQuotaStrategy sets a limit on the amount of data stored on a per pod basis",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/quota/PodQuotaStrategy.jsonld#PodQuotaStrategy_limit_unit",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/storage/quota/PodQuotaStrategy.jsonld#PodQuotaStrategy_identifierStrategy",
+          "range": "css:dist/util/identifiers/IdentifierStrategy.jsonld#IdentifierStrategy"
+        },
+        {
+          "@id": "css:dist/storage/quota/PodQuotaStrategy.jsonld#PodQuotaStrategy_accessor",
+          "range": "css:dist/storage/accessors/DataAccessor.jsonld#DataAccessor"
+        },
+        {
+          "@id": "css:dist/storage/quota/PodQuotaStrategy.jsonld#PodQuotaStrategy_limit_amount",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "css:dist/storage/quota/PodQuotaStrategy.jsonld#PodQuotaStrategy_reporter",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/size-reporter/SizeReporter.jsonld#SizeReporter",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/quota/PodQuotaStrategy.jsonld#PodQuotaStrategy__member_identifierStrategy",
+          "memberFieldName": "identifierStrategy"
+        },
+        {
+          "@id": "css:dist/storage/quota/PodQuotaStrategy.jsonld#PodQuotaStrategy__member_accessor",
+          "memberFieldName": "accessor"
+        },
+        {
+          "@id": "css:dist/storage/quota/PodQuotaStrategy.jsonld#PodQuotaStrategy__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/quota/PodQuotaStrategy.jsonld#PodQuotaStrategy__member_getTotalSpaceUsed",
+          "memberFieldName": "getTotalSpaceUsed"
+        },
+        {
+          "@id": "css:dist/storage/quota/PodQuotaStrategy.jsonld#PodQuotaStrategy__member_searchPimStorage",
+          "memberFieldName": "searchPimStorage"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/quota/PodQuotaStrategy.jsonld#PodQuotaStrategy_limit__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "unit",
+              "value": {
+                "@id": "css:dist/storage/quota/PodQuotaStrategy.jsonld#PodQuotaStrategy_limit_unit"
+              }
+            },
+            {
+              "keyRaw": "amount",
+              "value": {
+                "@id": "css:dist/storage/quota/PodQuotaStrategy.jsonld#PodQuotaStrategy_limit_amount"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "css:dist/storage/quota/PodQuotaStrategy.jsonld#PodQuotaStrategy_reporter"
+        },
+        {
+          "@id": "css:dist/storage/quota/PodQuotaStrategy.jsonld#PodQuotaStrategy_identifierStrategy"
+        },
+        {
+          "@id": "css:dist/storage/quota/PodQuotaStrategy.jsonld#PodQuotaStrategy_accessor"
+        }
+      ]
+    }
+  ]
+}

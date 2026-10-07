@@ -1,0 +1,43 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/notifications/serialize/NotificationSerializer.jsonld#NotificationSerializer",
+      "@type": "AbstractClass",
+      "requireElement": "NotificationSerializer",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            "css:dist/server/notifications/serialize/NotificationSerializer.jsonld#NotificationSerializerInput",
+            "css:dist/http/representation/Representation.jsonld#Representation"
+          ]
+        }
+      ],
+      "comment": "Converts a {@link Notification} into a {@link Representation} that can be transmitted.  This is a separate class between a generator and emitter, so that a specific notification channel type can add extra metadata to the Representation if needed.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "css:dist/server/notifications/serialize/NotificationSerializer.jsonld#NotificationSerializerInput",
+      "@type": "AbstractClass",
+      "requireElement": "NotificationSerializerInput",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/notifications/serialize/NotificationSerializer.jsonld#NotificationSerializerInput__member_notification",
+          "memberFieldName": "notification"
+        },
+        {
+          "@id": "css:dist/server/notifications/serialize/NotificationSerializer.jsonld#NotificationSerializerInput__member_channel",
+          "memberFieldName": "channel"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

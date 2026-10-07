@@ -1,0 +1,43 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/input/body/BodyParser.jsonld#BodyParser",
+      "@type": "AbstractClass",
+      "requireElement": "BodyParser",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            "css:dist/http/input/body/BodyParser.jsonld#BodyParserArgs",
+            "css:dist/http/representation/Representation.jsonld#Representation"
+          ]
+        }
+      ],
+      "comment": "Parses the body of an incoming {@link HttpRequest} and converts it to a {@link Representation}.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "css:dist/http/input/body/BodyParser.jsonld#BodyParserArgs",
+      "@type": "AbstractClass",
+      "requireElement": "BodyParserArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/input/body/BodyParser.jsonld#BodyParserArgs__member_request",
+          "memberFieldName": "request"
+        },
+        {
+          "@id": "css:dist/http/input/body/BodyParser.jsonld#BodyParserArgs__member_metadata",
+          "memberFieldName": "metadata"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

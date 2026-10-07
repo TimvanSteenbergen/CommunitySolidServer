@@ -1,0 +1,111 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/pod/CreatePodHandler.jsonld#CreatePodHandler",
+      "@type": "Class",
+      "requireElement": "CreatePodHandler",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/identity/interaction/JsonInteractionHandler.jsonld#JsonInteractionHandler",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeWildcard"
+            }
+          ]
+        },
+        "css:dist/identity/interaction/JsonView.jsonld#JsonView"
+      ],
+      "comment": "Handles the creation of pods. Will call the stored {@link PodCreator} with the settings found in the input JSON.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/pod/CreatePodHandler.jsonld#CreatePodHandler_allowRoot",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/CreatePodHandler.jsonld#CreatePodHandler_podStore",
+          "range": "css:dist/identity/interaction/pod/util/PodStore.jsonld#PodStore"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/CreatePodHandler.jsonld#CreatePodHandler_podCreator",
+          "range": "css:dist/identity/interaction/pod/util/PodCreator.jsonld#PodCreator"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/CreatePodHandler.jsonld#CreatePodHandler_webIdLinkRoute",
+          "range": "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/CreatePodHandler.jsonld#CreatePodHandler_podIdRoute",
+          "range": "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/pod/CreatePodHandler.jsonld#CreatePodHandler__member_logger",
+          "memberFieldName": "logger"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/CreatePodHandler.jsonld#CreatePodHandler__member_podStore",
+          "memberFieldName": "podStore"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/CreatePodHandler.jsonld#CreatePodHandler__member_podCreator",
+          "memberFieldName": "podCreator"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/CreatePodHandler.jsonld#CreatePodHandler__member_webIdLinkRoute",
+          "memberFieldName": "webIdLinkRoute"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/CreatePodHandler.jsonld#CreatePodHandler__member_podIdRoute",
+          "memberFieldName": "podIdRoute"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/CreatePodHandler.jsonld#CreatePodHandler__member_inSchema",
+          "memberFieldName": "inSchema"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/CreatePodHandler.jsonld#CreatePodHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/CreatePodHandler.jsonld#CreatePodHandler__member_getView",
+          "memberFieldName": "getView"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/CreatePodHandler.jsonld#CreatePodHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/pod/CreatePodHandler.jsonld#CreatePodHandler_podStore"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/CreatePodHandler.jsonld#CreatePodHandler_podCreator"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/CreatePodHandler.jsonld#CreatePodHandler_webIdLinkRoute"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/CreatePodHandler.jsonld#CreatePodHandler_podIdRoute"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/CreatePodHandler.jsonld#CreatePodHandler_allowRoot"
+        }
+      ]
+    }
+  ]
+}

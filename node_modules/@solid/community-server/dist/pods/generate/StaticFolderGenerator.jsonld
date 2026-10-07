@@ -1,0 +1,53 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/pods/generate/StaticFolderGenerator.jsonld#StaticFolderGenerator",
+      "@type": "Class",
+      "requireElement": "StaticFolderGenerator",
+      "extends": [
+        "css:dist/pods/generate/ResourcesGenerator.jsonld#ResourcesGenerator"
+      ],
+      "comment": "Stores a static template folder that will be used to call the wrapped {@link TemplatedResourcesGenerator}.",
+      "parameters": [
+        {
+          "@id": "css:dist/pods/generate/StaticFolderGenerator.jsonld#StaticFolderGenerator_templateFolder",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/pods/generate/StaticFolderGenerator.jsonld#StaticFolderGenerator_resourcesGenerator",
+          "range": "css:dist/pods/generate/TemplatedResourcesGenerator.jsonld#TemplatedResourcesGenerator"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/pods/generate/StaticFolderGenerator.jsonld#StaticFolderGenerator__member_resourcesGenerator",
+          "memberFieldName": "resourcesGenerator"
+        },
+        {
+          "@id": "css:dist/pods/generate/StaticFolderGenerator.jsonld#StaticFolderGenerator__member_templateFolder",
+          "memberFieldName": "templateFolder"
+        },
+        {
+          "@id": "css:dist/pods/generate/StaticFolderGenerator.jsonld#StaticFolderGenerator__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/pods/generate/StaticFolderGenerator.jsonld#StaticFolderGenerator__member_generate",
+          "memberFieldName": "generate"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/pods/generate/StaticFolderGenerator.jsonld#StaticFolderGenerator_resourcesGenerator"
+        },
+        {
+          "@id": "css:dist/pods/generate/StaticFolderGenerator.jsonld#StaticFolderGenerator_templateFolder"
+        }
+      ]
+    }
+  ]
+}

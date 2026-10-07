@@ -1,0 +1,18 @@
+{
+  "@context": "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld",
+  "@graph": [
+    {
+      "comment": "Same locker as config/util/resource-locker/file.json, but with a much longer expiration: the default 6000ms is too short for a real (not-tiny) file upload - e.g. a photo dragged in straight from the OS file manager can take longer than that to write, which otherwise 500s with 'Lock expired after 6000ms'.",
+      "@type": "Override",
+      "overrideInstance": { "@id": "urn:solid-server:default:ResourceLocker" },
+      "overrideParameters": {
+        "@type": "WrappedExpiringReadWriteLocker",
+        "locker": {
+          "@type": "PartialReadWriteLocker",
+          "locker": { "@id": "urn:solid-server:default:FileSystemResourceLocker" }
+        },
+        "expiration": 120000
+      }
+    }
+  ]
+}

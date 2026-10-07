@@ -1,0 +1,117 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/pod/util/BasePodStore.jsonld#BasePodStore",
+      "@type": "Class",
+      "requireElement": "BasePodStore",
+      "extends": [
+        "css:dist/init/Initializer.jsonld#Initializer",
+        "css:dist/identity/interaction/pod/util/PodStore.jsonld#PodStore"
+      ],
+      "comment": "A {@link PodStore} implementation using a {@link PodManager} to create pods and a {@link AccountLoginStorage} to store the data. Needs to be initialized before it can be used.  Adds the initial WebID as the owner of the pod. By default, this owner is not exposed through a link header. This can be changed by setting the constructor `visible` parameter to `true`.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/pod/util/BasePodStore.jsonld#BasePodStore_visible",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/BasePodStore.jsonld#BasePodStore_manager",
+          "range": "css:dist/pods/PodManager.jsonld#PodManager"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/BasePodStore.jsonld#BasePodStore_storage",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/identity/interaction/account/util/LoginStorage.jsonld#LoginStorage",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/pod/util/BasePodStore.jsonld#BasePodStore__member_logger",
+          "memberFieldName": "logger"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/BasePodStore.jsonld#BasePodStore__member_storage",
+          "memberFieldName": "storage"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/BasePodStore.jsonld#BasePodStore__member_manager",
+          "memberFieldName": "manager"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/BasePodStore.jsonld#BasePodStore__member_visible",
+          "memberFieldName": "visible"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/BasePodStore.jsonld#BasePodStore__member_initialized",
+          "memberFieldName": "initialized"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/BasePodStore.jsonld#BasePodStore__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/BasePodStore.jsonld#BasePodStore__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/BasePodStore.jsonld#BasePodStore__member_create",
+          "memberFieldName": "create"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/BasePodStore.jsonld#BasePodStore__member_get",
+          "memberFieldName": "get"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/BasePodStore.jsonld#BasePodStore__member_findByBaseUrl",
+          "memberFieldName": "findByBaseUrl"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/BasePodStore.jsonld#BasePodStore__member_findPods",
+          "memberFieldName": "findPods"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/BasePodStore.jsonld#BasePodStore__member_getOwners",
+          "memberFieldName": "getOwners"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/BasePodStore.jsonld#BasePodStore__member_updateOwner",
+          "memberFieldName": "updateOwner"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/BasePodStore.jsonld#BasePodStore__member_removeOwner",
+          "memberFieldName": "removeOwner"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/pod/util/BasePodStore.jsonld#BasePodStore_storage"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/BasePodStore.jsonld#BasePodStore_manager"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/BasePodStore.jsonld#BasePodStore_visible"
+        }
+      ]
+    }
+  ]
+}

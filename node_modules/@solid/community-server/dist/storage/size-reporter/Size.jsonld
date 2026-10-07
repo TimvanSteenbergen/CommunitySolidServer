@@ -1,0 +1,26 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/size-reporter/Size.jsonld#Size",
+      "@type": "AbstractClass",
+      "requireElement": "Size",
+      "comment": "Describes the size of something by stating how much of a certain unit is present.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/size-reporter/Size.jsonld#Size__member_unit",
+          "memberFieldName": "unit"
+        },
+        {
+          "@id": "css:dist/storage/size-reporter/Size.jsonld#Size__member_amount",
+          "memberFieldName": "amount"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

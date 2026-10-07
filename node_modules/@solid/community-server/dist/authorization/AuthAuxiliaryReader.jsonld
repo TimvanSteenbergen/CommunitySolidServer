@@ -1,0 +1,68 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/authorization/AuthAuxiliaryReader.jsonld#AuthAuxiliaryReader",
+      "@type": "Class",
+      "requireElement": "AuthAuxiliaryReader",
+      "extends": [
+        "css:dist/authorization/PermissionReader.jsonld#PermissionReader"
+      ],
+      "comment": "Determines the permission for authorization resources (such as ACL or ACR). In contrast to the regular resource mechanism, read/write access to authorization resources is obtained by setting Control permissions on the corresponding subject resource rather than directly setting permissions for the authorization resource itself. Hence, this class transforms Control permissions on the subject resource to Read/Write permissions on the authorization resource.",
+      "parameters": [
+        {
+          "@id": "css:dist/authorization/AuthAuxiliaryReader.jsonld#AuthAuxiliaryReader_reader",
+          "range": "css:dist/authorization/PermissionReader.jsonld#PermissionReader"
+        },
+        {
+          "@id": "css:dist/authorization/AuthAuxiliaryReader.jsonld#AuthAuxiliaryReader_authStrategy",
+          "range": "css:dist/http/auxiliary/AuxiliaryStrategy.jsonld#AuxiliaryStrategy"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/authorization/AuthAuxiliaryReader.jsonld#AuthAuxiliaryReader__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/authorization/AuthAuxiliaryReader.jsonld#AuthAuxiliaryReader__member_reader",
+          "memberFieldName": "reader"
+        },
+        {
+          "@id": "css:dist/authorization/AuthAuxiliaryReader.jsonld#AuthAuxiliaryReader__member_authStrategy",
+          "memberFieldName": "authStrategy"
+        },
+        {
+          "@id": "css:dist/authorization/AuthAuxiliaryReader.jsonld#AuthAuxiliaryReader__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/authorization/AuthAuxiliaryReader.jsonld#AuthAuxiliaryReader__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/authorization/AuthAuxiliaryReader.jsonld#AuthAuxiliaryReader__member_findAuth",
+          "memberFieldName": "findAuth"
+        },
+        {
+          "@id": "css:dist/authorization/AuthAuxiliaryReader.jsonld#AuthAuxiliaryReader__member_interpretControl",
+          "memberFieldName": "interpretControl"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/authorization/AuthAuxiliaryReader.jsonld#AuthAuxiliaryReader_reader"
+        },
+        {
+          "@id": "css:dist/authorization/AuthAuxiliaryReader.jsonld#AuthAuxiliaryReader_authStrategy"
+        }
+      ]
+    }
+  ]
+}

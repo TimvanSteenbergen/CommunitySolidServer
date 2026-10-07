@@ -1,0 +1,58 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/errors/RangeNotSatisfiedHttpError.jsonld#RangeNotSatisfiedHttpError",
+      "@type": "Class",
+      "requireElement": "RangeNotSatisfiedHttpError",
+      "comment": "An error thrown when the requested range is not supported.",
+      "parameters": [
+        {
+          "@id": "css:dist/util/errors/RangeNotSatisfiedHttpError.jsonld#RangeNotSatisfiedHttpError_message",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Optional, more specific, message."
+        },
+        {
+          "@id": "css:dist/util/errors/RangeNotSatisfiedHttpError.jsonld#RangeNotSatisfiedHttpError_options",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeWildcard"
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Optional error options."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/errors/RangeNotSatisfiedHttpError.jsonld#RangeNotSatisfiedHttpError__member_constructor",
+          "memberFieldName": "constructor"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/errors/RangeNotSatisfiedHttpError.jsonld#RangeNotSatisfiedHttpError_message"
+        },
+        {
+          "@id": "css:dist/util/errors/RangeNotSatisfiedHttpError.jsonld#RangeNotSatisfiedHttpError_options"
+        }
+      ]
+    }
+  ]
+}

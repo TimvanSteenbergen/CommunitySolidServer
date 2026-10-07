@@ -1,0 +1,78 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/patch/SparqlUpdatePatcher.jsonld#SparqlUpdatePatcher",
+      "@type": "Class",
+      "requireElement": "SparqlUpdatePatcher",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/storage/patch/RepresentationPatcher.jsonld#RepresentationPatcher",
+          "genericTypeInstances": [
+            "css:dist/http/representation/RdfDatasetRepresentation.jsonld#RdfDatasetRepresentation"
+          ]
+        }
+      ],
+      "comment": "Supports application/sparql-update PATCH requests on RDF resources.  Only DELETE/INSERT updates without variables are supported.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/patch/SparqlUpdatePatcher.jsonld#SparqlUpdatePatcher__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/storage/patch/SparqlUpdatePatcher.jsonld#SparqlUpdatePatcher__member_engine",
+          "memberFieldName": "engine"
+        },
+        {
+          "@id": "css:dist/storage/patch/SparqlUpdatePatcher.jsonld#SparqlUpdatePatcher__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/patch/SparqlUpdatePatcher.jsonld#SparqlUpdatePatcher__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/storage/patch/SparqlUpdatePatcher.jsonld#SparqlUpdatePatcher__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/storage/patch/SparqlUpdatePatcher.jsonld#SparqlUpdatePatcher__member_isSparqlUpdate",
+          "memberFieldName": "isSparqlUpdate"
+        },
+        {
+          "@id": "css:dist/storage/patch/SparqlUpdatePatcher.jsonld#SparqlUpdatePatcher__member_isDeleteInsert",
+          "memberFieldName": "isDeleteInsert"
+        },
+        {
+          "@id": "css:dist/storage/patch/SparqlUpdatePatcher.jsonld#SparqlUpdatePatcher__member_isComposite",
+          "memberFieldName": "isComposite"
+        },
+        {
+          "@id": "css:dist/storage/patch/SparqlUpdatePatcher.jsonld#SparqlUpdatePatcher__member_validateUpdate",
+          "memberFieldName": "validateUpdate"
+        },
+        {
+          "@id": "css:dist/storage/patch/SparqlUpdatePatcher.jsonld#SparqlUpdatePatcher__member_validateDeleteInsert",
+          "memberFieldName": "validateDeleteInsert"
+        },
+        {
+          "@id": "css:dist/storage/patch/SparqlUpdatePatcher.jsonld#SparqlUpdatePatcher__member_validateComposite",
+          "memberFieldName": "validateComposite"
+        },
+        {
+          "@id": "css:dist/storage/patch/SparqlUpdatePatcher.jsonld#SparqlUpdatePatcher__member_patch",
+          "memberFieldName": "patch"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

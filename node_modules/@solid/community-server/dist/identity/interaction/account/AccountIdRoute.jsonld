@@ -1,0 +1,46 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/account/AccountIdRoute.jsonld#BaseAccountIdRoute",
+      "@type": "Class",
+      "requireElement": "BaseAccountIdRoute",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/identity/interaction/routing/IdInteractionRoute.jsonld#IdInteractionRoute",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeWildcard"
+            },
+            {
+              "@type": "ParameterRangeLiteral",
+              "parameterRangeValueLiteral": "accountId"
+            }
+          ]
+        }
+      ],
+      "comment": "Implementation of an {@link AccountIdRoute} that adds the identifier relative to a base {@link InteractionRoute}.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/account/AccountIdRoute.jsonld#BaseAccountIdRoute_base",
+          "range": "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/account/AccountIdRoute.jsonld#BaseAccountIdRoute__member_constructor",
+          "memberFieldName": "constructor"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/account/AccountIdRoute.jsonld#BaseAccountIdRoute_base"
+        }
+      ]
+    }
+  ]
+}

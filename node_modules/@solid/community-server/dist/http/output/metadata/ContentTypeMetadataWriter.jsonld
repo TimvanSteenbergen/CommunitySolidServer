@@ -1,0 +1,25 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/output/metadata/ContentTypeMetadataWriter.jsonld#ContentTypeMetadataWriter",
+      "@type": "Class",
+      "requireElement": "ContentTypeMetadataWriter",
+      "extends": [
+        "css:dist/http/output/metadata/MetadataWriter.jsonld#MetadataWriter"
+      ],
+      "comment": "Adds the `Content-Type` header containing value and parameters (if available).",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/output/metadata/ContentTypeMetadataWriter.jsonld#ContentTypeMetadataWriter__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

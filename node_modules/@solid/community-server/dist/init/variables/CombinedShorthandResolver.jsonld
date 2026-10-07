@@ -1,0 +1,65 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/init/variables/CombinedShorthandResolver.jsonld#CombinedShorthandResolver",
+      "@type": "Class",
+      "requireElement": "CombinedShorthandResolver",
+      "extends": [
+        "css:dist/init/variables/ShorthandResolver.jsonld#ShorthandResolver"
+      ],
+      "comment": "Generates variable values by running a set of {@link ShorthandExtractor}s on the input.",
+      "parameters": [
+        {
+          "@id": "css:dist/init/variables/CombinedShorthandResolver.jsonld#CombinedShorthandResolver_resolvers",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "css:dist/init/variables/CombinedShorthandResolver.jsonld#CombinedShorthandResolver_resolvers_key"
+              },
+              {
+                "@id": "css:dist/init/variables/CombinedShorthandResolver.jsonld#CombinedShorthandResolver_resolvers_value",
+                "range": "css:dist/init/variables/extractors/ShorthandExtractor.jsonld#ShorthandExtractor"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/init/variables/CombinedShorthandResolver.jsonld#CombinedShorthandResolver__member_resolvers",
+          "memberFieldName": "resolvers",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/init/variables/CombinedShorthandResolver.jsonld#CombinedShorthandResolver__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/init/variables/CombinedShorthandResolver.jsonld#CombinedShorthandResolver__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/init/variables/CombinedShorthandResolver.jsonld#CombinedShorthandResolver_resolvers__constructorArgument",
+          "fields": [
+            {
+              "collectEntries": "css:dist/init/variables/CombinedShorthandResolver.jsonld#CombinedShorthandResolver_resolvers",
+              "key": "css:dist/init/variables/CombinedShorthandResolver.jsonld#CombinedShorthandResolver_resolvers_key",
+              "value": {
+                "@id": "css:dist/init/variables/CombinedShorthandResolver.jsonld#CombinedShorthandResolver_resolvers_value"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

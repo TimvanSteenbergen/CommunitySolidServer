@@ -1,0 +1,100 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/init/AppRunner.jsonld#AppRunner",
+      "@type": "Class",
+      "requireElement": "AppRunner",
+      "comment": "A class that can be used to instantiate and start a server based on a Component.js configuration.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/init/AppRunner.jsonld#AppRunner__member_logger",
+          "memberFieldName": "logger"
+        },
+        {
+          "@id": "css:dist/init/AppRunner.jsonld#AppRunner__member_run",
+          "memberFieldName": "run"
+        },
+        {
+          "@id": "css:dist/init/AppRunner.jsonld#AppRunner__member_create",
+          "memberFieldName": "create"
+        },
+        {
+          "@id": "css:dist/init/AppRunner.jsonld#AppRunner__member_runCliSync",
+          "memberFieldName": "runCliSync"
+        },
+        {
+          "@id": "css:dist/init/AppRunner.jsonld#AppRunner__member_runCli",
+          "memberFieldName": "runCli"
+        },
+        {
+          "@id": "css:dist/init/AppRunner.jsonld#AppRunner__member_createCli",
+          "memberFieldName": "createCli"
+        },
+        {
+          "@id": "css:dist/init/AppRunner.jsonld#AppRunner__member_getPackageSettings",
+          "memberFieldName": "getPackageSettings"
+        },
+        {
+          "@id": "css:dist/init/AppRunner.jsonld#AppRunner__member_createComponentsManager",
+          "memberFieldName": "createComponentsManager"
+        },
+        {
+          "@id": "css:dist/init/AppRunner.jsonld#AppRunner__member_createCliResolver",
+          "memberFieldName": "createCliResolver"
+        },
+        {
+          "@id": "css:dist/init/AppRunner.jsonld#AppRunner__member_extractShorthand",
+          "memberFieldName": "extractShorthand"
+        },
+        {
+          "@id": "css:dist/init/AppRunner.jsonld#AppRunner__member_resolveShorthand",
+          "memberFieldName": "resolveShorthand"
+        },
+        {
+          "@id": "css:dist/init/AppRunner.jsonld#AppRunner__member_createApp",
+          "memberFieldName": "createApp"
+        },
+        {
+          "@id": "css:dist/init/AppRunner.jsonld#AppRunner__member_resolveError",
+          "memberFieldName": "resolveError"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "css:dist/init/AppRunner.jsonld#AppRunnerInput",
+      "@type": "AbstractClass",
+      "requireElement": "AppRunnerInput",
+      "comment": "Parameters that can be used to instantiate the server through code.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/init/AppRunner.jsonld#AppRunnerInput__member_loaderProperties",
+          "memberFieldName": "loaderProperties"
+        },
+        {
+          "@id": "css:dist/init/AppRunner.jsonld#AppRunnerInput__member_config",
+          "memberFieldName": "config"
+        },
+        {
+          "@id": "css:dist/init/AppRunner.jsonld#AppRunnerInput__member_variableBindings",
+          "memberFieldName": "variableBindings"
+        },
+        {
+          "@id": "css:dist/init/AppRunner.jsonld#AppRunnerInput__member_shorthand",
+          "memberFieldName": "shorthand"
+        },
+        {
+          "@id": "css:dist/init/AppRunner.jsonld#AppRunnerInput__member_argv",
+          "memberFieldName": "argv"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

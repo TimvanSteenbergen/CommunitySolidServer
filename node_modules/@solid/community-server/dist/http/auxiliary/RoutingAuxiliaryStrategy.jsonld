@@ -1,0 +1,66 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/auxiliary/RoutingAuxiliaryStrategy.jsonld#RoutingAuxiliaryStrategy",
+      "@type": "Class",
+      "requireElement": "RoutingAuxiliaryStrategy",
+      "extends": [
+        "css:dist/http/auxiliary/RoutingAuxiliaryIdentifierStrategy.jsonld#RoutingAuxiliaryIdentifierStrategy",
+        "css:dist/http/auxiliary/AuxiliaryStrategy.jsonld#AuxiliaryStrategy"
+      ],
+      "comment": "An {@link AuxiliaryStrategy} that combines multiple AuxiliaryStrategies into one. Uses `isAuxiliaryIdentifier` to know which strategy to call for which call.  `addMetadata` will either call all strategies if the input is the subject identifier, or only the matching strategy if the input is an auxiliary identifier.",
+      "parameters": [
+        {
+          "@id": "css:dist/http/auxiliary/RoutingAuxiliaryStrategy.jsonld#RoutingAuxiliaryStrategy_sources",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": "css:dist/http/auxiliary/AuxiliaryStrategy.jsonld#AuxiliaryStrategy"
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/auxiliary/RoutingAuxiliaryStrategy.jsonld#RoutingAuxiliaryStrategy__member_sources",
+          "memberFieldName": "sources",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": "css:dist/http/auxiliary/AuxiliaryStrategy.jsonld#AuxiliaryStrategy"
+          }
+        },
+        {
+          "@id": "css:dist/http/auxiliary/RoutingAuxiliaryStrategy.jsonld#RoutingAuxiliaryStrategy__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/RoutingAuxiliaryStrategy.jsonld#RoutingAuxiliaryStrategy__member_usesOwnAuthorization",
+          "memberFieldName": "usesOwnAuthorization"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/RoutingAuxiliaryStrategy.jsonld#RoutingAuxiliaryStrategy__member_isRequiredInRoot",
+          "memberFieldName": "isRequiredInRoot"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/RoutingAuxiliaryStrategy.jsonld#RoutingAuxiliaryStrategy__member_addMetadata",
+          "memberFieldName": "addMetadata"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/RoutingAuxiliaryStrategy.jsonld#RoutingAuxiliaryStrategy__member_validate",
+          "memberFieldName": "validate"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/RoutingAuxiliaryStrategy.jsonld#RoutingAuxiliaryStrategy__member_getMatchingSource",
+          "memberFieldName": "getMatchingSource"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/auxiliary/RoutingAuxiliaryStrategy.jsonld#RoutingAuxiliaryStrategy_sources"
+        }
+      ]
+    }
+  ]
+}

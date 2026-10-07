@@ -1,0 +1,109 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/storage/ClientIdAdapterFactory.jsonld#ClientIdAdapter",
+      "@type": "Class",
+      "requireElement": "ClientIdAdapter",
+      "extends": [
+        "css:dist/identity/storage/PassthroughAdapterFactory.jsonld#PassthroughAdapter"
+      ],
+      "comment": "This {@link Adapter} redirects the `find` call to its source adapter. In case no client data was found in the source for the given Client ID, this class will do an HTTP GET request to that Client ID. If the result is a valid Client ID document, that will be returned instead.  See https://solidproject.org/TR/2022/oidc-20220328#clientids-document.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/storage/ClientIdAdapterFactory.jsonld#ClientIdAdapter_name",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/identity/storage/ClientIdAdapterFactory.jsonld#ClientIdAdapter_source",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/identity/storage/ClientIdAdapterFactory.jsonld#ClientIdAdapter_converter",
+          "range": "css:dist/storage/conversion/RepresentationConverter.jsonld#RepresentationConverter"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/storage/ClientIdAdapterFactory.jsonld#ClientIdAdapter__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/identity/storage/ClientIdAdapterFactory.jsonld#ClientIdAdapter__member_converter",
+          "memberFieldName": "converter"
+        },
+        {
+          "@id": "css:dist/identity/storage/ClientIdAdapterFactory.jsonld#ClientIdAdapter__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/storage/ClientIdAdapterFactory.jsonld#ClientIdAdapter__member_find",
+          "memberFieldName": "find"
+        },
+        {
+          "@id": "css:dist/identity/storage/ClientIdAdapterFactory.jsonld#ClientIdAdapter__member_parseRdfClientId",
+          "memberFieldName": "parseRdfClientId"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/storage/ClientIdAdapterFactory.jsonld#ClientIdAdapter_name"
+        },
+        {
+          "@id": "css:dist/identity/storage/ClientIdAdapterFactory.jsonld#ClientIdAdapter_source"
+        },
+        {
+          "@id": "css:dist/identity/storage/ClientIdAdapterFactory.jsonld#ClientIdAdapter_converter"
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/identity/storage/ClientIdAdapterFactory.jsonld#ClientIdAdapterFactory",
+      "@type": "Class",
+      "requireElement": "ClientIdAdapterFactory",
+      "extends": [
+        "css:dist/identity/storage/PassthroughAdapterFactory.jsonld#PassthroughAdapterFactory"
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/identity/storage/ClientIdAdapterFactory.jsonld#ClientIdAdapterFactory_source",
+          "range": "css:dist/identity/storage/AdapterFactory.jsonld#AdapterFactory"
+        },
+        {
+          "@id": "css:dist/identity/storage/ClientIdAdapterFactory.jsonld#ClientIdAdapterFactory_converter",
+          "range": "css:dist/storage/conversion/RepresentationConverter.jsonld#RepresentationConverter"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/storage/ClientIdAdapterFactory.jsonld#ClientIdAdapterFactory__member_converter",
+          "memberFieldName": "converter"
+        },
+        {
+          "@id": "css:dist/identity/storage/ClientIdAdapterFactory.jsonld#ClientIdAdapterFactory__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/storage/ClientIdAdapterFactory.jsonld#ClientIdAdapterFactory__member_createStorageAdapter",
+          "memberFieldName": "createStorageAdapter"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/storage/ClientIdAdapterFactory.jsonld#ClientIdAdapterFactory_source"
+        },
+        {
+          "@id": "css:dist/identity/storage/ClientIdAdapterFactory.jsonld#ClientIdAdapterFactory_converter"
+        }
+      ]
+    }
+  ]
+}

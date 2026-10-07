@@ -1,0 +1,8 @@
+<http://localhost:3000/test/images/4a4348ce-3d89-46be-b27b-bbb375a8f69e.ttl> a <https://schema.org/ImageObject>;
+    <https://schema.org/contentUrl> <http://localhost:3000/test/images/4a4348ce-3d89-46be-b27b-bbb375a8f69e.png>;
+    <https://schema.org/caption> "AD";
+    <https://schema.org/description> "access denied";
+    <https://schema.org/width> 1709;
+    <https://schema.org/height> 466;
+    <https://schema.org/encodingFormat> "image/png";
+    <https://schema.org/uploadDate> "2026-09-29T10:12:00.000Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>.

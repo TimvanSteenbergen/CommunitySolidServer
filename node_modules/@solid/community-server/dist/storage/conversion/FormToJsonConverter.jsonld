@@ -1,0 +1,29 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/conversion/FormToJsonConverter.jsonld#FormToJsonConverter",
+      "@type": "Class",
+      "requireElement": "FormToJsonConverter",
+      "extends": [
+        "css:dist/storage/conversion/BaseTypedRepresentationConverter.jsonld#BaseTypedRepresentationConverter"
+      ],
+      "comment": "Converts application/x-www-form-urlencoded data to application/json. Due to the nature of form data, the result will be a simple key/value JSON object.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/conversion/FormToJsonConverter.jsonld#FormToJsonConverter__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/conversion/FormToJsonConverter.jsonld#FormToJsonConverter__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

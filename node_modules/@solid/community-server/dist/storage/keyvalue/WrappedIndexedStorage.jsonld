@@ -1,0 +1,224 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage",
+      "@type": "Class",
+      "requireElement": "WrappedIndexedStorage",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/storage/keyvalue/IndexedStorage.jsonld#IndexedStorage",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__generic_T"
+            }
+          ]
+        }
+      ],
+      "comment": "An {@link IndexedStorage} that makes use of 2 {@link KeyValueStorage}s to implement the interface. Due to being limited by key/value storages, there are some restrictions on the allowed type definitions:  * There needs to be exactly 1 type with no references to other types. * All other types need to have exactly 1 reference to another type. * Types can't reference each other to create a cycle of references.  All of the above to create a tree-like structure of references. Such a tree is then stored in one of the storages. The other storage is used to store all indexes that are used to find the correct tree object when solving queries.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__generic_T",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage_valueStorage",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+            "genericTypeInstances": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage_indexStorage",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+            "genericTypeInstances": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": "xsd:string"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_valueStorage",
+          "memberFieldName": "valueStorage"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_indexStorage",
+          "memberFieldName": "indexStorage"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_indexes",
+          "memberFieldName": "indexes"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_validDefinition",
+          "memberFieldName": "validDefinition"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_rootTypeVar",
+          "memberFieldName": "rootTypeVar"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_relations",
+          "memberFieldName": "relations"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_defineType",
+          "memberFieldName": "defineType"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_createIndex",
+          "memberFieldName": "createIndex"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_has",
+          "memberFieldName": "has"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_get",
+          "memberFieldName": "get"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_create",
+          "memberFieldName": "create"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_set",
+          "memberFieldName": "set"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_setField",
+          "memberFieldName": "setField"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_delete",
+          "memberFieldName": "delete"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_findIds",
+          "memberFieldName": "findIds"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_find",
+          "memberFieldName": "find"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_entries",
+          "memberFieldName": "entries"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_toTypeObject",
+          "memberFieldName": "toTypeObject"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_rootType",
+          "memberFieldName": "rootType"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_getRoot",
+          "memberFieldName": "getRoot"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_getPathToType",
+          "memberFieldName": "getPathToType"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_getPathRecords",
+          "memberFieldName": "getPathRecords"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_getChildObjects",
+          "memberFieldName": "getChildObjects"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_getContainingRecord",
+          "memberFieldName": "getContainingRecord"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_updateValue",
+          "memberFieldName": "updateValue"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_updateValue",
+          "memberFieldName": "updateValue"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_getChildRelations",
+          "memberFieldName": "getChildRelations"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_getParentRelation",
+          "memberFieldName": "getParentRelation"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_validateDefinition",
+          "memberFieldName": "validateDefinition"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_findIndexedRoots",
+          "memberFieldName": "findIndexedRoots"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_solveQuery",
+          "memberFieldName": "solveQuery"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_getIndexKey",
+          "memberFieldName": "getIndexKey"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_updateDeepTypeIndex",
+          "memberFieldName": "updateDeepTypeIndex"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_updateTypeIndex",
+          "memberFieldName": "updateTypeIndex"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage__member_updateKeyIndex",
+          "memberFieldName": "updateKeyIndex"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage_valueStorage"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedIndexedStorage.jsonld#WrappedIndexedStorage_indexStorage"
+        }
+      ]
+    }
+  ]
+}

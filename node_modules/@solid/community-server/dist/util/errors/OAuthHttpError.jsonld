@@ -1,0 +1,197 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/errors/OAuthHttpError.jsonld#OAuthHttpError",
+      "@type": "Class",
+      "requireElement": "OAuthHttpError",
+      "extends": [
+        "css:dist/util/errors/HttpError.jsonld#HttpError"
+      ],
+      "comment": "Represents on OAuth error that is being thrown. OAuth error responses have additional fields that need to be present in the JSON response, as described in RFC 6749, §4.1.2.1.",
+      "parameters": [
+        {
+          "@id": "css:dist/util/errors/OAuthHttpError.jsonld#OAuthHttpError_mandatoryFields_error",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/util/errors/OAuthHttpError.jsonld#OAuthHttpError_name",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Error name. Useful for logging and stack tracing."
+        },
+        {
+          "@id": "css:dist/util/errors/OAuthHttpError.jsonld#OAuthHttpError_statusCode",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "HTTP status code needed for the HTTP response."
+        },
+        {
+          "@id": "css:dist/util/errors/OAuthHttpError.jsonld#OAuthHttpError_message",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Error message."
+        },
+        {
+          "@id": "css:dist/util/errors/OAuthHttpError.jsonld#OAuthHttpError_options",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeWildcard"
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Optional options."
+        },
+        {
+          "@id": "css:dist/util/errors/OAuthHttpError.jsonld#OAuthHttpError_mandatoryFields_error_description",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/util/errors/OAuthHttpError.jsonld#OAuthHttpError_mandatoryFields_scope",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/util/errors/OAuthHttpError.jsonld#OAuthHttpError_mandatoryFields_state",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/errors/OAuthHttpError.jsonld#OAuthHttpError__member_mandatoryFields",
+          "memberFieldName": "mandatoryFields",
+          "range": "css:dist/util/errors/OAuthHttpError.jsonld#OAuthErrorFields"
+        },
+        {
+          "@id": "css:dist/util/errors/OAuthHttpError.jsonld#OAuthHttpError__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/util/errors/OAuthHttpError.jsonld#OAuthHttpError__member_isInstance",
+          "memberFieldName": "isInstance"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/errors/OAuthHttpError.jsonld#OAuthHttpError_mandatoryFields__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "error",
+              "value": {
+                "@id": "css:dist/util/errors/OAuthHttpError.jsonld#OAuthHttpError_mandatoryFields_error"
+              }
+            },
+            {
+              "keyRaw": "error_description",
+              "value": {
+                "@id": "css:dist/util/errors/OAuthHttpError.jsonld#OAuthHttpError_mandatoryFields_error_description"
+              }
+            },
+            {
+              "keyRaw": "scope",
+              "value": {
+                "@id": "css:dist/util/errors/OAuthHttpError.jsonld#OAuthHttpError_mandatoryFields_scope"
+              }
+            },
+            {
+              "keyRaw": "state",
+              "value": {
+                "@id": "css:dist/util/errors/OAuthHttpError.jsonld#OAuthHttpError_mandatoryFields_state"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "css:dist/util/errors/OAuthHttpError.jsonld#OAuthHttpError_name"
+        },
+        {
+          "@id": "css:dist/util/errors/OAuthHttpError.jsonld#OAuthHttpError_statusCode"
+        },
+        {
+          "@id": "css:dist/util/errors/OAuthHttpError.jsonld#OAuthHttpError_message"
+        },
+        {
+          "@id": "css:dist/util/errors/OAuthHttpError.jsonld#OAuthHttpError_options"
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/util/errors/OAuthHttpError.jsonld#OAuthErrorFields",
+      "@type": "AbstractClass",
+      "requireElement": "OAuthErrorFields",
+      "comment": "These are the fields that can occur in an OAuth error response as described in RFC 6749, §4.1.2.1. https://datatracker.ietf.org/doc/html/rfc6749#section-4.1.2.1  This interface is identical to the ErrorOut interface of the `oidc-provider` library, but having our own version reduces the part of the codebase that is dependent on that library.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/errors/OAuthHttpError.jsonld#OAuthErrorFields__member_error",
+          "memberFieldName": "error"
+        },
+        {
+          "@id": "css:dist/util/errors/OAuthHttpError.jsonld#OAuthErrorFields__member_error_description",
+          "memberFieldName": "error_description"
+        },
+        {
+          "@id": "css:dist/util/errors/OAuthHttpError.jsonld#OAuthErrorFields__member_scope",
+          "memberFieldName": "scope"
+        },
+        {
+          "@id": "css:dist/util/errors/OAuthHttpError.jsonld#OAuthErrorFields__member_state",
+          "memberFieldName": "state"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

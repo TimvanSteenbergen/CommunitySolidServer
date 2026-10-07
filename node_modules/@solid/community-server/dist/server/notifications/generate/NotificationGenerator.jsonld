@@ -1,0 +1,26 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/notifications/generate/NotificationGenerator.jsonld#NotificationGenerator",
+      "@type": "AbstractClass",
+      "requireElement": "NotificationGenerator",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            "css:dist/server/notifications/NotificationHandler.jsonld#NotificationHandlerInput",
+            "css:dist/server/notifications/Notification.jsonld#Notification"
+          ]
+        }
+      ],
+      "comment": "Creates a {@link Notification} based on the provided input.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

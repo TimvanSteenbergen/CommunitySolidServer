@@ -1,0 +1,53 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/ldp/PatchOperationHandler.jsonld#PatchOperationHandler",
+      "@type": "Class",
+      "requireElement": "PatchOperationHandler",
+      "extends": [
+        "css:dist/http/ldp/OperationHandler.jsonld#OperationHandler"
+      ],
+      "comment": "Handles PATCH {@link Operation}s. Calls the modifyResource function from a {@link ResourceStore}.",
+      "parameters": [
+        {
+          "@id": "css:dist/http/ldp/PatchOperationHandler.jsonld#PatchOperationHandler_store",
+          "range": "css:dist/storage/ResourceStore.jsonld#ResourceStore"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/ldp/PatchOperationHandler.jsonld#PatchOperationHandler__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/http/ldp/PatchOperationHandler.jsonld#PatchOperationHandler__member_store",
+          "memberFieldName": "store"
+        },
+        {
+          "@id": "css:dist/http/ldp/PatchOperationHandler.jsonld#PatchOperationHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/ldp/PatchOperationHandler.jsonld#PatchOperationHandler__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/http/ldp/PatchOperationHandler.jsonld#PatchOperationHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/ldp/PatchOperationHandler.jsonld#PatchOperationHandler_store"
+        }
+      ]
+    }
+  ]
+}

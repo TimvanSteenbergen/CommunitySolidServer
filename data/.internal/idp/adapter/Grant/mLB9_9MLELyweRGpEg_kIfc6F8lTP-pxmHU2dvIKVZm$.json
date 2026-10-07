@@ -1,0 +1,1 @@
+{"key":"idp/adapter/Grant/mLB9_9MLELyweRGpEg_kIfc6F8lTP-pxmHU2dvIKVZm","payload":{"expires":"2026-10-21T10:55:08.502Z","payload":{"iat":1791370508,"exp":1792580108,"accountId":"http://localhost:3000/test/profile/card#me","clientId":"ljsNE4VCq2RppwlLzWD_b","kind":"Grant","jti":"mLB9_9MLELyweRGpEg_kIfc6F8lTP-pxmHU2dvIKVZm","openid":{"scope":"openid offline_access webid"}}}}

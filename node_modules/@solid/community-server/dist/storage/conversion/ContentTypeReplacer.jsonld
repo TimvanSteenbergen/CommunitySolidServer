@@ -1,0 +1,83 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/conversion/ContentTypeReplacer.jsonld#ContentTypeReplacer",
+      "@type": "Class",
+      "requireElement": "ContentTypeReplacer",
+      "extends": [
+        "css:dist/storage/conversion/TypedRepresentationConverter.jsonld#TypedRepresentationConverter"
+      ],
+      "comment": "A {@link RepresentationConverter} that changes the content type but does not alter the representation.  Useful for when a content type is binary-compatible with another one; for instance, all JSON-LD files are valid JSON files.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/conversion/ContentTypeReplacer.jsonld#ContentTypeReplacer_replacements",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "css:dist/storage/conversion/ContentTypeReplacer.jsonld#ContentTypeReplacer_replacements_key"
+              },
+              {
+                "@id": "css:dist/storage/conversion/ContentTypeReplacer.jsonld#ContentTypeReplacer_replacements_value",
+                "range": "xsd:string"
+              }
+            ]
+          },
+          "comment": "Map of content type patterns and content types to replace them by."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/conversion/ContentTypeReplacer.jsonld#ContentTypeReplacer__member_contentTypeMap",
+          "memberFieldName": "contentTypeMap"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ContentTypeReplacer.jsonld#ContentTypeReplacer__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ContentTypeReplacer.jsonld#ContentTypeReplacer__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ContentTypeReplacer.jsonld#ContentTypeReplacer__member_getOutputTypes",
+          "memberFieldName": "getOutputTypes"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ContentTypeReplacer.jsonld#ContentTypeReplacer__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ContentTypeReplacer.jsonld#ContentTypeReplacer__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ContentTypeReplacer.jsonld#ContentTypeReplacer__member_handleSafe",
+          "memberFieldName": "handleSafe"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ContentTypeReplacer.jsonld#ContentTypeReplacer__member_getReplacementType",
+          "memberFieldName": "getReplacementType"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/conversion/ContentTypeReplacer.jsonld#ContentTypeReplacer_replacements__constructorArgument",
+          "fields": [
+            {
+              "collectEntries": "css:dist/storage/conversion/ContentTypeReplacer.jsonld#ContentTypeReplacer_replacements",
+              "key": "css:dist/storage/conversion/ContentTypeReplacer.jsonld#ContentTypeReplacer_replacements_key",
+              "value": {
+                "@id": "css:dist/storage/conversion/ContentTypeReplacer.jsonld#ContentTypeReplacer_replacements_value"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

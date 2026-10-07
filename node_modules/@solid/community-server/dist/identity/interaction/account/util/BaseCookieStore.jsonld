@@ -1,0 +1,80 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/account/util/BaseCookieStore.jsonld#BaseCookieStore",
+      "@type": "Class",
+      "requireElement": "BaseCookieStore",
+      "extends": [
+        "css:dist/identity/interaction/account/util/CookieStore.jsonld#CookieStore"
+      ],
+      "comment": "A {@link CookieStore} that uses an {@link ExpiringStorage} to keep track of the stored cookies. Cookies have a specified time to live in seconds, default is 14 days, after which they will be removed.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseCookieStore.jsonld#BaseCookieStore_ttl",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseCookieStore.jsonld#BaseCookieStore_storage",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/ExpiringStorage.jsonld#ExpiringStorage",
+            "genericTypeInstances": [
+              "xsd:string",
+              "xsd:string"
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseCookieStore.jsonld#BaseCookieStore__member_storage",
+          "memberFieldName": "storage"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseCookieStore.jsonld#BaseCookieStore__member_ttl",
+          "memberFieldName": "ttl"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseCookieStore.jsonld#BaseCookieStore__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseCookieStore.jsonld#BaseCookieStore__member_generate",
+          "memberFieldName": "generate"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseCookieStore.jsonld#BaseCookieStore__member_get",
+          "memberFieldName": "get"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseCookieStore.jsonld#BaseCookieStore__member_refresh",
+          "memberFieldName": "refresh"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseCookieStore.jsonld#BaseCookieStore__member_delete",
+          "memberFieldName": "delete"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseCookieStore.jsonld#BaseCookieStore_storage"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseCookieStore.jsonld#BaseCookieStore_ttl"
+        }
+      ]
+    }
+  ]
+}

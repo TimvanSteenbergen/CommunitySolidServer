@@ -1,0 +1,81 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/templates/ChainedTemplateEngine.jsonld#ChainedTemplateEngine",
+      "@type": "Class",
+      "requireElement": "ChainedTemplateEngine",
+      "comment": "Calls the given array of {@link TemplateEngine}s in the order they appear, feeding the output of one into the input of the next.  The first engine will be called with the provided contents and template parameters. All subsequent engines will be called with no template parameter. Contents will still be passed along and another entry will be added for the body of the previous output.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/util/templates/ChainedTemplateEngine.jsonld#ChainedTemplateEngine__generic_T",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/util/templates/ChainedTemplateEngine.jsonld#ChainedTemplateEngine_engines",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": {
+              "@type": "ParameterRangeWildcard"
+            }
+          },
+          "comment": "Engines will be executed in the same order as the array."
+        },
+        {
+          "@id": "css:dist/util/templates/ChainedTemplateEngine.jsonld#ChainedTemplateEngine_renderedName",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "The name of the key used to pass the body of one engine to the next."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/templates/ChainedTemplateEngine.jsonld#ChainedTemplateEngine__member_firstEngine",
+          "memberFieldName": "firstEngine"
+        },
+        {
+          "@id": "css:dist/util/templates/ChainedTemplateEngine.jsonld#ChainedTemplateEngine__member_chainedEngines",
+          "memberFieldName": "chainedEngines"
+        },
+        {
+          "@id": "css:dist/util/templates/ChainedTemplateEngine.jsonld#ChainedTemplateEngine__member_renderedName",
+          "memberFieldName": "renderedName"
+        },
+        {
+          "@id": "css:dist/util/templates/ChainedTemplateEngine.jsonld#ChainedTemplateEngine__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/util/templates/ChainedTemplateEngine.jsonld#ChainedTemplateEngine__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/util/templates/ChainedTemplateEngine.jsonld#ChainedTemplateEngine__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/templates/ChainedTemplateEngine.jsonld#ChainedTemplateEngine_engines"
+        },
+        {
+          "@id": "css:dist/util/templates/ChainedTemplateEngine.jsonld#ChainedTemplateEngine_renderedName"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,174 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/AccountInitializer.jsonld#AccountInitializer",
+      "@type": "Class",
+      "requireElement": "AccountInitializer",
+      "extends": [
+        "css:dist/init/Initializer.jsonld#Initializer"
+      ],
+      "comment": "Initializes an account with email/password login and a pod with the provided name.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/AccountInitializer.jsonld#AccountInitializer_args_accountStore",
+          "range": "css:dist/identity/interaction/account/util/AccountStore.jsonld#AccountStore",
+          "comment": "Creates the accounts."
+        },
+        {
+          "@id": "css:dist/identity/AccountInitializer.jsonld#AccountInitializer_args_passwordStore",
+          "range": "css:dist/identity/interaction/password/util/PasswordStore.jsonld#PasswordStore",
+          "comment": "Adds the login methods."
+        },
+        {
+          "@id": "css:dist/identity/AccountInitializer.jsonld#AccountInitializer_args_podCreator",
+          "range": "css:dist/identity/interaction/pod/util/PodCreator.jsonld#PodCreator",
+          "comment": "Creates the pods."
+        },
+        {
+          "@id": "css:dist/identity/AccountInitializer.jsonld#AccountInitializer_args_email",
+          "range": "xsd:string",
+          "comment": "Email address for the account login."
+        },
+        {
+          "@id": "css:dist/identity/AccountInitializer.jsonld#AccountInitializer_args_password",
+          "range": "xsd:string",
+          "comment": "Password for the account login."
+        },
+        {
+          "@id": "css:dist/identity/AccountInitializer.jsonld#AccountInitializer_args_name",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Name to use for the pod. If undefined the pod will be made in the root of the server."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/AccountInitializer.jsonld#AccountInitializer__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/identity/AccountInitializer.jsonld#AccountInitializer__member_accountStore",
+          "memberFieldName": "accountStore"
+        },
+        {
+          "@id": "css:dist/identity/AccountInitializer.jsonld#AccountInitializer__member_passwordStore",
+          "memberFieldName": "passwordStore"
+        },
+        {
+          "@id": "css:dist/identity/AccountInitializer.jsonld#AccountInitializer__member_podCreator",
+          "memberFieldName": "podCreator"
+        },
+        {
+          "@id": "css:dist/identity/AccountInitializer.jsonld#AccountInitializer__member_email",
+          "memberFieldName": "email"
+        },
+        {
+          "@id": "css:dist/identity/AccountInitializer.jsonld#AccountInitializer__member_password",
+          "memberFieldName": "password"
+        },
+        {
+          "@id": "css:dist/identity/AccountInitializer.jsonld#AccountInitializer__member_name",
+          "memberFieldName": "name"
+        },
+        {
+          "@id": "css:dist/identity/AccountInitializer.jsonld#AccountInitializer__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/AccountInitializer.jsonld#AccountInitializer__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/AccountInitializer.jsonld#AccountInitializer_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "accountStore",
+              "value": {
+                "@id": "css:dist/identity/AccountInitializer.jsonld#AccountInitializer_args_accountStore"
+              }
+            },
+            {
+              "keyRaw": "passwordStore",
+              "value": {
+                "@id": "css:dist/identity/AccountInitializer.jsonld#AccountInitializer_args_passwordStore"
+              }
+            },
+            {
+              "keyRaw": "podCreator",
+              "value": {
+                "@id": "css:dist/identity/AccountInitializer.jsonld#AccountInitializer_args_podCreator"
+              }
+            },
+            {
+              "keyRaw": "email",
+              "value": {
+                "@id": "css:dist/identity/AccountInitializer.jsonld#AccountInitializer_args_email"
+              }
+            },
+            {
+              "keyRaw": "password",
+              "value": {
+                "@id": "css:dist/identity/AccountInitializer.jsonld#AccountInitializer_args_password"
+              }
+            },
+            {
+              "keyRaw": "name",
+              "value": {
+                "@id": "css:dist/identity/AccountInitializer.jsonld#AccountInitializer_args_name"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/identity/AccountInitializer.jsonld#AccountInitializerArgs",
+      "@type": "AbstractClass",
+      "requireElement": "AccountInitializerArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/AccountInitializer.jsonld#AccountInitializerArgs__member_accountStore",
+          "memberFieldName": "accountStore"
+        },
+        {
+          "@id": "css:dist/identity/AccountInitializer.jsonld#AccountInitializerArgs__member_passwordStore",
+          "memberFieldName": "passwordStore"
+        },
+        {
+          "@id": "css:dist/identity/AccountInitializer.jsonld#AccountInitializerArgs__member_podCreator",
+          "memberFieldName": "podCreator"
+        },
+        {
+          "@id": "css:dist/identity/AccountInitializer.jsonld#AccountInitializerArgs__member_email",
+          "memberFieldName": "email"
+        },
+        {
+          "@id": "css:dist/identity/AccountInitializer.jsonld#AccountInitializerArgs__member_password",
+          "memberFieldName": "password"
+        },
+        {
+          "@id": "css:dist/identity/AccountInitializer.jsonld#AccountInitializerArgs__member_name",
+          "memberFieldName": "name"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

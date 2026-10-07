@@ -1,0 +1,87 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/handlers/SequenceHandler.jsonld#SequenceHandler",
+      "@type": "Class",
+      "requireElement": "SequenceHandler",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/util/handlers/SequenceHandler.jsonld#SequenceHandler__generic_TIn"
+            },
+            {
+              "@type": "ParameterRangeUnion",
+              "parameterRangeElements": [
+                {
+                  "@type": "ParameterRangeGenericTypeReference",
+                  "parameterRangeGenericType": "css:dist/util/handlers/SequenceHandler.jsonld#SequenceHandler__generic_TOut"
+                },
+                {
+                  "@type": "ParameterRangeUndefined"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "comment": "A composite handler that will try to run all supporting handlers sequentially and return the value of the last supported handler. The `canHandle` check of this handler will always succeed.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/util/handlers/SequenceHandler.jsonld#SequenceHandler__generic_TIn"
+        },
+        {
+          "@id": "css:dist/util/handlers/SequenceHandler.jsonld#SequenceHandler__generic_TOut"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/util/handlers/SequenceHandler.jsonld#SequenceHandler_handlers",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": {
+              "@type": "ParameterRangeGenericComponent",
+              "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+              "genericTypeInstances": [
+                {
+                  "@type": "ParameterRangeGenericTypeReference",
+                  "parameterRangeGenericType": "css:dist/util/handlers/SequenceHandler.jsonld#SequenceHandler__generic_TIn"
+                },
+                {
+                  "@type": "ParameterRangeGenericTypeReference",
+                  "parameterRangeGenericType": "css:dist/util/handlers/SequenceHandler.jsonld#SequenceHandler__generic_TOut"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/handlers/SequenceHandler.jsonld#SequenceHandler__member_handlers",
+          "memberFieldName": "handlers"
+        },
+        {
+          "@id": "css:dist/util/handlers/SequenceHandler.jsonld#SequenceHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/util/handlers/SequenceHandler.jsonld#SequenceHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/handlers/SequenceHandler.jsonld#SequenceHandler_handlers"
+        }
+      ]
+    }
+  ]
+}

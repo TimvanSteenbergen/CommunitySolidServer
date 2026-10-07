@@ -1,0 +1,117 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/authorization/WebAclReader.jsonld#WebAclReader",
+      "@type": "Class",
+      "requireElement": "WebAclReader",
+      "extends": [
+        "css:dist/authorization/PermissionReader.jsonld#PermissionReader"
+      ],
+      "comment": "Finds the permissions of a resource as defined in the corresponding ACL resource. Does not make any deductions such as checking parent containers for create permissions or applying control permissions for ACL resources.  Specific access checks are done by the provided {@link AccessChecker}.",
+      "parameters": [
+        {
+          "@id": "css:dist/authorization/WebAclReader.jsonld#WebAclReader_aclStrategy",
+          "range": "css:dist/http/auxiliary/AuxiliaryIdentifierStrategy.jsonld#AuxiliaryIdentifierStrategy"
+        },
+        {
+          "@id": "css:dist/authorization/WebAclReader.jsonld#WebAclReader_resourceSet",
+          "range": "css:dist/storage/ResourceSet.jsonld#ResourceSet"
+        },
+        {
+          "@id": "css:dist/authorization/WebAclReader.jsonld#WebAclReader_aclStore",
+          "range": "css:dist/storage/ResourceStore.jsonld#ResourceStore"
+        },
+        {
+          "@id": "css:dist/authorization/WebAclReader.jsonld#WebAclReader_identifierStrategy",
+          "range": "css:dist/util/identifiers/IdentifierStrategy.jsonld#IdentifierStrategy"
+        },
+        {
+          "@id": "css:dist/authorization/WebAclReader.jsonld#WebAclReader_accessChecker",
+          "range": "css:dist/authorization/access/AccessChecker.jsonld#AccessChecker"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/authorization/WebAclReader.jsonld#WebAclReader__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/authorization/WebAclReader.jsonld#WebAclReader__member_aclStrategy",
+          "memberFieldName": "aclStrategy"
+        },
+        {
+          "@id": "css:dist/authorization/WebAclReader.jsonld#WebAclReader__member_resourceSet",
+          "memberFieldName": "resourceSet"
+        },
+        {
+          "@id": "css:dist/authorization/WebAclReader.jsonld#WebAclReader__member_aclStore",
+          "memberFieldName": "aclStore"
+        },
+        {
+          "@id": "css:dist/authorization/WebAclReader.jsonld#WebAclReader__member_identifierStrategy",
+          "memberFieldName": "identifierStrategy"
+        },
+        {
+          "@id": "css:dist/authorization/WebAclReader.jsonld#WebAclReader__member_accessChecker",
+          "memberFieldName": "accessChecker"
+        },
+        {
+          "@id": "css:dist/authorization/WebAclReader.jsonld#WebAclReader__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/authorization/WebAclReader.jsonld#WebAclReader__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/authorization/WebAclReader.jsonld#WebAclReader__member_findPermissions",
+          "memberFieldName": "findPermissions"
+        },
+        {
+          "@id": "css:dist/authorization/WebAclReader.jsonld#WebAclReader__member_determinePermissions",
+          "memberFieldName": "determinePermissions"
+        },
+        {
+          "@id": "css:dist/authorization/WebAclReader.jsonld#WebAclReader__member_getAclMatches",
+          "memberFieldName": "getAclMatches"
+        },
+        {
+          "@id": "css:dist/authorization/WebAclReader.jsonld#WebAclReader__member_getAclRecursive",
+          "memberFieldName": "getAclRecursive"
+        },
+        {
+          "@id": "css:dist/authorization/WebAclReader.jsonld#WebAclReader__member_findAuthorizationStatements",
+          "memberFieldName": "findAuthorizationStatements"
+        },
+        {
+          "@id": "css:dist/authorization/WebAclReader.jsonld#WebAclReader__member_filterStore",
+          "memberFieldName": "filterStore"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/authorization/WebAclReader.jsonld#WebAclReader_aclStrategy"
+        },
+        {
+          "@id": "css:dist/authorization/WebAclReader.jsonld#WebAclReader_resourceSet"
+        },
+        {
+          "@id": "css:dist/authorization/WebAclReader.jsonld#WebAclReader_aclStore"
+        },
+        {
+          "@id": "css:dist/authorization/WebAclReader.jsonld#WebAclReader_identifierStrategy"
+        },
+        {
+          "@id": "css:dist/authorization/WebAclReader.jsonld#WebAclReader_accessChecker"
+        }
+      ]
+    }
+  ]
+}

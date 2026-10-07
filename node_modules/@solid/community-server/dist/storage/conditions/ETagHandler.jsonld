@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/conditions/ETagHandler.jsonld#ETagHandler",
+      "@type": "AbstractClass",
+      "requireElement": "ETagHandler",
+      "comment": "Responsible for everything related to ETag generation and comparison. ETags are constructed in such a way they can both be used for the standard ETag usage of comparing representations, but also to see if two ETags of different representations correspond to the same resource state.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/conditions/ETagHandler.jsonld#ETagHandler__member_getETag",
+          "memberFieldName": "getETag"
+        },
+        {
+          "@id": "css:dist/storage/conditions/ETagHandler.jsonld#ETagHandler__member_matchesETag",
+          "memberFieldName": "matchesETag"
+        },
+        {
+          "@id": "css:dist/storage/conditions/ETagHandler.jsonld#ETagHandler__member_sameResourceState",
+          "memberFieldName": "sameResourceState"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

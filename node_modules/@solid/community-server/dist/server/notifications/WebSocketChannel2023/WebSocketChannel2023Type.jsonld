@@ -1,0 +1,81 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocketChannel2023Type.jsonld#WebSocketChannel2023Type",
+      "@type": "Class",
+      "requireElement": "WebSocketChannel2023Type",
+      "comment": "The notification channel type WebSocketChannel2023 as described in https://solid.github.io/notifications/websocket-channel-2023  Requires read permissions on a resource to be able to receive notifications.",
+      "parameters": [
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocketChannel2023Type.jsonld#WebSocketChannel2023Type_route",
+          "range": "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocketChannel2023Type.jsonld#WebSocketChannel2023Type_features",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": "xsd:string"
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocketChannel2023Type.jsonld#WebSocketChannel2023Type__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocketChannel2023Type.jsonld#WebSocketChannel2023Type__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocketChannel2023Type.jsonld#WebSocketChannel2023Type__member_initChannel",
+          "memberFieldName": "initChannel"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocketChannel2023Type.jsonld#WebSocketChannel2023Type_route"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocketChannel2023Type.jsonld#WebSocketChannel2023Type_features"
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocketChannel2023Type.jsonld#WebSocketChannel2023",
+      "@type": "AbstractClass",
+      "requireElement": "WebSocketChannel2023",
+      "extends": [
+        "css:dist/server/notifications/NotificationChannel.jsonld#NotificationChannel"
+      ],
+      "comment": "A {@link NotificationChannel} containing the necessary fields for a WebSocketChannel2023 channel.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocketChannel2023Type.jsonld#WebSocketChannel2023__member_type",
+          "memberFieldName": "type"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocketChannel2023Type.jsonld#WebSocketChannel2023__member_receiveFrom",
+          "memberFieldName": "receiveFrom"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/locking/MemoryResourceLocker.jsonld#MemoryResourceLocker",
+      "@type": "Class",
+      "requireElement": "MemoryResourceLocker",
+      "extends": [
+        "css:dist/util/locking/ResourceLocker.jsonld#ResourceLocker",
+        "css:dist/init/cluster/SingleThreaded.jsonld#SingleThreaded"
+      ],
+      "comment": "A resource locker making use of the `async-lock` library. Note that all locks are kept in memory until they are unlocked which could potentially result in a memory leak if locks are never unlocked, so make sure this is covered with expiring locks for example, and/or proper `finally` handles.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/locking/MemoryResourceLocker.jsonld#MemoryResourceLocker__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/util/locking/MemoryResourceLocker.jsonld#MemoryResourceLocker__member_locker",
+          "memberFieldName": "locker"
+        },
+        {
+          "@id": "css:dist/util/locking/MemoryResourceLocker.jsonld#MemoryResourceLocker__member_unlockCallbacks",
+          "memberFieldName": "unlockCallbacks"
+        },
+        {
+          "@id": "css:dist/util/locking/MemoryResourceLocker.jsonld#MemoryResourceLocker__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/util/locking/MemoryResourceLocker.jsonld#MemoryResourceLocker__member_acquire",
+          "memberFieldName": "acquire"
+        },
+        {
+          "@id": "css:dist/util/locking/MemoryResourceLocker.jsonld#MemoryResourceLocker__member_release",
+          "memberFieldName": "release"
+        },
+        {
+          "@id": "css:dist/util/locking/MemoryResourceLocker.jsonld#MemoryResourceLocker__member_getLockCount",
+          "memberFieldName": "getLockCount"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

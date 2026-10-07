@@ -1,0 +1,35 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/output/response/OkResponseDescription.jsonld#OkResponseDescription",
+      "@type": "Class",
+      "requireElement": "OkResponseDescription",
+      "extends": [
+        "css:dist/http/output/response/ResponseDescription.jsonld#ResponseDescription"
+      ],
+      "comment": "Corresponds to a 200 or 206 response, containing relevant metadata and potentially data. A 206 will be returned if range metadata is found in the metadata object.",
+      "parameters": [
+        {
+          "@id": "css:dist/http/output/response/OkResponseDescription.jsonld#OkResponseDescription_metadata",
+          "range": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata",
+          "comment": "Metadata concerning the response."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/output/response/OkResponseDescription.jsonld#OkResponseDescription__member_constructor",
+          "memberFieldName": "constructor"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/output/response/OkResponseDescription.jsonld#OkResponseDescription_metadata"
+        }
+      ]
+    }
+  ]
+}

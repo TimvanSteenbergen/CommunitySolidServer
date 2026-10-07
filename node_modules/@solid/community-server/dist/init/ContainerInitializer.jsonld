@@ -1,0 +1,169 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/init/ContainerInitializer.jsonld#ContainerInitializer",
+      "@type": "Class",
+      "requireElement": "ContainerInitializer",
+      "extends": [
+        "css:dist/init/Initializer.jsonld#Initializer"
+      ],
+      "comment": "Initializer that sets up a container. Will copy all the files and folders in the given path to the corresponding documents and containers.",
+      "parameters": [
+        {
+          "@id": "css:dist/init/ContainerInitializer.jsonld#ContainerInitializer_args_baseUrl",
+          "range": "xsd:string",
+          "comment": "Base URL of the server."
+        },
+        {
+          "@id": "css:dist/init/ContainerInitializer.jsonld#ContainerInitializer_args_path",
+          "range": "xsd:string",
+          "comment": "Relative path of the container."
+        },
+        {
+          "@id": "css:dist/init/ContainerInitializer.jsonld#ContainerInitializer_args_store",
+          "range": "css:dist/storage/ResourceStore.jsonld#ResourceStore",
+          "comment": "ResourceStore where the container should be stored."
+        },
+        {
+          "@id": "css:dist/init/ContainerInitializer.jsonld#ContainerInitializer_args_generator",
+          "range": "css:dist/pods/generate/ResourcesGenerator.jsonld#ResourcesGenerator",
+          "comment": "Generator that should be used to generate container contents."
+        },
+        {
+          "@id": "css:dist/init/ContainerInitializer.jsonld#ContainerInitializer_args_storageKey",
+          "range": "xsd:string",
+          "comment": "Key that is used to store the boolean in the storage indicating the container is initialized."
+        },
+        {
+          "@id": "css:dist/init/ContainerInitializer.jsonld#ContainerInitializer_args_storage",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+            "genericTypeInstances": [
+              "xsd:string",
+              "xsd:boolean"
+            ]
+          },
+          "comment": "Used to store initialization status."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/init/ContainerInitializer.jsonld#ContainerInitializer__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/init/ContainerInitializer.jsonld#ContainerInitializer__member_store",
+          "memberFieldName": "store"
+        },
+        {
+          "@id": "css:dist/init/ContainerInitializer.jsonld#ContainerInitializer__member_containerId",
+          "memberFieldName": "containerId"
+        },
+        {
+          "@id": "css:dist/init/ContainerInitializer.jsonld#ContainerInitializer__member_generator",
+          "memberFieldName": "generator"
+        },
+        {
+          "@id": "css:dist/init/ContainerInitializer.jsonld#ContainerInitializer__member_storageKey",
+          "memberFieldName": "storageKey"
+        },
+        {
+          "@id": "css:dist/init/ContainerInitializer.jsonld#ContainerInitializer__member_storage",
+          "memberFieldName": "storage"
+        },
+        {
+          "@id": "css:dist/init/ContainerInitializer.jsonld#ContainerInitializer__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/init/ContainerInitializer.jsonld#ContainerInitializer__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/init/ContainerInitializer.jsonld#ContainerInitializer_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "baseUrl",
+              "value": {
+                "@id": "css:dist/init/ContainerInitializer.jsonld#ContainerInitializer_args_baseUrl"
+              }
+            },
+            {
+              "keyRaw": "path",
+              "value": {
+                "@id": "css:dist/init/ContainerInitializer.jsonld#ContainerInitializer_args_path"
+              }
+            },
+            {
+              "keyRaw": "store",
+              "value": {
+                "@id": "css:dist/init/ContainerInitializer.jsonld#ContainerInitializer_args_store"
+              }
+            },
+            {
+              "keyRaw": "generator",
+              "value": {
+                "@id": "css:dist/init/ContainerInitializer.jsonld#ContainerInitializer_args_generator"
+              }
+            },
+            {
+              "keyRaw": "storageKey",
+              "value": {
+                "@id": "css:dist/init/ContainerInitializer.jsonld#ContainerInitializer_args_storageKey"
+              }
+            },
+            {
+              "keyRaw": "storage",
+              "value": {
+                "@id": "css:dist/init/ContainerInitializer.jsonld#ContainerInitializer_args_storage"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/init/ContainerInitializer.jsonld#ContainerInitializerArgs",
+      "@type": "AbstractClass",
+      "requireElement": "ContainerInitializerArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/init/ContainerInitializer.jsonld#ContainerInitializerArgs__member_baseUrl",
+          "memberFieldName": "baseUrl"
+        },
+        {
+          "@id": "css:dist/init/ContainerInitializer.jsonld#ContainerInitializerArgs__member_path",
+          "memberFieldName": "path"
+        },
+        {
+          "@id": "css:dist/init/ContainerInitializer.jsonld#ContainerInitializerArgs__member_store",
+          "memberFieldName": "store"
+        },
+        {
+          "@id": "css:dist/init/ContainerInitializer.jsonld#ContainerInitializerArgs__member_generator",
+          "memberFieldName": "generator"
+        },
+        {
+          "@id": "css:dist/init/ContainerInitializer.jsonld#ContainerInitializerArgs__member_storageKey",
+          "memberFieldName": "storageKey"
+        },
+        {
+          "@id": "css:dist/init/ContainerInitializer.jsonld#ContainerInitializerArgs__member_storage",
+          "memberFieldName": "storage"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

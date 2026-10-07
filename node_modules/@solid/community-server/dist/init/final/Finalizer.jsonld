@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/init/final/Finalizer.jsonld#Finalizer",
+      "@type": "AbstractClass",
+      "requireElement": "Finalizer",
+      "extends": [
+        "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler"
+      ],
+      "comment": "Finalizer is used to indicate an AsyncHandler that performs finalization logic.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

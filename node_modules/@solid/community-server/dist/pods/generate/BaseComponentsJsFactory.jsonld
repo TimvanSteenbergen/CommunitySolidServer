@@ -1,0 +1,69 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/pods/generate/BaseComponentsJsFactory.jsonld#BaseComponentsJsFactory",
+      "@type": "Class",
+      "requireElement": "BaseComponentsJsFactory",
+      "extends": [
+        "css:dist/pods/generate/ComponentsJsFactory.jsonld#ComponentsJsFactory"
+      ],
+      "comment": "Can be used to instantiate objects using Components.js. Default main module path is the root folder of the project. For every generate call a new manager will be made, but moduleState will be stored in between calls.",
+      "parameters": [
+        {
+          "@id": "css:dist/pods/generate/BaseComponentsJsFactory.jsonld#BaseComponentsJsFactory_relativeModulePath",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/pods/generate/BaseComponentsJsFactory.jsonld#BaseComponentsJsFactory_logLevel",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/pods/generate/BaseComponentsJsFactory.jsonld#BaseComponentsJsFactory__member_options",
+          "memberFieldName": "options"
+        },
+        {
+          "@id": "css:dist/pods/generate/BaseComponentsJsFactory.jsonld#BaseComponentsJsFactory__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/pods/generate/BaseComponentsJsFactory.jsonld#BaseComponentsJsFactory__member_buildManager",
+          "memberFieldName": "buildManager"
+        },
+        {
+          "@id": "css:dist/pods/generate/BaseComponentsJsFactory.jsonld#BaseComponentsJsFactory__member_generate",
+          "memberFieldName": "generate"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/pods/generate/BaseComponentsJsFactory.jsonld#BaseComponentsJsFactory_relativeModulePath"
+        },
+        {
+          "@id": "css:dist/pods/generate/BaseComponentsJsFactory.jsonld#BaseComponentsJsFactory_logLevel"
+        }
+      ]
+    }
+  ]
+}

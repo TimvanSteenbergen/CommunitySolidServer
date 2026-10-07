@@ -1,0 +1,29 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/description/StorageDescriber.jsonld#StorageDescriber",
+      "@type": "AbstractClass",
+      "requireElement": "StorageDescriber",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            "css:dist/http/representation/ResourceIdentifier.jsonld#ResourceIdentifier",
+            {
+              "@type": "ParameterRangeArray",
+              "parameterRangeValue": "urn:npm:@rdfjs/types:Quad"
+            }
+          ]
+        }
+      ],
+      "comment": "Generates Quads that need to be added to the given storage description resource.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

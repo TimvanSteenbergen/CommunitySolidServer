@@ -1,0 +1,144 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/errors/HttpError.jsonld#HttpError",
+      "@type": "Class",
+      "requireElement": "HttpError",
+      "comment": "A class for all errors that could be thrown by Solid. All errors inheriting from this should fix the status code thereby hiding the HTTP internals from other components.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/util/errors/HttpError.jsonld#HttpError__generic_T",
+          "range": "xsd:number"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/util/errors/HttpError.jsonld#HttpError_statusCode",
+          "range": {
+            "@type": "ParameterRangeGenericTypeReference",
+            "parameterRangeGenericType": "css:dist/util/errors/HttpError.jsonld#HttpError__generic_T"
+          },
+          "comment": "HTTP status code needed for the HTTP response."
+        },
+        {
+          "@id": "css:dist/util/errors/HttpError.jsonld#HttpError_name",
+          "range": "xsd:string",
+          "comment": "Error name. Useful for logging and stack tracing."
+        },
+        {
+          "@id": "css:dist/util/errors/HttpError.jsonld#HttpError_message",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Error message."
+        },
+        {
+          "@id": "css:dist/util/errors/HttpError.jsonld#HttpError_options",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeWildcard"
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Optional options."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/errors/HttpError.jsonld#HttpError__member_statusCode",
+          "memberFieldName": "statusCode",
+          "range": {
+            "@type": "ParameterRangeGenericTypeReference",
+            "parameterRangeGenericType": "css:dist/util/errors/HttpError.jsonld#HttpError__generic_T"
+          }
+        },
+        {
+          "@id": "css:dist/util/errors/HttpError.jsonld#HttpError__member_cause",
+          "memberFieldName": "cause",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/util/errors/HttpError.jsonld#HttpError__member_errorCode",
+          "memberFieldName": "errorCode",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/util/errors/HttpError.jsonld#HttpError__member_metadata",
+          "memberFieldName": "metadata",
+          "range": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata"
+        },
+        {
+          "@id": "css:dist/util/errors/HttpError.jsonld#HttpError__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/util/errors/HttpError.jsonld#HttpError__member_isInstance",
+          "memberFieldName": "isInstance"
+        },
+        {
+          "@id": "css:dist/util/errors/HttpError.jsonld#HttpError__member_generateMetadata",
+          "memberFieldName": "generateMetadata"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/errors/HttpError.jsonld#HttpError_statusCode"
+        },
+        {
+          "@id": "css:dist/util/errors/HttpError.jsonld#HttpError_name"
+        },
+        {
+          "@id": "css:dist/util/errors/HttpError.jsonld#HttpError_message"
+        },
+        {
+          "@id": "css:dist/util/errors/HttpError.jsonld#HttpError_options"
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/util/errors/HttpError.jsonld#HttpErrorClass",
+      "@type": "AbstractClass",
+      "requireElement": "HttpErrorClass",
+      "comment": "Interface describing what an HttpError class should look like. This helps us make sure all HttpError classes have the same utility static functions.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/util/errors/HttpError.jsonld#HttpErrorClass__generic_TCode",
+          "range": "xsd:number"
+        }
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/errors/HttpError.jsonld#HttpErrorClass__member_statusCode",
+          "memberFieldName": "statusCode"
+        },
+        {
+          "@id": "css:dist/util/errors/HttpError.jsonld#HttpErrorClass__member_uri",
+          "memberFieldName": "uri"
+        },
+        {
+          "@id": "css:dist/util/errors/HttpError.jsonld#HttpErrorClass__member_isInstance",
+          "memberFieldName": "isInstance"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

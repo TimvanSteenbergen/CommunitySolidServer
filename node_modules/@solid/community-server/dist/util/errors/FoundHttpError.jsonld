@@ -1,0 +1,63 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/errors/FoundHttpError.jsonld#FoundHttpError",
+      "@type": "Class",
+      "requireElement": "FoundHttpError",
+      "comment": "Error used for resources that have been moved temporarily. Methods other than GET may or may not be changed to GET in subsequent requests.",
+      "parameters": [
+        {
+          "@id": "css:dist/util/errors/FoundHttpError.jsonld#FoundHttpError_location",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/util/errors/FoundHttpError.jsonld#FoundHttpError_message",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/util/errors/FoundHttpError.jsonld#FoundHttpError_options",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeWildcard"
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/errors/FoundHttpError.jsonld#FoundHttpError__member_constructor",
+          "memberFieldName": "constructor"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/errors/FoundHttpError.jsonld#FoundHttpError_location"
+        },
+        {
+          "@id": "css:dist/util/errors/FoundHttpError.jsonld#FoundHttpError_message"
+        },
+        {
+          "@id": "css:dist/util/errors/FoundHttpError.jsonld#FoundHttpError_options"
+        }
+      ]
+    }
+  ]
+}

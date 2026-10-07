@@ -1,0 +1,62 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/conversion/RdfToQuadConverter.jsonld#RdfToQuadConverter",
+      "@type": "Class",
+      "requireElement": "RdfToQuadConverter",
+      "extends": [
+        "css:dist/storage/conversion/BaseTypedRepresentationConverter.jsonld#BaseTypedRepresentationConverter"
+      ],
+      "comment": "Converts most major RDF serializations to `internal/quads`.  Custom contexts can be defined to be used when parsing JSON-LD. The keys of the object should be the URL of the context, and the values the file path of the contexts to use when the JSON-LD parser would fetch the given context. We use filepaths because embedding them directly into the configurations breaks Components.js.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/conversion/RdfToQuadConverter.jsonld#RdfToQuadConverter_contexts",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "css:dist/storage/conversion/RdfToQuadConverter.jsonld#RdfToQuadConverter_contexts_key"
+              },
+              {
+                "@id": "css:dist/storage/conversion/RdfToQuadConverter.jsonld#RdfToQuadConverter_contexts_value",
+                "range": "xsd:string"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/conversion/RdfToQuadConverter.jsonld#RdfToQuadConverter__member_documentLoader",
+          "memberFieldName": "documentLoader"
+        },
+        {
+          "@id": "css:dist/storage/conversion/RdfToQuadConverter.jsonld#RdfToQuadConverter__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/conversion/RdfToQuadConverter.jsonld#RdfToQuadConverter__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/conversion/RdfToQuadConverter.jsonld#RdfToQuadConverter_contexts__constructorArgument",
+          "fields": [
+            {
+              "collectEntries": "css:dist/storage/conversion/RdfToQuadConverter.jsonld#RdfToQuadConverter_contexts",
+              "key": "css:dist/storage/conversion/RdfToQuadConverter.jsonld#RdfToQuadConverter_contexts_key",
+              "value": {
+                "@id": "css:dist/storage/conversion/RdfToQuadConverter.jsonld#RdfToQuadConverter_contexts_value"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

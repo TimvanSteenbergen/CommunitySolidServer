@@ -1,0 +1,53 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/identifiers/SingleRootIdentifierStrategy.jsonld#SingleRootIdentifierStrategy",
+      "@type": "Class",
+      "requireElement": "SingleRootIdentifierStrategy",
+      "extends": [
+        "css:dist/util/identifiers/BaseIdentifierStrategy.jsonld#BaseIdentifierStrategy"
+      ],
+      "comment": "An IdentifierStrategy that assumes there is only 1 root and all other identifiers are made by appending to that root.",
+      "parameters": [
+        {
+          "@id": "css:dist/util/identifiers/SingleRootIdentifierStrategy.jsonld#SingleRootIdentifierStrategy_baseUrl",
+          "range": "xsd:string"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/identifiers/SingleRootIdentifierStrategy.jsonld#SingleRootIdentifierStrategy__member_baseUrl",
+          "memberFieldName": "baseUrl"
+        },
+        {
+          "@id": "css:dist/util/identifiers/SingleRootIdentifierStrategy.jsonld#SingleRootIdentifierStrategy__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/util/identifiers/SingleRootIdentifierStrategy.jsonld#SingleRootIdentifierStrategy__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/util/identifiers/SingleRootIdentifierStrategy.jsonld#SingleRootIdentifierStrategy__member_supportsIdentifier",
+          "memberFieldName": "supportsIdentifier"
+        },
+        {
+          "@id": "css:dist/util/identifiers/SingleRootIdentifierStrategy.jsonld#SingleRootIdentifierStrategy__member_isRootContainer",
+          "memberFieldName": "isRootContainer"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/identifiers/SingleRootIdentifierStrategy.jsonld#SingleRootIdentifierStrategy_baseUrl"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/authorization/ParentContainerReader.jsonld#ParentContainerReader",
+      "@type": "Class",
+      "requireElement": "ParentContainerReader",
+      "extends": [
+        "css:dist/authorization/PermissionReader.jsonld#PermissionReader"
+      ],
+      "comment": "Determines `delete` and `create` permissions for those resources that need it by making sure the parent container has the required permissions.  Create requires `append` permissions on the parent container. Delete requires `write` permissions on both the parent container and the resource itself.",
+      "parameters": [
+        {
+          "@id": "css:dist/authorization/ParentContainerReader.jsonld#ParentContainerReader_reader",
+          "range": "css:dist/authorization/PermissionReader.jsonld#PermissionReader"
+        },
+        {
+          "@id": "css:dist/authorization/ParentContainerReader.jsonld#ParentContainerReader_identifierStrategy",
+          "range": "css:dist/util/identifiers/IdentifierStrategy.jsonld#IdentifierStrategy"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/authorization/ParentContainerReader.jsonld#ParentContainerReader__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/authorization/ParentContainerReader.jsonld#ParentContainerReader__member_reader",
+          "memberFieldName": "reader"
+        },
+        {
+          "@id": "css:dist/authorization/ParentContainerReader.jsonld#ParentContainerReader__member_identifierStrategy",
+          "memberFieldName": "identifierStrategy"
+        },
+        {
+          "@id": "css:dist/authorization/ParentContainerReader.jsonld#ParentContainerReader__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/authorization/ParentContainerReader.jsonld#ParentContainerReader__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/authorization/ParentContainerReader.jsonld#ParentContainerReader__member_findParents",
+          "memberFieldName": "findParents"
+        },
+        {
+          "@id": "css:dist/authorization/ParentContainerReader.jsonld#ParentContainerReader__member_getParentModes",
+          "memberFieldName": "getParentModes"
+        },
+        {
+          "@id": "css:dist/authorization/ParentContainerReader.jsonld#ParentContainerReader__member_addContainerPermissions",
+          "memberFieldName": "addContainerPermissions"
+        },
+        {
+          "@id": "css:dist/authorization/ParentContainerReader.jsonld#ParentContainerReader__member_interpretContainerPermission",
+          "memberFieldName": "interpretContainerPermission"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/authorization/ParentContainerReader.jsonld#ParentContainerReader_reader"
+        },
+        {
+          "@id": "css:dist/authorization/ParentContainerReader.jsonld#ParentContainerReader_identifierStrategy"
+        }
+      ]
+    }
+  ]
+}

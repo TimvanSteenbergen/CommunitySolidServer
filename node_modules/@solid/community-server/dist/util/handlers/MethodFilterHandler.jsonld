@@ -1,0 +1,112 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/handlers/MethodFilterHandler.jsonld#MethodFilterHandler",
+      "@type": "Class",
+      "requireElement": "MethodFilterHandler",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/util/handlers/MethodFilterHandler.jsonld#MethodFilterHandler__generic_TIn"
+            },
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/util/handlers/MethodFilterHandler.jsonld#MethodFilterHandler__generic_TOut"
+            }
+          ]
+        }
+      ],
+      "comment": "Only accepts requests where the input has a (possibly nested) `method` field that matches any one of the given methods. In case of a match, the input will be sent to the source handler.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/util/handlers/MethodFilterHandler.jsonld#MethodFilterHandler__generic_TIn",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeWildcard"
+              },
+              {
+                "@type": "ParameterRangeWildcard"
+              },
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/util/handlers/MethodFilterHandler.jsonld#MethodFilterHandler__generic_TOut"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/util/handlers/MethodFilterHandler.jsonld#MethodFilterHandler_methods",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": "xsd:string"
+          }
+        },
+        {
+          "@id": "css:dist/util/handlers/MethodFilterHandler.jsonld#MethodFilterHandler_source",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "css:dist/util/handlers/MethodFilterHandler.jsonld#MethodFilterHandler__generic_TIn"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "css:dist/util/handlers/MethodFilterHandler.jsonld#MethodFilterHandler__generic_TOut"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/handlers/MethodFilterHandler.jsonld#MethodFilterHandler__member_methods",
+          "memberFieldName": "methods"
+        },
+        {
+          "@id": "css:dist/util/handlers/MethodFilterHandler.jsonld#MethodFilterHandler__member_source",
+          "memberFieldName": "source"
+        },
+        {
+          "@id": "css:dist/util/handlers/MethodFilterHandler.jsonld#MethodFilterHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/util/handlers/MethodFilterHandler.jsonld#MethodFilterHandler__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/util/handlers/MethodFilterHandler.jsonld#MethodFilterHandler__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/util/handlers/MethodFilterHandler.jsonld#MethodFilterHandler__member_findMethod",
+          "memberFieldName": "findMethod"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/handlers/MethodFilterHandler.jsonld#MethodFilterHandler_methods"
+        },
+        {
+          "@id": "css:dist/util/handlers/MethodFilterHandler.jsonld#MethodFilterHandler_source"
+        }
+      ]
+    }
+  ]
+}

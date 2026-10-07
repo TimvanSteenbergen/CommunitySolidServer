@@ -1,0 +1,70 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/handlers/StaticHandler.jsonld#StaticHandler",
+      "@type": "Class",
+      "requireElement": "StaticHandler",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeWildcard"
+            },
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/util/handlers/StaticHandler.jsonld#StaticHandler__generic_T"
+            }
+          ]
+        }
+      ],
+      "comment": "A handler that always resolves and always returns the stored value. Will return undefined if no value is stored.  The generic type extends `any` due to Components.js requirements.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/util/handlers/StaticHandler.jsonld#StaticHandler__generic_T"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/util/handlers/StaticHandler.jsonld#StaticHandler_value",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "css:dist/util/handlers/StaticHandler.jsonld#StaticHandler__generic_T"
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/handlers/StaticHandler.jsonld#StaticHandler__member_value",
+          "memberFieldName": "value"
+        },
+        {
+          "@id": "css:dist/util/handlers/StaticHandler.jsonld#StaticHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/util/handlers/StaticHandler.jsonld#StaticHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/handlers/StaticHandler.jsonld#StaticHandler_value"
+        }
+      ]
+    }
+  ]
+}

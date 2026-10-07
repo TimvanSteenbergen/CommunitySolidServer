@@ -1,0 +1,75 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/templates/StaticTemplateEngine.jsonld#StaticTemplateEngine",
+      "@type": "Class",
+      "requireElement": "StaticTemplateEngine",
+      "comment": "Template engine that renders output based on a static template file.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/util/templates/StaticTemplateEngine.jsonld#StaticTemplateEngine__generic_T",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/util/templates/StaticTemplateEngine.jsonld#StaticTemplateEngine_template",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          },
+          "comment": "The static template to be used."
+        },
+        {
+          "@id": "css:dist/util/templates/StaticTemplateEngine.jsonld#StaticTemplateEngine_templateEngine",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeWildcard"
+              },
+              "xsd:string"
+            ]
+          },
+          "comment": "The template engine that should be used for processing the template."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/templates/StaticTemplateEngine.jsonld#StaticTemplateEngine__member_template",
+          "memberFieldName": "template"
+        },
+        {
+          "@id": "css:dist/util/templates/StaticTemplateEngine.jsonld#StaticTemplateEngine__member_templateEngine",
+          "memberFieldName": "templateEngine"
+        },
+        {
+          "@id": "css:dist/util/templates/StaticTemplateEngine.jsonld#StaticTemplateEngine__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/util/templates/StaticTemplateEngine.jsonld#StaticTemplateEngine__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/util/templates/StaticTemplateEngine.jsonld#StaticTemplateEngine__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/templates/StaticTemplateEngine.jsonld#StaticTemplateEngine_templateEngine"
+        },
+        {
+          "@id": "css:dist/util/templates/StaticTemplateEngine.jsonld#StaticTemplateEngine_template"
+        }
+      ]
+    }
+  ]
+}

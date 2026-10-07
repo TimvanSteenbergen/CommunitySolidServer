@@ -1,0 +1,28 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/routing/RouterRule.jsonld#RouterRule",
+      "@type": "AbstractClass",
+      "requireElement": "RouterRule",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeWildcard"
+            },
+            "css:dist/storage/ResourceStore.jsonld#ResourceStore"
+          ]
+        }
+      ],
+      "comment": "Finds which store needs to be accessed for the given resource, potentially based on the Representation of incoming data.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

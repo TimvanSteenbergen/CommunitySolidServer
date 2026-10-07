@@ -1,0 +1,7 @@
+<http://localhost:3000/test/people/970a4bc5-77dd-4684-a9d0-8a6b1258e151.ttl> a <https://schema.org/Person>;
+    <https://schema.org/name> "Elisabeth Maria";
+    <https://schema.org/givenName> "Elma";
+    <https://schema.org/familyName> "van Steenbergen";
+    <https://schema.org/email> "elma@tieka.nl";
+    <https://schema.org/telephone> "0612341234";
+    <https://schema.org/birthDate> "1967-06-03Z"^^<http://www.w3.org/2001/XMLSchema#date>.

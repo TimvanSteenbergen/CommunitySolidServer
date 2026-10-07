@@ -1,0 +1,78 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/conversion/ConversionUtil.jsonld#ContextDocumentLoader",
+      "@type": "Class",
+      "requireElement": "ContextDocumentLoader",
+      "comment": "First, checks whether a context is stored locally before letting the super class do a fetch. This can be used when converting JSON-LD with Comunica-related libraries, such as `rdf-parse`.  To use this, add this document loader to the options of the call using the `KeysRdfParseJsonLd.documentLoader.name` key. All extra keys get passed in the Comunica ActionContext and this is the key that is used to define the document loader. See https://github.com/rubensworks/rdf-parse.js/blob/master/lib/RdfParser.ts and https://github.com/comunica/comunica/blob/master/packages/actor-rdf-parse-jsonld/lib/ActorRdfParseJsonLd.ts  The loader has an internal cache that stores fetched documents for 30 minutes by default. This is to prevent spamming a context URL in case there are many requests. This cache can be disabled by setting the `ttl` to 0.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/conversion/ConversionUtil.jsonld#ContextDocumentLoader_contexts",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "css:dist/storage/conversion/ConversionUtil.jsonld#ContextDocumentLoader_contexts_key"
+              },
+              {
+                "@id": "css:dist/storage/conversion/ConversionUtil.jsonld#ContextDocumentLoader_contexts_value",
+                "range": "xsd:string"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/storage/conversion/ConversionUtil.jsonld#ContextDocumentLoader_ttl",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/conversion/ConversionUtil.jsonld#ContextDocumentLoader__member_contexts",
+          "memberFieldName": "contexts"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ConversionUtil.jsonld#ContextDocumentLoader__member_cache",
+          "memberFieldName": "cache"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ConversionUtil.jsonld#ContextDocumentLoader__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ConversionUtil.jsonld#ContextDocumentLoader__member_load",
+          "memberFieldName": "load"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/conversion/ConversionUtil.jsonld#ContextDocumentLoader_contexts__constructorArgument",
+          "fields": [
+            {
+              "collectEntries": "css:dist/storage/conversion/ConversionUtil.jsonld#ContextDocumentLoader_contexts",
+              "key": "css:dist/storage/conversion/ConversionUtil.jsonld#ContextDocumentLoader_contexts_key",
+              "value": {
+                "@id": "css:dist/storage/conversion/ConversionUtil.jsonld#ContextDocumentLoader_contexts_value"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "css:dist/storage/conversion/ConversionUtil.jsonld#ContextDocumentLoader_ttl"
+        }
+      ]
+    }
+  ]
+}

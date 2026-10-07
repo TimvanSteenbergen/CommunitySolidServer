@@ -1,0 +1,51 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/locking/EqualReadWriteLocker.jsonld#EqualReadWriteLocker",
+      "@type": "Class",
+      "requireElement": "EqualReadWriteLocker",
+      "extends": [
+        "css:dist/util/locking/ReadWriteLocker.jsonld#ReadWriteLocker"
+      ],
+      "comment": "A {@link ReadWriteLocker} that gives no priority to read or write operations: both use the same lock.",
+      "parameters": [
+        {
+          "@id": "css:dist/util/locking/EqualReadWriteLocker.jsonld#EqualReadWriteLocker_locker",
+          "range": "css:dist/util/locking/ResourceLocker.jsonld#ResourceLocker"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/locking/EqualReadWriteLocker.jsonld#EqualReadWriteLocker__member_locker",
+          "memberFieldName": "locker",
+          "range": "css:dist/util/locking/ResourceLocker.jsonld#ResourceLocker"
+        },
+        {
+          "@id": "css:dist/util/locking/EqualReadWriteLocker.jsonld#EqualReadWriteLocker__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/util/locking/EqualReadWriteLocker.jsonld#EqualReadWriteLocker__member_withReadLock",
+          "memberFieldName": "withReadLock"
+        },
+        {
+          "@id": "css:dist/util/locking/EqualReadWriteLocker.jsonld#EqualReadWriteLocker__member_withWriteLock",
+          "memberFieldName": "withWriteLock"
+        },
+        {
+          "@id": "css:dist/util/locking/EqualReadWriteLocker.jsonld#EqualReadWriteLocker__member_withLock",
+          "memberFieldName": "withLock"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/locking/EqualReadWriteLocker.jsonld#EqualReadWriteLocker_locker"
+        }
+      ]
+    }
+  ]
+}

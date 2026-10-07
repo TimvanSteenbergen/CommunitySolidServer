@@ -1,0 +1,56 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/errors/NotFoundHttpError.jsonld#NotFoundHttpError",
+      "@type": "Class",
+      "requireElement": "NotFoundHttpError",
+      "comment": "An error thrown when no data was found for the requested identifier.",
+      "parameters": [
+        {
+          "@id": "css:dist/util/errors/NotFoundHttpError.jsonld#NotFoundHttpError_message",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/util/errors/NotFoundHttpError.jsonld#NotFoundHttpError_options",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeWildcard"
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/errors/NotFoundHttpError.jsonld#NotFoundHttpError__member_constructor",
+          "memberFieldName": "constructor"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/errors/NotFoundHttpError.jsonld#NotFoundHttpError_message"
+        },
+        {
+          "@id": "css:dist/util/errors/NotFoundHttpError.jsonld#NotFoundHttpError_options"
+        }
+      ]
+    }
+  ]
+}

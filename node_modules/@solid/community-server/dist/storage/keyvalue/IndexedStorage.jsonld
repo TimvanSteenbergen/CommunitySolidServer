@@ -1,0 +1,70 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/keyvalue/IndexedStorage.jsonld#IndexedStorage",
+      "@type": "AbstractClass",
+      "requireElement": "IndexedStorage",
+      "comment": "A storage solution that allows for more complex queries than a key/value storage and allows setting indexes on specific keys.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/storage/keyvalue/IndexedStorage.jsonld#IndexedStorage__generic_T",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        }
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/keyvalue/IndexedStorage.jsonld#IndexedStorage__member_defineType",
+          "memberFieldName": "defineType"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/IndexedStorage.jsonld#IndexedStorage__member_createIndex",
+          "memberFieldName": "createIndex"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/IndexedStorage.jsonld#IndexedStorage__member_create",
+          "memberFieldName": "create"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/IndexedStorage.jsonld#IndexedStorage__member_has",
+          "memberFieldName": "has"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/IndexedStorage.jsonld#IndexedStorage__member_get",
+          "memberFieldName": "get"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/IndexedStorage.jsonld#IndexedStorage__member_find",
+          "memberFieldName": "find"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/IndexedStorage.jsonld#IndexedStorage__member_findIds",
+          "memberFieldName": "findIds"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/IndexedStorage.jsonld#IndexedStorage__member_set",
+          "memberFieldName": "set"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/IndexedStorage.jsonld#IndexedStorage__member_setField",
+          "memberFieldName": "setField"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/IndexedStorage.jsonld#IndexedStorage__member_delete",
+          "memberFieldName": "delete"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/IndexedStorage.jsonld#IndexedStorage__member_entries",
+          "memberFieldName": "entries"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

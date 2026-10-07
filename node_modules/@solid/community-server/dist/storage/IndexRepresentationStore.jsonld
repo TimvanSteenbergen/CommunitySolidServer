@@ -1,0 +1,80 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/IndexRepresentationStore.jsonld#IndexRepresentationStore",
+      "@type": "Class",
+      "requireElement": "IndexRepresentationStore",
+      "extends": [
+        "css:dist/storage/PassthroughStore.jsonld#PassthroughStore"
+      ],
+      "comment": "Allow containers to have a custom representation. The index representation will be returned when the following conditions are fulfilled: * The request targets a container. * A resource with the given `indexName` exists in the container. (default: \"index.html\") * The highest weighted preference matches the `mediaRange` (default: \"text/html\") Otherwise the request will be passed on to the source store. In case the index representation should always be returned when it exists, the `mediaRange` should be set to \"\\*∕\\*\".  Note: this functionality is not yet part of the specification. Relevant issues are: - https://github.com/solid/specification/issues/69 - https://github.com/solid/specification/issues/198 - https://github.com/solid/specification/issues/109 - https://github.com/solid/web-access-control-spec/issues/36",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/IndexRepresentationStore.jsonld#IndexRepresentationStore_indexName",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/storage/IndexRepresentationStore.jsonld#IndexRepresentationStore_mediaRange",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/storage/IndexRepresentationStore.jsonld#IndexRepresentationStore_source",
+          "range": "css:dist/storage/ResourceStore.jsonld#ResourceStore"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/IndexRepresentationStore.jsonld#IndexRepresentationStore__member_indexName",
+          "memberFieldName": "indexName"
+        },
+        {
+          "@id": "css:dist/storage/IndexRepresentationStore.jsonld#IndexRepresentationStore__member_mediaRange",
+          "memberFieldName": "mediaRange"
+        },
+        {
+          "@id": "css:dist/storage/IndexRepresentationStore.jsonld#IndexRepresentationStore__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/IndexRepresentationStore.jsonld#IndexRepresentationStore__member_getRepresentation",
+          "memberFieldName": "getRepresentation"
+        },
+        {
+          "@id": "css:dist/storage/IndexRepresentationStore.jsonld#IndexRepresentationStore__member_matchesPreferences",
+          "memberFieldName": "matchesPreferences"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/IndexRepresentationStore.jsonld#IndexRepresentationStore_source"
+        },
+        {
+          "@id": "css:dist/storage/IndexRepresentationStore.jsonld#IndexRepresentationStore_indexName"
+        },
+        {
+          "@id": "css:dist/storage/IndexRepresentationStore.jsonld#IndexRepresentationStore_mediaRange"
+        }
+      ]
+    }
+  ]
+}

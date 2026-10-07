@@ -1,0 +1,39 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/locking/VoidLocker.jsonld#VoidLocker",
+      "@type": "Class",
+      "requireElement": "VoidLocker",
+      "extends": [
+        "css:dist/util/locking/ExpiringReadWriteLocker.jsonld#ExpiringReadWriteLocker"
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/locking/VoidLocker.jsonld#VoidLocker__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/util/locking/VoidLocker.jsonld#VoidLocker__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/util/locking/VoidLocker.jsonld#VoidLocker__member_withReadLock",
+          "memberFieldName": "withReadLock"
+        },
+        {
+          "@id": "css:dist/util/locking/VoidLocker.jsonld#VoidLocker__member_withWriteLock",
+          "memberFieldName": "withWriteLock"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

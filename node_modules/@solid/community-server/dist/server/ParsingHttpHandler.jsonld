@@ -1,0 +1,133 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/ParsingHttpHandler.jsonld#ParsingHttpHandler",
+      "@type": "Class",
+      "requireElement": "ParsingHttpHandler",
+      "extends": [
+        "css:dist/server/HttpHandler.jsonld#HttpHandler"
+      ],
+      "comment": "Parses requests and sends the resulting {@link Operation} to the wrapped {@link OperationHttpHandler}. Errors are caught and handled by the {@link ErrorHandler}. In case the {@link OperationHttpHandler} returns a result it will be sent to the {@link ResponseWriter}.",
+      "parameters": [
+        {
+          "@id": "css:dist/server/ParsingHttpHandler.jsonld#ParsingHttpHandler_args_requestParser",
+          "range": "css:dist/http/input/RequestParser.jsonld#RequestParser",
+          "comment": "Parses the incoming requests."
+        },
+        {
+          "@id": "css:dist/server/ParsingHttpHandler.jsonld#ParsingHttpHandler_args_errorHandler",
+          "range": "css:dist/http/output/error/ErrorHandler.jsonld#ErrorHandler",
+          "comment": "Converts errors to a serializable format."
+        },
+        {
+          "@id": "css:dist/server/ParsingHttpHandler.jsonld#ParsingHttpHandler_args_responseWriter",
+          "range": "css:dist/http/output/ResponseWriter.jsonld#ResponseWriter",
+          "comment": "Writes out the response of the operation."
+        },
+        {
+          "@id": "css:dist/server/ParsingHttpHandler.jsonld#ParsingHttpHandler_args_operationHandler",
+          "range": "css:dist/server/OperationHttpHandler.jsonld#OperationHttpHandler",
+          "comment": "Handler to send the operation to."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/ParsingHttpHandler.jsonld#ParsingHttpHandler__member_logger",
+          "memberFieldName": "logger"
+        },
+        {
+          "@id": "css:dist/server/ParsingHttpHandler.jsonld#ParsingHttpHandler__member_requestParser",
+          "memberFieldName": "requestParser"
+        },
+        {
+          "@id": "css:dist/server/ParsingHttpHandler.jsonld#ParsingHttpHandler__member_errorHandler",
+          "memberFieldName": "errorHandler"
+        },
+        {
+          "@id": "css:dist/server/ParsingHttpHandler.jsonld#ParsingHttpHandler__member_responseWriter",
+          "memberFieldName": "responseWriter"
+        },
+        {
+          "@id": "css:dist/server/ParsingHttpHandler.jsonld#ParsingHttpHandler__member_operationHandler",
+          "memberFieldName": "operationHandler"
+        },
+        {
+          "@id": "css:dist/server/ParsingHttpHandler.jsonld#ParsingHttpHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/ParsingHttpHandler.jsonld#ParsingHttpHandler__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/server/ParsingHttpHandler.jsonld#ParsingHttpHandler__member_handleRequest",
+          "memberFieldName": "handleRequest"
+        },
+        {
+          "@id": "css:dist/server/ParsingHttpHandler.jsonld#ParsingHttpHandler__member_handleError",
+          "memberFieldName": "handleError"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/ParsingHttpHandler.jsonld#ParsingHttpHandler_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "requestParser",
+              "value": {
+                "@id": "css:dist/server/ParsingHttpHandler.jsonld#ParsingHttpHandler_args_requestParser"
+              }
+            },
+            {
+              "keyRaw": "errorHandler",
+              "value": {
+                "@id": "css:dist/server/ParsingHttpHandler.jsonld#ParsingHttpHandler_args_errorHandler"
+              }
+            },
+            {
+              "keyRaw": "responseWriter",
+              "value": {
+                "@id": "css:dist/server/ParsingHttpHandler.jsonld#ParsingHttpHandler_args_responseWriter"
+              }
+            },
+            {
+              "keyRaw": "operationHandler",
+              "value": {
+                "@id": "css:dist/server/ParsingHttpHandler.jsonld#ParsingHttpHandler_args_operationHandler"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/server/ParsingHttpHandler.jsonld#ParsingHttpHandlerArgs",
+      "@type": "AbstractClass",
+      "requireElement": "ParsingHttpHandlerArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/ParsingHttpHandler.jsonld#ParsingHttpHandlerArgs__member_requestParser",
+          "memberFieldName": "requestParser"
+        },
+        {
+          "@id": "css:dist/server/ParsingHttpHandler.jsonld#ParsingHttpHandlerArgs__member_errorHandler",
+          "memberFieldName": "errorHandler"
+        },
+        {
+          "@id": "css:dist/server/ParsingHttpHandler.jsonld#ParsingHttpHandlerArgs__member_responseWriter",
+          "memberFieldName": "responseWriter"
+        },
+        {
+          "@id": "css:dist/server/ParsingHttpHandler.jsonld#ParsingHttpHandlerArgs__member_operationHandler",
+          "memberFieldName": "operationHandler"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

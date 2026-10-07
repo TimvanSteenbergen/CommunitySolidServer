@@ -1,0 +1,82 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/keyvalue/ContainerPathStorage.jsonld#ContainerPathStorage",
+      "@type": "Class",
+      "requireElement": "ContainerPathStorage",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/storage/keyvalue/PassthroughKeyValueStorage.jsonld#PassthroughKeyValueStorage",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/storage/keyvalue/ContainerPathStorage.jsonld#ContainerPathStorage__generic_T"
+            }
+          ]
+        }
+      ],
+      "comment": "A {@link KeyValueStorage} that prepends a relative path to the key. Leading slashes of the relative path are trimmed, and a trailing slash is added if needed.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/storage/keyvalue/ContainerPathStorage.jsonld#ContainerPathStorage__generic_T"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/storage/keyvalue/ContainerPathStorage.jsonld#ContainerPathStorage_relativePath",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/ContainerPathStorage.jsonld#ContainerPathStorage_source",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+            "genericTypeInstances": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "css:dist/storage/keyvalue/ContainerPathStorage.jsonld#ContainerPathStorage__generic_T"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/keyvalue/ContainerPathStorage.jsonld#ContainerPathStorage__member_basePath",
+          "memberFieldName": "basePath",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/ContainerPathStorage.jsonld#ContainerPathStorage__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/ContainerPathStorage.jsonld#ContainerPathStorage__member_entries",
+          "memberFieldName": "entries"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/ContainerPathStorage.jsonld#ContainerPathStorage__member_toNewKey",
+          "memberFieldName": "toNewKey"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/ContainerPathStorage.jsonld#ContainerPathStorage__member_toOriginalKey",
+          "memberFieldName": "toOriginalKey"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/keyvalue/ContainerPathStorage.jsonld#ContainerPathStorage_source"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/ContainerPathStorage.jsonld#ContainerPathStorage_relativePath"
+        }
+      ]
+    }
+  ]
+}

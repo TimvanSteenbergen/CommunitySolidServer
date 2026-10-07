@@ -1,0 +1,21 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.DefaultGraph = void 0;
+/**
+ * A singleton term instance that represents the default graph.
+ * It's only allowed to assign a DefaultGraph to the .graph property of a Quad.
+ */
+class DefaultGraph {
+    constructor() {
+        this.termType = 'DefaultGraph';
+        this.value = '';
+        // Private constructor
+    }
+    equals(other) {
+        return !!other && other.termType === 'DefaultGraph';
+    }
+}
+exports.DefaultGraph = DefaultGraph;
+// eslint-disable-next-line ts/naming-convention
+DefaultGraph.INSTANCE = new DefaultGraph();
+//# sourceMappingURL=DefaultGraph.js.map

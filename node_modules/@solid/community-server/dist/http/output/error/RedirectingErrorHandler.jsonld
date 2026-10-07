@@ -1,0 +1,29 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/output/error/RedirectingErrorHandler.jsonld#RedirectingErrorHandler",
+      "@type": "Class",
+      "requireElement": "RedirectingErrorHandler",
+      "extends": [
+        "css:dist/http/output/error/ErrorHandler.jsonld#ErrorHandler"
+      ],
+      "comment": "Internally we create redirects by throwing specific {@link RedirectHttpError}s. This Error handler converts those to {@link RedirectResponseDescription}s that are used for output.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/output/error/RedirectingErrorHandler.jsonld#RedirectingErrorHandler__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/http/output/error/RedirectingErrorHandler.jsonld#RedirectingErrorHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

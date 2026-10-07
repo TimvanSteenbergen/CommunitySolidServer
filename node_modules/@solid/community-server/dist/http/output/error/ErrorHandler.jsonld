@@ -1,0 +1,43 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/output/error/ErrorHandler.jsonld#ErrorHandler",
+      "@type": "AbstractClass",
+      "requireElement": "ErrorHandler",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            "css:dist/http/output/error/ErrorHandler.jsonld#ErrorHandlerArgs",
+            "css:dist/http/output/response/ResponseDescription.jsonld#ResponseDescription"
+          ]
+        }
+      ],
+      "comment": "Converts an error into a {@link ResponseDescription} based on the request preferences.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "css:dist/http/output/error/ErrorHandler.jsonld#ErrorHandlerArgs",
+      "@type": "AbstractClass",
+      "requireElement": "ErrorHandlerArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/output/error/ErrorHandler.jsonld#ErrorHandlerArgs__member_error",
+          "memberFieldName": "error"
+        },
+        {
+          "@id": "css:dist/http/output/error/ErrorHandler.jsonld#ErrorHandlerArgs__member_request",
+          "memberFieldName": "request"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

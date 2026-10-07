@@ -1,0 +1,50 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/oidc/ClientInfoHandler.jsonld#ClientInfoHandler",
+      "@type": "Class",
+      "requireElement": "ClientInfoHandler",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/identity/interaction/JsonInteractionHandler.jsonld#JsonInteractionHandler",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeWildcard"
+            }
+          ]
+        }
+      ],
+      "comment": "Returns a JSON representation with metadata of the client that is requesting the OIDC interaction.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/oidc/ClientInfoHandler.jsonld#ClientInfoHandler_providerFactory",
+          "range": "css:dist/identity/configuration/ProviderFactory.jsonld#ProviderFactory"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/oidc/ClientInfoHandler.jsonld#ClientInfoHandler__member_providerFactory",
+          "memberFieldName": "providerFactory"
+        },
+        {
+          "@id": "css:dist/identity/interaction/oidc/ClientInfoHandler.jsonld#ClientInfoHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/oidc/ClientInfoHandler.jsonld#ClientInfoHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/oidc/ClientInfoHandler.jsonld#ClientInfoHandler_providerFactory"
+        }
+      ]
+    }
+  ]
+}

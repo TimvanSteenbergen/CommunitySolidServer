@@ -1,0 +1,93 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/pods/ConfigPodManager.jsonld#ConfigPodManager",
+      "@type": "Class",
+      "requireElement": "ConfigPodManager",
+      "extends": [
+        "css:dist/pods/PodManager.jsonld#PodManager"
+      ],
+      "comment": "Pod manager that creates a store for the pod with a {@link PodGenerator} and fills it with resources from a {@link ResourcesGenerator}.  Part of the dynamic pod creation. 1. Calls a PodGenerator to instantiate a new resource store for the pod. 2. Generates the pod resources based on the templates as usual. 3. Adds the created pod to the routing storage, which is used for linking pod identifiers to their resource stores.",
+      "parameters": [
+        {
+          "@id": "css:dist/pods/ConfigPodManager.jsonld#ConfigPodManager_podGenerator",
+          "range": "css:dist/pods/generate/PodGenerator.jsonld#PodGenerator",
+          "comment": "Generator for the pod stores."
+        },
+        {
+          "@id": "css:dist/pods/ConfigPodManager.jsonld#ConfigPodManager_resourcesGenerator",
+          "range": "css:dist/pods/generate/ResourcesGenerator.jsonld#ResourcesGenerator",
+          "comment": "Generator for the pod resources."
+        },
+        {
+          "@id": "css:dist/pods/ConfigPodManager.jsonld#ConfigPodManager_store",
+          "range": "css:dist/storage/ResourceStore.jsonld#ResourceStore",
+          "comment": "The default ResourceStore"
+        },
+        {
+          "@id": "css:dist/pods/ConfigPodManager.jsonld#ConfigPodManager_routingStorage",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+            "genericTypeInstances": [
+              "xsd:string",
+              "css:dist/storage/ResourceStore.jsonld#ResourceStore"
+            ]
+          },
+          "comment": "Where to store the generated pods so they can be routed to."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/pods/ConfigPodManager.jsonld#ConfigPodManager__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/pods/ConfigPodManager.jsonld#ConfigPodManager__member_podGenerator",
+          "memberFieldName": "podGenerator"
+        },
+        {
+          "@id": "css:dist/pods/ConfigPodManager.jsonld#ConfigPodManager__member_routingStorage",
+          "memberFieldName": "routingStorage"
+        },
+        {
+          "@id": "css:dist/pods/ConfigPodManager.jsonld#ConfigPodManager__member_resourcesGenerator",
+          "memberFieldName": "resourcesGenerator"
+        },
+        {
+          "@id": "css:dist/pods/ConfigPodManager.jsonld#ConfigPodManager__member_store",
+          "memberFieldName": "store"
+        },
+        {
+          "@id": "css:dist/pods/ConfigPodManager.jsonld#ConfigPodManager__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/pods/ConfigPodManager.jsonld#ConfigPodManager__member_createPod",
+          "memberFieldName": "createPod"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/pods/ConfigPodManager.jsonld#ConfigPodManager_podGenerator"
+        },
+        {
+          "@id": "css:dist/pods/ConfigPodManager.jsonld#ConfigPodManager_resourcesGenerator"
+        },
+        {
+          "@id": "css:dist/pods/ConfigPodManager.jsonld#ConfigPodManager_routingStorage"
+        },
+        {
+          "@id": "css:dist/pods/ConfigPodManager.jsonld#ConfigPodManager_store"
+        }
+      ]
+    }
+  ]
+}

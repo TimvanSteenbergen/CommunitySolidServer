@@ -1,0 +1,160 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/input/metadata/LinkRelParser.jsonld#LinkRelParser",
+      "@type": "Class",
+      "requireElement": "LinkRelParser",
+      "extends": [
+        "css:dist/http/input/metadata/MetadataParser.jsonld#MetadataParser"
+      ],
+      "comment": "Parses Link headers with a specific `rel` value and adds them as metadata with the given predicate.",
+      "parameters": [
+        {
+          "@id": "css:dist/http/input/metadata/LinkRelParser.jsonld#LinkRelParser_linkRelMap",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "css:dist/http/input/metadata/LinkRelParser.jsonld#LinkRelParser_linkRelMap_key"
+              },
+              {
+                "@id": "css:dist/http/input/metadata/LinkRelParser.jsonld#LinkRelParser_linkRelMap_value",
+                "range": "css:dist/http/input/metadata/LinkRelParser.jsonld#LinkRelObject"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/input/metadata/LinkRelParser.jsonld#LinkRelParser__member_logger",
+          "memberFieldName": "logger",
+          "range": "css:dist/logging/Logger.jsonld#Logger"
+        },
+        {
+          "@id": "css:dist/http/input/metadata/LinkRelParser.jsonld#LinkRelParser__member_linkRelMap",
+          "memberFieldName": "linkRelMap"
+        },
+        {
+          "@id": "css:dist/http/input/metadata/LinkRelParser.jsonld#LinkRelParser__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/input/metadata/LinkRelParser.jsonld#LinkRelParser__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/input/metadata/LinkRelParser.jsonld#LinkRelParser_linkRelMap__constructorArgument",
+          "fields": [
+            {
+              "collectEntries": "css:dist/http/input/metadata/LinkRelParser.jsonld#LinkRelParser_linkRelMap",
+              "key": "css:dist/http/input/metadata/LinkRelParser.jsonld#LinkRelParser_linkRelMap_key",
+              "value": {
+                "@id": "css:dist/http/input/metadata/LinkRelParser.jsonld#LinkRelParser_linkRelMap_value"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/http/input/metadata/LinkRelParser.jsonld#LinkRelObject",
+      "@type": "Class",
+      "requireElement": "LinkRelObject",
+      "comment": "Represents the values that are parsed as metadata",
+      "parameters": [
+        {
+          "@id": "css:dist/http/input/metadata/LinkRelParser.jsonld#LinkRelObject_value",
+          "range": "xsd:string",
+          "comment": "The value corresponding to the `rel` value that will be used as predicate in the metadata."
+        },
+        {
+          "@id": "css:dist/http/input/metadata/LinkRelParser.jsonld#LinkRelObject_ephemeral",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "(Optional) Indicates whether it will be stored by the server."
+        },
+        {
+          "@id": "css:dist/http/input/metadata/LinkRelParser.jsonld#LinkRelObject_allowList",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": "xsd:string"
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "(Optional) Contains the objects that are allowed to be used with the given predicate."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/input/metadata/LinkRelParser.jsonld#LinkRelObject__member_value",
+          "memberFieldName": "value",
+          "range": "urn:npm:@rdfjs/types:NamedNode"
+        },
+        {
+          "@id": "css:dist/http/input/metadata/LinkRelParser.jsonld#LinkRelObject__member_ephemeral",
+          "memberFieldName": "ephemeral",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "css:dist/http/input/metadata/LinkRelParser.jsonld#LinkRelObject__member_allowList",
+          "memberFieldName": "allowList",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": "xsd:string"
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/http/input/metadata/LinkRelParser.jsonld#LinkRelObject__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/input/metadata/LinkRelParser.jsonld#LinkRelObject__member_objectAllowed",
+          "memberFieldName": "objectAllowed"
+        },
+        {
+          "@id": "css:dist/http/input/metadata/LinkRelParser.jsonld#LinkRelObject__member_addToMetadata",
+          "memberFieldName": "addToMetadata"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/input/metadata/LinkRelParser.jsonld#LinkRelObject_value"
+        },
+        {
+          "@id": "css:dist/http/input/metadata/LinkRelParser.jsonld#LinkRelObject_ephemeral"
+        },
+        {
+          "@id": "css:dist/http/input/metadata/LinkRelParser.jsonld#LinkRelObject_allowList"
+        }
+      ]
+    }
+  ]
+}

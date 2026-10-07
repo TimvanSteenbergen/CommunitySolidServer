@@ -1,0 +1,47 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/authorization/permissions/MethodModesExtractor.jsonld#MethodModesExtractor",
+      "@type": "Class",
+      "requireElement": "MethodModesExtractor",
+      "extends": [
+        "css:dist/authorization/permissions/ModesExtractor.jsonld#ModesExtractor"
+      ],
+      "comment": "Generates permissions for the base set of methods that always require the same permissions. Specifically: GET, HEAD, POST, PUT and DELETE.",
+      "parameters": [
+        {
+          "@id": "css:dist/authorization/permissions/MethodModesExtractor.jsonld#MethodModesExtractor_resourceSet",
+          "range": "css:dist/storage/ResourceSet.jsonld#ResourceSet",
+          "comment": "{@link ResourceSet} that can verify the target resource existence."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/authorization/permissions/MethodModesExtractor.jsonld#MethodModesExtractor__member_resourceSet",
+          "memberFieldName": "resourceSet"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/MethodModesExtractor.jsonld#MethodModesExtractor__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/MethodModesExtractor.jsonld#MethodModesExtractor__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/MethodModesExtractor.jsonld#MethodModesExtractor__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/authorization/permissions/MethodModesExtractor.jsonld#MethodModesExtractor_resourceSet"
+        }
+      ]
+    }
+  ]
+}

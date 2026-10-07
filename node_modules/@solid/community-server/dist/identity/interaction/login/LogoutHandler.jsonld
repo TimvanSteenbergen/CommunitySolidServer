@@ -1,0 +1,50 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/login/LogoutHandler.jsonld#LogoutHandler",
+      "@type": "Class",
+      "requireElement": "LogoutHandler",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/identity/interaction/JsonInteractionHandler.jsonld#JsonInteractionHandler",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeWildcard"
+            }
+          ]
+        }
+      ],
+      "comment": "Responsible for logging a user out. In practice this means making sure the cookie is no longer valid.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/login/LogoutHandler.jsonld#LogoutHandler_cookieStore",
+          "range": "css:dist/identity/interaction/account/util/CookieStore.jsonld#CookieStore"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/login/LogoutHandler.jsonld#LogoutHandler__member_cookieStore",
+          "memberFieldName": "cookieStore"
+        },
+        {
+          "@id": "css:dist/identity/interaction/login/LogoutHandler.jsonld#LogoutHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/login/LogoutHandler.jsonld#LogoutHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/login/LogoutHandler.jsonld#LogoutHandler_cookieStore"
+        }
+      ]
+    }
+  ]
+}

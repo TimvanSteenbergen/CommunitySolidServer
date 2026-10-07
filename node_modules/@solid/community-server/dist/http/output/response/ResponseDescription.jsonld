@@ -1,0 +1,72 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/output/response/ResponseDescription.jsonld#ResponseDescription",
+      "@type": "Class",
+      "requireElement": "ResponseDescription",
+      "comment": "The result of executing an operation.",
+      "parameters": [
+        {
+          "@id": "css:dist/http/output/response/ResponseDescription.jsonld#ResponseDescription_statusCode",
+          "range": "xsd:number",
+          "comment": "Status code to return."
+        },
+        {
+          "@id": "css:dist/http/output/response/ResponseDescription.jsonld#ResponseDescription_metadata",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Metadata corresponding to the response (and data potentially)."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/output/response/ResponseDescription.jsonld#ResponseDescription__member_statusCode",
+          "memberFieldName": "statusCode",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "css:dist/http/output/response/ResponseDescription.jsonld#ResponseDescription__member_metadata",
+          "memberFieldName": "metadata",
+          "range": "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata"
+        },
+        {
+          "@id": "css:dist/http/output/response/ResponseDescription.jsonld#ResponseDescription__member_data",
+          "memberFieldName": "data",
+          "range": {
+            "@type": "ParameterRangeIntersection",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "css:dist/util/GuardedStream.jsonld#Guarded__generic_T"
+              },
+              "css:dist/util/GuardedStream.jsonld#Guard"
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/http/output/response/ResponseDescription.jsonld#ResponseDescription__member_constructor",
+          "memberFieldName": "constructor"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/output/response/ResponseDescription.jsonld#ResponseDescription_statusCode"
+        },
+        {
+          "@id": "css:dist/http/output/response/ResponseDescription.jsonld#ResponseDescription_metadata"
+        }
+      ]
+    }
+  ]
+}

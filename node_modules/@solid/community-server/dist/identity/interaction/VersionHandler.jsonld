@@ -1,0 +1,46 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/VersionHandler.jsonld#VersionHandler",
+      "@type": "Class",
+      "requireElement": "VersionHandler",
+      "extends": [
+        "css:dist/identity/interaction/JsonInteractionHandler.jsonld#JsonInteractionHandler"
+      ],
+      "comment": "Adds the current version of the API to the JSON output. This version number should be updated every time the API changes.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/VersionHandler.jsonld#VersionHandler_source",
+          "range": "css:dist/identity/interaction/JsonInteractionHandler.jsonld#JsonInteractionHandler"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/VersionHandler.jsonld#VersionHandler__member_source",
+          "memberFieldName": "source"
+        },
+        {
+          "@id": "css:dist/identity/interaction/VersionHandler.jsonld#VersionHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/VersionHandler.jsonld#VersionHandler__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/identity/interaction/VersionHandler.jsonld#VersionHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/VersionHandler.jsonld#VersionHandler_source"
+        }
+      ]
+    }
+  ]
+}

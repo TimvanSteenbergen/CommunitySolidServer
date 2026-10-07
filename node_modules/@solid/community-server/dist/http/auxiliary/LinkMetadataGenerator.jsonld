@@ -1,0 +1,53 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/auxiliary/LinkMetadataGenerator.jsonld#LinkMetadataGenerator",
+      "@type": "Class",
+      "requireElement": "LinkMetadataGenerator",
+      "extends": [
+        "css:dist/http/auxiliary/MetadataGenerator.jsonld#MetadataGenerator"
+      ],
+      "comment": "Adds a link to the auxiliary resource when called on the subject resource. Specifically: <subjectId> <link> <auxiliaryId> will be added.  In case the input is metadata of an auxiliary resource no metadata will be added",
+      "parameters": [
+        {
+          "@id": "css:dist/http/auxiliary/LinkMetadataGenerator.jsonld#LinkMetadataGenerator_link",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/LinkMetadataGenerator.jsonld#LinkMetadataGenerator_identifierStrategy",
+          "range": "css:dist/http/auxiliary/AuxiliaryIdentifierStrategy.jsonld#AuxiliaryIdentifierStrategy"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/auxiliary/LinkMetadataGenerator.jsonld#LinkMetadataGenerator__member_link",
+          "memberFieldName": "link"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/LinkMetadataGenerator.jsonld#LinkMetadataGenerator__member_identifierStrategy",
+          "memberFieldName": "identifierStrategy"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/LinkMetadataGenerator.jsonld#LinkMetadataGenerator__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/LinkMetadataGenerator.jsonld#LinkMetadataGenerator__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/auxiliary/LinkMetadataGenerator.jsonld#LinkMetadataGenerator_link"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/LinkMetadataGenerator.jsonld#LinkMetadataGenerator_identifierStrategy"
+        }
+      ]
+    }
+  ]
+}

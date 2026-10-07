@@ -1,0 +1,22 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/pods/PodManager.jsonld#PodManager",
+      "@type": "AbstractClass",
+      "requireElement": "PodManager",
+      "comment": "Covers all functions related to pod management. In the future this should also include delete, and potentially recovery functions.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/pods/PodManager.jsonld#PodManager__member_createPod",
+          "memberFieldName": "createPod"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

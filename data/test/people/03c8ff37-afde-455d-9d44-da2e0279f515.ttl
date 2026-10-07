@@ -1,0 +1,7 @@
+<http://localhost:3000/test/people/03c8ff37-afde-455d-9d44-da2e0279f515.ttl> a <https://schema.org/Person>;
+    <https://schema.org/name> "avs";
+    <https://schema.org/givenName> "a";
+    <https://schema.org/familyName> "vs";
+    <https://schema.org/email> "avs@r.nl";
+    <https://schema.org/telephone> "2";
+    <https://schema.org/image> <http://localhost:3000/test/images/470e30d5-5c15-411f-810d-7112df8428e0.ttl>.

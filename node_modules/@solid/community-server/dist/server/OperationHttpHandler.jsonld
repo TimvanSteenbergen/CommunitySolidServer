@@ -1,0 +1,42 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/OperationHttpHandler.jsonld#OperationHttpHandler",
+      "@type": "AbstractClass",
+      "requireElement": "OperationHttpHandler",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            "css:dist/server/OperationHttpHandler.jsonld#OperationHttpHandlerInput",
+            "css:dist/http/output/response/ResponseDescription.jsonld#ResponseDescription"
+          ]
+        }
+      ],
+      "comment": "An HTTP handler that makes use of an already parsed Operation.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "css:dist/server/OperationHttpHandler.jsonld#OperationHttpHandlerInput",
+      "@type": "AbstractClass",
+      "requireElement": "OperationHttpHandlerInput",
+      "extends": [
+        "css:dist/server/HttpHandler.jsonld#HttpHandlerInput"
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/OperationHttpHandler.jsonld#OperationHttpHandlerInput__member_operation",
+          "memberFieldName": "operation"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

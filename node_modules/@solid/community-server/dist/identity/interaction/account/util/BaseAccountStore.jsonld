@@ -1,0 +1,50 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/account/util/BaseAccountStore.jsonld#BaseAccountStore",
+      "@type": "Class",
+      "requireElement": "BaseAccountStore",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/identity/interaction/account/util/GenericAccountStore.jsonld#GenericAccountStore",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeWildcard"
+            }
+          ]
+        }
+      ],
+      "comment": "A {@link GenericAccountStore} that supports the minimal account settings. Needs to be initialized before it can be used.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseAccountStore.jsonld#BaseAccountStore_storage",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/identity/interaction/account/util/LoginStorage.jsonld#LoginStorage",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseAccountStore.jsonld#BaseAccountStore__member_constructor",
+          "memberFieldName": "constructor"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseAccountStore.jsonld#BaseAccountStore_storage"
+        }
+      ]
+    }
+  ]
+}

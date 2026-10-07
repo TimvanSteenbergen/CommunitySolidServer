@@ -1,0 +1,53 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/RecordObject.jsonld#RecordObject",
+      "@type": "Class",
+      "requireElement": "RecordObject",
+      "comment": "Helper class for instantiating multiple objects with Components.js. See https://github.com/LinkedSoftwareDependencies/Components.js/issues/26",
+      "parameters": [
+        {
+          "@id": "css:dist/util/RecordObject.jsonld#RecordObject_record",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "css:dist/util/RecordObject.jsonld#RecordObject_record_key"
+              },
+              {
+                "@id": "css:dist/util/RecordObject.jsonld#RecordObject_record_value",
+                "range": {
+                  "@type": "ParameterRangeWildcard"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/RecordObject.jsonld#RecordObject__member_constructor",
+          "memberFieldName": "constructor"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/RecordObject.jsonld#RecordObject_record__constructorArgument",
+          "fields": [
+            {
+              "collectEntries": "css:dist/util/RecordObject.jsonld#RecordObject_record",
+              "key": "css:dist/util/RecordObject.jsonld#RecordObject_record_key",
+              "value": {
+                "@id": "css:dist/util/RecordObject.jsonld#RecordObject_record_value"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

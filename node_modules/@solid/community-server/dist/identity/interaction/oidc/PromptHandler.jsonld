@@ -1,0 +1,74 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/oidc/PromptHandler.jsonld#PromptHandler",
+      "@type": "Class",
+      "requireElement": "PromptHandler",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/identity/interaction/JsonInteractionHandler.jsonld#JsonInteractionHandler",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeWildcard"
+            }
+          ]
+        }
+      ],
+      "comment": "Redirects requests based on the OIDC Interaction prompt. Errors in case no match was found.  The reason we use this intermediate handler instead of letting the OIDC library redirect directly to the correct page, is because that library creates a cookie with of scope of the target page. By having the library always redirect to the index page, the cookie is relevant for all pages and other pages can see if we are still in an interaction.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/oidc/PromptHandler.jsonld#PromptHandler_promptRoutes",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "css:dist/identity/interaction/oidc/PromptHandler.jsonld#PromptHandler_promptRoutes_key"
+              },
+              {
+                "@id": "css:dist/identity/interaction/oidc/PromptHandler.jsonld#PromptHandler_promptRoutes_value",
+                "range": "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/oidc/PromptHandler.jsonld#PromptHandler__member_logger",
+          "memberFieldName": "logger"
+        },
+        {
+          "@id": "css:dist/identity/interaction/oidc/PromptHandler.jsonld#PromptHandler__member_promptRoutes",
+          "memberFieldName": "promptRoutes"
+        },
+        {
+          "@id": "css:dist/identity/interaction/oidc/PromptHandler.jsonld#PromptHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/oidc/PromptHandler.jsonld#PromptHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/oidc/PromptHandler.jsonld#PromptHandler_promptRoutes__constructorArgument",
+          "fields": [
+            {
+              "collectEntries": "css:dist/identity/interaction/oidc/PromptHandler.jsonld#PromptHandler_promptRoutes",
+              "key": "css:dist/identity/interaction/oidc/PromptHandler.jsonld#PromptHandler_promptRoutes_key",
+              "value": {
+                "@id": "css:dist/identity/interaction/oidc/PromptHandler.jsonld#PromptHandler_promptRoutes_value"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

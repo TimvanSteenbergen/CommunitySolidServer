@@ -1,0 +1,114 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/storage/PassthroughAdapterFactory.jsonld#PassthroughAdapter",
+      "@type": "Class",
+      "requireElement": "PassthroughAdapter",
+      "comment": "OIDC Adapter that calls the corresponding functions of the source Adapter. Can be extended by adapters that do not want to override all functions by implementing a decorator pattern.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/storage/PassthroughAdapterFactory.jsonld#PassthroughAdapter_name",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/identity/storage/PassthroughAdapterFactory.jsonld#PassthroughAdapter_source",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/storage/PassthroughAdapterFactory.jsonld#PassthroughAdapter__member_name",
+          "memberFieldName": "name",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/identity/storage/PassthroughAdapterFactory.jsonld#PassthroughAdapter__member_source",
+          "memberFieldName": "source",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/identity/storage/PassthroughAdapterFactory.jsonld#PassthroughAdapter__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/storage/PassthroughAdapterFactory.jsonld#PassthroughAdapter__member_upsert",
+          "memberFieldName": "upsert"
+        },
+        {
+          "@id": "css:dist/identity/storage/PassthroughAdapterFactory.jsonld#PassthroughAdapter__member_find",
+          "memberFieldName": "find"
+        },
+        {
+          "@id": "css:dist/identity/storage/PassthroughAdapterFactory.jsonld#PassthroughAdapter__member_findByUserCode",
+          "memberFieldName": "findByUserCode"
+        },
+        {
+          "@id": "css:dist/identity/storage/PassthroughAdapterFactory.jsonld#PassthroughAdapter__member_findByUid",
+          "memberFieldName": "findByUid"
+        },
+        {
+          "@id": "css:dist/identity/storage/PassthroughAdapterFactory.jsonld#PassthroughAdapter__member_consume",
+          "memberFieldName": "consume"
+        },
+        {
+          "@id": "css:dist/identity/storage/PassthroughAdapterFactory.jsonld#PassthroughAdapter__member_destroy",
+          "memberFieldName": "destroy"
+        },
+        {
+          "@id": "css:dist/identity/storage/PassthroughAdapterFactory.jsonld#PassthroughAdapter__member_revokeByGrantId",
+          "memberFieldName": "revokeByGrantId"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/storage/PassthroughAdapterFactory.jsonld#PassthroughAdapter_name"
+        },
+        {
+          "@id": "css:dist/identity/storage/PassthroughAdapterFactory.jsonld#PassthroughAdapter_source"
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/identity/storage/PassthroughAdapterFactory.jsonld#PassthroughAdapterFactory",
+      "@type": "Class",
+      "requireElement": "PassthroughAdapterFactory",
+      "extends": [
+        "css:dist/identity/storage/AdapterFactory.jsonld#AdapterFactory"
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/identity/storage/PassthroughAdapterFactory.jsonld#PassthroughAdapterFactory_source",
+          "range": "css:dist/identity/storage/AdapterFactory.jsonld#AdapterFactory"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/storage/PassthroughAdapterFactory.jsonld#PassthroughAdapterFactory__member_source",
+          "memberFieldName": "source",
+          "range": "css:dist/identity/storage/AdapterFactory.jsonld#AdapterFactory"
+        },
+        {
+          "@id": "css:dist/identity/storage/PassthroughAdapterFactory.jsonld#PassthroughAdapterFactory__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/storage/PassthroughAdapterFactory.jsonld#PassthroughAdapterFactory__member_createStorageAdapter",
+          "memberFieldName": "createStorageAdapter"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/storage/PassthroughAdapterFactory.jsonld#PassthroughAdapterFactory_source"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/routing/BaseUrlRouterRule.jsonld#BaseUrlRouterRule",
+      "@type": "Class",
+      "requireElement": "BaseUrlRouterRule",
+      "extends": [
+        "css:dist/storage/routing/RouterRule.jsonld#RouterRule"
+      ],
+      "comment": "Routes requests based on their base url. Checks if any of the stored base URLs match the request identifier. If there are no matches the base store will be returned if one was configured.  Part of the dynamic pod creation. Uses the identifiers that were added to the routing storage.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/routing/BaseUrlRouterRule.jsonld#BaseUrlRouterRule_baseStore",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "css:dist/storage/ResourceStore.jsonld#ResourceStore",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/storage/routing/BaseUrlRouterRule.jsonld#BaseUrlRouterRule_stores",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+            "genericTypeInstances": [
+              "xsd:string",
+              "css:dist/storage/ResourceStore.jsonld#ResourceStore"
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/routing/BaseUrlRouterRule.jsonld#BaseUrlRouterRule__member_baseStore",
+          "memberFieldName": "baseStore"
+        },
+        {
+          "@id": "css:dist/storage/routing/BaseUrlRouterRule.jsonld#BaseUrlRouterRule__member_stores",
+          "memberFieldName": "stores"
+        },
+        {
+          "@id": "css:dist/storage/routing/BaseUrlRouterRule.jsonld#BaseUrlRouterRule__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/routing/BaseUrlRouterRule.jsonld#BaseUrlRouterRule__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/storage/routing/BaseUrlRouterRule.jsonld#BaseUrlRouterRule__member_findStore",
+          "memberFieldName": "findStore"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/routing/BaseUrlRouterRule.jsonld#BaseUrlRouterRule_stores"
+        },
+        {
+          "@id": "css:dist/storage/routing/BaseUrlRouterRule.jsonld#BaseUrlRouterRule_baseStore"
+        }
+      ]
+    }
+  ]
+}

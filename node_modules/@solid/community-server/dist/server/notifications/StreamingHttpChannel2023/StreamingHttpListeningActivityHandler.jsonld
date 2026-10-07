@@ -1,0 +1,77 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpListeningActivityHandler.jsonld#StreamingHttpListeningActivityHandler",
+      "@type": "Class",
+      "requireElement": "StreamingHttpListeningActivityHandler",
+      "extends": [
+        "css:dist/util/handlers/StaticHandler.jsonld#StaticHandler"
+      ],
+      "comment": "Listens to an {@link ActivityEmitter} and calls the stored {@link NotificationHandler}s in case of an event for every matching notification channel found.  Extends {@link StaticHandler} so it can be more easily injected into a Components.js configuration. No class takes this one as input, so to make sure Components.js instantiates it, it needs to be added somewhere where its presence has no impact, such as the list of initializers.",
+      "parameters": [
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpListeningActivityHandler.jsonld#StreamingHttpListeningActivityHandler_emitter",
+          "range": {
+            "@type": "ParameterRangeIntersection",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeWildcard"
+              },
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpListeningActivityHandler.jsonld#StreamingHttpListeningActivityHandler_streamMap",
+          "range": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpMap.jsonld#StreamingHttpMap"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpListeningActivityHandler.jsonld#StreamingHttpListeningActivityHandler_source",
+          "range": "css:dist/server/notifications/NotificationHandler.jsonld#NotificationHandler"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpListeningActivityHandler.jsonld#StreamingHttpListeningActivityHandler__member_streamMap",
+          "memberFieldName": "streamMap"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpListeningActivityHandler.jsonld#StreamingHttpListeningActivityHandler__member_source",
+          "memberFieldName": "source"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpListeningActivityHandler.jsonld#StreamingHttpListeningActivityHandler__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpListeningActivityHandler.jsonld#StreamingHttpListeningActivityHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpListeningActivityHandler.jsonld#StreamingHttpListeningActivityHandler__member_emit",
+          "memberFieldName": "emit"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpListeningActivityHandler.jsonld#StreamingHttpListeningActivityHandler_emitter"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpListeningActivityHandler.jsonld#StreamingHttpListeningActivityHandler_streamMap"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpListeningActivityHandler.jsonld#StreamingHttpListeningActivityHandler_source"
+        }
+      ]
+    }
+  ]
+}

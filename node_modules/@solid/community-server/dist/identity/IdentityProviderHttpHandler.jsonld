@@ -1,0 +1,109 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/IdentityProviderHttpHandler.jsonld#IdentityProviderHttpHandler",
+      "@type": "Class",
+      "requireElement": "IdentityProviderHttpHandler",
+      "extends": [
+        "css:dist/server/OperationHttpHandler.jsonld#OperationHttpHandler"
+      ],
+      "comment": "Generates the active Interaction object if there is an ongoing OIDC interaction. Finds the account ID if there is cookie metadata.  Calls the stored {@link InteractionHandler} with that information and returns the result.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/IdentityProviderHttpHandler.jsonld#IdentityProviderHttpHandler_args_providerFactory",
+          "range": "css:dist/identity/configuration/ProviderFactory.jsonld#ProviderFactory",
+          "comment": "Used to generate the OIDC provider."
+        },
+        {
+          "@id": "css:dist/identity/IdentityProviderHttpHandler.jsonld#IdentityProviderHttpHandler_args_cookieStore",
+          "range": "css:dist/identity/interaction/account/util/CookieStore.jsonld#CookieStore",
+          "comment": "Used to determine the account of the requesting agent."
+        },
+        {
+          "@id": "css:dist/identity/IdentityProviderHttpHandler.jsonld#IdentityProviderHttpHandler_args_handler",
+          "range": "css:dist/identity/interaction/InteractionHandler.jsonld#InteractionHandler",
+          "comment": "Handles the requests."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/IdentityProviderHttpHandler.jsonld#IdentityProviderHttpHandler__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/identity/IdentityProviderHttpHandler.jsonld#IdentityProviderHttpHandler__member_providerFactory",
+          "memberFieldName": "providerFactory"
+        },
+        {
+          "@id": "css:dist/identity/IdentityProviderHttpHandler.jsonld#IdentityProviderHttpHandler__member_cookieStore",
+          "memberFieldName": "cookieStore"
+        },
+        {
+          "@id": "css:dist/identity/IdentityProviderHttpHandler.jsonld#IdentityProviderHttpHandler__member_handler",
+          "memberFieldName": "handler"
+        },
+        {
+          "@id": "css:dist/identity/IdentityProviderHttpHandler.jsonld#IdentityProviderHttpHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/IdentityProviderHttpHandler.jsonld#IdentityProviderHttpHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/IdentityProviderHttpHandler.jsonld#IdentityProviderHttpHandler_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "providerFactory",
+              "value": {
+                "@id": "css:dist/identity/IdentityProviderHttpHandler.jsonld#IdentityProviderHttpHandler_args_providerFactory"
+              }
+            },
+            {
+              "keyRaw": "cookieStore",
+              "value": {
+                "@id": "css:dist/identity/IdentityProviderHttpHandler.jsonld#IdentityProviderHttpHandler_args_cookieStore"
+              }
+            },
+            {
+              "keyRaw": "handler",
+              "value": {
+                "@id": "css:dist/identity/IdentityProviderHttpHandler.jsonld#IdentityProviderHttpHandler_args_handler"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/identity/IdentityProviderHttpHandler.jsonld#IdentityProviderHttpHandlerArgs",
+      "@type": "AbstractClass",
+      "requireElement": "IdentityProviderHttpHandlerArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/IdentityProviderHttpHandler.jsonld#IdentityProviderHttpHandlerArgs__member_providerFactory",
+          "memberFieldName": "providerFactory"
+        },
+        {
+          "@id": "css:dist/identity/IdentityProviderHttpHandler.jsonld#IdentityProviderHttpHandlerArgs__member_cookieStore",
+          "memberFieldName": "cookieStore"
+        },
+        {
+          "@id": "css:dist/identity/IdentityProviderHttpHandler.jsonld#IdentityProviderHttpHandlerArgs__member_handler",
+          "memberFieldName": "handler"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

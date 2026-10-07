@@ -1,0 +1,128 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/input/identifier/OriginalUrlExtractor.jsonld#OriginalUrlExtractor",
+      "@type": "Class",
+      "requireElement": "OriginalUrlExtractor",
+      "extends": [
+        "css:dist/http/input/identifier/TargetExtractor.jsonld#TargetExtractor"
+      ],
+      "comment": "Reconstructs the original URL of an incoming {@link HttpRequest}.",
+      "parameters": [
+        {
+          "@id": "css:dist/http/input/identifier/OriginalUrlExtractor.jsonld#OriginalUrlExtractor_args_identifierStrategy",
+          "range": "css:dist/util/identifiers/IdentifierStrategy.jsonld#IdentifierStrategy",
+          "comment": "The IdentifierStrategy to use for checking the scope of the request"
+        },
+        {
+          "@id": "css:dist/http/input/identifier/OriginalUrlExtractor.jsonld#OriginalUrlExtractor_args_includeQueryString",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Specify whether the OriginalUrlExtractor should include the request query string."
+        },
+        {
+          "@id": "css:dist/http/input/identifier/OriginalUrlExtractor.jsonld#OriginalUrlExtractor_args_fixedBaseUrl",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Forces the server to always assume the host header to be the value of the defined base URL. Useful for debugging when you're trying to access the server both internally and externally."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/input/identifier/OriginalUrlExtractor.jsonld#OriginalUrlExtractor__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/http/input/identifier/OriginalUrlExtractor.jsonld#OriginalUrlExtractor__member_identifierStrategy",
+          "memberFieldName": "identifierStrategy",
+          "range": "css:dist/util/identifiers/IdentifierStrategy.jsonld#IdentifierStrategy"
+        },
+        {
+          "@id": "css:dist/http/input/identifier/OriginalUrlExtractor.jsonld#OriginalUrlExtractor__member_includeQueryString",
+          "memberFieldName": "includeQueryString",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "css:dist/http/input/identifier/OriginalUrlExtractor.jsonld#OriginalUrlExtractor__member_fixedHost",
+          "memberFieldName": "fixedHost",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/http/input/identifier/OriginalUrlExtractor.jsonld#OriginalUrlExtractor__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/input/identifier/OriginalUrlExtractor.jsonld#OriginalUrlExtractor__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/input/identifier/OriginalUrlExtractor.jsonld#OriginalUrlExtractor_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "identifierStrategy",
+              "value": {
+                "@id": "css:dist/http/input/identifier/OriginalUrlExtractor.jsonld#OriginalUrlExtractor_args_identifierStrategy"
+              }
+            },
+            {
+              "keyRaw": "includeQueryString",
+              "value": {
+                "@id": "css:dist/http/input/identifier/OriginalUrlExtractor.jsonld#OriginalUrlExtractor_args_includeQueryString"
+              }
+            },
+            {
+              "keyRaw": "fixedBaseUrl",
+              "value": {
+                "@id": "css:dist/http/input/identifier/OriginalUrlExtractor.jsonld#OriginalUrlExtractor_args_fixedBaseUrl"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/http/input/identifier/OriginalUrlExtractor.jsonld#OriginalUrlExtractorArgs",
+      "@type": "AbstractClass",
+      "requireElement": "OriginalUrlExtractorArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/input/identifier/OriginalUrlExtractor.jsonld#OriginalUrlExtractorArgs__member_identifierStrategy",
+          "memberFieldName": "identifierStrategy"
+        },
+        {
+          "@id": "css:dist/http/input/identifier/OriginalUrlExtractor.jsonld#OriginalUrlExtractorArgs__member_includeQueryString",
+          "memberFieldName": "includeQueryString"
+        },
+        {
+          "@id": "css:dist/http/input/identifier/OriginalUrlExtractor.jsonld#OriginalUrlExtractorArgs__member_fixedBaseUrl",
+          "memberFieldName": "fixedBaseUrl"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

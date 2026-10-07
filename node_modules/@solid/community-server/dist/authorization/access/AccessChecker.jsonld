@@ -1,0 +1,47 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/authorization/access/AccessChecker.jsonld#AccessChecker",
+      "@type": "AbstractClass",
+      "requireElement": "AccessChecker",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            "css:dist/authorization/access/AccessChecker.jsonld#AccessCheckerArgs",
+            "xsd:boolean"
+          ]
+        }
+      ],
+      "comment": "Performs an authorization check against the given acl resource.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "css:dist/authorization/access/AccessChecker.jsonld#AccessCheckerArgs",
+      "@type": "AbstractClass",
+      "requireElement": "AccessCheckerArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/authorization/access/AccessChecker.jsonld#AccessCheckerArgs__member_acl",
+          "memberFieldName": "acl"
+        },
+        {
+          "@id": "css:dist/authorization/access/AccessChecker.jsonld#AccessCheckerArgs__member_rule",
+          "memberFieldName": "rule"
+        },
+        {
+          "@id": "css:dist/authorization/access/AccessChecker.jsonld#AccessCheckerArgs__member_credentials",
+          "memberFieldName": "credentials"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

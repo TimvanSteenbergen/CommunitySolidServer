@@ -1,0 +1,79 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/routing/ConvertingRouterRule.jsonld#ConvertingRouterRule",
+      "@type": "Class",
+      "requireElement": "ConvertingRouterRule",
+      "extends": [
+        "css:dist/storage/routing/RouterRule.jsonld#RouterRule"
+      ],
+      "comment": "Rule that directs requests based on how the data would need to be converted. In case the given converter can convert the data to the requested type, it will be directed to the `convertStore`. Otherwise the `defaultStore` will be chosen.  In case there is no data and only an identifier the `defaultStore` will be checked if it contains the given identifier. If not, the `convertStore` will be returned.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/routing/ConvertingRouterRule.jsonld#ConvertingRouterRule_typedStores",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": {
+              "@type": "ParameterRangeWildcard"
+            }
+          }
+        },
+        {
+          "@id": "css:dist/storage/routing/ConvertingRouterRule.jsonld#ConvertingRouterRule_defaultStore",
+          "range": "css:dist/storage/ResourceStore.jsonld#ResourceStore"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/routing/ConvertingRouterRule.jsonld#ConvertingRouterRule__member_typedStores",
+          "memberFieldName": "typedStores"
+        },
+        {
+          "@id": "css:dist/storage/routing/ConvertingRouterRule.jsonld#ConvertingRouterRule__member_defaultStore",
+          "memberFieldName": "defaultStore"
+        },
+        {
+          "@id": "css:dist/storage/routing/ConvertingRouterRule.jsonld#ConvertingRouterRule__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/routing/ConvertingRouterRule.jsonld#ConvertingRouterRule__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/storage/routing/ConvertingRouterRule.jsonld#ConvertingRouterRule__member_findStore",
+          "memberFieldName": "findStore"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/routing/ConvertingRouterRule.jsonld#ConvertingRouterRule_typedStores"
+        },
+        {
+          "@id": "css:dist/storage/routing/ConvertingRouterRule.jsonld#ConvertingRouterRule_defaultStore"
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/storage/routing/ConvertingRouterRule.jsonld#ConvertingStoreEntry",
+      "@type": "AbstractClass",
+      "requireElement": "ConvertingStoreEntry",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/routing/ConvertingRouterRule.jsonld#ConvertingStoreEntry__member_store",
+          "memberFieldName": "store"
+        },
+        {
+          "@id": "css:dist/storage/routing/ConvertingRouterRule.jsonld#ConvertingStoreEntry__member_supportChecker",
+          "memberFieldName": "supportChecker"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,182 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#BaseResourcesGenerator",
+      "@type": "Class",
+      "requireElement": "BaseResourcesGenerator",
+      "extends": [
+        "css:dist/pods/generate/TemplatedResourcesGenerator.jsonld#TemplatedResourcesGenerator"
+      ],
+      "comment": "Generates resources by making use of a template engine. The template folder structure will be kept. Folders will be interpreted as containers and files as documents. A FileIdentifierMapper will be used to generate identifiers that correspond to the relative structure.  Metadata resources will be yielded separately from their subject resource.  A relative `templateFolder` is resolved relative to cwd, unless it's preceded by `@css:`, e.g. `@css:foo/bar`.",
+      "parameters": [
+        {
+          "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#BaseResourcesGenerator_args_factory",
+          "range": "css:dist/storage/mapping/FileIdentifierMapper.jsonld#FileIdentifierMapperFactory",
+          "comment": "Factory used to generate mapper relative to the base identifier."
+        },
+        {
+          "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#BaseResourcesGenerator_args_templateEngine",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          },
+          "comment": "Template engine for generating the resources."
+        },
+        {
+          "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#BaseResourcesGenerator_args_templateExtension",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "The extension of files that need to be interpreted as templates. Will be removed to generate the identifier."
+        },
+        {
+          "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#BaseResourcesGenerator_args_metadataStrategy",
+          "range": "css:dist/http/auxiliary/AuxiliaryStrategy.jsonld#AuxiliaryStrategy",
+          "comment": "The metadataStrategy"
+        },
+        {
+          "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#BaseResourcesGenerator_args_store",
+          "range": "css:dist/storage/ResourceSet.jsonld#ResourceSet",
+          "comment": "The default ResourceStore"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#BaseResourcesGenerator__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#BaseResourcesGenerator__member_factory",
+          "memberFieldName": "factory"
+        },
+        {
+          "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#BaseResourcesGenerator__member_templateEngine",
+          "memberFieldName": "templateEngine"
+        },
+        {
+          "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#BaseResourcesGenerator__member_templateExtension",
+          "memberFieldName": "templateExtension"
+        },
+        {
+          "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#BaseResourcesGenerator__member_metadataStrategy",
+          "memberFieldName": "metadataStrategy"
+        },
+        {
+          "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#BaseResourcesGenerator__member_store",
+          "memberFieldName": "store"
+        },
+        {
+          "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#BaseResourcesGenerator__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#BaseResourcesGenerator__member_generate",
+          "memberFieldName": "generate"
+        },
+        {
+          "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#BaseResourcesGenerator__member_processFolder",
+          "memberFieldName": "processFolder"
+        },
+        {
+          "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#BaseResourcesGenerator__member_toTemplateLink",
+          "memberFieldName": "toTemplateLink"
+        },
+        {
+          "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#BaseResourcesGenerator__member_groupLinks",
+          "memberFieldName": "groupLinks"
+        },
+        {
+          "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#BaseResourcesGenerator__member_generateResource",
+          "memberFieldName": "generateResource"
+        },
+        {
+          "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#BaseResourcesGenerator__member_generateMetadata",
+          "memberFieldName": "generateMetadata"
+        },
+        {
+          "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#BaseResourcesGenerator__member_processFile",
+          "memberFieldName": "processFile"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#BaseResourcesGenerator_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "factory",
+              "value": {
+                "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#BaseResourcesGenerator_args_factory"
+              }
+            },
+            {
+              "keyRaw": "templateEngine",
+              "value": {
+                "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#BaseResourcesGenerator_args_templateEngine"
+              }
+            },
+            {
+              "keyRaw": "templateExtension",
+              "value": {
+                "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#BaseResourcesGenerator_args_templateExtension"
+              }
+            },
+            {
+              "keyRaw": "metadataStrategy",
+              "value": {
+                "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#BaseResourcesGenerator_args_metadataStrategy"
+              }
+            },
+            {
+              "keyRaw": "store",
+              "value": {
+                "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#BaseResourcesGenerator_args_store"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#SubfolderResourcesGeneratorArgs",
+      "@type": "AbstractClass",
+      "requireElement": "SubfolderResourcesGeneratorArgs",
+      "comment": "Input arguments required for {@link BaseResourcesGenerator}",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#SubfolderResourcesGeneratorArgs__member_factory",
+          "memberFieldName": "factory"
+        },
+        {
+          "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#SubfolderResourcesGeneratorArgs__member_templateEngine",
+          "memberFieldName": "templateEngine"
+        },
+        {
+          "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#SubfolderResourcesGeneratorArgs__member_templateExtension",
+          "memberFieldName": "templateExtension"
+        },
+        {
+          "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#SubfolderResourcesGeneratorArgs__member_metadataStrategy",
+          "memberFieldName": "metadataStrategy"
+        },
+        {
+          "@id": "css:dist/pods/generate/BaseResourcesGenerator.jsonld#SubfolderResourcesGeneratorArgs__member_store",
+          "memberFieldName": "store"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

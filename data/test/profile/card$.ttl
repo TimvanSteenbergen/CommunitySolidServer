@@ -1,0 +1,12 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix solid: <http://www.w3.org/ns/solid/terms#>.
+@prefix pim: <http://www.w3.org/ns/pim/space#>.
+
+<> a foaf:PersonalProfileDocument;
+    foaf:maker <#me>;
+    foaf:primaryTopic <#me>.
+<#me> a foaf:Person;
+    solid:oidcIssuer <../../>;
+    solid:privateTypeIndex <../settings/privateTypeIndex.ttl>;
+    pim:storage <../>;
+    <https://schema.org/image> <../images/470e30d5-5c15-411f-810d-7112df8428e0.ttl>.

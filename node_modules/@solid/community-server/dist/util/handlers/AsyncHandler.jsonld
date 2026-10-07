@@ -1,0 +1,38 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+      "@type": "AbstractClass",
+      "requireElement": "AsyncHandler",
+      "comment": "Simple interface for classes that can potentially handle a specific kind of data asynchronously.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler__generic_TIn"
+        },
+        {
+          "@id": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler__generic_TOut"
+        }
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler__member_handleSafe",
+          "memberFieldName": "handleSafe"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

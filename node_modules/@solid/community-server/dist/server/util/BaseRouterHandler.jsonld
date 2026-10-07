@@ -1,0 +1,50 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/util/BaseRouterHandler.jsonld#BaseRouterHandlerArgs",
+      "@type": "AbstractClass",
+      "requireElement": "BaseRouterHandlerArgs",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/server/util/BaseRouterHandler.jsonld#BaseRouterHandlerArgs__generic_T",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeWildcard"
+              },
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        }
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/util/BaseRouterHandler.jsonld#BaseRouterHandlerArgs__member_baseUrl",
+          "memberFieldName": "baseUrl"
+        },
+        {
+          "@id": "css:dist/server/util/BaseRouterHandler.jsonld#BaseRouterHandlerArgs__member_handler",
+          "memberFieldName": "handler"
+        },
+        {
+          "@id": "css:dist/server/util/BaseRouterHandler.jsonld#BaseRouterHandlerArgs__member_allowedMethods",
+          "memberFieldName": "allowedMethods"
+        },
+        {
+          "@id": "css:dist/server/util/BaseRouterHandler.jsonld#BaseRouterHandlerArgs__member_allowedPathNames",
+          "memberFieldName": "allowedPathNames"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

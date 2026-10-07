@@ -1,0 +1,32 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/ownership/NoCheckOwnershipValidator.jsonld#NoCheckOwnershipValidator",
+      "@type": "Class",
+      "requireElement": "NoCheckOwnershipValidator",
+      "extends": [
+        "css:dist/identity/ownership/OwnershipValidator.jsonld#OwnershipValidator"
+      ],
+      "comment": "Does not do any checks to verify if the agent doing the request is actually the owner of the WebID. This should only be used for debugging.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/ownership/NoCheckOwnershipValidator.jsonld#NoCheckOwnershipValidator__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/identity/ownership/NoCheckOwnershipValidator.jsonld#NoCheckOwnershipValidator__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

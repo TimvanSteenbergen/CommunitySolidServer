@@ -1,0 +1,43 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/auxiliary/RdfValidator.jsonld#RdfValidator",
+      "@type": "Class",
+      "requireElement": "RdfValidator",
+      "extends": [
+        "css:dist/http/auxiliary/Validator.jsonld#Validator"
+      ],
+      "comment": "Validates a Representation by verifying if the data stream contains valid RDF data. It does this by letting the stored RepresentationConverter convert the data.",
+      "parameters": [
+        {
+          "@id": "css:dist/http/auxiliary/RdfValidator.jsonld#RdfValidator_converter",
+          "range": "css:dist/storage/conversion/RepresentationConverter.jsonld#RepresentationConverter"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/auxiliary/RdfValidator.jsonld#RdfValidator__member_converter",
+          "memberFieldName": "converter",
+          "range": "css:dist/storage/conversion/RepresentationConverter.jsonld#RepresentationConverter"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/RdfValidator.jsonld#RdfValidator__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/RdfValidator.jsonld#RdfValidator__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/auxiliary/RdfValidator.jsonld#RdfValidator_converter"
+        }
+      ]
+    }
+  ]
+}

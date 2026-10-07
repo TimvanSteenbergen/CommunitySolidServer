@@ -1,0 +1,42 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/output/metadata/WwwAuthMetadataWriter.jsonld#WwwAuthMetadataWriter",
+      "@type": "Class",
+      "requireElement": "WwwAuthMetadataWriter",
+      "extends": [
+        "css:dist/http/output/metadata/MetadataWriter.jsonld#MetadataWriter"
+      ],
+      "comment": "Adds the `WWW-Authenticate` header with the injected value in case the response status code is 401.",
+      "parameters": [
+        {
+          "@id": "css:dist/http/output/metadata/WwwAuthMetadataWriter.jsonld#WwwAuthMetadataWriter_auth",
+          "range": "xsd:string"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/output/metadata/WwwAuthMetadataWriter.jsonld#WwwAuthMetadataWriter__member_auth",
+          "memberFieldName": "auth"
+        },
+        {
+          "@id": "css:dist/http/output/metadata/WwwAuthMetadataWriter.jsonld#WwwAuthMetadataWriter__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/output/metadata/WwwAuthMetadataWriter.jsonld#WwwAuthMetadataWriter__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/output/metadata/WwwAuthMetadataWriter.jsonld#WwwAuthMetadataWriter_auth"
+        }
+      ]
+    }
+  ]
+}

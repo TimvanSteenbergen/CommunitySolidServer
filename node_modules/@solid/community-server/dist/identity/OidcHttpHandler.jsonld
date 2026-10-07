@@ -1,0 +1,49 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/OidcHttpHandler.jsonld#OidcHttpHandler",
+      "@type": "Class",
+      "requireElement": "OidcHttpHandler",
+      "extends": [
+        "css:dist/server/HttpHandler.jsonld#HttpHandler"
+      ],
+      "comment": "HTTP handler that redirects all requests to the OIDC library.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/OidcHttpHandler.jsonld#OidcHttpHandler_providerFactory",
+          "range": "css:dist/identity/configuration/ProviderFactory.jsonld#ProviderFactory"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/OidcHttpHandler.jsonld#OidcHttpHandler__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/identity/OidcHttpHandler.jsonld#OidcHttpHandler__member_providerFactory",
+          "memberFieldName": "providerFactory"
+        },
+        {
+          "@id": "css:dist/identity/OidcHttpHandler.jsonld#OidcHttpHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/OidcHttpHandler.jsonld#OidcHttpHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/OidcHttpHandler.jsonld#OidcHttpHandler_providerFactory"
+        }
+      ]
+    }
+  ]
+}

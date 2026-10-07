@@ -1,0 +1,136 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/input/BasicRequestParser.jsonld#BasicRequestParser",
+      "@type": "Class",
+      "requireElement": "BasicRequestParser",
+      "extends": [
+        "css:dist/http/input/RequestParser.jsonld#RequestParser"
+      ],
+      "comment": "Creates an {@link Operation} from an incoming {@link HttpRequest} by aggregating the results of a {@link TargetExtractor}, {@link MetadataParser}, {@link ConditionsParser} and {@link BodyParser}.",
+      "parameters": [
+        {
+          "@id": "css:dist/http/input/BasicRequestParser.jsonld#BasicRequestParser_args_targetExtractor",
+          "range": "css:dist/http/input/identifier/TargetExtractor.jsonld#TargetExtractor"
+        },
+        {
+          "@id": "css:dist/http/input/BasicRequestParser.jsonld#BasicRequestParser_args_preferenceParser",
+          "range": "css:dist/http/input/preferences/PreferenceParser.jsonld#PreferenceParser"
+        },
+        {
+          "@id": "css:dist/http/input/BasicRequestParser.jsonld#BasicRequestParser_args_metadataParser",
+          "range": "css:dist/http/input/metadata/MetadataParser.jsonld#MetadataParser"
+        },
+        {
+          "@id": "css:dist/http/input/BasicRequestParser.jsonld#BasicRequestParser_args_conditionsParser",
+          "range": "css:dist/http/input/conditions/ConditionsParser.jsonld#ConditionsParser"
+        },
+        {
+          "@id": "css:dist/http/input/BasicRequestParser.jsonld#BasicRequestParser_args_bodyParser",
+          "range": "css:dist/http/input/body/BodyParser.jsonld#BodyParser"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/input/BasicRequestParser.jsonld#BasicRequestParser__member_targetExtractor",
+          "memberFieldName": "targetExtractor"
+        },
+        {
+          "@id": "css:dist/http/input/BasicRequestParser.jsonld#BasicRequestParser__member_preferenceParser",
+          "memberFieldName": "preferenceParser"
+        },
+        {
+          "@id": "css:dist/http/input/BasicRequestParser.jsonld#BasicRequestParser__member_metadataParser",
+          "memberFieldName": "metadataParser"
+        },
+        {
+          "@id": "css:dist/http/input/BasicRequestParser.jsonld#BasicRequestParser__member_conditionsParser",
+          "memberFieldName": "conditionsParser"
+        },
+        {
+          "@id": "css:dist/http/input/BasicRequestParser.jsonld#BasicRequestParser__member_bodyParser",
+          "memberFieldName": "bodyParser"
+        },
+        {
+          "@id": "css:dist/http/input/BasicRequestParser.jsonld#BasicRequestParser__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/input/BasicRequestParser.jsonld#BasicRequestParser__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/input/BasicRequestParser.jsonld#BasicRequestParser_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "targetExtractor",
+              "value": {
+                "@id": "css:dist/http/input/BasicRequestParser.jsonld#BasicRequestParser_args_targetExtractor"
+              }
+            },
+            {
+              "keyRaw": "preferenceParser",
+              "value": {
+                "@id": "css:dist/http/input/BasicRequestParser.jsonld#BasicRequestParser_args_preferenceParser"
+              }
+            },
+            {
+              "keyRaw": "metadataParser",
+              "value": {
+                "@id": "css:dist/http/input/BasicRequestParser.jsonld#BasicRequestParser_args_metadataParser"
+              }
+            },
+            {
+              "keyRaw": "conditionsParser",
+              "value": {
+                "@id": "css:dist/http/input/BasicRequestParser.jsonld#BasicRequestParser_args_conditionsParser"
+              }
+            },
+            {
+              "keyRaw": "bodyParser",
+              "value": {
+                "@id": "css:dist/http/input/BasicRequestParser.jsonld#BasicRequestParser_args_bodyParser"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/http/input/BasicRequestParser.jsonld#BasicRequestParserArgs",
+      "@type": "AbstractClass",
+      "requireElement": "BasicRequestParserArgs",
+      "comment": "Input parsers required for a {@link BasicRequestParser}.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/input/BasicRequestParser.jsonld#BasicRequestParserArgs__member_targetExtractor",
+          "memberFieldName": "targetExtractor"
+        },
+        {
+          "@id": "css:dist/http/input/BasicRequestParser.jsonld#BasicRequestParserArgs__member_preferenceParser",
+          "memberFieldName": "preferenceParser"
+        },
+        {
+          "@id": "css:dist/http/input/BasicRequestParser.jsonld#BasicRequestParserArgs__member_metadataParser",
+          "memberFieldName": "metadataParser"
+        },
+        {
+          "@id": "css:dist/http/input/BasicRequestParser.jsonld#BasicRequestParserArgs__member_conditionsParser",
+          "memberFieldName": "conditionsParser"
+        },
+        {
+          "@id": "css:dist/http/input/BasicRequestParser.jsonld#BasicRequestParserArgs__member_bodyParser",
+          "memberFieldName": "bodyParser"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

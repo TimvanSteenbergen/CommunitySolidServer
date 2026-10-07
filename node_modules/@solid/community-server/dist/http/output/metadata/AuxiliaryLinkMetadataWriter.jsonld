@@ -1,0 +1,74 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/output/metadata/AuxiliaryLinkMetadataWriter.jsonld#AuxiliaryLinkMetadataWriter",
+      "@type": "Class",
+      "requireElement": "AuxiliaryLinkMetadataWriter",
+      "extends": [
+        "css:dist/http/output/metadata/MetadataWriter.jsonld#MetadataWriter"
+      ],
+      "comment": "A {@link MetadataWriter} that takes a specific auxiliaryStrategy and relation type as input and creates a Link header with the strategy identifier and the relation type as \"rel\" value.",
+      "parameters": [
+        {
+          "@id": "css:dist/http/output/metadata/AuxiliaryLinkMetadataWriter.jsonld#AuxiliaryLinkMetadataWriter_relationType",
+          "range": "xsd:string",
+          "comment": "The value used to create the \"rel\" value of the Link header."
+        },
+        {
+          "@id": "css:dist/http/output/metadata/AuxiliaryLinkMetadataWriter.jsonld#AuxiliaryLinkMetadataWriter_auxiliaryStrategy",
+          "range": "css:dist/http/auxiliary/AuxiliaryStrategy.jsonld#AuxiliaryStrategy",
+          "comment": "The strategy used to check if an identifier is any kind of auxiliary identifier."
+        },
+        {
+          "@id": "css:dist/http/output/metadata/AuxiliaryLinkMetadataWriter.jsonld#AuxiliaryLinkMetadataWriter_specificStrategy",
+          "range": "css:dist/http/auxiliary/AuxiliaryStrategy.jsonld#AuxiliaryStrategy",
+          "comment": "The strategy used to create a specific kind of auxiliary identifier."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/output/metadata/AuxiliaryLinkMetadataWriter.jsonld#AuxiliaryLinkMetadataWriter__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/http/output/metadata/AuxiliaryLinkMetadataWriter.jsonld#AuxiliaryLinkMetadataWriter__member_auxiliaryStrategy",
+          "memberFieldName": "auxiliaryStrategy"
+        },
+        {
+          "@id": "css:dist/http/output/metadata/AuxiliaryLinkMetadataWriter.jsonld#AuxiliaryLinkMetadataWriter__member_specificStrategy",
+          "memberFieldName": "specificStrategy"
+        },
+        {
+          "@id": "css:dist/http/output/metadata/AuxiliaryLinkMetadataWriter.jsonld#AuxiliaryLinkMetadataWriter__member_relationType",
+          "memberFieldName": "relationType"
+        },
+        {
+          "@id": "css:dist/http/output/metadata/AuxiliaryLinkMetadataWriter.jsonld#AuxiliaryLinkMetadataWriter__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/output/metadata/AuxiliaryLinkMetadataWriter.jsonld#AuxiliaryLinkMetadataWriter__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/output/metadata/AuxiliaryLinkMetadataWriter.jsonld#AuxiliaryLinkMetadataWriter_auxiliaryStrategy"
+        },
+        {
+          "@id": "css:dist/http/output/metadata/AuxiliaryLinkMetadataWriter.jsonld#AuxiliaryLinkMetadataWriter_specificStrategy"
+        },
+        {
+          "@id": "css:dist/http/output/metadata/AuxiliaryLinkMetadataWriter.jsonld#AuxiliaryLinkMetadataWriter_relationType"
+        }
+      ]
+    }
+  ]
+}

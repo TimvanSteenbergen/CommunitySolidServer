@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/util/ConvertingOperationHttpHandler.jsonld#ConvertingOperationHttpHandler",
+      "@type": "Class",
+      "requireElement": "ConvertingOperationHttpHandler",
+      "extends": [
+        "css:dist/server/OperationHttpHandler.jsonld#OperationHttpHandler"
+      ],
+      "comment": "An {@link OperationHttpHandler} that converts the response of its handler based on the {@link Operation} preferences. If there are no preferences, or no data, the response will be returned as-is.",
+      "parameters": [
+        {
+          "@id": "css:dist/server/util/ConvertingOperationHttpHandler.jsonld#ConvertingOperationHttpHandler_converter",
+          "range": "css:dist/storage/conversion/RepresentationConverter.jsonld#RepresentationConverter"
+        },
+        {
+          "@id": "css:dist/server/util/ConvertingOperationHttpHandler.jsonld#ConvertingOperationHttpHandler_operationHandler",
+          "range": "css:dist/server/OperationHttpHandler.jsonld#OperationHttpHandler"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/util/ConvertingOperationHttpHandler.jsonld#ConvertingOperationHttpHandler__member_converter",
+          "memberFieldName": "converter"
+        },
+        {
+          "@id": "css:dist/server/util/ConvertingOperationHttpHandler.jsonld#ConvertingOperationHttpHandler__member_operationHandler",
+          "memberFieldName": "operationHandler"
+        },
+        {
+          "@id": "css:dist/server/util/ConvertingOperationHttpHandler.jsonld#ConvertingOperationHttpHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/util/ConvertingOperationHttpHandler.jsonld#ConvertingOperationHttpHandler__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/server/util/ConvertingOperationHttpHandler.jsonld#ConvertingOperationHttpHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/util/ConvertingOperationHttpHandler.jsonld#ConvertingOperationHttpHandler_converter"
+        },
+        {
+          "@id": "css:dist/server/util/ConvertingOperationHttpHandler.jsonld#ConvertingOperationHttpHandler_operationHandler"
+        }
+      ]
+    }
+  ]
+}

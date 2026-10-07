@@ -1,0 +1,71 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/mapping/FileIdentifierMapper.jsonld#ResourceLink",
+      "@type": "AbstractClass",
+      "requireElement": "ResourceLink",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/mapping/FileIdentifierMapper.jsonld#ResourceLink__member_identifier",
+          "memberFieldName": "identifier"
+        },
+        {
+          "@id": "css:dist/storage/mapping/FileIdentifierMapper.jsonld#ResourceLink__member_filePath",
+          "memberFieldName": "filePath"
+        },
+        {
+          "@id": "css:dist/storage/mapping/FileIdentifierMapper.jsonld#ResourceLink__member_contentType",
+          "memberFieldName": "contentType"
+        },
+        {
+          "@id": "css:dist/storage/mapping/FileIdentifierMapper.jsonld#ResourceLink__member_isMetadata",
+          "memberFieldName": "isMetadata"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "css:dist/storage/mapping/FileIdentifierMapper.jsonld#FileIdentifierMapper",
+      "@type": "AbstractClass",
+      "requireElement": "FileIdentifierMapper",
+      "comment": "Supports mapping a file to an URL and back.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/mapping/FileIdentifierMapper.jsonld#FileIdentifierMapper__member_mapFilePathToUrl",
+          "memberFieldName": "mapFilePathToUrl"
+        },
+        {
+          "@id": "css:dist/storage/mapping/FileIdentifierMapper.jsonld#FileIdentifierMapper__member_mapUrlToFilePath",
+          "memberFieldName": "mapUrlToFilePath"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "css:dist/storage/mapping/FileIdentifierMapper.jsonld#FileIdentifierMapperFactory",
+      "@type": "AbstractClass",
+      "requireElement": "FileIdentifierMapperFactory",
+      "comment": "Factory that can create FileIdentifierMappers so the base and rootFilePath can be set dynamically. Specifically used when identifiers need to be generated for a new pod (since pod identifiers are generated).",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/storage/mapping/FileIdentifierMapper.jsonld#FileIdentifierMapperFactory__generic_T",
+          "range": "css:dist/storage/mapping/FileIdentifierMapper.jsonld#FileIdentifierMapper"
+        }
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/mapping/FileIdentifierMapper.jsonld#FileIdentifierMapperFactory__member_create",
+          "memberFieldName": "create"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

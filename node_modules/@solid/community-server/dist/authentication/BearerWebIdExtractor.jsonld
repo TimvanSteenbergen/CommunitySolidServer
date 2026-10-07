@@ -1,0 +1,43 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/authentication/BearerWebIdExtractor.jsonld#BearerWebIdExtractor",
+      "@type": "Class",
+      "requireElement": "BearerWebIdExtractor",
+      "extends": [
+        "css:dist/authentication/CredentialsExtractor.jsonld#CredentialsExtractor"
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/authentication/BearerWebIdExtractor.jsonld#BearerWebIdExtractor__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/authentication/BearerWebIdExtractor.jsonld#BearerWebIdExtractor__member_verify",
+          "memberFieldName": "verify"
+        },
+        {
+          "@id": "css:dist/authentication/BearerWebIdExtractor.jsonld#BearerWebIdExtractor__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/authentication/BearerWebIdExtractor.jsonld#BearerWebIdExtractor__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/authentication/BearerWebIdExtractor.jsonld#BearerWebIdExtractor__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

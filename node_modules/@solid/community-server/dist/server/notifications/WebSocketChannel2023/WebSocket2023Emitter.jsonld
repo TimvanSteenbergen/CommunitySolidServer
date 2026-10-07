@@ -1,0 +1,51 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Emitter.jsonld#WebSocket2023Emitter",
+      "@type": "Class",
+      "requireElement": "WebSocket2023Emitter",
+      "extends": [
+        "css:dist/server/notifications/NotificationEmitter.jsonld#NotificationEmitter"
+      ],
+      "comment": "Emits notifications on WebSocketChannel2023 subscription. Uses the WebSockets found in the provided map. The key should be the identifier of the matching channel.",
+      "parameters": [
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Emitter.jsonld#WebSocket2023Emitter_socketMap",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Emitter.jsonld#WebSocket2023Emitter__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Emitter.jsonld#WebSocket2023Emitter__member_socketMap",
+          "memberFieldName": "socketMap"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Emitter.jsonld#WebSocket2023Emitter__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Emitter.jsonld#WebSocket2023Emitter__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Emitter.jsonld#WebSocket2023Emitter_socketMap"
+        }
+      ]
+    }
+  ]
+}

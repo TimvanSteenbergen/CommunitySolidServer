@@ -1,0 +1,37 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/authorization/access/AgentGroupAccessChecker.jsonld#AgentGroupAccessChecker",
+      "@type": "Class",
+      "requireElement": "AgentGroupAccessChecker",
+      "extends": [
+        "css:dist/authorization/access/AccessChecker.jsonld#AccessChecker"
+      ],
+      "comment": "Checks if the given WebID belongs to a group that has access. Implements the behaviour of groups from the WAC specification.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/authorization/access/AgentGroupAccessChecker.jsonld#AgentGroupAccessChecker__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/authorization/access/AgentGroupAccessChecker.jsonld#AgentGroupAccessChecker__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/authorization/access/AgentGroupAccessChecker.jsonld#AgentGroupAccessChecker__member_isMemberOfGroup",
+          "memberFieldName": "isMemberOfGroup"
+        },
+        {
+          "@id": "css:dist/authorization/access/AgentGroupAccessChecker.jsonld#AgentGroupAccessChecker__member_fetchQuads",
+          "memberFieldName": "fetchQuads"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

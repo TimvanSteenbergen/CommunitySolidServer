@@ -1,0 +1,58 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/errors/BadRequestHttpError.jsonld#BadRequestHttpError",
+      "@type": "Class",
+      "requireElement": "BadRequestHttpError",
+      "comment": "An error thrown when incoming data is not supported. Probably because an {@link AsyncHandler} returns false on the canHandle call.",
+      "parameters": [
+        {
+          "@id": "css:dist/util/errors/BadRequestHttpError.jsonld#BadRequestHttpError_message",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Optional, more specific, message."
+        },
+        {
+          "@id": "css:dist/util/errors/BadRequestHttpError.jsonld#BadRequestHttpError_options",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeWildcard"
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Optional error options."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/errors/BadRequestHttpError.jsonld#BadRequestHttpError__member_constructor",
+          "memberFieldName": "constructor"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/errors/BadRequestHttpError.jsonld#BadRequestHttpError_message"
+        },
+        {
+          "@id": "css:dist/util/errors/BadRequestHttpError.jsonld#BadRequestHttpError_options"
+        }
+      ]
+    }
+  ]
+}

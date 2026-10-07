@@ -1,0 +1,42 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/WebSocketHandler.jsonld#WebSocketHandler",
+      "@type": "AbstractClass",
+      "requireElement": "WebSocketHandler",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            "css:dist/server/WebSocketHandler.jsonld#WebSocketHandlerInput"
+          ]
+        }
+      ],
+      "comment": "A handler to support requests trying to open a WebSocket connection.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "css:dist/server/WebSocketHandler.jsonld#WebSocketHandlerInput",
+      "@type": "AbstractClass",
+      "requireElement": "WebSocketHandlerInput",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/WebSocketHandler.jsonld#WebSocketHandlerInput__member_webSocket",
+          "memberFieldName": "webSocket"
+        },
+        {
+          "@id": "css:dist/server/WebSocketHandler.jsonld#WebSocketHandlerInput__member_upgradeRequest",
+          "memberFieldName": "upgradeRequest"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

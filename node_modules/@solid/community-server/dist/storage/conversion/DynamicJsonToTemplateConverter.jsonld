@@ -1,0 +1,56 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/conversion/DynamicJsonToTemplateConverter.jsonld#DynamicJsonToTemplateConverter",
+      "@type": "Class",
+      "requireElement": "DynamicJsonToTemplateConverter",
+      "extends": [
+        "css:dist/storage/conversion/RepresentationConverter.jsonld#RepresentationConverter"
+      ],
+      "comment": "Converts JSON data by using it as input parameters for rendering a template. The `extension` field can be used to only support a specific type of templates, such as \".ejs\" for EJS templates.  To find the templates it expects the Representation metadata to contain `SOLID_META.template` triples, with the objects being the template paths. For each of those templates there also needs to be a CONTENT_TYPE triple describing the content-type of that template.  The output of the result depends on the content-type matched with the template. In case JSON is the most preferred output type, the input representation will be returned unless a JSON template is defined.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/conversion/DynamicJsonToTemplateConverter.jsonld#DynamicJsonToTemplateConverter_templateEngine",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/conversion/DynamicJsonToTemplateConverter.jsonld#DynamicJsonToTemplateConverter__member_templateEngine",
+          "memberFieldName": "templateEngine"
+        },
+        {
+          "@id": "css:dist/storage/conversion/DynamicJsonToTemplateConverter.jsonld#DynamicJsonToTemplateConverter__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/conversion/DynamicJsonToTemplateConverter.jsonld#DynamicJsonToTemplateConverter__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/storage/conversion/DynamicJsonToTemplateConverter.jsonld#DynamicJsonToTemplateConverter__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/storage/conversion/DynamicJsonToTemplateConverter.jsonld#DynamicJsonToTemplateConverter__member_constructTypeMap",
+          "memberFieldName": "constructTypeMap"
+        },
+        {
+          "@id": "css:dist/storage/conversion/DynamicJsonToTemplateConverter.jsonld#DynamicJsonToTemplateConverter__member_findType",
+          "memberFieldName": "findType"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/conversion/DynamicJsonToTemplateConverter.jsonld#DynamicJsonToTemplateConverter_templateEngine"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/authorization/permissions/DeleteParentExtractor.jsonld#DeleteParentExtractor",
+      "@type": "Class",
+      "requireElement": "DeleteParentExtractor",
+      "extends": [
+        "css:dist/authorization/permissions/ModesExtractor.jsonld#ModesExtractor"
+      ],
+      "comment": "In case a resource is being deleted but does not exist, the server response code depends on the access modes the agent has on the parent container. In case the agent has read access on the parent container, a 404 should be returned, otherwise it should be 401/403.  This class adds support for this by requiring read access on the parent container in case the target resource does not exist.",
+      "parameters": [
+        {
+          "@id": "css:dist/authorization/permissions/DeleteParentExtractor.jsonld#DeleteParentExtractor_source",
+          "range": "css:dist/authorization/permissions/ModesExtractor.jsonld#ModesExtractor"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/DeleteParentExtractor.jsonld#DeleteParentExtractor_resourceSet",
+          "range": "css:dist/storage/ResourceSet.jsonld#ResourceSet"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/DeleteParentExtractor.jsonld#DeleteParentExtractor_identifierStrategy",
+          "range": "css:dist/util/identifiers/IdentifierStrategy.jsonld#IdentifierStrategy"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/authorization/permissions/DeleteParentExtractor.jsonld#DeleteParentExtractor__member_source",
+          "memberFieldName": "source"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/DeleteParentExtractor.jsonld#DeleteParentExtractor__member_resourceSet",
+          "memberFieldName": "resourceSet"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/DeleteParentExtractor.jsonld#DeleteParentExtractor__member_identifierStrategy",
+          "memberFieldName": "identifierStrategy"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/DeleteParentExtractor.jsonld#DeleteParentExtractor__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/DeleteParentExtractor.jsonld#DeleteParentExtractor__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/DeleteParentExtractor.jsonld#DeleteParentExtractor__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/authorization/permissions/DeleteParentExtractor.jsonld#DeleteParentExtractor_source"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/DeleteParentExtractor.jsonld#DeleteParentExtractor_resourceSet"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/DeleteParentExtractor.jsonld#DeleteParentExtractor_identifierStrategy"
+        }
+      ]
+    }
+  ]
+}

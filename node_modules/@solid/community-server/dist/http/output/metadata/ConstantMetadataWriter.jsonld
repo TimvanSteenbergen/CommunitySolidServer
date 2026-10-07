@@ -1,0 +1,62 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/output/metadata/ConstantMetadataWriter.jsonld#ConstantMetadataWriter",
+      "@type": "Class",
+      "requireElement": "ConstantMetadataWriter",
+      "extends": [
+        "css:dist/http/output/metadata/MetadataWriter.jsonld#MetadataWriter"
+      ],
+      "comment": "A {@link MetadataWriter} that takes a constant map of header names and values.",
+      "parameters": [
+        {
+          "@id": "css:dist/http/output/metadata/ConstantMetadataWriter.jsonld#ConstantMetadataWriter_headers",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "css:dist/http/output/metadata/ConstantMetadataWriter.jsonld#ConstantMetadataWriter_headers_key"
+              },
+              {
+                "@id": "css:dist/http/output/metadata/ConstantMetadataWriter.jsonld#ConstantMetadataWriter_headers_value",
+                "range": "xsd:string"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/output/metadata/ConstantMetadataWriter.jsonld#ConstantMetadataWriter__member_headers",
+          "memberFieldName": "headers"
+        },
+        {
+          "@id": "css:dist/http/output/metadata/ConstantMetadataWriter.jsonld#ConstantMetadataWriter__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/output/metadata/ConstantMetadataWriter.jsonld#ConstantMetadataWriter__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/output/metadata/ConstantMetadataWriter.jsonld#ConstantMetadataWriter_headers__constructorArgument",
+          "fields": [
+            {
+              "collectEntries": "css:dist/http/output/metadata/ConstantMetadataWriter.jsonld#ConstantMetadataWriter_headers",
+              "key": "css:dist/http/output/metadata/ConstantMetadataWriter.jsonld#ConstantMetadataWriter_headers_key",
+              "value": {
+                "@id": "css:dist/http/output/metadata/ConstantMetadataWriter.jsonld#ConstantMetadataWriter_headers_value"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

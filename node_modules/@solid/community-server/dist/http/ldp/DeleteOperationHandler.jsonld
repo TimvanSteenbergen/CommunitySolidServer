@@ -1,0 +1,46 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/ldp/DeleteOperationHandler.jsonld#DeleteOperationHandler",
+      "@type": "Class",
+      "requireElement": "DeleteOperationHandler",
+      "extends": [
+        "css:dist/http/ldp/OperationHandler.jsonld#OperationHandler"
+      ],
+      "comment": "Handles DELETE {@link Operation}s. Calls the deleteResource function from a {@link ResourceStore}.",
+      "parameters": [
+        {
+          "@id": "css:dist/http/ldp/DeleteOperationHandler.jsonld#DeleteOperationHandler_store",
+          "range": "css:dist/storage/ResourceStore.jsonld#ResourceStore"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/ldp/DeleteOperationHandler.jsonld#DeleteOperationHandler__member_store",
+          "memberFieldName": "store"
+        },
+        {
+          "@id": "css:dist/http/ldp/DeleteOperationHandler.jsonld#DeleteOperationHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/ldp/DeleteOperationHandler.jsonld#DeleteOperationHandler__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/http/ldp/DeleteOperationHandler.jsonld#DeleteOperationHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/ldp/DeleteOperationHandler.jsonld#DeleteOperationHandler_store"
+        }
+      ]
+    }
+  ]
+}

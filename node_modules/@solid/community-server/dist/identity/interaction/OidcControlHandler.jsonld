@@ -1,0 +1,75 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/OidcControlHandler.jsonld#OidcControlHandler",
+      "@type": "Class",
+      "requireElement": "OidcControlHandler",
+      "extends": [
+        "css:dist/identity/interaction/ControlHandler.jsonld#ControlHandler"
+      ],
+      "comment": "A {@link ControlHandler} that only returns results if there is an active OIDC interaction.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/OidcControlHandler.jsonld#OidcControlHandler_source",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "css:dist/identity/interaction/JsonInteractionHandler.jsonld#JsonInteractionHandler",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/identity/interaction/OidcControlHandler.jsonld#OidcControlHandler_controls",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "css:dist/identity/interaction/OidcControlHandler.jsonld#OidcControlHandler_controls_key"
+              },
+              {
+                "@id": "css:dist/identity/interaction/OidcControlHandler.jsonld#OidcControlHandler_controls_value",
+                "range": {
+                  "@type": "ParameterRangeUnion",
+                  "parameterRangeElements": [
+                    "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute",
+                    "css:dist/identity/interaction/JsonInteractionHandler.jsonld#JsonInteractionHandler"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/OidcControlHandler.jsonld#OidcControlHandler__member_generateControls",
+          "memberFieldName": "generateControls"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/OidcControlHandler.jsonld#OidcControlHandler_controls__constructorArgument",
+          "fields": [
+            {
+              "collectEntries": "css:dist/identity/interaction/OidcControlHandler.jsonld#OidcControlHandler_controls",
+              "key": "css:dist/identity/interaction/OidcControlHandler.jsonld#OidcControlHandler_controls_key",
+              "value": {
+                "@id": "css:dist/identity/interaction/OidcControlHandler.jsonld#OidcControlHandler_controls_value"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "css:dist/identity/interaction/OidcControlHandler.jsonld#OidcControlHandler_source"
+        }
+      ]
+    }
+  ]
+}

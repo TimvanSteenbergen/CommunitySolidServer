@@ -1,0 +1,107 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/notifications/KeyValueChannelStorage.jsonld#KeyValueChannelStorage",
+      "@type": "Class",
+      "requireElement": "KeyValueChannelStorage",
+      "extends": [
+        "css:dist/server/notifications/NotificationChannelStorage.jsonld#NotificationChannelStorage"
+      ],
+      "comment": "Stores all the {@link NotificationChannel} in a {@link KeyValueStorage}. Encodes IDs/topics before storing them in the KeyValueStorage.  Uses a {@link ReadWriteLocker} to prevent internal race conditions.",
+      "parameters": [
+        {
+          "@id": "css:dist/server/notifications/KeyValueChannelStorage.jsonld#KeyValueChannelStorage_locker",
+          "range": "css:dist/util/locking/ReadWriteLocker.jsonld#ReadWriteLocker"
+        },
+        {
+          "@id": "css:dist/server/notifications/KeyValueChannelStorage.jsonld#KeyValueChannelStorage_storage",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+            "genericTypeInstances": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUnion",
+                "parameterRangeElements": [
+                  "xsd:string",
+                  {
+                    "@type": "ParameterRangeArray",
+                    "parameterRangeValue": "xsd:string"
+                  },
+                  {
+                    "@type": "ParameterRangeWildcard"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/notifications/KeyValueChannelStorage.jsonld#KeyValueChannelStorage__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/server/notifications/KeyValueChannelStorage.jsonld#KeyValueChannelStorage__member_storage",
+          "memberFieldName": "storage"
+        },
+        {
+          "@id": "css:dist/server/notifications/KeyValueChannelStorage.jsonld#KeyValueChannelStorage__member_locker",
+          "memberFieldName": "locker"
+        },
+        {
+          "@id": "css:dist/server/notifications/KeyValueChannelStorage.jsonld#KeyValueChannelStorage__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/notifications/KeyValueChannelStorage.jsonld#KeyValueChannelStorage__member_get",
+          "memberFieldName": "get"
+        },
+        {
+          "@id": "css:dist/server/notifications/KeyValueChannelStorage.jsonld#KeyValueChannelStorage__member_getAll",
+          "memberFieldName": "getAll"
+        },
+        {
+          "@id": "css:dist/server/notifications/KeyValueChannelStorage.jsonld#KeyValueChannelStorage__member_add",
+          "memberFieldName": "add"
+        },
+        {
+          "@id": "css:dist/server/notifications/KeyValueChannelStorage.jsonld#KeyValueChannelStorage__member_update",
+          "memberFieldName": "update"
+        },
+        {
+          "@id": "css:dist/server/notifications/KeyValueChannelStorage.jsonld#KeyValueChannelStorage__member_delete",
+          "memberFieldName": "delete"
+        },
+        {
+          "@id": "css:dist/server/notifications/KeyValueChannelStorage.jsonld#KeyValueChannelStorage__member_deleteChannel",
+          "memberFieldName": "deleteChannel"
+        },
+        {
+          "@id": "css:dist/server/notifications/KeyValueChannelStorage.jsonld#KeyValueChannelStorage__member_isChannel",
+          "memberFieldName": "isChannel"
+        },
+        {
+          "@id": "css:dist/server/notifications/KeyValueChannelStorage.jsonld#KeyValueChannelStorage__member_getLockKey",
+          "memberFieldName": "getLockKey"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/notifications/KeyValueChannelStorage.jsonld#KeyValueChannelStorage_storage"
+        },
+        {
+          "@id": "css:dist/server/notifications/KeyValueChannelStorage.jsonld#KeyValueChannelStorage_locker"
+        }
+      ]
+    }
+  ]
+}

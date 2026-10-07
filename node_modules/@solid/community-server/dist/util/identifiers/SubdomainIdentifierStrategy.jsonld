@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/identifiers/SubdomainIdentifierStrategy.jsonld#SubdomainIdentifierStrategy",
+      "@type": "Class",
+      "requireElement": "SubdomainIdentifierStrategy",
+      "extends": [
+        "css:dist/util/identifiers/BaseIdentifierStrategy.jsonld#BaseIdentifierStrategy"
+      ],
+      "comment": "An IdentifierStrategy that interprets all subdomains of the given base URL as roots.",
+      "parameters": [
+        {
+          "@id": "css:dist/util/identifiers/SubdomainIdentifierStrategy.jsonld#SubdomainIdentifierStrategy_baseUrl",
+          "range": "xsd:string"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/identifiers/SubdomainIdentifierStrategy.jsonld#SubdomainIdentifierStrategy__member_baseUrl",
+          "memberFieldName": "baseUrl"
+        },
+        {
+          "@id": "css:dist/util/identifiers/SubdomainIdentifierStrategy.jsonld#SubdomainIdentifierStrategy__member_regex",
+          "memberFieldName": "regex"
+        },
+        {
+          "@id": "css:dist/util/identifiers/SubdomainIdentifierStrategy.jsonld#SubdomainIdentifierStrategy__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/util/identifiers/SubdomainIdentifierStrategy.jsonld#SubdomainIdentifierStrategy__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/util/identifiers/SubdomainIdentifierStrategy.jsonld#SubdomainIdentifierStrategy__member_supportsIdentifier",
+          "memberFieldName": "supportsIdentifier"
+        },
+        {
+          "@id": "css:dist/util/identifiers/SubdomainIdentifierStrategy.jsonld#SubdomainIdentifierStrategy__member_isRootContainer",
+          "memberFieldName": "isRootContainer"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/identifiers/SubdomainIdentifierStrategy.jsonld#SubdomainIdentifierStrategy_baseUrl"
+        }
+      ]
+    }
+  ]
+}

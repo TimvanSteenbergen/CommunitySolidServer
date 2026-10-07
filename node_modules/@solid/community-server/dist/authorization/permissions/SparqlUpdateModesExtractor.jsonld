@@ -1,0 +1,75 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/authorization/permissions/SparqlUpdateModesExtractor.jsonld#SparqlUpdateModesExtractor",
+      "@type": "Class",
+      "requireElement": "SparqlUpdateModesExtractor",
+      "extends": [
+        "css:dist/authorization/permissions/ModesExtractor.jsonld#ModesExtractor"
+      ],
+      "comment": "Generates permissions for a SPARQL DELETE/INSERT body. Updates with only an INSERT can be done with just append permissions, while DELETEs require write permissions as well.",
+      "parameters": [
+        {
+          "@id": "css:dist/authorization/permissions/SparqlUpdateModesExtractor.jsonld#SparqlUpdateModesExtractor_resourceSet",
+          "range": "css:dist/storage/ResourceSet.jsonld#ResourceSet",
+          "comment": "{@link ResourceSet} that can verify the target resource existence."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/authorization/permissions/SparqlUpdateModesExtractor.jsonld#SparqlUpdateModesExtractor__member_resourceSet",
+          "memberFieldName": "resourceSet"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/SparqlUpdateModesExtractor.jsonld#SparqlUpdateModesExtractor__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/SparqlUpdateModesExtractor.jsonld#SparqlUpdateModesExtractor__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/SparqlUpdateModesExtractor.jsonld#SparqlUpdateModesExtractor__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/SparqlUpdateModesExtractor.jsonld#SparqlUpdateModesExtractor__member_isSparql",
+          "memberFieldName": "isSparql"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/SparqlUpdateModesExtractor.jsonld#SparqlUpdateModesExtractor__member_isSupported",
+          "memberFieldName": "isSupported"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/SparqlUpdateModesExtractor.jsonld#SparqlUpdateModesExtractor__member_isDeleteInsert",
+          "memberFieldName": "isDeleteInsert"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/SparqlUpdateModesExtractor.jsonld#SparqlUpdateModesExtractor__member_isNop",
+          "memberFieldName": "isNop"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/SparqlUpdateModesExtractor.jsonld#SparqlUpdateModesExtractor__member_hasConditions",
+          "memberFieldName": "hasConditions"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/SparqlUpdateModesExtractor.jsonld#SparqlUpdateModesExtractor__member_hasInserts",
+          "memberFieldName": "hasInserts"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/SparqlUpdateModesExtractor.jsonld#SparqlUpdateModesExtractor__member_hasDeletes",
+          "memberFieldName": "hasDeletes"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/authorization/permissions/SparqlUpdateModesExtractor.jsonld#SparqlUpdateModesExtractor_resourceSet"
+        }
+      ]
+    }
+  ]
+}

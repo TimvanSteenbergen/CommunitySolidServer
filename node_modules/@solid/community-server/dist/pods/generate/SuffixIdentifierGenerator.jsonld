@@ -1,0 +1,46 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/pods/generate/SuffixIdentifierGenerator.jsonld#SuffixIdentifierGenerator",
+      "@type": "Class",
+      "requireElement": "SuffixIdentifierGenerator",
+      "extends": [
+        "css:dist/pods/generate/IdentifierGenerator.jsonld#IdentifierGenerator"
+      ],
+      "comment": "Generates identifiers by appending the name to a stored base identifier. Non-alphanumeric characters will be replaced with `-`.",
+      "parameters": [
+        {
+          "@id": "css:dist/pods/generate/SuffixIdentifierGenerator.jsonld#SuffixIdentifierGenerator_base",
+          "range": "xsd:string"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/pods/generate/SuffixIdentifierGenerator.jsonld#SuffixIdentifierGenerator__member_base",
+          "memberFieldName": "base"
+        },
+        {
+          "@id": "css:dist/pods/generate/SuffixIdentifierGenerator.jsonld#SuffixIdentifierGenerator__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/pods/generate/SuffixIdentifierGenerator.jsonld#SuffixIdentifierGenerator__member_generate",
+          "memberFieldName": "generate"
+        },
+        {
+          "@id": "css:dist/pods/generate/SuffixIdentifierGenerator.jsonld#SuffixIdentifierGenerator__member_extractPod",
+          "memberFieldName": "extractPod"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/pods/generate/SuffixIdentifierGenerator.jsonld#SuffixIdentifierGenerator_base"
+        }
+      ]
+    }
+  ]
+}

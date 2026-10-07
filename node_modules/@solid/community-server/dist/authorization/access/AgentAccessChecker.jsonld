@@ -1,0 +1,25 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/authorization/access/AgentAccessChecker.jsonld#AgentAccessChecker",
+      "@type": "Class",
+      "requireElement": "AgentAccessChecker",
+      "extends": [
+        "css:dist/authorization/access/AccessChecker.jsonld#AccessChecker"
+      ],
+      "comment": "Checks if the given WebID has been given access.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/authorization/access/AgentAccessChecker.jsonld#AgentAccessChecker__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/locking/FileSystemResourceLocker.jsonld#FileSystemResourceLocker",
+      "@type": "Class",
+      "requireElement": "FileSystemResourceLocker",
+      "extends": [
+        "css:dist/util/locking/ResourceLocker.jsonld#ResourceLocker",
+        "css:dist/init/Initializable.jsonld#Initializable",
+        "css:dist/init/final/Finalizable.jsonld#Finalizable"
+      ],
+      "comment": "A resource locker making use of the [proper-lockfile](https://www.npmjs.com/package/proper-lockfile) library. Note that no locks are kept in memory, thus this is considered thread- and process-safe. While it stores the actual locks on disk, it also tracks them in memory for when they need to be released. This means only the worker thread that acquired a lock can release it again, making this implementation unusable in combination with a wrapping read/write lock implementation.  This **proper-lockfile** library has its own retry mechanism for the operations, since a lock/unlock call will either resolve successfully or reject immediately with the causing error. The retry function of the library however will be ignored and replaced by our own LockUtils' {@link retryFunction} function.",
+      "parameters": [
+        {
+          "@id": "css:dist/util/locking/FileSystemResourceLocker.jsonld#FileSystemResourceLocker_args_rootFilePath",
+          "range": "xsd:string",
+          "comment": "The root filepath of where the server is allowed to write files"
+        },
+        {
+          "@id": "css:dist/util/locking/FileSystemResourceLocker.jsonld#FileSystemResourceLocker_args_lockDirectory",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "The path to the directory where locks will be stored (relative to rootFilePath) _[default is `/.internal/locks`]_"
+        },
+        {
+          "@id": "css:dist/util/locking/FileSystemResourceLocker.jsonld#FileSystemResourceLocker_args_attemptSettings_retryCount",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "How many times should an operation be retried. (-1 is indefinitely)."
+        },
+        {
+          "@id": "css:dist/util/locking/FileSystemResourceLocker.jsonld#FileSystemResourceLocker_args_attemptSettings_retryDelay",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "The how long should the next retry be delayed (+ some retryJitter) (in ms)."
+        },
+        {
+          "@id": "css:dist/util/locking/FileSystemResourceLocker.jsonld#FileSystemResourceLocker_args_attemptSettings_retryJitter",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Add a fraction of jitter to the original delay each attempt (in ms)."
+        },
+        {
+          "@id": "css:dist/util/locking/FileSystemResourceLocker.jsonld#FileSystemResourceLocker_args_throwOnCompromise",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Throws an error when a lock is compromised, instead of logging an error."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/locking/FileSystemResourceLocker.jsonld#FileSystemResourceLocker__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/util/locking/FileSystemResourceLocker.jsonld#FileSystemResourceLocker__member_attemptSettings",
+          "memberFieldName": "attemptSettings"
+        },
+        {
+          "@id": "css:dist/util/locking/FileSystemResourceLocker.jsonld#FileSystemResourceLocker__member_lockOptions",
+          "memberFieldName": "lockOptions"
+        },
+        {
+          "@id": "css:dist/util/locking/FileSystemResourceLocker.jsonld#FileSystemResourceLocker__member_throwOnCompromise",
+          "memberFieldName": "throwOnCompromise"
+        },
+        {
+          "@id": "css:dist/util/locking/FileSystemResourceLocker.jsonld#FileSystemResourceLocker__member_lockFolder",
+          "memberFieldName": "lockFolder"
+        },
+        {
+          "@id": "css:dist/util/locking/FileSystemResourceLocker.jsonld#FileSystemResourceLocker__member_finalized",
+          "memberFieldName": "finalized"
+        },
+        {
+          "@id": "css:dist/util/locking/FileSystemResourceLocker.jsonld#FileSystemResourceLocker__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/util/locking/FileSystemResourceLocker.jsonld#FileSystemResourceLocker__member_swallowErrors",
+          "memberFieldName": "swallowErrors"
+        },
+        {
+          "@id": "css:dist/util/locking/FileSystemResourceLocker.jsonld#FileSystemResourceLocker__member_acquire",
+          "memberFieldName": "acquire"
+        },
+        {
+          "@id": "css:dist/util/locking/FileSystemResourceLocker.jsonld#FileSystemResourceLocker__member_release",
+          "memberFieldName": "release"
+        },
+        {
+          "@id": "css:dist/util/locking/FileSystemResourceLocker.jsonld#FileSystemResourceLocker__member_toLockfilePath",
+          "memberFieldName": "toLockfilePath"
+        },
+        {
+          "@id": "css:dist/util/locking/FileSystemResourceLocker.jsonld#FileSystemResourceLocker__member_generateOptions",
+          "memberFieldName": "generateOptions"
+        },
+        {
+          "@id": "css:dist/util/locking/FileSystemResourceLocker.jsonld#FileSystemResourceLocker__member_initialize",
+          "memberFieldName": "initialize"
+        },
+        {
+          "@id": "css:dist/util/locking/FileSystemResourceLocker.jsonld#FileSystemResourceLocker__member_finalize",
+          "memberFieldName": "finalize"
+        },
+        {
+          "@id": "css:dist/util/locking/FileSystemResourceLocker.jsonld#FileSystemResourceLocker__member_customOnCompromised",
+          "memberFieldName": "customOnCompromised"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/locking/FileSystemResourceLocker.jsonld#FileSystemResourceLocker_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "rootFilePath",
+              "value": {
+                "@id": "css:dist/util/locking/FileSystemResourceLocker.jsonld#FileSystemResourceLocker_args_rootFilePath"
+              }
+            },
+            {
+              "keyRaw": "lockDirectory",
+              "value": {
+                "@id": "css:dist/util/locking/FileSystemResourceLocker.jsonld#FileSystemResourceLocker_args_lockDirectory"
+              }
+            },
+            {
+              "keyRaw": "attemptSettings",
+              "value": {
+                "@id": "css:dist/util/locking/FileSystemResourceLocker.jsonld#FileSystemResourceLocker_args_attemptSettings__constructorArgument",
+                "fields": [
+                  {
+                    "keyRaw": "retryCount",
+                    "value": {
+                      "@id": "css:dist/util/locking/FileSystemResourceLocker.jsonld#FileSystemResourceLocker_args_attemptSettings_retryCount"
+                    }
+                  },
+                  {
+                    "keyRaw": "retryDelay",
+                    "value": {
+                      "@id": "css:dist/util/locking/FileSystemResourceLocker.jsonld#FileSystemResourceLocker_args_attemptSettings_retryDelay"
+                    }
+                  },
+                  {
+                    "keyRaw": "retryJitter",
+                    "value": {
+                      "@id": "css:dist/util/locking/FileSystemResourceLocker.jsonld#FileSystemResourceLocker_args_attemptSettings_retryJitter"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "keyRaw": "throwOnCompromise",
+              "value": {
+                "@id": "css:dist/util/locking/FileSystemResourceLocker.jsonld#FileSystemResourceLocker_args_throwOnCompromise"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

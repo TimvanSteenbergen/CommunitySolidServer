@@ -1,0 +1,66 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/init/App.jsonld#App",
+      "@type": "Class",
+      "requireElement": "App",
+      "comment": "Entry point for the entire Solid server.",
+      "parameters": [
+        {
+          "@id": "css:dist/init/App.jsonld#App_initializer",
+          "range": "css:dist/init/Initializer.jsonld#Initializer"
+        },
+        {
+          "@id": "css:dist/init/App.jsonld#App_finalizer",
+          "range": "css:dist/init/final/Finalizer.jsonld#Finalizer"
+        },
+        {
+          "@id": "css:dist/init/App.jsonld#App_clusterManager",
+          "range": "css:dist/init/cluster/ClusterManager.jsonld#ClusterManager"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/init/App.jsonld#App__member_initializer",
+          "memberFieldName": "initializer"
+        },
+        {
+          "@id": "css:dist/init/App.jsonld#App__member_finalizer",
+          "memberFieldName": "finalizer"
+        },
+        {
+          "@id": "css:dist/init/App.jsonld#App__member_clusterManager",
+          "memberFieldName": "clusterManager",
+          "range": "css:dist/init/cluster/ClusterManager.jsonld#ClusterManager"
+        },
+        {
+          "@id": "css:dist/init/App.jsonld#App__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/init/App.jsonld#App__member_start",
+          "memberFieldName": "start"
+        },
+        {
+          "@id": "css:dist/init/App.jsonld#App__member_stop",
+          "memberFieldName": "stop"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/init/App.jsonld#App_initializer"
+        },
+        {
+          "@id": "css:dist/init/App.jsonld#App_finalizer"
+        },
+        {
+          "@id": "css:dist/init/App.jsonld#App_clusterManager"
+        }
+      ]
+    }
+  ]
+}

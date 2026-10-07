@@ -1,0 +1,42 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/pods/generate/variables/RootFilePathHandler.jsonld#RootFilePathHandler",
+      "@type": "Class",
+      "requireElement": "RootFilePathHandler",
+      "extends": [
+        "css:dist/pods/generate/variables/VariableHandler.jsonld#VariableHandler"
+      ],
+      "comment": "Uses a FileIdentifierMapper to generate a root file path variable based on the identifier. Will throw an error if the resulting file path already exists.",
+      "parameters": [
+        {
+          "@id": "css:dist/pods/generate/variables/RootFilePathHandler.jsonld#RootFilePathHandler_fileMapper",
+          "range": "css:dist/storage/mapping/FileIdentifierMapper.jsonld#FileIdentifierMapper"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/pods/generate/variables/RootFilePathHandler.jsonld#RootFilePathHandler__member_fileMapper",
+          "memberFieldName": "fileMapper"
+        },
+        {
+          "@id": "css:dist/pods/generate/variables/RootFilePathHandler.jsonld#RootFilePathHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/pods/generate/variables/RootFilePathHandler.jsonld#RootFilePathHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/pods/generate/variables/RootFilePathHandler.jsonld#RootFilePathHandler_fileMapper"
+        }
+      ]
+    }
+  ]
+}

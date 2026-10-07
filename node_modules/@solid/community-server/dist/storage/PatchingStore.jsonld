@@ -1,0 +1,67 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/PatchingStore.jsonld#PatchingStore",
+      "@type": "Class",
+      "requireElement": "PatchingStore",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/storage/PassthroughStore.jsonld#PassthroughStore",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/storage/PatchingStore.jsonld#PatchingStore__generic_T"
+            }
+          ]
+        }
+      ],
+      "comment": "{@link ResourceStore} using decorator pattern for the `modifyResource` function. If the original store supports the {@link Patch}, behaviour will be identical, otherwise the {@link PatchHandler} will be called instead.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/storage/PatchingStore.jsonld#PatchingStore__generic_T",
+          "range": "css:dist/storage/ResourceStore.jsonld#ResourceStore"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/storage/PatchingStore.jsonld#PatchingStore_source",
+          "range": {
+            "@type": "ParameterRangeGenericTypeReference",
+            "parameterRangeGenericType": "css:dist/storage/PatchingStore.jsonld#PatchingStore__generic_T"
+          }
+        },
+        {
+          "@id": "css:dist/storage/PatchingStore.jsonld#PatchingStore_patchHandler",
+          "range": "css:dist/storage/patch/PatchHandler.jsonld#PatchHandler"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/PatchingStore.jsonld#PatchingStore__member_patchHandler",
+          "memberFieldName": "patchHandler"
+        },
+        {
+          "@id": "css:dist/storage/PatchingStore.jsonld#PatchingStore__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/PatchingStore.jsonld#PatchingStore__member_modifyResource",
+          "memberFieldName": "modifyResource"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/PatchingStore.jsonld#PatchingStore_source"
+        },
+        {
+          "@id": "css:dist/storage/PatchingStore.jsonld#PatchingStore_patchHandler"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/QuadUtil.jsonld#FilterPattern",
+      "@type": "Class",
+      "requireElement": "FilterPattern",
+      "comment": "Represents a triple pattern to be used as a filter.",
+      "parameters": [
+        {
+          "@id": "css:dist/util/QuadUtil.jsonld#FilterPattern_subject",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Optionally filter based on a specific subject."
+        },
+        {
+          "@id": "css:dist/util/QuadUtil.jsonld#FilterPattern_predicate",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Optionally filter based on a predicate."
+        },
+        {
+          "@id": "css:dist/util/QuadUtil.jsonld#FilterPattern_object",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Optionally filter based on a specific object."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/QuadUtil.jsonld#FilterPattern__member_subject",
+          "memberFieldName": "subject",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "urn:npm:@rdfjs/types:NamedNode",
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/util/QuadUtil.jsonld#FilterPattern__member_predicate",
+          "memberFieldName": "predicate",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "urn:npm:@rdfjs/types:NamedNode",
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/util/QuadUtil.jsonld#FilterPattern__member_object",
+          "memberFieldName": "object",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "urn:npm:@rdfjs/types:NamedNode",
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/util/QuadUtil.jsonld#FilterPattern__member_constructor",
+          "memberFieldName": "constructor"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/QuadUtil.jsonld#FilterPattern_subject"
+        },
+        {
+          "@id": "css:dist/util/QuadUtil.jsonld#FilterPattern_predicate"
+        },
+        {
+          "@id": "css:dist/util/QuadUtil.jsonld#FilterPattern_object"
+        }
+      ]
+    }
+  ]
+}

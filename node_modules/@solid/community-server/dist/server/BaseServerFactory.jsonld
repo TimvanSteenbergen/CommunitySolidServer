@@ -1,0 +1,183 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/BaseServerFactory.jsonld#BaseServerFactory",
+      "@type": "Class",
+      "requireElement": "BaseServerFactory",
+      "extends": [
+        "css:dist/server/HttpServerFactory.jsonld#HttpServerFactory"
+      ],
+      "comment": "Creates an HTTP(S) server native Node.js `http`/`https` modules.  Will apply a {@link ServerConfigurator} to the server, which should be used to attach listeners.",
+      "parameters": [
+        {
+          "@id": "css:dist/server/BaseServerFactory.jsonld#BaseServerFactory_options_https",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "If the server should start as an HTTP or HTTPS server."
+        },
+        {
+          "@id": "css:dist/server/BaseServerFactory.jsonld#BaseServerFactory_configurator",
+          "range": "css:dist/server/ServerConfigurator.jsonld#ServerConfigurator"
+        },
+        {
+          "@id": "css:dist/server/BaseServerFactory.jsonld#BaseServerFactory_options_key",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/server/BaseServerFactory.jsonld#BaseServerFactory_options_cert",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/server/BaseServerFactory.jsonld#BaseServerFactory_options_pfx",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/server/BaseServerFactory.jsonld#BaseServerFactory_options_passphrase",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/BaseServerFactory.jsonld#BaseServerFactory__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/server/BaseServerFactory.jsonld#BaseServerFactory__member_configurator",
+          "memberFieldName": "configurator"
+        },
+        {
+          "@id": "css:dist/server/BaseServerFactory.jsonld#BaseServerFactory__member_options",
+          "memberFieldName": "options"
+        },
+        {
+          "@id": "css:dist/server/BaseServerFactory.jsonld#BaseServerFactory__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/BaseServerFactory.jsonld#BaseServerFactory__member_createServer",
+          "memberFieldName": "createServer"
+        },
+        {
+          "@id": "css:dist/server/BaseServerFactory.jsonld#BaseServerFactory__member_createServerOptions",
+          "memberFieldName": "createServerOptions"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/BaseServerFactory.jsonld#BaseServerFactory_configurator"
+        },
+        {
+          "@id": "css:dist/server/BaseServerFactory.jsonld#BaseServerFactory_options__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "https",
+              "value": {
+                "@id": "css:dist/server/BaseServerFactory.jsonld#BaseServerFactory_options_https"
+              }
+            },
+            {
+              "keyRaw": "key",
+              "value": {
+                "@id": "css:dist/server/BaseServerFactory.jsonld#BaseServerFactory_options_key"
+              }
+            },
+            {
+              "keyRaw": "cert",
+              "value": {
+                "@id": "css:dist/server/BaseServerFactory.jsonld#BaseServerFactory_options_cert"
+              }
+            },
+            {
+              "keyRaw": "pfx",
+              "value": {
+                "@id": "css:dist/server/BaseServerFactory.jsonld#BaseServerFactory_options_pfx"
+              }
+            },
+            {
+              "keyRaw": "passphrase",
+              "value": {
+                "@id": "css:dist/server/BaseServerFactory.jsonld#BaseServerFactory_options_passphrase"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/server/BaseServerFactory.jsonld#BaseServerFactoryOptions",
+      "@type": "AbstractClass",
+      "requireElement": "BaseServerFactoryOptions",
+      "comment": "Options to be used when creating the server. Due to Components.js not supporting external types, this has been simplified (for now?). The common https keys here (key/cert/pfx) will be interpreted as file paths that need to be read before passing the options to the `createServer` function.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/BaseServerFactory.jsonld#BaseServerFactoryOptions__member_https",
+          "memberFieldName": "https"
+        },
+        {
+          "@id": "css:dist/server/BaseServerFactory.jsonld#BaseServerFactoryOptions__member_key",
+          "memberFieldName": "key"
+        },
+        {
+          "@id": "css:dist/server/BaseServerFactory.jsonld#BaseServerFactoryOptions__member_cert",
+          "memberFieldName": "cert"
+        },
+        {
+          "@id": "css:dist/server/BaseServerFactory.jsonld#BaseServerFactoryOptions__member_pfx",
+          "memberFieldName": "pfx"
+        },
+        {
+          "@id": "css:dist/server/BaseServerFactory.jsonld#BaseServerFactoryOptions__member_passphrase",
+          "memberFieldName": "passphrase"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

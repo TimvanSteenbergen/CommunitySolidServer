@@ -1,0 +1,50 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/init/variables/extractors/BaseUrlExtractor.jsonld#BaseUrlExtractor",
+      "@type": "Class",
+      "requireElement": "BaseUrlExtractor",
+      "extends": [
+        "css:dist/init/variables/extractors/ShorthandExtractor.jsonld#ShorthandExtractor"
+      ],
+      "comment": "A {@link ShorthandExtractor} that that generates the base URL based on the input `baseUrl` value, or by using the port if the first isn't provided.",
+      "parameters": [
+        {
+          "@id": "css:dist/init/variables/extractors/BaseUrlExtractor.jsonld#BaseUrlExtractor_defaultPort",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/init/variables/extractors/BaseUrlExtractor.jsonld#BaseUrlExtractor__member_defaultPort",
+          "memberFieldName": "defaultPort"
+        },
+        {
+          "@id": "css:dist/init/variables/extractors/BaseUrlExtractor.jsonld#BaseUrlExtractor__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/init/variables/extractors/BaseUrlExtractor.jsonld#BaseUrlExtractor__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/init/variables/extractors/BaseUrlExtractor.jsonld#BaseUrlExtractor_defaultPort"
+        }
+      ]
+    }
+  ]
+}

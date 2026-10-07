@@ -1,0 +1,68 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/ReadOnlyStore.jsonld#ReadOnlyStore",
+      "@type": "Class",
+      "requireElement": "ReadOnlyStore",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/storage/PassthroughStore.jsonld#PassthroughStore",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/storage/ReadOnlyStore.jsonld#ReadOnlyStore__generic_T"
+            }
+          ]
+        }
+      ],
+      "comment": "Store that only allow read operations on the underlying source.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/storage/ReadOnlyStore.jsonld#ReadOnlyStore__generic_T",
+          "range": "css:dist/storage/ResourceStore.jsonld#ResourceStore"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/storage/ReadOnlyStore.jsonld#ReadOnlyStore_source",
+          "range": {
+            "@type": "ParameterRangeGenericTypeReference",
+            "parameterRangeGenericType": "css:dist/storage/ReadOnlyStore.jsonld#ReadOnlyStore__generic_T"
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/ReadOnlyStore.jsonld#ReadOnlyStore__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/ReadOnlyStore.jsonld#ReadOnlyStore__member_addResource",
+          "memberFieldName": "addResource"
+        },
+        {
+          "@id": "css:dist/storage/ReadOnlyStore.jsonld#ReadOnlyStore__member_deleteResource",
+          "memberFieldName": "deleteResource"
+        },
+        {
+          "@id": "css:dist/storage/ReadOnlyStore.jsonld#ReadOnlyStore__member_modifyResource",
+          "memberFieldName": "modifyResource"
+        },
+        {
+          "@id": "css:dist/storage/ReadOnlyStore.jsonld#ReadOnlyStore__member_setRepresentation",
+          "memberFieldName": "setRepresentation"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/ReadOnlyStore.jsonld#ReadOnlyStore_source"
+        }
+      ]
+    }
+  ]
+}

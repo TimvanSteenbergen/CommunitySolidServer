@@ -1,0 +1,79 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/authorization/OwnerPermissionReader.jsonld#OwnerPermissionReader",
+      "@type": "Class",
+      "requireElement": "OwnerPermissionReader",
+      "extends": [
+        "css:dist/authorization/PermissionReader.jsonld#PermissionReader"
+      ],
+      "comment": "Allows control access if the request is being made by an owner of the pod containing the resource.",
+      "parameters": [
+        {
+          "@id": "css:dist/authorization/OwnerPermissionReader.jsonld#OwnerPermissionReader_podStore",
+          "range": "css:dist/identity/interaction/pod/util/PodStore.jsonld#PodStore"
+        },
+        {
+          "@id": "css:dist/authorization/OwnerPermissionReader.jsonld#OwnerPermissionReader_authStrategy",
+          "range": "css:dist/http/auxiliary/AuxiliaryIdentifierStrategy.jsonld#AuxiliaryIdentifierStrategy"
+        },
+        {
+          "@id": "css:dist/authorization/OwnerPermissionReader.jsonld#OwnerPermissionReader_storageStrategy",
+          "range": "css:dist/server/description/StorageLocationStrategy.jsonld#StorageLocationStrategy"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/authorization/OwnerPermissionReader.jsonld#OwnerPermissionReader__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/authorization/OwnerPermissionReader.jsonld#OwnerPermissionReader__member_podStore",
+          "memberFieldName": "podStore"
+        },
+        {
+          "@id": "css:dist/authorization/OwnerPermissionReader.jsonld#OwnerPermissionReader__member_authStrategy",
+          "memberFieldName": "authStrategy"
+        },
+        {
+          "@id": "css:dist/authorization/OwnerPermissionReader.jsonld#OwnerPermissionReader__member_storageStrategy",
+          "memberFieldName": "storageStrategy"
+        },
+        {
+          "@id": "css:dist/authorization/OwnerPermissionReader.jsonld#OwnerPermissionReader__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/authorization/OwnerPermissionReader.jsonld#OwnerPermissionReader__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/authorization/OwnerPermissionReader.jsonld#OwnerPermissionReader__member_findPods",
+          "memberFieldName": "findPods"
+        },
+        {
+          "@id": "css:dist/authorization/OwnerPermissionReader.jsonld#OwnerPermissionReader__member_findOwners",
+          "memberFieldName": "findOwners"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/authorization/OwnerPermissionReader.jsonld#OwnerPermissionReader_podStore"
+        },
+        {
+          "@id": "css:dist/authorization/OwnerPermissionReader.jsonld#OwnerPermissionReader_authStrategy"
+        },
+        {
+          "@id": "css:dist/authorization/OwnerPermissionReader.jsonld#OwnerPermissionReader_storageStrategy"
+        }
+      ]
+    }
+  ]
+}

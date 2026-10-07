@@ -1,0 +1,32 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/input/body/RawBodyParser.jsonld#RawBodyParser",
+      "@type": "Class",
+      "requireElement": "RawBodyParser",
+      "extends": [
+        "css:dist/http/input/body/BodyParser.jsonld#BodyParser"
+      ],
+      "comment": "Converts incoming {@link HttpRequest} to a Representation without any further parsing.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/input/body/RawBodyParser.jsonld#RawBodyParser__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/http/input/body/RawBodyParser.jsonld#RawBodyParser__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

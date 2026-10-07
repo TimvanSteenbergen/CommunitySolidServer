@@ -1,0 +1,22 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/ResourceSet.jsonld#ResourceSet",
+      "@type": "AbstractClass",
+      "requireElement": "ResourceSet",
+      "comment": "A set containing resources.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/ResourceSet.jsonld#ResourceSet__member_hasResource",
+          "memberFieldName": "hasResource"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

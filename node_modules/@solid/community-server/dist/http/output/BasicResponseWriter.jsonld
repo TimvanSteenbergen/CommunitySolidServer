@@ -1,0 +1,53 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/output/BasicResponseWriter.jsonld#BasicResponseWriter",
+      "@type": "Class",
+      "requireElement": "BasicResponseWriter",
+      "extends": [
+        "css:dist/http/output/ResponseWriter.jsonld#ResponseWriter"
+      ],
+      "comment": "Writes to an {@link HttpResponse} based on the incoming {@link ResponseDescription}.",
+      "parameters": [
+        {
+          "@id": "css:dist/http/output/BasicResponseWriter.jsonld#BasicResponseWriter_metadataWriter",
+          "range": "css:dist/http/output/metadata/MetadataWriter.jsonld#MetadataWriter"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/output/BasicResponseWriter.jsonld#BasicResponseWriter__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/http/output/BasicResponseWriter.jsonld#BasicResponseWriter__member_metadataWriter",
+          "memberFieldName": "metadataWriter"
+        },
+        {
+          "@id": "css:dist/http/output/BasicResponseWriter.jsonld#BasicResponseWriter__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/output/BasicResponseWriter.jsonld#BasicResponseWriter__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/http/output/BasicResponseWriter.jsonld#BasicResponseWriter__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/output/BasicResponseWriter.jsonld#BasicResponseWriter_metadataWriter"
+        }
+      ]
+    }
+  ]
+}

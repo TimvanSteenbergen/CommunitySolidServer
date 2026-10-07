@@ -1,0 +1,48 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/init/CliResolver.jsonld#CliResolver",
+      "@type": "Class",
+      "requireElement": "CliResolver",
+      "comment": "A class that combines a {@link CliExtractor} and a {@link ShorthandResolver}. Mainly exists so both such classes can be generated in a single Components.js instance.",
+      "parameters": [
+        {
+          "@id": "css:dist/init/CliResolver.jsonld#CliResolver_cliExtractor",
+          "range": "css:dist/init/cli/CliExtractor.jsonld#CliExtractor"
+        },
+        {
+          "@id": "css:dist/init/CliResolver.jsonld#CliResolver_shorthandResolver",
+          "range": "css:dist/init/variables/ShorthandResolver.jsonld#ShorthandResolver"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/init/CliResolver.jsonld#CliResolver__member_cliExtractor",
+          "memberFieldName": "cliExtractor",
+          "range": "css:dist/init/cli/CliExtractor.jsonld#CliExtractor"
+        },
+        {
+          "@id": "css:dist/init/CliResolver.jsonld#CliResolver__member_shorthandResolver",
+          "memberFieldName": "shorthandResolver",
+          "range": "css:dist/init/variables/ShorthandResolver.jsonld#ShorthandResolver"
+        },
+        {
+          "@id": "css:dist/init/CliResolver.jsonld#CliResolver__member_constructor",
+          "memberFieldName": "constructor"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/init/CliResolver.jsonld#CliResolver_cliExtractor"
+        },
+        {
+          "@id": "css:dist/init/CliResolver.jsonld#CliResolver_shorthandResolver"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/mapping/SubdomainExtensionBasedMapper.jsonld#SubdomainExtensionBasedMapper",
+      "@type": "Class",
+      "requireElement": "SubdomainExtensionBasedMapper",
+      "extends": [
+        "css:dist/storage/mapping/ExtensionBasedMapper.jsonld#ExtensionBasedMapper"
+      ],
+      "comment": "Extends the functionality of an {@link ExtensionBasedMapper} to support identifiers containing subdomains. This is mostly only relevant in case you want to support multiple pods with subdomain identifiers in a single ResourceStore.  When converting to/from file paths, the subdomain is interpreted as a folder in the rootFilePath. The rest of the path is then interpreted relative to that folder. E.g. `http://alice.test.com/foo` results in the relative path `/alice/foo`.  In case there is no subdomain in the URL, the `baseSubdomain` parameter is used instead. E.g., if the `baseSubdomain` is \"www\", `http://test.com/foo` would result in the relative path `/www/foo`. This means that there is no identifier that maps to the `rootFilePath` itself. To prevent the possibility of 2 identifiers linking to the same file, identifiers containing the default subdomain are rejected. E.g., `http://www.test.com/foo` would result in a 403, even if `http://test.com/foo` exists.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/mapping/SubdomainExtensionBasedMapper.jsonld#SubdomainExtensionBasedMapper_base",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/storage/mapping/SubdomainExtensionBasedMapper.jsonld#SubdomainExtensionBasedMapper_rootFilepath",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/storage/mapping/SubdomainExtensionBasedMapper.jsonld#SubdomainExtensionBasedMapper_customTypes",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "css:dist/storage/mapping/SubdomainExtensionBasedMapper.jsonld#SubdomainExtensionBasedMapper_customTypes_key"
+              },
+              {
+                "@id": "css:dist/storage/mapping/SubdomainExtensionBasedMapper.jsonld#SubdomainExtensionBasedMapper_customTypes_value",
+                "range": "xsd:string"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/storage/mapping/SubdomainExtensionBasedMapper.jsonld#SubdomainExtensionBasedMapper_baseSubdomain",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/mapping/SubdomainExtensionBasedMapper.jsonld#SubdomainExtensionBasedMapper__member_baseSubdomain",
+          "memberFieldName": "baseSubdomain"
+        },
+        {
+          "@id": "css:dist/storage/mapping/SubdomainExtensionBasedMapper.jsonld#SubdomainExtensionBasedMapper__member_regex",
+          "memberFieldName": "regex"
+        },
+        {
+          "@id": "css:dist/storage/mapping/SubdomainExtensionBasedMapper.jsonld#SubdomainExtensionBasedMapper__member_baseParts",
+          "memberFieldName": "baseParts"
+        },
+        {
+          "@id": "css:dist/storage/mapping/SubdomainExtensionBasedMapper.jsonld#SubdomainExtensionBasedMapper__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/mapping/SubdomainExtensionBasedMapper.jsonld#SubdomainExtensionBasedMapper__member_getContainerUrl",
+          "memberFieldName": "getContainerUrl"
+        },
+        {
+          "@id": "css:dist/storage/mapping/SubdomainExtensionBasedMapper.jsonld#SubdomainExtensionBasedMapper__member_getDocumentUrl",
+          "memberFieldName": "getDocumentUrl"
+        },
+        {
+          "@id": "css:dist/storage/mapping/SubdomainExtensionBasedMapper.jsonld#SubdomainExtensionBasedMapper__member_relativeToUrl",
+          "memberFieldName": "relativeToUrl"
+        },
+        {
+          "@id": "css:dist/storage/mapping/SubdomainExtensionBasedMapper.jsonld#SubdomainExtensionBasedMapper__member_getRelativePath",
+          "memberFieldName": "getRelativePath"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/mapping/SubdomainExtensionBasedMapper.jsonld#SubdomainExtensionBasedMapper_base"
+        },
+        {
+          "@id": "css:dist/storage/mapping/SubdomainExtensionBasedMapper.jsonld#SubdomainExtensionBasedMapper_rootFilepath"
+        },
+        {
+          "@id": "css:dist/storage/mapping/SubdomainExtensionBasedMapper.jsonld#SubdomainExtensionBasedMapper_baseSubdomain"
+        },
+        {
+          "@id": "css:dist/storage/mapping/SubdomainExtensionBasedMapper.jsonld#SubdomainExtensionBasedMapper_customTypes__constructorArgument",
+          "fields": [
+            {
+              "collectEntries": "css:dist/storage/mapping/SubdomainExtensionBasedMapper.jsonld#SubdomainExtensionBasedMapper_customTypes",
+              "key": "css:dist/storage/mapping/SubdomainExtensionBasedMapper.jsonld#SubdomainExtensionBasedMapper_customTypes_key",
+              "value": {
+                "@id": "css:dist/storage/mapping/SubdomainExtensionBasedMapper.jsonld#SubdomainExtensionBasedMapper_customTypes_value"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+<http://localhost:3000/test/images/7ef05fc3-e8ad-4683-b8da-c3ebee27aa8d.ttl> a <https://schema.org/ImageObject>;
+    <https://schema.org/contentUrl> <http://localhost:3000/test/images/7ef05fc3-e8ad-4683-b8da-c3ebee27aa8d.png>;
+    <https://schema.org/caption> "Difficult meeting";
+    <https://schema.org/description> "Difficult meeting";
+    <https://schema.org/width> 1029;
+    <https://schema.org/height> 907;
+    <https://schema.org/encodingFormat> "image/png";
+    <https://schema.org/uploadDate> "2026-10-07T08:46:00.000Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>.

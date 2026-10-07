@@ -1,0 +1,61 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/webid/UnlinkWebIdHandler.jsonld#UnlinkWebIdHandler",
+      "@type": "Class",
+      "requireElement": "UnlinkWebIdHandler",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/identity/interaction/JsonInteractionHandler.jsonld#JsonInteractionHandler",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeWildcard"
+            }
+          ]
+        }
+      ],
+      "comment": "Allows users to remove WebIDs linked to their account.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/webid/UnlinkWebIdHandler.jsonld#UnlinkWebIdHandler_webIdStore",
+          "range": "css:dist/identity/interaction/webid/util/WebIdStore.jsonld#WebIdStore"
+        },
+        {
+          "@id": "css:dist/identity/interaction/webid/UnlinkWebIdHandler.jsonld#UnlinkWebIdHandler_webIdRoute",
+          "range": "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/webid/UnlinkWebIdHandler.jsonld#UnlinkWebIdHandler__member_webIdStore",
+          "memberFieldName": "webIdStore"
+        },
+        {
+          "@id": "css:dist/identity/interaction/webid/UnlinkWebIdHandler.jsonld#UnlinkWebIdHandler__member_webIdRoute",
+          "memberFieldName": "webIdRoute"
+        },
+        {
+          "@id": "css:dist/identity/interaction/webid/UnlinkWebIdHandler.jsonld#UnlinkWebIdHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/webid/UnlinkWebIdHandler.jsonld#UnlinkWebIdHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/webid/UnlinkWebIdHandler.jsonld#UnlinkWebIdHandler_webIdStore"
+        },
+        {
+          "@id": "css:dist/identity/interaction/webid/UnlinkWebIdHandler.jsonld#UnlinkWebIdHandler_webIdRoute"
+        }
+      ]
+    }
+  ]
+}

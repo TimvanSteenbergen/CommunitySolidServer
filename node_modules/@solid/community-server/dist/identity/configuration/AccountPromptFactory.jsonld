@@ -1,0 +1,79 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/configuration/AccountPromptFactory.jsonld#AccountPromptFactory",
+      "@type": "Class",
+      "requireElement": "AccountPromptFactory",
+      "extends": [
+        "css:dist/identity/configuration/PromptFactory.jsonld#PromptFactory"
+      ],
+      "comment": "Creates the prompt necessary to ensure a user is logged in with their account when doing an OIDC interaction. This is done by checking the presence of the account-related cookie.  Adds a Check to the login policy that verifies if the stored accountId, which corresponds to the chosen WebID, belongs to the currently logged in account.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/configuration/AccountPromptFactory.jsonld#AccountPromptFactory_cookieName",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/identity/configuration/AccountPromptFactory.jsonld#AccountPromptFactory_webIdStore",
+          "range": "css:dist/identity/interaction/webid/util/WebIdStore.jsonld#WebIdStore"
+        },
+        {
+          "@id": "css:dist/identity/configuration/AccountPromptFactory.jsonld#AccountPromptFactory_cookieStore",
+          "range": "css:dist/identity/interaction/account/util/CookieStore.jsonld#CookieStore"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/configuration/AccountPromptFactory.jsonld#AccountPromptFactory__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/identity/configuration/AccountPromptFactory.jsonld#AccountPromptFactory__member_webIdStore",
+          "memberFieldName": "webIdStore"
+        },
+        {
+          "@id": "css:dist/identity/configuration/AccountPromptFactory.jsonld#AccountPromptFactory__member_cookieStore",
+          "memberFieldName": "cookieStore"
+        },
+        {
+          "@id": "css:dist/identity/configuration/AccountPromptFactory.jsonld#AccountPromptFactory__member_cookieName",
+          "memberFieldName": "cookieName"
+        },
+        {
+          "@id": "css:dist/identity/configuration/AccountPromptFactory.jsonld#AccountPromptFactory__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/configuration/AccountPromptFactory.jsonld#AccountPromptFactory__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/identity/configuration/AccountPromptFactory.jsonld#AccountPromptFactory__member_addAccountPrompt",
+          "memberFieldName": "addAccountPrompt"
+        },
+        {
+          "@id": "css:dist/identity/configuration/AccountPromptFactory.jsonld#AccountPromptFactory__member_addWebIdVerificationPrompt",
+          "memberFieldName": "addWebIdVerificationPrompt"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/configuration/AccountPromptFactory.jsonld#AccountPromptFactory_webIdStore"
+        },
+        {
+          "@id": "css:dist/identity/configuration/AccountPromptFactory.jsonld#AccountPromptFactory_cookieStore"
+        },
+        {
+          "@id": "css:dist/identity/configuration/AccountPromptFactory.jsonld#AccountPromptFactory_cookieName"
+        }
+      ]
+    }
+  ]
+}

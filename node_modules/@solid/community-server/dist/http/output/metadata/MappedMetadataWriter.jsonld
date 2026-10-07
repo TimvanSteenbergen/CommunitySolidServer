@@ -1,0 +1,62 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/output/metadata/MappedMetadataWriter.jsonld#MappedMetadataWriter",
+      "@type": "Class",
+      "requireElement": "MappedMetadataWriter",
+      "extends": [
+        "css:dist/http/output/metadata/MetadataWriter.jsonld#MetadataWriter"
+      ],
+      "comment": "A {@link MetadataWriter} that takes a map directly converting metadata predicates to headers. The header value(s) will be the same as the corresponding object value(s).",
+      "parameters": [
+        {
+          "@id": "css:dist/http/output/metadata/MappedMetadataWriter.jsonld#MappedMetadataWriter_headerMap",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "css:dist/http/output/metadata/MappedMetadataWriter.jsonld#MappedMetadataWriter_headerMap_key"
+              },
+              {
+                "@id": "css:dist/http/output/metadata/MappedMetadataWriter.jsonld#MappedMetadataWriter_headerMap_value",
+                "range": "xsd:string"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/output/metadata/MappedMetadataWriter.jsonld#MappedMetadataWriter__member_headerMap",
+          "memberFieldName": "headerMap"
+        },
+        {
+          "@id": "css:dist/http/output/metadata/MappedMetadataWriter.jsonld#MappedMetadataWriter__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/output/metadata/MappedMetadataWriter.jsonld#MappedMetadataWriter__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/output/metadata/MappedMetadataWriter.jsonld#MappedMetadataWriter_headerMap__constructorArgument",
+          "fields": [
+            {
+              "collectEntries": "css:dist/http/output/metadata/MappedMetadataWriter.jsonld#MappedMetadataWriter_headerMap",
+              "key": "css:dist/http/output/metadata/MappedMetadataWriter.jsonld#MappedMetadataWriter_headerMap_key",
+              "value": {
+                "@id": "css:dist/http/output/metadata/MappedMetadataWriter.jsonld#MappedMetadataWriter_headerMap_value"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/description/StorageDescriptionHandler.jsonld#StorageDescriptionHandler",
+      "@type": "Class",
+      "requireElement": "StorageDescriptionHandler",
+      "extends": [
+        "css:dist/server/OperationHttpHandler.jsonld#OperationHttpHandler"
+      ],
+      "comment": "Generates the response for GET requests targeting a storage description resource. The input path needs to match the relative path used to generate storage description resources and will be used to verify if the container it is linked to is an actual storage.",
+      "parameters": [
+        {
+          "@id": "css:dist/server/description/StorageDescriptionHandler.jsonld#StorageDescriptionHandler_path",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/server/description/StorageDescriptionHandler.jsonld#StorageDescriptionHandler_store",
+          "range": "css:dist/storage/ResourceStore.jsonld#ResourceStore"
+        },
+        {
+          "@id": "css:dist/server/description/StorageDescriptionHandler.jsonld#StorageDescriptionHandler_describer",
+          "range": "css:dist/server/description/StorageDescriber.jsonld#StorageDescriber"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/description/StorageDescriptionHandler.jsonld#StorageDescriptionHandler__member_store",
+          "memberFieldName": "store"
+        },
+        {
+          "@id": "css:dist/server/description/StorageDescriptionHandler.jsonld#StorageDescriptionHandler__member_path",
+          "memberFieldName": "path"
+        },
+        {
+          "@id": "css:dist/server/description/StorageDescriptionHandler.jsonld#StorageDescriptionHandler__member_describer",
+          "memberFieldName": "describer"
+        },
+        {
+          "@id": "css:dist/server/description/StorageDescriptionHandler.jsonld#StorageDescriptionHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/description/StorageDescriptionHandler.jsonld#StorageDescriptionHandler__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/server/description/StorageDescriptionHandler.jsonld#StorageDescriptionHandler__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/server/description/StorageDescriptionHandler.jsonld#StorageDescriptionHandler__member_getStorageIdentifier",
+          "memberFieldName": "getStorageIdentifier"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/description/StorageDescriptionHandler.jsonld#StorageDescriptionHandler_store"
+        },
+        {
+          "@id": "css:dist/server/description/StorageDescriptionHandler.jsonld#StorageDescriptionHandler_path"
+        },
+        {
+          "@id": "css:dist/server/description/StorageDescriptionHandler.jsonld#StorageDescriptionHandler_describer"
+        }
+      ]
+    }
+  ]
+}

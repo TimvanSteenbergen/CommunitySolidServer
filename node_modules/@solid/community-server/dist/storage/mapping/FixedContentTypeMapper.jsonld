@@ -1,0 +1,114 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/mapping/FixedContentTypeMapper.jsonld#FixedContentTypeMapper",
+      "@type": "Class",
+      "requireElement": "FixedContentTypeMapper",
+      "extends": [
+        "css:dist/storage/mapping/BaseFileIdentifierMapper.jsonld#BaseFileIdentifierMapper"
+      ],
+      "comment": "A mapper that always returns a fixed content type for files.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/mapping/FixedContentTypeMapper.jsonld#FixedContentTypeMapper_base",
+          "range": "xsd:string",
+          "comment": "Base URL."
+        },
+        {
+          "@id": "css:dist/storage/mapping/FixedContentTypeMapper.jsonld#FixedContentTypeMapper_rootFilepath",
+          "range": "xsd:string",
+          "comment": "Base file path."
+        },
+        {
+          "@id": "css:dist/storage/mapping/FixedContentTypeMapper.jsonld#FixedContentTypeMapper_contentType",
+          "range": "xsd:string",
+          "comment": "Fixed content type that will be used for all resources."
+        },
+        {
+          "@id": "css:dist/storage/mapping/FixedContentTypeMapper.jsonld#FixedContentTypeMapper_pathSuffix",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "An optional suffix that will be appended to all file paths. Requested file paths without this suffix will be rejected."
+        },
+        {
+          "@id": "css:dist/storage/mapping/FixedContentTypeMapper.jsonld#FixedContentTypeMapper_urlSuffix",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "An optional suffix that will be appended to all URL. Requested URLs without this suffix will be rejected."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/mapping/FixedContentTypeMapper.jsonld#FixedContentTypeMapper__member_contentType",
+          "memberFieldName": "contentType",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/storage/mapping/FixedContentTypeMapper.jsonld#FixedContentTypeMapper__member_pathSuffix",
+          "memberFieldName": "pathSuffix",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/storage/mapping/FixedContentTypeMapper.jsonld#FixedContentTypeMapper__member_urlSuffix",
+          "memberFieldName": "urlSuffix",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/storage/mapping/FixedContentTypeMapper.jsonld#FixedContentTypeMapper__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/mapping/FixedContentTypeMapper.jsonld#FixedContentTypeMapper__member_getContentTypeFromUrl",
+          "memberFieldName": "getContentTypeFromUrl"
+        },
+        {
+          "@id": "css:dist/storage/mapping/FixedContentTypeMapper.jsonld#FixedContentTypeMapper__member_getContentTypeFromPath",
+          "memberFieldName": "getContentTypeFromPath"
+        },
+        {
+          "@id": "css:dist/storage/mapping/FixedContentTypeMapper.jsonld#FixedContentTypeMapper__member_mapUrlToDocumentPath",
+          "memberFieldName": "mapUrlToDocumentPath"
+        },
+        {
+          "@id": "css:dist/storage/mapping/FixedContentTypeMapper.jsonld#FixedContentTypeMapper__member_getDocumentUrl",
+          "memberFieldName": "getDocumentUrl"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/mapping/FixedContentTypeMapper.jsonld#FixedContentTypeMapper_base"
+        },
+        {
+          "@id": "css:dist/storage/mapping/FixedContentTypeMapper.jsonld#FixedContentTypeMapper_rootFilepath"
+        },
+        {
+          "@id": "css:dist/storage/mapping/FixedContentTypeMapper.jsonld#FixedContentTypeMapper_contentType"
+        },
+        {
+          "@id": "css:dist/storage/mapping/FixedContentTypeMapper.jsonld#FixedContentTypeMapper_pathSuffix"
+        },
+        {
+          "@id": "css:dist/storage/mapping/FixedContentTypeMapper.jsonld#FixedContentTypeMapper_urlSuffix"
+        }
+      ]
+    }
+  ]
+}

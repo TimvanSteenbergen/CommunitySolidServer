@@ -1,0 +1,66 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/output/error/TargetExtractorErrorHandler.jsonld#TargetExtractorErrorHandler",
+      "@type": "Class",
+      "requireElement": "TargetExtractorErrorHandler",
+      "extends": [
+        "css:dist/http/output/error/ErrorHandler.jsonld#ErrorHandler"
+      ],
+      "comment": "Adds metadata to an error to indicate the identifier of the originally targeted resource.",
+      "parameters": [
+        {
+          "@id": "css:dist/http/output/error/TargetExtractorErrorHandler.jsonld#TargetExtractorErrorHandler_errorHandler",
+          "range": "css:dist/http/output/error/ErrorHandler.jsonld#ErrorHandler"
+        },
+        {
+          "@id": "css:dist/http/output/error/TargetExtractorErrorHandler.jsonld#TargetExtractorErrorHandler_targetExtractor",
+          "range": "css:dist/http/input/identifier/TargetExtractor.jsonld#TargetExtractor"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/output/error/TargetExtractorErrorHandler.jsonld#TargetExtractorErrorHandler__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/http/output/error/TargetExtractorErrorHandler.jsonld#TargetExtractorErrorHandler__member_errorHandler",
+          "memberFieldName": "errorHandler",
+          "range": "css:dist/http/output/error/ErrorHandler.jsonld#ErrorHandler"
+        },
+        {
+          "@id": "css:dist/http/output/error/TargetExtractorErrorHandler.jsonld#TargetExtractorErrorHandler__member_targetExtractor",
+          "memberFieldName": "targetExtractor",
+          "range": "css:dist/http/input/identifier/TargetExtractor.jsonld#TargetExtractor"
+        },
+        {
+          "@id": "css:dist/http/output/error/TargetExtractorErrorHandler.jsonld#TargetExtractorErrorHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/output/error/TargetExtractorErrorHandler.jsonld#TargetExtractorErrorHandler__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/http/output/error/TargetExtractorErrorHandler.jsonld#TargetExtractorErrorHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/output/error/TargetExtractorErrorHandler.jsonld#TargetExtractorErrorHandler_errorHandler"
+        },
+        {
+          "@id": "css:dist/http/output/error/TargetExtractorErrorHandler.jsonld#TargetExtractorErrorHandler_targetExtractor"
+        }
+      ]
+    }
+  ]
+}

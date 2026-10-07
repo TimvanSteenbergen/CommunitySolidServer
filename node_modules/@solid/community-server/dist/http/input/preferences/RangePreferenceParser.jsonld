@@ -1,0 +1,25 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/input/preferences/RangePreferenceParser.jsonld#RangePreferenceParser",
+      "@type": "Class",
+      "requireElement": "RangePreferenceParser",
+      "extends": [
+        "css:dist/http/input/preferences/PreferenceParser.jsonld#PreferenceParser"
+      ],
+      "comment": "Parses the range header into range preferences. If the range corresponds to a suffix-length range, it will be stored in `start` as a negative value.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/input/preferences/RangePreferenceParser.jsonld#RangePreferenceParser__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

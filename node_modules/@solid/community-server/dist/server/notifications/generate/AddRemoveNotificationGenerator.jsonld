@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/notifications/generate/AddRemoveNotificationGenerator.jsonld#AddRemoveNotificationGenerator",
+      "@type": "Class",
+      "requireElement": "AddRemoveNotificationGenerator",
+      "extends": [
+        "css:dist/server/notifications/generate/NotificationGenerator.jsonld#NotificationGenerator"
+      ],
+      "comment": "A {@link NotificationGenerator} specifically for Add/Remove notifications. Creates the notification so the `target` is set to input topic, and the `object` value is extracted from the provided metadata.",
+      "parameters": [
+        {
+          "@id": "css:dist/server/notifications/generate/AddRemoveNotificationGenerator.jsonld#AddRemoveNotificationGenerator_store",
+          "range": "css:dist/storage/ResourceStore.jsonld#ResourceStore"
+        },
+        {
+          "@id": "css:dist/server/notifications/generate/AddRemoveNotificationGenerator.jsonld#AddRemoveNotificationGenerator_eTagHandler",
+          "range": "css:dist/storage/conditions/ETagHandler.jsonld#ETagHandler"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/notifications/generate/AddRemoveNotificationGenerator.jsonld#AddRemoveNotificationGenerator__member_store",
+          "memberFieldName": "store"
+        },
+        {
+          "@id": "css:dist/server/notifications/generate/AddRemoveNotificationGenerator.jsonld#AddRemoveNotificationGenerator__member_eTagHandler",
+          "memberFieldName": "eTagHandler"
+        },
+        {
+          "@id": "css:dist/server/notifications/generate/AddRemoveNotificationGenerator.jsonld#AddRemoveNotificationGenerator__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/notifications/generate/AddRemoveNotificationGenerator.jsonld#AddRemoveNotificationGenerator__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/server/notifications/generate/AddRemoveNotificationGenerator.jsonld#AddRemoveNotificationGenerator__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/notifications/generate/AddRemoveNotificationGenerator.jsonld#AddRemoveNotificationGenerator_store"
+        },
+        {
+          "@id": "css:dist/server/notifications/generate/AddRemoveNotificationGenerator.jsonld#AddRemoveNotificationGenerator_eTagHandler"
+        }
+      ]
+    }
+  ]
+}

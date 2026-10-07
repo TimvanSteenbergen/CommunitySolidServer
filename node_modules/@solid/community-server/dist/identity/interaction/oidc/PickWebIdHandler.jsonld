@@ -1,0 +1,70 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/oidc/PickWebIdHandler.jsonld#PickWebIdHandler",
+      "@type": "Class",
+      "requireElement": "PickWebIdHandler",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/identity/interaction/JsonInteractionHandler.jsonld#JsonInteractionHandler",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeWildcard"
+            }
+          ]
+        },
+        "css:dist/identity/interaction/JsonView.jsonld#JsonView"
+      ],
+      "comment": "Allows users to choose which WebID they want to authenticate as during an OIDC interaction.  One of the main reason picking a WebID is a separate class/request from consenting to the OIDC interaction, is because the OIDC-provider will only give the information we need for consent once we have added an accountId to the OIDC interaction, which we do in this class. The library also really wants to use that accountId as the value that you use for generating the tokens, meaning we can't just use another value there, so we need to assign the WebID to it, unless we use a hacky workaround.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/oidc/PickWebIdHandler.jsonld#PickWebIdHandler_webIdStore",
+          "range": "css:dist/identity/interaction/webid/util/WebIdStore.jsonld#WebIdStore"
+        },
+        {
+          "@id": "css:dist/identity/interaction/oidc/PickWebIdHandler.jsonld#PickWebIdHandler_providerFactory",
+          "range": "css:dist/identity/configuration/ProviderFactory.jsonld#ProviderFactory"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/oidc/PickWebIdHandler.jsonld#PickWebIdHandler__member_logger",
+          "memberFieldName": "logger"
+        },
+        {
+          "@id": "css:dist/identity/interaction/oidc/PickWebIdHandler.jsonld#PickWebIdHandler__member_webIdStore",
+          "memberFieldName": "webIdStore"
+        },
+        {
+          "@id": "css:dist/identity/interaction/oidc/PickWebIdHandler.jsonld#PickWebIdHandler__member_providerFactory",
+          "memberFieldName": "providerFactory"
+        },
+        {
+          "@id": "css:dist/identity/interaction/oidc/PickWebIdHandler.jsonld#PickWebIdHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/oidc/PickWebIdHandler.jsonld#PickWebIdHandler__member_getView",
+          "memberFieldName": "getView"
+        },
+        {
+          "@id": "css:dist/identity/interaction/oidc/PickWebIdHandler.jsonld#PickWebIdHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/oidc/PickWebIdHandler.jsonld#PickWebIdHandler_webIdStore"
+        },
+        {
+          "@id": "css:dist/identity/interaction/oidc/PickWebIdHandler.jsonld#PickWebIdHandler_providerFactory"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor",
+      "@type": "Class",
+      "requireElement": "SparqlDataAccessor",
+      "extends": [
+        "css:dist/storage/accessors/DataAccessor.jsonld#DataAccessor"
+      ],
+      "comment": "Stores all data and metadata of resources in a SPARQL backend. Communication is done by sending SPARQL queries. Queries are constructed in such a way to keep everything consistent, such as updating containment triples and deleting old data when it is overwritten.  Since metadata is hidden, no containment triples are stored for metadata files.  All input container metadata is stored in its metadata identifier. The containment triples are stored in the graph corresponding to the actual identifier so those don't get overwritten.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor_endpoint",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor_identifierStrategy",
+          "range": "css:dist/util/identifiers/IdentifierStrategy.jsonld#IdentifierStrategy"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor__member_endpoint",
+          "memberFieldName": "endpoint"
+        },
+        {
+          "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor__member_identifierStrategy",
+          "memberFieldName": "identifierStrategy"
+        },
+        {
+          "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor__member_fetcher",
+          "memberFieldName": "fetcher"
+        },
+        {
+          "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor__member_generator",
+          "memberFieldName": "generator"
+        },
+        {
+          "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor__member_getData",
+          "memberFieldName": "getData"
+        },
+        {
+          "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor__member_getMetadata",
+          "memberFieldName": "getMetadata"
+        },
+        {
+          "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor__member_getChildren",
+          "memberFieldName": "getChildren"
+        },
+        {
+          "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor__member_writeContainer",
+          "memberFieldName": "writeContainer"
+        },
+        {
+          "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor__member_writeDocument",
+          "memberFieldName": "writeDocument"
+        },
+        {
+          "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor__member_writeMetadata",
+          "memberFieldName": "writeMetadata"
+        },
+        {
+          "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor__member_deleteResource",
+          "memberFieldName": "deleteResource"
+        },
+        {
+          "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor__member_getRelatedNames",
+          "memberFieldName": "getRelatedNames"
+        },
+        {
+          "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor__member_getMetadataNode",
+          "memberFieldName": "getMetadataNode"
+        },
+        {
+          "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor__member_isMetadataIdentifier",
+          "memberFieldName": "isMetadataIdentifier"
+        },
+        {
+          "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor__member_sparqlConstruct",
+          "memberFieldName": "sparqlConstruct"
+        },
+        {
+          "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor__member_sparqlSelectGraph",
+          "memberFieldName": "sparqlSelectGraph"
+        },
+        {
+          "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor__member_sparqlInsert",
+          "memberFieldName": "sparqlInsert"
+        },
+        {
+          "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor__member_sparqlInsertMetadata",
+          "memberFieldName": "sparqlInsertMetadata"
+        },
+        {
+          "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor__member_sparqlDelete",
+          "memberFieldName": "sparqlDelete"
+        },
+        {
+          "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor__member_sparqlUpdateDeleteAll",
+          "memberFieldName": "sparqlUpdateDeleteAll"
+        },
+        {
+          "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor__member_sparqlUpdateGraph",
+          "memberFieldName": "sparqlUpdateGraph"
+        },
+        {
+          "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor__member_sendSparqlConstruct",
+          "memberFieldName": "sendSparqlConstruct"
+        },
+        {
+          "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor__member_sendSparqlUpdate",
+          "memberFieldName": "sendSparqlUpdate"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor_endpoint"
+        },
+        {
+          "@id": "css:dist/storage/accessors/SparqlDataAccessor.jsonld#SparqlDataAccessor_identifierStrategy"
+        }
+      ]
+    }
+  ]
+}

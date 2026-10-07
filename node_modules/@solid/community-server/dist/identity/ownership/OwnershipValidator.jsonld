@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/ownership/OwnershipValidator.jsonld#OwnershipValidator",
+      "@type": "AbstractClass",
+      "requireElement": "OwnershipValidator",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeWildcard"
+            }
+          ]
+        }
+      ],
+      "comment": "A class that validates if a someone owns a WebId. Will throw an error if the WebId is not valid or ownership could not be validated. The error message should contain a description of what is wrong and how it can be resolved.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

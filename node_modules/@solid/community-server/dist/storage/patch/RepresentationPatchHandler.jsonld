@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/patch/RepresentationPatchHandler.jsonld#RepresentationPatchHandler",
+      "@type": "Class",
+      "requireElement": "RepresentationPatchHandler",
+      "extends": [
+        "css:dist/storage/patch/PatchHandler.jsonld#PatchHandler"
+      ],
+      "comment": "Handles a patch operation by getting the representation from the store, applying a `RepresentationPatcher`, and then writing the result back to the store.  In case there is no original representation (the store throws a `NotFoundHttpError`), the patcher is expected to create a new one.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/patch/RepresentationPatchHandler.jsonld#RepresentationPatchHandler_patcher",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/patch/RepresentationPatcher.jsonld#RepresentationPatcher",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/patch/RepresentationPatchHandler.jsonld#RepresentationPatchHandler__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/storage/patch/RepresentationPatchHandler.jsonld#RepresentationPatchHandler__member_patcher",
+          "memberFieldName": "patcher"
+        },
+        {
+          "@id": "css:dist/storage/patch/RepresentationPatchHandler.jsonld#RepresentationPatchHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/patch/RepresentationPatchHandler.jsonld#RepresentationPatchHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/patch/RepresentationPatchHandler.jsonld#RepresentationPatchHandler_patcher"
+        }
+      ]
+    }
+  ]
+}

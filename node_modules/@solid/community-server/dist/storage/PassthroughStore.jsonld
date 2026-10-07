@@ -1,0 +1,75 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/PassthroughStore.jsonld#PassthroughStore",
+      "@type": "Class",
+      "requireElement": "PassthroughStore",
+      "extends": [
+        "css:dist/storage/ResourceStore.jsonld#ResourceStore"
+      ],
+      "comment": "Store that calls the corresponding functions of the source Store. Can be extended by stores that do not want to override all functions by implementing a decorator pattern.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/storage/PassthroughStore.jsonld#PassthroughStore__generic_T",
+          "range": "css:dist/storage/ResourceStore.jsonld#ResourceStore"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/storage/PassthroughStore.jsonld#PassthroughStore_source",
+          "range": {
+            "@type": "ParameterRangeGenericTypeReference",
+            "parameterRangeGenericType": "css:dist/storage/PassthroughStore.jsonld#PassthroughStore__generic_T"
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/PassthroughStore.jsonld#PassthroughStore__member_source",
+          "memberFieldName": "source",
+          "range": {
+            "@type": "ParameterRangeGenericTypeReference",
+            "parameterRangeGenericType": "css:dist/storage/PassthroughStore.jsonld#PassthroughStore__generic_T"
+          }
+        },
+        {
+          "@id": "css:dist/storage/PassthroughStore.jsonld#PassthroughStore__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/PassthroughStore.jsonld#PassthroughStore__member_hasResource",
+          "memberFieldName": "hasResource"
+        },
+        {
+          "@id": "css:dist/storage/PassthroughStore.jsonld#PassthroughStore__member_getRepresentation",
+          "memberFieldName": "getRepresentation"
+        },
+        {
+          "@id": "css:dist/storage/PassthroughStore.jsonld#PassthroughStore__member_addResource",
+          "memberFieldName": "addResource"
+        },
+        {
+          "@id": "css:dist/storage/PassthroughStore.jsonld#PassthroughStore__member_deleteResource",
+          "memberFieldName": "deleteResource"
+        },
+        {
+          "@id": "css:dist/storage/PassthroughStore.jsonld#PassthroughStore__member_modifyResource",
+          "memberFieldName": "modifyResource"
+        },
+        {
+          "@id": "css:dist/storage/PassthroughStore.jsonld#PassthroughStore__member_setRepresentation",
+          "memberFieldName": "setRepresentation"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/PassthroughStore.jsonld#PassthroughStore_source"
+        }
+      ]
+    }
+  ]
+}

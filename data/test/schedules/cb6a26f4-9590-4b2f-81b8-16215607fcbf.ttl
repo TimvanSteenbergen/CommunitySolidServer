@@ -1,0 +1,5 @@
+<http://localhost:3000/test/schedules/cb6a26f4-9590-4b2f-81b8-16215607fcbf.ttl> a <https://schema.org/Schedule>;
+    <https://schema.org/startDate> "2026-10-01Z"^^<http://www.w3.org/2001/XMLSchema#date>;
+    <https://schema.org/endDate> "2026-11-01Z"^^<http://www.w3.org/2001/XMLSchema#date>;
+    <https://schema.org/repeatFrequency> "P1W";
+    <https://schema.org/byDay> <https://schema.org/Tuesday>, <https://schema.org/Thursday>.

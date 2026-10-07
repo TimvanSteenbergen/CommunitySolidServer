@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/ldp/HeadOperationHandler.jsonld#HeadOperationHandler",
+      "@type": "Class",
+      "requireElement": "HeadOperationHandler",
+      "extends": [
+        "css:dist/http/ldp/OperationHandler.jsonld#OperationHandler"
+      ],
+      "comment": "Handles HEAD {@link Operation}s. Calls the getRepresentation function from a {@link ResourceStore}.",
+      "parameters": [
+        {
+          "@id": "css:dist/http/ldp/HeadOperationHandler.jsonld#HeadOperationHandler_store",
+          "range": "css:dist/storage/ResourceStore.jsonld#ResourceStore"
+        },
+        {
+          "@id": "css:dist/http/ldp/HeadOperationHandler.jsonld#HeadOperationHandler_eTagHandler",
+          "range": "css:dist/storage/conditions/ETagHandler.jsonld#ETagHandler"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/ldp/HeadOperationHandler.jsonld#HeadOperationHandler__member_store",
+          "memberFieldName": "store"
+        },
+        {
+          "@id": "css:dist/http/ldp/HeadOperationHandler.jsonld#HeadOperationHandler__member_eTagHandler",
+          "memberFieldName": "eTagHandler"
+        },
+        {
+          "@id": "css:dist/http/ldp/HeadOperationHandler.jsonld#HeadOperationHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/ldp/HeadOperationHandler.jsonld#HeadOperationHandler__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/http/ldp/HeadOperationHandler.jsonld#HeadOperationHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/ldp/HeadOperationHandler.jsonld#HeadOperationHandler_store"
+        },
+        {
+          "@id": "css:dist/http/ldp/HeadOperationHandler.jsonld#HeadOperationHandler_eTagHandler"
+        }
+      ]
+    }
+  ]
+}

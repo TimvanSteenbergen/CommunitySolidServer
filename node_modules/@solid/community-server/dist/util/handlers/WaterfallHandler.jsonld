@@ -1,0 +1,95 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/handlers/WaterfallHandler.jsonld#WaterfallHandler",
+      "@type": "Class",
+      "requireElement": "WaterfallHandler",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/util/handlers/WaterfallHandler.jsonld#WaterfallHandler__generic_TIn"
+            },
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/util/handlers/WaterfallHandler.jsonld#WaterfallHandler__generic_TOut"
+            }
+          ]
+        }
+      ],
+      "comment": "A composite handler that tries multiple handlers one by one until it finds a handler that supports the input. The handlers will be checked in the order they appear in the input array, allowing for more fine-grained handlers to check before catch-all handlers.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/util/handlers/WaterfallHandler.jsonld#WaterfallHandler__generic_TIn"
+        },
+        {
+          "@id": "css:dist/util/handlers/WaterfallHandler.jsonld#WaterfallHandler__generic_TOut"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/util/handlers/WaterfallHandler.jsonld#WaterfallHandler_handlers",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": {
+              "@type": "ParameterRangeGenericComponent",
+              "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+              "genericTypeInstances": [
+                {
+                  "@type": "ParameterRangeGenericTypeReference",
+                  "parameterRangeGenericType": "css:dist/util/handlers/WaterfallHandler.jsonld#WaterfallHandler__generic_TIn"
+                },
+                {
+                  "@type": "ParameterRangeGenericTypeReference",
+                  "parameterRangeGenericType": "css:dist/util/handlers/WaterfallHandler.jsonld#WaterfallHandler__generic_TOut"
+                }
+              ]
+            }
+          },
+          "comment": "Handlers over which it will run."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/handlers/WaterfallHandler.jsonld#WaterfallHandler__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/util/handlers/WaterfallHandler.jsonld#WaterfallHandler__member_handlers",
+          "memberFieldName": "handlers"
+        },
+        {
+          "@id": "css:dist/util/handlers/WaterfallHandler.jsonld#WaterfallHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/util/handlers/WaterfallHandler.jsonld#WaterfallHandler__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/util/handlers/WaterfallHandler.jsonld#WaterfallHandler__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/util/handlers/WaterfallHandler.jsonld#WaterfallHandler__member_handleSafe",
+          "memberFieldName": "handleSafe"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/handlers/WaterfallHandler.jsonld#WaterfallHandler_handlers"
+        }
+      ]
+    }
+  ]
+}

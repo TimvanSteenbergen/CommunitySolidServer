@@ -1,0 +1,125 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/errors/RedirectHttpError.jsonld#RedirectHttpError",
+      "@type": "Class",
+      "requireElement": "RedirectHttpError",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/errors/HttpError.jsonld#HttpError",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/util/errors/RedirectHttpError.jsonld#RedirectHttpError__generic_TCode"
+            }
+          ]
+        }
+      ],
+      "comment": "An error corresponding to a 3xx status code. Includes the location it redirects to.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/util/errors/RedirectHttpError.jsonld#RedirectHttpError__generic_TCode",
+          "range": "xsd:number"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/util/errors/RedirectHttpError.jsonld#RedirectHttpError_statusCode",
+          "range": {
+            "@type": "ParameterRangeGenericTypeReference",
+            "parameterRangeGenericType": "css:dist/util/errors/RedirectHttpError.jsonld#RedirectHttpError__generic_TCode"
+          },
+          "comment": "HTTP status code needed for the HTTP response."
+        },
+        {
+          "@id": "css:dist/util/errors/RedirectHttpError.jsonld#RedirectHttpError_name",
+          "range": "xsd:string",
+          "comment": "Error name. Useful for logging and stack tracing."
+        },
+        {
+          "@id": "css:dist/util/errors/RedirectHttpError.jsonld#RedirectHttpError_location",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/util/errors/RedirectHttpError.jsonld#RedirectHttpError_message",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Error message."
+        },
+        {
+          "@id": "css:dist/util/errors/RedirectHttpError.jsonld#RedirectHttpError_options",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeWildcard"
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Optional options."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/errors/RedirectHttpError.jsonld#RedirectHttpError__member_location",
+          "memberFieldName": "location",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/util/errors/RedirectHttpError.jsonld#RedirectHttpError__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/util/errors/RedirectHttpError.jsonld#RedirectHttpError__member_isInstance",
+          "memberFieldName": "isInstance"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/errors/RedirectHttpError.jsonld#RedirectHttpError_statusCode"
+        },
+        {
+          "@id": "css:dist/util/errors/RedirectHttpError.jsonld#RedirectHttpError_name"
+        },
+        {
+          "@id": "css:dist/util/errors/RedirectHttpError.jsonld#RedirectHttpError_location"
+        },
+        {
+          "@id": "css:dist/util/errors/RedirectHttpError.jsonld#RedirectHttpError_message"
+        },
+        {
+          "@id": "css:dist/util/errors/RedirectHttpError.jsonld#RedirectHttpError_options"
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/util/errors/RedirectHttpError.jsonld#RedirectHttpErrorClass",
+      "@type": "AbstractClass",
+      "requireElement": "RedirectHttpErrorClass",
+      "comment": "Interface describing what a {@link RedirectHttpError} class should look like. Makes sure a `location` value is always needed.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/util/errors/RedirectHttpError.jsonld#RedirectHttpErrorClass__generic_TCode",
+          "range": "xsd:number"
+        }
+      ],
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"version":3,"file":"Patch.js","sourceRoot":"","sources":["../../../src/http/representation/Patch.ts"],"names":[],"mappings":"","sourcesContent":["import type { Representation } from './Representation';\n\n/**\n * Represents the changes needed for a PATCH request.\n */\nexport interface Patch extends Representation {\n}\n"]}

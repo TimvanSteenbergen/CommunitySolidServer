@@ -1,0 +1,22 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/storage/AdapterFactory.jsonld#AdapterFactory",
+      "@type": "AbstractClass",
+      "requireElement": "AdapterFactory",
+      "comment": "A factory that generates an `Adapter` to be used by the IDP to persist information.  The `oidc-provider` library will call the relevant functions when it needs to find/create/delete metadata. For a full explanation of how these functions work and what is expected, have a look at https://github.com/panva/node-oidc-provider/blob/main/example/my_adapter.js",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/storage/AdapterFactory.jsonld#AdapterFactory__member_createStorageAdapter",
+          "memberFieldName": "createStorageAdapter"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

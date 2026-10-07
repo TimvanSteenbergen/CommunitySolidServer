@@ -1,0 +1,58 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/input/conditions/BasicConditionsParser.jsonld#BasicConditionsParser",
+      "@type": "Class",
+      "requireElement": "BasicConditionsParser",
+      "extends": [
+        "css:dist/http/input/conditions/ConditionsParser.jsonld#ConditionsParser"
+      ],
+      "comment": "Creates a Conditions object based on the following headers: - If-Modified-Since - If-Unmodified-Since - If-Match - If-None-Match  Implementation based on RFC7232",
+      "parameters": [
+        {
+          "@id": "css:dist/http/input/conditions/BasicConditionsParser.jsonld#BasicConditionsParser_eTagHandler",
+          "range": "css:dist/storage/conditions/ETagHandler.jsonld#ETagHandler"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/input/conditions/BasicConditionsParser.jsonld#BasicConditionsParser__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/http/input/conditions/BasicConditionsParser.jsonld#BasicConditionsParser__member_eTagHandler",
+          "memberFieldName": "eTagHandler",
+          "range": "css:dist/storage/conditions/ETagHandler.jsonld#ETagHandler"
+        },
+        {
+          "@id": "css:dist/http/input/conditions/BasicConditionsParser.jsonld#BasicConditionsParser__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/input/conditions/BasicConditionsParser.jsonld#BasicConditionsParser__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/http/input/conditions/BasicConditionsParser.jsonld#BasicConditionsParser__member_parseDateHeader",
+          "memberFieldName": "parseDateHeader"
+        },
+        {
+          "@id": "css:dist/http/input/conditions/BasicConditionsParser.jsonld#BasicConditionsParser__member_parseTagHeader",
+          "memberFieldName": "parseTagHeader"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/input/conditions/BasicConditionsParser.jsonld#BasicConditionsParser_eTagHandler"
+        }
+      ]
+    }
+  ]
+}

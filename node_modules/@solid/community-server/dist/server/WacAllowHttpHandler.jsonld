@@ -1,0 +1,125 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/WacAllowHttpHandler.jsonld#WacAllowHttpHandler",
+      "@type": "Class",
+      "requireElement": "WacAllowHttpHandler",
+      "extends": [
+        "css:dist/server/OperationHttpHandler.jsonld#OperationHttpHandler"
+      ],
+      "comment": "Adds all the available permissions to the response metadata, which can be used to generate the correct WAC-Allow header.  This class does many things similar to the {@link AuthorizingHttpHandler}, so in general it is a good idea to make sure all these classes cache their results.",
+      "parameters": [
+        {
+          "@id": "css:dist/server/WacAllowHttpHandler.jsonld#WacAllowHttpHandler_args_credentialsExtractor",
+          "range": "css:dist/authentication/CredentialsExtractor.jsonld#CredentialsExtractor"
+        },
+        {
+          "@id": "css:dist/server/WacAllowHttpHandler.jsonld#WacAllowHttpHandler_args_modesExtractor",
+          "range": "css:dist/authorization/permissions/ModesExtractor.jsonld#ModesExtractor"
+        },
+        {
+          "@id": "css:dist/server/WacAllowHttpHandler.jsonld#WacAllowHttpHandler_args_permissionReader",
+          "range": "css:dist/authorization/PermissionReader.jsonld#PermissionReader"
+        },
+        {
+          "@id": "css:dist/server/WacAllowHttpHandler.jsonld#WacAllowHttpHandler_args_operationHandler",
+          "range": "css:dist/server/OperationHttpHandler.jsonld#OperationHttpHandler"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/WacAllowHttpHandler.jsonld#WacAllowHttpHandler__member_logger",
+          "memberFieldName": "logger"
+        },
+        {
+          "@id": "css:dist/server/WacAllowHttpHandler.jsonld#WacAllowHttpHandler__member_credentialsExtractor",
+          "memberFieldName": "credentialsExtractor"
+        },
+        {
+          "@id": "css:dist/server/WacAllowHttpHandler.jsonld#WacAllowHttpHandler__member_modesExtractor",
+          "memberFieldName": "modesExtractor"
+        },
+        {
+          "@id": "css:dist/server/WacAllowHttpHandler.jsonld#WacAllowHttpHandler__member_permissionReader",
+          "memberFieldName": "permissionReader"
+        },
+        {
+          "@id": "css:dist/server/WacAllowHttpHandler.jsonld#WacAllowHttpHandler__member_operationHandler",
+          "memberFieldName": "operationHandler"
+        },
+        {
+          "@id": "css:dist/server/WacAllowHttpHandler.jsonld#WacAllowHttpHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/WacAllowHttpHandler.jsonld#WacAllowHttpHandler__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/server/WacAllowHttpHandler.jsonld#WacAllowHttpHandler__member_addWacAllowMetadata",
+          "memberFieldName": "addWacAllowMetadata"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/WacAllowHttpHandler.jsonld#WacAllowHttpHandler_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "credentialsExtractor",
+              "value": {
+                "@id": "css:dist/server/WacAllowHttpHandler.jsonld#WacAllowHttpHandler_args_credentialsExtractor"
+              }
+            },
+            {
+              "keyRaw": "modesExtractor",
+              "value": {
+                "@id": "css:dist/server/WacAllowHttpHandler.jsonld#WacAllowHttpHandler_args_modesExtractor"
+              }
+            },
+            {
+              "keyRaw": "permissionReader",
+              "value": {
+                "@id": "css:dist/server/WacAllowHttpHandler.jsonld#WacAllowHttpHandler_args_permissionReader"
+              }
+            },
+            {
+              "keyRaw": "operationHandler",
+              "value": {
+                "@id": "css:dist/server/WacAllowHttpHandler.jsonld#WacAllowHttpHandler_args_operationHandler"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/server/WacAllowHttpHandler.jsonld#WacAllowHttpHandlerArgs",
+      "@type": "AbstractClass",
+      "requireElement": "WacAllowHttpHandlerArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/WacAllowHttpHandler.jsonld#WacAllowHttpHandlerArgs__member_credentialsExtractor",
+          "memberFieldName": "credentialsExtractor"
+        },
+        {
+          "@id": "css:dist/server/WacAllowHttpHandler.jsonld#WacAllowHttpHandlerArgs__member_modesExtractor",
+          "memberFieldName": "modesExtractor"
+        },
+        {
+          "@id": "css:dist/server/WacAllowHttpHandler.jsonld#WacAllowHttpHandlerArgs__member_permissionReader",
+          "memberFieldName": "permissionReader"
+        },
+        {
+          "@id": "css:dist/server/WacAllowHttpHandler.jsonld#WacAllowHttpHandlerArgs__member_operationHandler",
+          "memberFieldName": "operationHandler"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

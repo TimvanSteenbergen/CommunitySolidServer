@@ -1,0 +1,97 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/size-reporter/FileSizeReporter.jsonld#FileSizeReporter",
+      "@type": "Class",
+      "requireElement": "FileSizeReporter",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/storage/size-reporter/SizeReporter.jsonld#SizeReporter",
+          "genericTypeInstances": [
+            "xsd:string"
+          ]
+        }
+      ],
+      "comment": "SizeReporter that is used to calculate sizes of resources for a file based system.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/size-reporter/FileSizeReporter.jsonld#FileSizeReporter_rootFilePath",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/storage/size-reporter/FileSizeReporter.jsonld#FileSizeReporter_fileIdentifierMapper",
+          "range": "css:dist/storage/mapping/FileIdentifierMapper.jsonld#FileIdentifierMapper"
+        },
+        {
+          "@id": "css:dist/storage/size-reporter/FileSizeReporter.jsonld#FileSizeReporter_ignoreFolders",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": "xsd:string"
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/size-reporter/FileSizeReporter.jsonld#FileSizeReporter__member_fileIdentifierMapper",
+          "memberFieldName": "fileIdentifierMapper"
+        },
+        {
+          "@id": "css:dist/storage/size-reporter/FileSizeReporter.jsonld#FileSizeReporter__member_ignoreFolders",
+          "memberFieldName": "ignoreFolders"
+        },
+        {
+          "@id": "css:dist/storage/size-reporter/FileSizeReporter.jsonld#FileSizeReporter__member_rootFilePath",
+          "memberFieldName": "rootFilePath"
+        },
+        {
+          "@id": "css:dist/storage/size-reporter/FileSizeReporter.jsonld#FileSizeReporter__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/size-reporter/FileSizeReporter.jsonld#FileSizeReporter__member_getUnit",
+          "memberFieldName": "getUnit"
+        },
+        {
+          "@id": "css:dist/storage/size-reporter/FileSizeReporter.jsonld#FileSizeReporter__member_getSize",
+          "memberFieldName": "getSize"
+        },
+        {
+          "@id": "css:dist/storage/size-reporter/FileSizeReporter.jsonld#FileSizeReporter__member_calculateChunkSize",
+          "memberFieldName": "calculateChunkSize"
+        },
+        {
+          "@id": "css:dist/storage/size-reporter/FileSizeReporter.jsonld#FileSizeReporter__member_estimateSize",
+          "memberFieldName": "estimateSize"
+        },
+        {
+          "@id": "css:dist/storage/size-reporter/FileSizeReporter.jsonld#FileSizeReporter__member_getTotalSize",
+          "memberFieldName": "getTotalSize"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/size-reporter/FileSizeReporter.jsonld#FileSizeReporter_fileIdentifierMapper"
+        },
+        {
+          "@id": "css:dist/storage/size-reporter/FileSizeReporter.jsonld#FileSizeReporter_rootFilePath"
+        },
+        {
+          "@id": "css:dist/storage/size-reporter/FileSizeReporter.jsonld#FileSizeReporter_ignoreFolders"
+        }
+      ]
+    }
+  ]
+}

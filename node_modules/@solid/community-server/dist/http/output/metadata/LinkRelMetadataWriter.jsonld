@@ -1,0 +1,69 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/output/metadata/LinkRelMetadataWriter.jsonld#LinkRelMetadataWriter",
+      "@type": "Class",
+      "requireElement": "LinkRelMetadataWriter",
+      "extends": [
+        "css:dist/http/output/metadata/MetadataWriter.jsonld#MetadataWriter"
+      ],
+      "comment": "A {@link MetadataWriter} that takes a linking metadata predicates to Link header \"rel\" values. The values of the objects will be put in a Link header with the corresponding \"rel\" value.",
+      "parameters": [
+        {
+          "@id": "css:dist/http/output/metadata/LinkRelMetadataWriter.jsonld#LinkRelMetadataWriter_linkRelMap",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "css:dist/http/output/metadata/LinkRelMetadataWriter.jsonld#LinkRelMetadataWriter_linkRelMap_key"
+              },
+              {
+                "@id": "css:dist/http/output/metadata/LinkRelMetadataWriter.jsonld#LinkRelMetadataWriter_linkRelMap_value",
+                "range": "xsd:string"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/output/metadata/LinkRelMetadataWriter.jsonld#LinkRelMetadataWriter__member_linkRelMap",
+          "memberFieldName": "linkRelMap"
+        },
+        {
+          "@id": "css:dist/http/output/metadata/LinkRelMetadataWriter.jsonld#LinkRelMetadataWriter__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/http/output/metadata/LinkRelMetadataWriter.jsonld#LinkRelMetadataWriter__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/output/metadata/LinkRelMetadataWriter.jsonld#LinkRelMetadataWriter__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/output/metadata/LinkRelMetadataWriter.jsonld#LinkRelMetadataWriter_linkRelMap__constructorArgument",
+          "fields": [
+            {
+              "collectEntries": "css:dist/http/output/metadata/LinkRelMetadataWriter.jsonld#LinkRelMetadataWriter_linkRelMap",
+              "key": "css:dist/http/output/metadata/LinkRelMetadataWriter.jsonld#LinkRelMetadataWriter_linkRelMap_key",
+              "value": {
+                "@id": "css:dist/http/output/metadata/LinkRelMetadataWriter.jsonld#LinkRelMetadataWriter_linkRelMap_value"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

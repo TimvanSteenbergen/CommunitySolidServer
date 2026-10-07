@@ -1,0 +1,46 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+      "@type": "AbstractClass",
+      "requireElement": "KeyValueStorage",
+      "comment": "A simple storage solution that can be used for internal values that need to be stored. To prevent potential issues, keys should be urlencoded before calling the storage.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage__generic_TKey"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage__generic_TValue"
+        }
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage__member_get",
+          "memberFieldName": "get"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage__member_has",
+          "memberFieldName": "has"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage__member_set",
+          "memberFieldName": "set"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage__member_delete",
+          "memberFieldName": "delete"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage__member_entries",
+          "memberFieldName": "entries"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

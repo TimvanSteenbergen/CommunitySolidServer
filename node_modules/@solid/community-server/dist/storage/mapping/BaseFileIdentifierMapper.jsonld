@@ -1,0 +1,114 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/mapping/BaseFileIdentifierMapper.jsonld#BaseFileIdentifierMapper",
+      "@type": "Class",
+      "requireElement": "BaseFileIdentifierMapper",
+      "extends": [
+        "css:dist/storage/mapping/FileIdentifierMapper.jsonld#FileIdentifierMapper"
+      ],
+      "comment": "Base class for {@link FileIdentifierMapper} implementations.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/mapping/BaseFileIdentifierMapper.jsonld#BaseFileIdentifierMapper_base",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/storage/mapping/BaseFileIdentifierMapper.jsonld#BaseFileIdentifierMapper_rootFilepath",
+          "range": "xsd:string"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/mapping/BaseFileIdentifierMapper.jsonld#BaseFileIdentifierMapper__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/storage/mapping/BaseFileIdentifierMapper.jsonld#BaseFileIdentifierMapper__member_baseRequestURI",
+          "memberFieldName": "baseRequestURI",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/storage/mapping/BaseFileIdentifierMapper.jsonld#BaseFileIdentifierMapper__member_rootFilepath",
+          "memberFieldName": "rootFilepath",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/storage/mapping/BaseFileIdentifierMapper.jsonld#BaseFileIdentifierMapper__member_unknownMediaTypeExtension",
+          "memberFieldName": "unknownMediaTypeExtension"
+        },
+        {
+          "@id": "css:dist/storage/mapping/BaseFileIdentifierMapper.jsonld#BaseFileIdentifierMapper__member_metadataSuffix",
+          "memberFieldName": "metadataSuffix"
+        },
+        {
+          "@id": "css:dist/storage/mapping/BaseFileIdentifierMapper.jsonld#BaseFileIdentifierMapper__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/mapping/BaseFileIdentifierMapper.jsonld#BaseFileIdentifierMapper__member_mapUrlToFilePath",
+          "memberFieldName": "mapUrlToFilePath"
+        },
+        {
+          "@id": "css:dist/storage/mapping/BaseFileIdentifierMapper.jsonld#BaseFileIdentifierMapper__member_mapUrlToContainerPath",
+          "memberFieldName": "mapUrlToContainerPath"
+        },
+        {
+          "@id": "css:dist/storage/mapping/BaseFileIdentifierMapper.jsonld#BaseFileIdentifierMapper__member_mapUrlToDocumentPath",
+          "memberFieldName": "mapUrlToDocumentPath"
+        },
+        {
+          "@id": "css:dist/storage/mapping/BaseFileIdentifierMapper.jsonld#BaseFileIdentifierMapper__member_getContentTypeFromUrl",
+          "memberFieldName": "getContentTypeFromUrl"
+        },
+        {
+          "@id": "css:dist/storage/mapping/BaseFileIdentifierMapper.jsonld#BaseFileIdentifierMapper__member_mapFilePathToUrl",
+          "memberFieldName": "mapFilePathToUrl"
+        },
+        {
+          "@id": "css:dist/storage/mapping/BaseFileIdentifierMapper.jsonld#BaseFileIdentifierMapper__member_getContainerUrl",
+          "memberFieldName": "getContainerUrl"
+        },
+        {
+          "@id": "css:dist/storage/mapping/BaseFileIdentifierMapper.jsonld#BaseFileIdentifierMapper__member_getDocumentUrl",
+          "memberFieldName": "getDocumentUrl"
+        },
+        {
+          "@id": "css:dist/storage/mapping/BaseFileIdentifierMapper.jsonld#BaseFileIdentifierMapper__member_getContentTypeFromPath",
+          "memberFieldName": "getContentTypeFromPath"
+        },
+        {
+          "@id": "css:dist/storage/mapping/BaseFileIdentifierMapper.jsonld#BaseFileIdentifierMapper__member_getAbsolutePath",
+          "memberFieldName": "getAbsolutePath"
+        },
+        {
+          "@id": "css:dist/storage/mapping/BaseFileIdentifierMapper.jsonld#BaseFileIdentifierMapper__member_getRelativePath",
+          "memberFieldName": "getRelativePath"
+        },
+        {
+          "@id": "css:dist/storage/mapping/BaseFileIdentifierMapper.jsonld#BaseFileIdentifierMapper__member_validateRelativePath",
+          "memberFieldName": "validateRelativePath"
+        },
+        {
+          "@id": "css:dist/storage/mapping/BaseFileIdentifierMapper.jsonld#BaseFileIdentifierMapper__member_isMetadataPath",
+          "memberFieldName": "isMetadataPath"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/mapping/BaseFileIdentifierMapper.jsonld#BaseFileIdentifierMapper_base"
+        },
+        {
+          "@id": "css:dist/storage/mapping/BaseFileIdentifierMapper.jsonld#BaseFileIdentifierMapper_rootFilepath"
+        }
+      ]
+    }
+  ]
+}

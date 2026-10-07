@@ -1,0 +1,25 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/notifications/serialize/JsonLdNotificationSerializer.jsonld#JsonLdNotificationSerializer",
+      "@type": "Class",
+      "requireElement": "JsonLdNotificationSerializer",
+      "extends": [
+        "css:dist/server/notifications/serialize/NotificationSerializer.jsonld#NotificationSerializer"
+      ],
+      "comment": "Serializes a Notification into a JSON-LD string.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/notifications/serialize/JsonLdNotificationSerializer.jsonld#JsonLdNotificationSerializer__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

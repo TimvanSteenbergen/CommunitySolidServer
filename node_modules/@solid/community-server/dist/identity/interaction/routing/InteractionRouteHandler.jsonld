@@ -1,0 +1,77 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/routing/InteractionRouteHandler.jsonld#InteractionRouteHandler",
+      "@type": "Class",
+      "requireElement": "InteractionRouteHandler",
+      "extends": [
+        "css:dist/identity/interaction/JsonInteractionHandler.jsonld#JsonInteractionHandler"
+      ],
+      "comment": "InteractionHandler that only accepts input of which the target matches the stored route.  Rejects operations that target a different route, otherwise the input parameters are passed to the source handler.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/identity/interaction/routing/InteractionRouteHandler.jsonld#InteractionRouteHandler__generic_T",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute",
+            "genericTypeInstances": [
+              "xsd:string"
+            ]
+          }
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/routing/InteractionRouteHandler.jsonld#InteractionRouteHandler_route",
+          "range": {
+            "@type": "ParameterRangeGenericTypeReference",
+            "parameterRangeGenericType": "css:dist/identity/interaction/routing/InteractionRouteHandler.jsonld#InteractionRouteHandler__generic_T"
+          }
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/InteractionRouteHandler.jsonld#InteractionRouteHandler_source",
+          "range": "css:dist/identity/interaction/JsonInteractionHandler.jsonld#JsonInteractionHandler"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/routing/InteractionRouteHandler.jsonld#InteractionRouteHandler__member_route",
+          "memberFieldName": "route",
+          "range": {
+            "@type": "ParameterRangeGenericTypeReference",
+            "parameterRangeGenericType": "css:dist/identity/interaction/routing/InteractionRouteHandler.jsonld#InteractionRouteHandler__generic_T"
+          }
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/InteractionRouteHandler.jsonld#InteractionRouteHandler__member_source",
+          "memberFieldName": "source",
+          "range": "css:dist/identity/interaction/JsonInteractionHandler.jsonld#JsonInteractionHandler"
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/InteractionRouteHandler.jsonld#InteractionRouteHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/InteractionRouteHandler.jsonld#InteractionRouteHandler__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/InteractionRouteHandler.jsonld#InteractionRouteHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/routing/InteractionRouteHandler.jsonld#InteractionRouteHandler_route"
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/InteractionRouteHandler.jsonld#InteractionRouteHandler_source"
+        }
+      ]
+    }
+  ]
+}

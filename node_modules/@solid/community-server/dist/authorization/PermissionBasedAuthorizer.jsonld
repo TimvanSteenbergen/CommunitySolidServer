@@ -1,0 +1,62 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/authorization/PermissionBasedAuthorizer.jsonld#PermissionBasedAuthorizer",
+      "@type": "Class",
+      "requireElement": "PermissionBasedAuthorizer",
+      "extends": [
+        "css:dist/authorization/Authorizer.jsonld#Authorizer"
+      ],
+      "comment": "Authorizer that bases its decision on the output it gets from its PermissionReader. For each permission it checks if the reader allows that for at least one credential type, if yes, authorization is granted. `undefined` values for reader results are interpreted as `false`.",
+      "parameters": [
+        {
+          "@id": "css:dist/authorization/PermissionBasedAuthorizer.jsonld#PermissionBasedAuthorizer_resourceSet",
+          "range": "css:dist/storage/ResourceSet.jsonld#ResourceSet",
+          "comment": "{@link ResourceSet} that can verify the target resource existence."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/authorization/PermissionBasedAuthorizer.jsonld#PermissionBasedAuthorizer__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/authorization/PermissionBasedAuthorizer.jsonld#PermissionBasedAuthorizer__member_resourceSet",
+          "memberFieldName": "resourceSet"
+        },
+        {
+          "@id": "css:dist/authorization/PermissionBasedAuthorizer.jsonld#PermissionBasedAuthorizer__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/authorization/PermissionBasedAuthorizer.jsonld#PermissionBasedAuthorizer__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/authorization/PermissionBasedAuthorizer.jsonld#PermissionBasedAuthorizer__member_reportAccessError",
+          "memberFieldName": "reportAccessError"
+        },
+        {
+          "@id": "css:dist/authorization/PermissionBasedAuthorizer.jsonld#PermissionBasedAuthorizer__member_requireModePermission",
+          "memberFieldName": "requireModePermission"
+        },
+        {
+          "@id": "css:dist/authorization/PermissionBasedAuthorizer.jsonld#PermissionBasedAuthorizer__member_isAuthenticated",
+          "memberFieldName": "isAuthenticated"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/authorization/PermissionBasedAuthorizer.jsonld#PermissionBasedAuthorizer_resourceSet"
+        }
+      ]
+    }
+  ]
+}

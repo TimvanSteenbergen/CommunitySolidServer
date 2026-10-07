@@ -1,0 +1,50 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/notifications/NotificationHandler.jsonld#NotificationHandler",
+      "@type": "AbstractClass",
+      "requireElement": "NotificationHandler",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            "css:dist/server/notifications/NotificationHandler.jsonld#NotificationHandlerInput"
+          ]
+        }
+      ],
+      "comment": "Makes sure an activity gets emitted to the relevant channel.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "css:dist/server/notifications/NotificationHandler.jsonld#NotificationHandlerInput",
+      "@type": "AbstractClass",
+      "requireElement": "NotificationHandlerInput",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/notifications/NotificationHandler.jsonld#NotificationHandlerInput__member_topic",
+          "memberFieldName": "topic"
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationHandler.jsonld#NotificationHandlerInput__member_channel",
+          "memberFieldName": "channel"
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationHandler.jsonld#NotificationHandlerInput__member_activity",
+          "memberFieldName": "activity"
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationHandler.jsonld#NotificationHandlerInput__member_metadata",
+          "memberFieldName": "metadata"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

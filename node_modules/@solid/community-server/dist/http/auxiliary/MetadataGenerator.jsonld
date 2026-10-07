@@ -1,0 +1,25 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/auxiliary/MetadataGenerator.jsonld#MetadataGenerator",
+      "@type": "AbstractClass",
+      "requireElement": "MetadataGenerator",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            "css:dist/http/representation/RepresentationMetadata.jsonld#RepresentationMetadata"
+          ]
+        }
+      ],
+      "comment": "Generic interface for classes that add metadata to a RepresentationMetadata.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

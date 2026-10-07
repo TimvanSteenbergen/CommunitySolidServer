@@ -1,0 +1,160 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/logging/Logger.jsonld#BaseLogger",
+      "@type": "AbstractClass",
+      "requireElement": "BaseLogger",
+      "extends": [
+        "css:dist/logging/Logger.jsonld#Logger"
+      ],
+      "comment": "Base class that implements all additional {@link BaseLogger} methods, leaving only the implementation of {@link SimpleLogger}.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/logging/Logger.jsonld#BaseLogger__member_log",
+          "memberFieldName": "log"
+        },
+        {
+          "@id": "css:dist/logging/Logger.jsonld#BaseLogger__member_getMeta",
+          "memberFieldName": "getMeta"
+        },
+        {
+          "@id": "css:dist/logging/Logger.jsonld#BaseLogger__member_error",
+          "memberFieldName": "error"
+        },
+        {
+          "@id": "css:dist/logging/Logger.jsonld#BaseLogger__member_warn",
+          "memberFieldName": "warn"
+        },
+        {
+          "@id": "css:dist/logging/Logger.jsonld#BaseLogger__member_info",
+          "memberFieldName": "info"
+        },
+        {
+          "@id": "css:dist/logging/Logger.jsonld#BaseLogger__member_verbose",
+          "memberFieldName": "verbose"
+        },
+        {
+          "@id": "css:dist/logging/Logger.jsonld#BaseLogger__member_debug",
+          "memberFieldName": "debug"
+        },
+        {
+          "@id": "css:dist/logging/Logger.jsonld#BaseLogger__member_silly",
+          "memberFieldName": "silly"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "css:dist/logging/Logger.jsonld#WrappingLogger",
+      "@type": "Class",
+      "requireElement": "WrappingLogger",
+      "extends": [
+        "css:dist/logging/Logger.jsonld#BaseLogger"
+      ],
+      "comment": "Implements {@link BaseLogger} around a {@link SimpleLogger}, which can be swapped out a runtime.",
+      "parameters": [
+        {
+          "@id": "css:dist/logging/Logger.jsonld#WrappingLogger_logger",
+          "range": "css:dist/logging/Logger.jsonld#SimpleLogger"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/logging/Logger.jsonld#WrappingLogger__member_logger",
+          "memberFieldName": "logger",
+          "range": "css:dist/logging/Logger.jsonld#SimpleLogger"
+        },
+        {
+          "@id": "css:dist/logging/Logger.jsonld#WrappingLogger__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/logging/Logger.jsonld#WrappingLogger__member_log",
+          "memberFieldName": "log"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/logging/Logger.jsonld#WrappingLogger_logger"
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/logging/Logger.jsonld#LogMetadata",
+      "@type": "AbstractClass",
+      "requireElement": "LogMetadata",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/logging/Logger.jsonld#LogMetadata__member_isPrimary",
+          "memberFieldName": "isPrimary"
+        },
+        {
+          "@id": "css:dist/logging/Logger.jsonld#LogMetadata__member_pid",
+          "memberFieldName": "pid"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "css:dist/logging/Logger.jsonld#SimpleLogger",
+      "@type": "AbstractClass",
+      "requireElement": "SimpleLogger",
+      "comment": "Logs messages on a specific level.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/logging/Logger.jsonld#SimpleLogger__member_log",
+          "memberFieldName": "log"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "css:dist/logging/Logger.jsonld#Logger",
+      "@type": "AbstractClass",
+      "requireElement": "Logger",
+      "extends": [
+        "css:dist/logging/Logger.jsonld#SimpleLogger"
+      ],
+      "comment": "Logs messages, with convenience methods to log on a specific level.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/logging/Logger.jsonld#Logger__member_log",
+          "memberFieldName": "log"
+        },
+        {
+          "@id": "css:dist/logging/Logger.jsonld#Logger__member_error",
+          "memberFieldName": "error"
+        },
+        {
+          "@id": "css:dist/logging/Logger.jsonld#Logger__member_warn",
+          "memberFieldName": "warn"
+        },
+        {
+          "@id": "css:dist/logging/Logger.jsonld#Logger__member_info",
+          "memberFieldName": "info"
+        },
+        {
+          "@id": "css:dist/logging/Logger.jsonld#Logger__member_verbose",
+          "memberFieldName": "verbose"
+        },
+        {
+          "@id": "css:dist/logging/Logger.jsonld#Logger__member_debug",
+          "memberFieldName": "debug"
+        },
+        {
+          "@id": "css:dist/logging/Logger.jsonld#Logger__member_silly",
+          "memberFieldName": "silly"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

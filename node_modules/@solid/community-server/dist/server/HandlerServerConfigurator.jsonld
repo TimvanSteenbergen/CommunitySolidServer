@@ -1,0 +1,79 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/HandlerServerConfigurator.jsonld#HandlerServerConfigurator",
+      "@type": "Class",
+      "requireElement": "HandlerServerConfigurator",
+      "extends": [
+        "css:dist/server/ServerConfigurator.jsonld#ServerConfigurator"
+      ],
+      "comment": "A {@link ServerConfigurator} that attaches an {@link HttpHandler} to the `request` event of a {@link Server}. All incoming requests will be sent to the provided handler. Failsafes are added to make sure a valid response is sent in case something goes wrong.  The `showStackTrace` parameter can be used to add stack traces to error outputs.",
+      "parameters": [
+        {
+          "@id": "css:dist/server/HandlerServerConfigurator.jsonld#HandlerServerConfigurator_showStackTrace",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/server/HandlerServerConfigurator.jsonld#HandlerServerConfigurator_handler",
+          "range": "css:dist/server/HttpHandler.jsonld#HttpHandler"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/HandlerServerConfigurator.jsonld#HandlerServerConfigurator__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/server/HandlerServerConfigurator.jsonld#HandlerServerConfigurator__member_errorLogger",
+          "memberFieldName": "errorLogger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/server/HandlerServerConfigurator.jsonld#HandlerServerConfigurator__member_handler",
+          "memberFieldName": "handler"
+        },
+        {
+          "@id": "css:dist/server/HandlerServerConfigurator.jsonld#HandlerServerConfigurator__member_showStackTrace",
+          "memberFieldName": "showStackTrace"
+        },
+        {
+          "@id": "css:dist/server/HandlerServerConfigurator.jsonld#HandlerServerConfigurator__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/HandlerServerConfigurator.jsonld#HandlerServerConfigurator__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/server/HandlerServerConfigurator.jsonld#HandlerServerConfigurator__member_createErrorMessage",
+          "memberFieldName": "createErrorMessage"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/HandlerServerConfigurator.jsonld#HandlerServerConfigurator_handler"
+        },
+        {
+          "@id": "css:dist/server/HandlerServerConfigurator.jsonld#HandlerServerConfigurator_showStackTrace"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/keyvalue/JsonFileStorage.jsonld#JsonFileStorage",
+      "@type": "Class",
+      "requireElement": "JsonFileStorage",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+          "genericTypeInstances": [
+            "xsd:string",
+            {
+              "@type": "ParameterRangeWildcard"
+            }
+          ]
+        }
+      ],
+      "comment": "Uses a JSON file to store key/value pairs.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/keyvalue/JsonFileStorage.jsonld#JsonFileStorage_filePath",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/JsonFileStorage.jsonld#JsonFileStorage_locker",
+          "range": "css:dist/util/locking/ReadWriteLocker.jsonld#ReadWriteLocker"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/keyvalue/JsonFileStorage.jsonld#JsonFileStorage__member_filePath",
+          "memberFieldName": "filePath"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/JsonFileStorage.jsonld#JsonFileStorage__member_locker",
+          "memberFieldName": "locker"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/JsonFileStorage.jsonld#JsonFileStorage__member_lockIdentifier",
+          "memberFieldName": "lockIdentifier"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/JsonFileStorage.jsonld#JsonFileStorage__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/JsonFileStorage.jsonld#JsonFileStorage__member_get",
+          "memberFieldName": "get"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/JsonFileStorage.jsonld#JsonFileStorage__member_has",
+          "memberFieldName": "has"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/JsonFileStorage.jsonld#JsonFileStorage__member_set",
+          "memberFieldName": "set"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/JsonFileStorage.jsonld#JsonFileStorage__member_delete",
+          "memberFieldName": "delete"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/JsonFileStorage.jsonld#JsonFileStorage__member_entries",
+          "memberFieldName": "entries"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/JsonFileStorage.jsonld#JsonFileStorage__member_getJsonSafely",
+          "memberFieldName": "getJsonSafely"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/JsonFileStorage.jsonld#JsonFileStorage__member_updateJsonSafely",
+          "memberFieldName": "updateJsonSafely"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/JsonFileStorage.jsonld#JsonFileStorage__member_getJson",
+          "memberFieldName": "getJson"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/keyvalue/JsonFileStorage.jsonld#JsonFileStorage_filePath"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/JsonFileStorage.jsonld#JsonFileStorage_locker"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/StaticInteractionHandler.jsonld#StaticInteractionHandler",
+      "@type": "Class",
+      "requireElement": "StaticInteractionHandler",
+      "extends": [
+        "css:dist/identity/interaction/JsonInteractionHandler.jsonld#JsonInteractionHandler"
+      ],
+      "comment": "An {@link JsonInteractionHandler} that always returns the same JSON response on all requests.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/StaticInteractionHandler.jsonld#StaticInteractionHandler_response",
+          "range": "rdf:JSON"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/StaticInteractionHandler.jsonld#StaticInteractionHandler__member_response",
+          "memberFieldName": "response"
+        },
+        {
+          "@id": "css:dist/identity/interaction/StaticInteractionHandler.jsonld#StaticInteractionHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/StaticInteractionHandler.jsonld#StaticInteractionHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/StaticInteractionHandler.jsonld#StaticInteractionHandler_response"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/init/SeededAccountInitializer.jsonld#SeededAccountInitializer",
+      "@type": "Class",
+      "requireElement": "SeededAccountInitializer",
+      "extends": [
+        "css:dist/init/Initializer.jsonld#Initializer"
+      ],
+      "comment": "Initializes a set of accounts based on the input data. These accounts have exactly 1 email/password login method, and 0 or more pods. The pod settings that can be defined are identical to those of the {@link CreatePodHandler}.",
+      "parameters": [
+        {
+          "@id": "css:dist/init/SeededAccountInitializer.jsonld#SeededAccountInitializer_args_accountStore",
+          "range": "css:dist/identity/interaction/account/util/AccountStore.jsonld#AccountStore",
+          "comment": "Creates the accounts."
+        },
+        {
+          "@id": "css:dist/init/SeededAccountInitializer.jsonld#SeededAccountInitializer_args_passwordStore",
+          "range": "css:dist/identity/interaction/password/util/PasswordStore.jsonld#PasswordStore",
+          "comment": "Adds the login methods."
+        },
+        {
+          "@id": "css:dist/init/SeededAccountInitializer.jsonld#SeededAccountInitializer_args_podCreator",
+          "range": "css:dist/identity/interaction/pod/util/PodCreator.jsonld#PodCreator",
+          "comment": "Creates the pods."
+        },
+        {
+          "@id": "css:dist/init/SeededAccountInitializer.jsonld#SeededAccountInitializer_args_configFilePath",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "File path of the JSON describing the accounts to seed."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/init/SeededAccountInitializer.jsonld#SeededAccountInitializer__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/init/SeededAccountInitializer.jsonld#SeededAccountInitializer__member_accountStore",
+          "memberFieldName": "accountStore"
+        },
+        {
+          "@id": "css:dist/init/SeededAccountInitializer.jsonld#SeededAccountInitializer__member_passwordStore",
+          "memberFieldName": "passwordStore"
+        },
+        {
+          "@id": "css:dist/init/SeededAccountInitializer.jsonld#SeededAccountInitializer__member_podCreator",
+          "memberFieldName": "podCreator"
+        },
+        {
+          "@id": "css:dist/init/SeededAccountInitializer.jsonld#SeededAccountInitializer__member_configFilePath",
+          "memberFieldName": "configFilePath"
+        },
+        {
+          "@id": "css:dist/init/SeededAccountInitializer.jsonld#SeededAccountInitializer__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/init/SeededAccountInitializer.jsonld#SeededAccountInitializer__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/init/SeededAccountInitializer.jsonld#SeededAccountInitializer_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "accountStore",
+              "value": {
+                "@id": "css:dist/init/SeededAccountInitializer.jsonld#SeededAccountInitializer_args_accountStore"
+              }
+            },
+            {
+              "keyRaw": "passwordStore",
+              "value": {
+                "@id": "css:dist/init/SeededAccountInitializer.jsonld#SeededAccountInitializer_args_passwordStore"
+              }
+            },
+            {
+              "keyRaw": "podCreator",
+              "value": {
+                "@id": "css:dist/init/SeededAccountInitializer.jsonld#SeededAccountInitializer_args_podCreator"
+              }
+            },
+            {
+              "keyRaw": "configFilePath",
+              "value": {
+                "@id": "css:dist/init/SeededAccountInitializer.jsonld#SeededAccountInitializer_args_configFilePath"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/init/SeededAccountInitializer.jsonld#SeededAccountInitializerArgs",
+      "@type": "AbstractClass",
+      "requireElement": "SeededAccountInitializerArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/init/SeededAccountInitializer.jsonld#SeededAccountInitializerArgs__member_accountStore",
+          "memberFieldName": "accountStore"
+        },
+        {
+          "@id": "css:dist/init/SeededAccountInitializer.jsonld#SeededAccountInitializerArgs__member_passwordStore",
+          "memberFieldName": "passwordStore"
+        },
+        {
+          "@id": "css:dist/init/SeededAccountInitializer.jsonld#SeededAccountInitializerArgs__member_podCreator",
+          "memberFieldName": "podCreator"
+        },
+        {
+          "@id": "css:dist/init/SeededAccountInitializer.jsonld#SeededAccountInitializerArgs__member_configFilePath",
+          "memberFieldName": "configFilePath"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

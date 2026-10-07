@@ -1,0 +1,102 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/keyvalue/PassthroughKeyValueStorage.jsonld#PassthroughKeyValueStorage",
+      "@type": "AbstractClass",
+      "requireElement": "PassthroughKeyValueStorage",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+          "genericTypeInstances": [
+            "xsd:string",
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/storage/keyvalue/PassthroughKeyValueStorage.jsonld#PassthroughKeyValueStorage__generic_TVal"
+            }
+          ]
+        }
+      ],
+      "comment": "Abstract class to create a {@link KeyValueStorage} by wrapping around another one.  Exposes abstract functions to modify the key before passing it to the the source storage.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/storage/keyvalue/PassthroughKeyValueStorage.jsonld#PassthroughKeyValueStorage__generic_TVal"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/storage/keyvalue/PassthroughKeyValueStorage.jsonld#PassthroughKeyValueStorage_source",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+            "genericTypeInstances": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "css:dist/storage/keyvalue/PassthroughKeyValueStorage.jsonld#PassthroughKeyValueStorage__generic_TVal"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/keyvalue/PassthroughKeyValueStorage.jsonld#PassthroughKeyValueStorage__member_source",
+          "memberFieldName": "source",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+            "genericTypeInstances": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "css:dist/storage/keyvalue/PassthroughKeyValueStorage.jsonld#PassthroughKeyValueStorage__generic_TVal"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/PassthroughKeyValueStorage.jsonld#PassthroughKeyValueStorage__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/PassthroughKeyValueStorage.jsonld#PassthroughKeyValueStorage__member_get",
+          "memberFieldName": "get"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/PassthroughKeyValueStorage.jsonld#PassthroughKeyValueStorage__member_has",
+          "memberFieldName": "has"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/PassthroughKeyValueStorage.jsonld#PassthroughKeyValueStorage__member_set",
+          "memberFieldName": "set"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/PassthroughKeyValueStorage.jsonld#PassthroughKeyValueStorage__member_delete",
+          "memberFieldName": "delete"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/PassthroughKeyValueStorage.jsonld#PassthroughKeyValueStorage__member_entries",
+          "memberFieldName": "entries"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/PassthroughKeyValueStorage.jsonld#PassthroughKeyValueStorage__member_toNewKey",
+          "memberFieldName": "toNewKey"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/PassthroughKeyValueStorage.jsonld#PassthroughKeyValueStorage__member_toOriginalKey",
+          "memberFieldName": "toOriginalKey"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/keyvalue/PassthroughKeyValueStorage.jsonld#PassthroughKeyValueStorage_source"
+        }
+      ]
+    }
+  ]
+}

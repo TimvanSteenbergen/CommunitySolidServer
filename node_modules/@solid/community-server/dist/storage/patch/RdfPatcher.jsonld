@@ -1,0 +1,67 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/patch/RdfPatcher.jsonld#RdfPatcher",
+      "@type": "Class",
+      "requireElement": "RdfPatcher",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/storage/patch/RepresentationPatcher.jsonld#RepresentationPatcher",
+          "genericTypeInstances": [
+            "css:dist/http/representation/Representation.jsonld#Representation"
+          ]
+        }
+      ],
+      "comment": "Patcher that converts the representation data to a representation with an N3 store, does the patch using this store and then converts the representation with store back to a representation with data which gets returned",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/patch/RdfPatcher.jsonld#RdfPatcher_patcher",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/patch/RepresentationPatcher.jsonld#RepresentationPatcher",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/patch/RdfPatcher.jsonld#RdfPatcher__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/storage/patch/RdfPatcher.jsonld#RdfPatcher__member_patcher",
+          "memberFieldName": "patcher"
+        },
+        {
+          "@id": "css:dist/storage/patch/RdfPatcher.jsonld#RdfPatcher__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/patch/RdfPatcher.jsonld#RdfPatcher__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/storage/patch/RdfPatcher.jsonld#RdfPatcher__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/patch/RdfPatcher.jsonld#RdfPatcher_patcher"
+        }
+      ]
+    }
+  ]
+}

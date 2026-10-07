@@ -1,0 +1,68 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/output/error/SafeErrorHandler.jsonld#SafeErrorHandler",
+      "@type": "Class",
+      "requireElement": "SafeErrorHandler",
+      "extends": [
+        "css:dist/http/output/error/ErrorHandler.jsonld#ErrorHandler"
+      ],
+      "comment": "Returns a simple text description of an error. This class is a failsafe in case the wrapped error handler fails.",
+      "parameters": [
+        {
+          "@id": "css:dist/http/output/error/SafeErrorHandler.jsonld#SafeErrorHandler_showStackTrace",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/http/output/error/SafeErrorHandler.jsonld#SafeErrorHandler_errorHandler",
+          "range": "css:dist/http/output/error/ErrorHandler.jsonld#ErrorHandler"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/output/error/SafeErrorHandler.jsonld#SafeErrorHandler__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/http/output/error/SafeErrorHandler.jsonld#SafeErrorHandler__member_errorHandler",
+          "memberFieldName": "errorHandler"
+        },
+        {
+          "@id": "css:dist/http/output/error/SafeErrorHandler.jsonld#SafeErrorHandler__member_showStackTrace",
+          "memberFieldName": "showStackTrace"
+        },
+        {
+          "@id": "css:dist/http/output/error/SafeErrorHandler.jsonld#SafeErrorHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/output/error/SafeErrorHandler.jsonld#SafeErrorHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/output/error/SafeErrorHandler.jsonld#SafeErrorHandler_errorHandler"
+        },
+        {
+          "@id": "css:dist/http/output/error/SafeErrorHandler.jsonld#SafeErrorHandler_showStackTrace"
+        }
+      ]
+    }
+  ]
+}

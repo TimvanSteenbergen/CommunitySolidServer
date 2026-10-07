@@ -1,0 +1,107 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/ControlHandler.jsonld#ControlHandler",
+      "@type": "Class",
+      "requireElement": "ControlHandler",
+      "extends": [
+        "css:dist/identity/interaction/JsonInteractionHandler.jsonld#JsonInteractionHandler"
+      ],
+      "comment": "Creates an object with the keys matching those of the input `controls`, and the values being the results received by the matching values in the same input.  If `source` is defined, the controls will be added to the output of that handler after passing the input. In case the control keys conflict with a key already present in the resulting object, the results will be merged.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/ControlHandler.jsonld#ControlHandler_source",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "css:dist/identity/interaction/JsonInteractionHandler.jsonld#JsonInteractionHandler",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/identity/interaction/ControlHandler.jsonld#ControlHandler_controls",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "css:dist/identity/interaction/ControlHandler.jsonld#ControlHandler_controls_key"
+              },
+              {
+                "@id": "css:dist/identity/interaction/ControlHandler.jsonld#ControlHandler_controls_value",
+                "range": {
+                  "@type": "ParameterRangeUnion",
+                  "parameterRangeElements": [
+                    "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute",
+                    "css:dist/identity/interaction/JsonInteractionHandler.jsonld#JsonInteractionHandler"
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/ControlHandler.jsonld#ControlHandler__member_controls",
+          "memberFieldName": "controls"
+        },
+        {
+          "@id": "css:dist/identity/interaction/ControlHandler.jsonld#ControlHandler__member_source",
+          "memberFieldName": "source"
+        },
+        {
+          "@id": "css:dist/identity/interaction/ControlHandler.jsonld#ControlHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/ControlHandler.jsonld#ControlHandler__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/identity/interaction/ControlHandler.jsonld#ControlHandler__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/identity/interaction/ControlHandler.jsonld#ControlHandler__member_isRoute",
+          "memberFieldName": "isRoute"
+        },
+        {
+          "@id": "css:dist/identity/interaction/ControlHandler.jsonld#ControlHandler__member_generateControls",
+          "memberFieldName": "generateControls"
+        },
+        {
+          "@id": "css:dist/identity/interaction/ControlHandler.jsonld#ControlHandler__member_generateControlSet",
+          "memberFieldName": "generateControlSet"
+        },
+        {
+          "@id": "css:dist/identity/interaction/ControlHandler.jsonld#ControlHandler__member_mergeControls",
+          "memberFieldName": "mergeControls"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/ControlHandler.jsonld#ControlHandler_controls__constructorArgument",
+          "fields": [
+            {
+              "collectEntries": "css:dist/identity/interaction/ControlHandler.jsonld#ControlHandler_controls",
+              "key": "css:dist/identity/interaction/ControlHandler.jsonld#ControlHandler_controls_key",
+              "value": {
+                "@id": "css:dist/identity/interaction/ControlHandler.jsonld#ControlHandler_controls_value"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "css:dist/identity/interaction/ControlHandler.jsonld#ControlHandler_source"
+        }
+      ]
+    }
+  ]
+}

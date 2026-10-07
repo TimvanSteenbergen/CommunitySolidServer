@@ -1,0 +1,42 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/init/LoggerInitializer.jsonld#LoggerInitializer",
+      "@type": "Class",
+      "requireElement": "LoggerInitializer",
+      "extends": [
+        "css:dist/init/Initializer.jsonld#Initializer"
+      ],
+      "comment": "Sets up the global logger factory.",
+      "parameters": [
+        {
+          "@id": "css:dist/init/LoggerInitializer.jsonld#LoggerInitializer_loggerFactory",
+          "range": "css:dist/logging/LoggerFactory.jsonld#LoggerFactory"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/init/LoggerInitializer.jsonld#LoggerInitializer__member_loggerFactory",
+          "memberFieldName": "loggerFactory"
+        },
+        {
+          "@id": "css:dist/init/LoggerInitializer.jsonld#LoggerInitializer__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/init/LoggerInitializer.jsonld#LoggerInitializer__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/init/LoggerInitializer.jsonld#LoggerInitializer_loggerFactory"
+        }
+      ]
+    }
+  ]
+}

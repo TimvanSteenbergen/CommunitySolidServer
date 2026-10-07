@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/init/Initializer.jsonld#Initializer",
+      "@type": "AbstractClass",
+      "requireElement": "Initializer",
+      "extends": [
+        "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler"
+      ],
+      "comment": "Initializer is used to indicate an AsyncHandler that performs initialization logic.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

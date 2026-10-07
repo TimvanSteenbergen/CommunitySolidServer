@@ -1,0 +1,56 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/pods/generate/SubfolderResourcesGenerator.jsonld#SubfolderResourcesGenerator",
+      "@type": "Class",
+      "requireElement": "SubfolderResourcesGenerator",
+      "extends": [
+        "css:dist/pods/generate/TemplatedResourcesGenerator.jsonld#TemplatedResourcesGenerator"
+      ],
+      "comment": "Generates all resources found in specific subfolders of the given template folder. In case the same resource is defined in several subfolders, the data of the last subfolder in the list will be used.  The results of all the subfolders will be merged so the end result is still a sorted stream of identifiers.  One of the main use cases for this class is so template resources can be in a separate folder than their corresponding authorization resources, allowing for authorization-independent templates.",
+      "parameters": [
+        {
+          "@id": "css:dist/pods/generate/SubfolderResourcesGenerator.jsonld#SubfolderResourcesGenerator_subfolders",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": "xsd:string"
+          }
+        },
+        {
+          "@id": "css:dist/pods/generate/SubfolderResourcesGenerator.jsonld#SubfolderResourcesGenerator_resourcesGenerator",
+          "range": "css:dist/pods/generate/TemplatedResourcesGenerator.jsonld#TemplatedResourcesGenerator"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/pods/generate/SubfolderResourcesGenerator.jsonld#SubfolderResourcesGenerator__member_resourcesGenerator",
+          "memberFieldName": "resourcesGenerator"
+        },
+        {
+          "@id": "css:dist/pods/generate/SubfolderResourcesGenerator.jsonld#SubfolderResourcesGenerator__member_subfolders",
+          "memberFieldName": "subfolders"
+        },
+        {
+          "@id": "css:dist/pods/generate/SubfolderResourcesGenerator.jsonld#SubfolderResourcesGenerator__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/pods/generate/SubfolderResourcesGenerator.jsonld#SubfolderResourcesGenerator__member_generate",
+          "memberFieldName": "generate"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/pods/generate/SubfolderResourcesGenerator.jsonld#SubfolderResourcesGenerator_resourcesGenerator"
+        },
+        {
+          "@id": "css:dist/pods/generate/SubfolderResourcesGenerator.jsonld#SubfolderResourcesGenerator_subfolders"
+        }
+      ]
+    }
+  ]
+}

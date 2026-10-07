@@ -1,0 +1,22 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/pods/generate/PodGenerator.jsonld#PodGenerator",
+      "@type": "AbstractClass",
+      "requireElement": "PodGenerator",
+      "comment": "Generates an empty resource store to be used as a new pod. It is also responsible for storing any relevant variables needed to instantiate this resource store. These can then be used when the server is restarted to re-instantiate those stores.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/pods/generate/PodGenerator.jsonld#PodGenerator__member_generate",
+          "memberFieldName": "generate"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/locking/ExpiringReadWriteLocker.jsonld#ExpiringReadWriteLocker",
+      "@type": "AbstractClass",
+      "requireElement": "ExpiringReadWriteLocker",
+      "extends": [
+        "css:dist/util/locking/ReadWriteLocker.jsonld#ReadWriteLocker"
+      ],
+      "comment": "A {@link ReadWriteLocker} where the locks expire after a given time.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/locking/ExpiringReadWriteLocker.jsonld#ExpiringReadWriteLocker__member_withReadLock",
+          "memberFieldName": "withReadLock"
+        },
+        {
+          "@id": "css:dist/util/locking/ExpiringReadWriteLocker.jsonld#ExpiringReadWriteLocker__member_withWriteLock",
+          "memberFieldName": "withWriteLock"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

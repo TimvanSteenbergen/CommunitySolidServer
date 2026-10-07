@@ -1,0 +1,66 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/logging/LazyLoggerFactory.jsonld#LazyLoggerFactory",
+      "@type": "Class",
+      "requireElement": "LazyLoggerFactory",
+      "extends": [
+        "css:dist/logging/LoggerFactory.jsonld#LoggerFactory"
+      ],
+      "comment": "Wraps around another {@link LoggerFactory} that can be set lazily. This is useful when objects are instantiated (and when they create loggers) before the logging system has been fully instantiated, as is the case when using a dependency injection framework such as Components.js.  Loggers can be created even before a {@link LoggerFactory} is set; any log messages will be buffered and re-emitted.",
+      "parameters": [
+        {
+          "@id": "css:dist/logging/LazyLoggerFactory.jsonld#LazyLoggerFactory_options_bufferSize",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/logging/LazyLoggerFactory.jsonld#LazyLoggerFactory__member_factory",
+          "memberFieldName": "factory"
+        },
+        {
+          "@id": "css:dist/logging/LazyLoggerFactory.jsonld#LazyLoggerFactory__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/logging/LazyLoggerFactory.jsonld#LazyLoggerFactory__member_loggerFactory",
+          "memberFieldName": "loggerFactory"
+        },
+        {
+          "@id": "css:dist/logging/LazyLoggerFactory.jsonld#LazyLoggerFactory__member_loggerFactory",
+          "memberFieldName": "loggerFactory"
+        },
+        {
+          "@id": "css:dist/logging/LazyLoggerFactory.jsonld#LazyLoggerFactory__member_createLogger",
+          "memberFieldName": "createLogger"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/logging/LazyLoggerFactory.jsonld#LazyLoggerFactory_options__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "bufferSize",
+              "value": {
+                "@id": "css:dist/logging/LazyLoggerFactory.jsonld#LazyLoggerFactory_options_bufferSize"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

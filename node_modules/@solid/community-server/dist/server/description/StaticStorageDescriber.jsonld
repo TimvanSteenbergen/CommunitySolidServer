@@ -1,0 +1,75 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/description/StaticStorageDescriber.jsonld#StaticStorageDescriber",
+      "@type": "Class",
+      "requireElement": "StaticStorageDescriber",
+      "extends": [
+        "css:dist/server/description/StorageDescriber.jsonld#StorageDescriber"
+      ],
+      "comment": "Adds a fixed set of triples to the storage description resource, with the resource identifier as subject.  This can be used to add descriptions that a storage always needs to have, such as the `<> a pim:Storage` triple.",
+      "parameters": [
+        {
+          "@id": "css:dist/server/description/StaticStorageDescriber.jsonld#StaticStorageDescriber_terms",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "css:dist/server/description/StaticStorageDescriber.jsonld#StaticStorageDescriber_terms_key"
+              },
+              {
+                "@id": "css:dist/server/description/StaticStorageDescriber.jsonld#StaticStorageDescriber_terms_value",
+                "range": {
+                  "@type": "ParameterRangeUnion",
+                  "parameterRangeElements": [
+                    "xsd:string",
+                    {
+                      "@type": "ParameterRangeArray",
+                      "parameterRangeValue": "xsd:string"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/description/StaticStorageDescriber.jsonld#StaticStorageDescriber__member_terms",
+          "memberFieldName": "terms"
+        },
+        {
+          "@id": "css:dist/server/description/StaticStorageDescriber.jsonld#StaticStorageDescriber__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/description/StaticStorageDescriber.jsonld#StaticStorageDescriber__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/server/description/StaticStorageDescriber.jsonld#StaticStorageDescriber__member_generateTriples",
+          "memberFieldName": "generateTriples"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/description/StaticStorageDescriber.jsonld#StaticStorageDescriber_terms__constructorArgument",
+          "fields": [
+            {
+              "collectEntries": "css:dist/server/description/StaticStorageDescriber.jsonld#StaticStorageDescriber_terms",
+              "key": "css:dist/server/description/StaticStorageDescriber.jsonld#StaticStorageDescriber_terms_key",
+              "value": {
+                "@id": "css:dist/server/description/StaticStorageDescriber.jsonld#StaticStorageDescriber_terms_value"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

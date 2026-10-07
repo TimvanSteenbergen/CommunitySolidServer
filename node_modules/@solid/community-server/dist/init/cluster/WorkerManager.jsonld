@@ -1,0 +1,42 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/init/cluster/WorkerManager.jsonld#WorkerManager",
+      "@type": "Class",
+      "requireElement": "WorkerManager",
+      "extends": [
+        "css:dist/init/Initializer.jsonld#Initializer"
+      ],
+      "comment": "Spawns the necessary workers when starting in multithreaded mode.",
+      "parameters": [
+        {
+          "@id": "css:dist/init/cluster/WorkerManager.jsonld#WorkerManager_clusterManager",
+          "range": "css:dist/init/cluster/ClusterManager.jsonld#ClusterManager"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/init/cluster/WorkerManager.jsonld#WorkerManager__member_clusterManager",
+          "memberFieldName": "clusterManager"
+        },
+        {
+          "@id": "css:dist/init/cluster/WorkerManager.jsonld#WorkerManager__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/init/cluster/WorkerManager.jsonld#WorkerManager__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/init/cluster/WorkerManager.jsonld#WorkerManager_clusterManager"
+        }
+      ]
+    }
+  ]
+}

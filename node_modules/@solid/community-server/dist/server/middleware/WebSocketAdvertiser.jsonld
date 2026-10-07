@@ -1,0 +1,42 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/middleware/WebSocketAdvertiser.jsonld#WebSocketAdvertiser",
+      "@type": "Class",
+      "requireElement": "WebSocketAdvertiser",
+      "extends": [
+        "css:dist/server/HttpHandler.jsonld#HttpHandler"
+      ],
+      "comment": "Handler that advertises a WebSocket through the Updates-Via header.",
+      "parameters": [
+        {
+          "@id": "css:dist/server/middleware/WebSocketAdvertiser.jsonld#WebSocketAdvertiser_baseUrl",
+          "range": "xsd:string"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/middleware/WebSocketAdvertiser.jsonld#WebSocketAdvertiser__member_socketUrl",
+          "memberFieldName": "socketUrl"
+        },
+        {
+          "@id": "css:dist/server/middleware/WebSocketAdvertiser.jsonld#WebSocketAdvertiser__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/middleware/WebSocketAdvertiser.jsonld#WebSocketAdvertiser__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/middleware/WebSocketAdvertiser.jsonld#WebSocketAdvertiser_baseUrl"
+        }
+      ]
+    }
+  ]
+}

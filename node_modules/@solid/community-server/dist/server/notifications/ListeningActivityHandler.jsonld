@@ -1,0 +1,77 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/notifications/ListeningActivityHandler.jsonld#ListeningActivityHandler",
+      "@type": "Class",
+      "requireElement": "ListeningActivityHandler",
+      "extends": [
+        "css:dist/util/handlers/StaticHandler.jsonld#StaticHandler"
+      ],
+      "comment": "Listens to an {@link ActivityEmitter} and calls the stored {@link NotificationHandler}s in case of an event for every matching notification channel found.  Takes the `rate` feature into account so only channels that want a new notification will receive one.  Extends {@link StaticHandler} so it can be more easily injected into a Components.js configuration. No class takes this one as input, so to make sure Components.js instantiates it, it needs to be added somewhere where its presence has no impact, such as the list of initializers.",
+      "parameters": [
+        {
+          "@id": "css:dist/server/notifications/ListeningActivityHandler.jsonld#ListeningActivityHandler_emitter",
+          "range": {
+            "@type": "ParameterRangeIntersection",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeWildcard"
+              },
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/server/notifications/ListeningActivityHandler.jsonld#ListeningActivityHandler_storage",
+          "range": "css:dist/server/notifications/NotificationChannelStorage.jsonld#NotificationChannelStorage"
+        },
+        {
+          "@id": "css:dist/server/notifications/ListeningActivityHandler.jsonld#ListeningActivityHandler_handler",
+          "range": "css:dist/server/notifications/NotificationHandler.jsonld#NotificationHandler"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/notifications/ListeningActivityHandler.jsonld#ListeningActivityHandler__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/server/notifications/ListeningActivityHandler.jsonld#ListeningActivityHandler__member_storage",
+          "memberFieldName": "storage"
+        },
+        {
+          "@id": "css:dist/server/notifications/ListeningActivityHandler.jsonld#ListeningActivityHandler__member_handler",
+          "memberFieldName": "handler"
+        },
+        {
+          "@id": "css:dist/server/notifications/ListeningActivityHandler.jsonld#ListeningActivityHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/notifications/ListeningActivityHandler.jsonld#ListeningActivityHandler__member_emit",
+          "memberFieldName": "emit"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/notifications/ListeningActivityHandler.jsonld#ListeningActivityHandler_storage"
+        },
+        {
+          "@id": "css:dist/server/notifications/ListeningActivityHandler.jsonld#ListeningActivityHandler_emitter"
+        },
+        {
+          "@id": "css:dist/server/notifications/ListeningActivityHandler.jsonld#ListeningActivityHandler_handler"
+        }
+      ]
+    }
+  ]
+}

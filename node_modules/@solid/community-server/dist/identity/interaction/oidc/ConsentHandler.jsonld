@@ -1,0 +1,62 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/oidc/ConsentHandler.jsonld#ConsentHandler",
+      "@type": "Class",
+      "requireElement": "ConsentHandler",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/identity/interaction/JsonInteractionHandler.jsonld#JsonInteractionHandler",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeWildcard"
+            }
+          ]
+        }
+      ],
+      "comment": "Handles the OIDC consent prompts where the user confirms they want to log in for the given client.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/oidc/ConsentHandler.jsonld#ConsentHandler_providerFactory",
+          "range": "css:dist/identity/configuration/ProviderFactory.jsonld#ProviderFactory"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/oidc/ConsentHandler.jsonld#ConsentHandler__member_providerFactory",
+          "memberFieldName": "providerFactory"
+        },
+        {
+          "@id": "css:dist/identity/interaction/oidc/ConsentHandler.jsonld#ConsentHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/oidc/ConsentHandler.jsonld#ConsentHandler__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/identity/interaction/oidc/ConsentHandler.jsonld#ConsentHandler__member_getGrant",
+          "memberFieldName": "getGrant"
+        },
+        {
+          "@id": "css:dist/identity/interaction/oidc/ConsentHandler.jsonld#ConsentHandler__member_updateGrant",
+          "memberFieldName": "updateGrant"
+        },
+        {
+          "@id": "css:dist/identity/interaction/oidc/ConsentHandler.jsonld#ConsentHandler__member_updateInteraction",
+          "memberFieldName": "updateInteraction"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/oidc/ConsentHandler.jsonld#ConsentHandler_providerFactory"
+        }
+      ]
+    }
+  ]
+}

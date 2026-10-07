@@ -1,0 +1,6 @@
+<http://localhost:3000/test/people/a889a359-7b69-49a3-9d26-0c1d6898f961.ttl> a <https://schema.org/Person>;
+    <https://schema.org/name> "kvs";
+    <https://schema.org/givenName> "Kim";
+    <https://schema.org/familyName> "vs";
+    <https://schema.org/email> "k@ti.nl";
+    <https://schema.org/telephone> "1".

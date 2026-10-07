@@ -1,0 +1,53 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/accessors/ValidatingDataAccessor.jsonld#ValidatingDataAccessor",
+      "@type": "Class",
+      "requireElement": "ValidatingDataAccessor",
+      "extends": [
+        "css:dist/storage/accessors/PassthroughDataAccessor.jsonld#PassthroughDataAccessor"
+      ],
+      "comment": "A ValidatingDataAccessor wraps a DataAccessor such that the data stream is validated while being written. An AtomicDataAccessor can be used to prevent data being written in case validation fails.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/accessors/ValidatingDataAccessor.jsonld#ValidatingDataAccessor_accessor",
+          "range": "css:dist/storage/accessors/DataAccessor.jsonld#DataAccessor"
+        },
+        {
+          "@id": "css:dist/storage/accessors/ValidatingDataAccessor.jsonld#ValidatingDataAccessor_validator",
+          "range": "css:dist/http/auxiliary/Validator.jsonld#Validator"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/accessors/ValidatingDataAccessor.jsonld#ValidatingDataAccessor__member_validator",
+          "memberFieldName": "validator"
+        },
+        {
+          "@id": "css:dist/storage/accessors/ValidatingDataAccessor.jsonld#ValidatingDataAccessor__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/accessors/ValidatingDataAccessor.jsonld#ValidatingDataAccessor__member_writeDocument",
+          "memberFieldName": "writeDocument"
+        },
+        {
+          "@id": "css:dist/storage/accessors/ValidatingDataAccessor.jsonld#ValidatingDataAccessor__member_writeContainer",
+          "memberFieldName": "writeContainer"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/accessors/ValidatingDataAccessor.jsonld#ValidatingDataAccessor_accessor"
+        },
+        {
+          "@id": "css:dist/storage/accessors/ValidatingDataAccessor.jsonld#ValidatingDataAccessor_validator"
+        }
+      ]
+    }
+  ]
+}

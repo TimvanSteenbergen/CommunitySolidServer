@@ -1,0 +1,277 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer",
+      "@type": "Class",
+      "requireElement": "V6MigrationInitializer",
+      "extends": [
+        "css:dist/init/Initializer.jsonld#Initializer"
+      ],
+      "comment": "Handles migrating account data from v6 to the newer format. Will only trigger if it is detected that this server was previously started on an older version and at least one account was found. Confirmation will be asked to the user through a CLI prompt. After migration is complete the old data will be removed.",
+      "parameters": [
+        {
+          "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer_args_setupStorage",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+            "genericTypeInstances": [
+              "xsd:string",
+              "xsd:string"
+            ]
+          },
+          "comment": "The storage in which all setup values are stored, including the version of the server."
+        },
+        {
+          "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer_args_versionKey",
+          "range": "xsd:string",
+          "comment": "The key necessary to get the version from the `setupStorage`."
+        },
+        {
+          "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer_args_accountStorage",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+            "genericTypeInstances": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUnion",
+                "parameterRangeElements": [
+                  {
+                    "@type": "ParameterRangeWildcard"
+                  },
+                  {
+                    "@type": "ParameterRangeWildcard"
+                  }
+                ]
+              }
+            ]
+          },
+          "comment": "The storage in which account data of the previous version is stored."
+        },
+        {
+          "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer_args_clientCredentialsStorage",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+            "genericTypeInstances": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          },
+          "comment": "The storage in which client credentials are stored from the previous version."
+        },
+        {
+          "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer_args_cleanupStorages",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": {
+              "@type": "ParameterRangeGenericComponent",
+              "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+              "genericTypeInstances": [
+                "xsd:string",
+                {
+                  "@type": "ParameterRangeWildcard"
+                }
+              ]
+            }
+          },
+          "comment": "Storages for which all entries need to be removed."
+        },
+        {
+          "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer_args_newAccountStorage",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/identity/interaction/account/util/LoginStorage.jsonld#LoginStorage",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          },
+          "comment": "The storage that will contain the account data in the new format. Wrong typings to prevent Components.js typing issues."
+        },
+        {
+          "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer_args_newSetupStorage",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+            "genericTypeInstances": [
+              "xsd:string",
+              "xsd:string"
+            ]
+          },
+          "comment": "The storage that will contain the setup entries in the new format."
+        },
+        {
+          "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer_args_skipConfirmation",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "If true, no confirmation prompt will be printed to the stdout."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer__member_logger",
+          "memberFieldName": "logger"
+        },
+        {
+          "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer__member_skipConfirmation",
+          "memberFieldName": "skipConfirmation"
+        },
+        {
+          "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer__member_versionKey",
+          "memberFieldName": "versionKey"
+        },
+        {
+          "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer__member_setupStorage",
+          "memberFieldName": "setupStorage"
+        },
+        {
+          "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer__member_accountStorage",
+          "memberFieldName": "accountStorage"
+        },
+        {
+          "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer__member_clientCredentialsStorage",
+          "memberFieldName": "clientCredentialsStorage"
+        },
+        {
+          "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer__member_cleanupStorages",
+          "memberFieldName": "cleanupStorages"
+        },
+        {
+          "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer__member_newAccountStorage",
+          "memberFieldName": "newAccountStorage"
+        },
+        {
+          "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer__member_newSetupStorage",
+          "memberFieldName": "newSetupStorage"
+        },
+        {
+          "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer__member_isAccount",
+          "memberFieldName": "isAccount"
+        },
+        {
+          "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer__member_createAccount",
+          "memberFieldName": "createAccount"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "setupStorage",
+              "value": {
+                "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer_args_setupStorage"
+              }
+            },
+            {
+              "keyRaw": "versionKey",
+              "value": {
+                "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer_args_versionKey"
+              }
+            },
+            {
+              "keyRaw": "accountStorage",
+              "value": {
+                "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer_args_accountStorage"
+              }
+            },
+            {
+              "keyRaw": "clientCredentialsStorage",
+              "value": {
+                "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer_args_clientCredentialsStorage"
+              }
+            },
+            {
+              "keyRaw": "cleanupStorages",
+              "value": {
+                "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer_args_cleanupStorages"
+              }
+            },
+            {
+              "keyRaw": "newAccountStorage",
+              "value": {
+                "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer_args_newAccountStorage"
+              }
+            },
+            {
+              "keyRaw": "newSetupStorage",
+              "value": {
+                "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer_args_newSetupStorage"
+              }
+            },
+            {
+              "keyRaw": "skipConfirmation",
+              "value": {
+                "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializer_args_skipConfirmation"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializerArgs",
+      "@type": "AbstractClass",
+      "requireElement": "V6MigrationInitializerArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializerArgs__member_setupStorage",
+          "memberFieldName": "setupStorage"
+        },
+        {
+          "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializerArgs__member_versionKey",
+          "memberFieldName": "versionKey"
+        },
+        {
+          "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializerArgs__member_accountStorage",
+          "memberFieldName": "accountStorage"
+        },
+        {
+          "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializerArgs__member_clientCredentialsStorage",
+          "memberFieldName": "clientCredentialsStorage"
+        },
+        {
+          "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializerArgs__member_cleanupStorages",
+          "memberFieldName": "cleanupStorages"
+        },
+        {
+          "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializerArgs__member_newAccountStorage",
+          "memberFieldName": "newAccountStorage"
+        },
+        {
+          "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializerArgs__member_newSetupStorage",
+          "memberFieldName": "newSetupStorage"
+        },
+        {
+          "@id": "css:dist/init/migration/V6MigrationInitializer.jsonld#V6MigrationInitializerArgs__member_skipConfirmation",
+          "memberFieldName": "skipConfirmation"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

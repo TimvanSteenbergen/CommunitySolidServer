@@ -1,0 +1,47 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/patch/RdfStorePatcher.jsonld#RdfStorePatcher",
+      "@type": "AbstractClass",
+      "requireElement": "RdfStorePatcher",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            "css:dist/storage/patch/RdfStorePatcher.jsonld#RdfStorePatcherInput",
+            "urn:npm:n3:Store"
+          ]
+        }
+      ],
+      "comment": "Applies a Patch on an N3.js Store.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "css:dist/storage/patch/RdfStorePatcher.jsonld#RdfStorePatcherInput",
+      "@type": "AbstractClass",
+      "requireElement": "RdfStorePatcherInput",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/patch/RdfStorePatcher.jsonld#RdfStorePatcherInput__member_identifier",
+          "memberFieldName": "identifier"
+        },
+        {
+          "@id": "css:dist/storage/patch/RdfStorePatcher.jsonld#RdfStorePatcherInput__member_patch",
+          "memberFieldName": "patch"
+        },
+        {
+          "@id": "css:dist/storage/patch/RdfStorePatcher.jsonld#RdfStorePatcherInput__member_store",
+          "memberFieldName": "store"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

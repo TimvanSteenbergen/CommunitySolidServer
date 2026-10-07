@@ -1,0 +1,68 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/CookieInteractionHandler.jsonld#CookieInteractionHandler",
+      "@type": "Class",
+      "requireElement": "CookieInteractionHandler",
+      "extends": [
+        "css:dist/identity/interaction/JsonInteractionHandler.jsonld#JsonInteractionHandler"
+      ],
+      "comment": "Handles all the necessary steps for having cookies. Refreshes the cookie expiration if there was a successful account interaction. Adds the cookie and cookie expiration data to the output metadata, unless it is already present in that metadata. Checks the account settings to see if the cookie needs to be remembered.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/CookieInteractionHandler.jsonld#CookieInteractionHandler_source",
+          "range": "css:dist/identity/interaction/JsonInteractionHandler.jsonld#JsonInteractionHandler"
+        },
+        {
+          "@id": "css:dist/identity/interaction/CookieInteractionHandler.jsonld#CookieInteractionHandler_accountStore",
+          "range": "css:dist/identity/interaction/account/util/AccountStore.jsonld#AccountStore"
+        },
+        {
+          "@id": "css:dist/identity/interaction/CookieInteractionHandler.jsonld#CookieInteractionHandler_cookieStore",
+          "range": "css:dist/identity/interaction/account/util/CookieStore.jsonld#CookieStore"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/CookieInteractionHandler.jsonld#CookieInteractionHandler__member_source",
+          "memberFieldName": "source"
+        },
+        {
+          "@id": "css:dist/identity/interaction/CookieInteractionHandler.jsonld#CookieInteractionHandler__member_accountStore",
+          "memberFieldName": "accountStore"
+        },
+        {
+          "@id": "css:dist/identity/interaction/CookieInteractionHandler.jsonld#CookieInteractionHandler__member_cookieStore",
+          "memberFieldName": "cookieStore"
+        },
+        {
+          "@id": "css:dist/identity/interaction/CookieInteractionHandler.jsonld#CookieInteractionHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/CookieInteractionHandler.jsonld#CookieInteractionHandler__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/identity/interaction/CookieInteractionHandler.jsonld#CookieInteractionHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/CookieInteractionHandler.jsonld#CookieInteractionHandler_source"
+        },
+        {
+          "@id": "css:dist/identity/interaction/CookieInteractionHandler.jsonld#CookieInteractionHandler_accountStore"
+        },
+        {
+          "@id": "css:dist/identity/interaction/CookieInteractionHandler.jsonld#CookieInteractionHandler_cookieStore"
+        }
+      ]
+    }
+  ]
+}

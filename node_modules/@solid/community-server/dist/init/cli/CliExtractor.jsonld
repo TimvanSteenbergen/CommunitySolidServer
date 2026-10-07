@@ -1,0 +1,31 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/init/cli/CliExtractor.jsonld#CliExtractor",
+      "@type": "AbstractClass",
+      "requireElement": "CliExtractor",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeArray",
+              "parameterRangeValue": "xsd:string"
+            },
+            {
+              "@type": "ParameterRangeWildcard"
+            }
+          ]
+        }
+      ],
+      "comment": "Converts the input CLI arguments into an easily parseable key/value object.  Due to how the application is built, there are certain CLI parameters that need to be parsed before this class can be instantiated. These can be ignored by this class as they will have been handled before it is called, but that does mean that this class should not error if they are present, e.g., by being strict throwing an error on these unexpected parameters.  In case strict mode is preferred, the following should be added to the list of known parameters: - -c / \\--config - -m / \\--mainModulePath - -l / \\--loggingLevel",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

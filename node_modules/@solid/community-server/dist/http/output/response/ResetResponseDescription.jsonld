@@ -1,0 +1,25 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/output/response/ResetResponseDescription.jsonld#ResetResponseDescription",
+      "@type": "Class",
+      "requireElement": "ResetResponseDescription",
+      "extends": [
+        "css:dist/http/output/response/ResponseDescription.jsonld#ResponseDescription"
+      ],
+      "comment": "Corresponds to a 205 response.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/output/response/ResetResponseDescription.jsonld#ResetResponseDescription__member_constructor",
+          "memberFieldName": "constructor"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/conversion/PassthroughConverter.jsonld#PassthroughConverter",
+      "@type": "Class",
+      "requireElement": "PassthroughConverter",
+      "extends": [
+        "css:dist/storage/conversion/RepresentationConverter.jsonld#RepresentationConverter"
+      ],
+      "comment": "A {@link RepresentationConverter} that does not perform any conversion.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/conversion/PassthroughConverter.jsonld#PassthroughConverter__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

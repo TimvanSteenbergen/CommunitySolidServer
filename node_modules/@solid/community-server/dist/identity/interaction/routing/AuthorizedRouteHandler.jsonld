@@ -1,0 +1,55 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/routing/AuthorizedRouteHandler.jsonld#AuthorizedRouteHandler",
+      "@type": "Class",
+      "requireElement": "AuthorizedRouteHandler",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/identity/interaction/routing/InteractionRouteHandler.jsonld#InteractionRouteHandler",
+          "genericTypeInstances": [
+            "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute"
+          ]
+        }
+      ],
+      "comment": "An {@link InteractionRouteHandler} specifically for an {@link AccountIdRoute}. If there is no account ID, implying the user is not logged in, an {@link UnauthorizedHttpError} will be thrown. If there is an account ID, but it does not match the one in target resource, a {@link ForbiddenHttpError} will be thrown.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/routing/AuthorizedRouteHandler.jsonld#AuthorizedRouteHandler_route",
+          "range": "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute"
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/AuthorizedRouteHandler.jsonld#AuthorizedRouteHandler_source",
+          "range": "css:dist/identity/interaction/JsonInteractionHandler.jsonld#JsonInteractionHandler"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/routing/AuthorizedRouteHandler.jsonld#AuthorizedRouteHandler__member_logger",
+          "memberFieldName": "logger"
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/AuthorizedRouteHandler.jsonld#AuthorizedRouteHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/AuthorizedRouteHandler.jsonld#AuthorizedRouteHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/routing/AuthorizedRouteHandler.jsonld#AuthorizedRouteHandler_route"
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/AuthorizedRouteHandler.jsonld#AuthorizedRouteHandler_source"
+        }
+      ]
+    }
+  ]
+}

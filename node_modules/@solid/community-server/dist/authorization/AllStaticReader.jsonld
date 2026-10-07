@@ -1,0 +1,42 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/authorization/AllStaticReader.jsonld#AllStaticReader",
+      "@type": "Class",
+      "requireElement": "AllStaticReader",
+      "extends": [
+        "css:dist/authorization/PermissionReader.jsonld#PermissionReader"
+      ],
+      "comment": "PermissionReader which sets all permissions to true or false independently of the identifier and requested permissions.",
+      "parameters": [
+        {
+          "@id": "css:dist/authorization/AllStaticReader.jsonld#AllStaticReader_allow",
+          "range": "xsd:boolean"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/authorization/AllStaticReader.jsonld#AllStaticReader__member_permissionSet",
+          "memberFieldName": "permissionSet"
+        },
+        {
+          "@id": "css:dist/authorization/AllStaticReader.jsonld#AllStaticReader__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/authorization/AllStaticReader.jsonld#AllStaticReader__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/authorization/AllStaticReader.jsonld#AllStaticReader_allow"
+        }
+      ]
+    }
+  ]
+}

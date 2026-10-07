@@ -1,0 +1,119 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpRequestHandler.jsonld#StreamingHttpRequestHandler",
+      "@type": "Class",
+      "requireElement": "StreamingHttpRequestHandler",
+      "extends": [
+        "css:dist/server/OperationHttpHandler.jsonld#OperationHttpHandler"
+      ],
+      "comment": "Handles request to Streaming HTTP receiveFrom endopints. All allowed requests are stored in the {@link StreamingHttpMap}",
+      "parameters": [
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpRequestHandler.jsonld#StreamingHttpRequestHandler_streamMap",
+          "range": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpMap.jsonld#StreamingHttpMap"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpRequestHandler.jsonld#StreamingHttpRequestHandler_route",
+          "range": "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpRequestHandler.jsonld#StreamingHttpRequestHandler_generator",
+          "range": "css:dist/server/notifications/generate/NotificationGenerator.jsonld#NotificationGenerator"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpRequestHandler.jsonld#StreamingHttpRequestHandler_serializer",
+          "range": "css:dist/server/notifications/serialize/NotificationSerializer.jsonld#NotificationSerializer"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpRequestHandler.jsonld#StreamingHttpRequestHandler_credentialsExtractor",
+          "range": "css:dist/authentication/CredentialsExtractor.jsonld#CredentialsExtractor"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpRequestHandler.jsonld#StreamingHttpRequestHandler_permissionReader",
+          "range": "css:dist/authorization/PermissionReader.jsonld#PermissionReader"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpRequestHandler.jsonld#StreamingHttpRequestHandler_authorizer",
+          "range": "css:dist/authorization/Authorizer.jsonld#Authorizer"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpRequestHandler.jsonld#StreamingHttpRequestHandler__member_streamMap",
+          "memberFieldName": "streamMap"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpRequestHandler.jsonld#StreamingHttpRequestHandler__member_route",
+          "memberFieldName": "route"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpRequestHandler.jsonld#StreamingHttpRequestHandler__member_generator",
+          "memberFieldName": "generator"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpRequestHandler.jsonld#StreamingHttpRequestHandler__member_serializer",
+          "memberFieldName": "serializer"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpRequestHandler.jsonld#StreamingHttpRequestHandler__member_credentialsExtractor",
+          "memberFieldName": "credentialsExtractor"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpRequestHandler.jsonld#StreamingHttpRequestHandler__member_permissionReader",
+          "memberFieldName": "permissionReader"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpRequestHandler.jsonld#StreamingHttpRequestHandler__member_authorizer",
+          "memberFieldName": "authorizer"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpRequestHandler.jsonld#StreamingHttpRequestHandler__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpRequestHandler.jsonld#StreamingHttpRequestHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpRequestHandler.jsonld#StreamingHttpRequestHandler__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpRequestHandler.jsonld#StreamingHttpRequestHandler__member_authorize",
+          "memberFieldName": "authorize"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpRequestHandler.jsonld#StreamingHttpRequestHandler_streamMap"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpRequestHandler.jsonld#StreamingHttpRequestHandler_route"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpRequestHandler.jsonld#StreamingHttpRequestHandler_generator"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpRequestHandler.jsonld#StreamingHttpRequestHandler_serializer"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpRequestHandler.jsonld#StreamingHttpRequestHandler_credentialsExtractor"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpRequestHandler.jsonld#StreamingHttpRequestHandler_permissionReader"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpRequestHandler.jsonld#StreamingHttpRequestHandler_authorizer"
+        }
+      ]
+    }
+  ]
+}

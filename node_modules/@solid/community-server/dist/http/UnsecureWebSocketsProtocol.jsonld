@@ -1,0 +1,79 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/UnsecureWebSocketsProtocol.jsonld#UnsecureWebSocketsProtocol",
+      "@type": "Class",
+      "requireElement": "UnsecureWebSocketsProtocol",
+      "extends": [
+        "css:dist/server/WebSocketHandler.jsonld#WebSocketHandler",
+        "css:dist/init/cluster/SingleThreaded.jsonld#SingleThreaded"
+      ],
+      "comment": "Provides live update functionality following the Solid WebSockets API Spec solid-0.1.  The `baseUrl` parameter should be the same one that is used to advertise with the Updates-Via header.",
+      "parameters": [
+        {
+          "@id": "css:dist/http/UnsecureWebSocketsProtocol.jsonld#UnsecureWebSocketsProtocol_baseUrl",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/http/UnsecureWebSocketsProtocol.jsonld#UnsecureWebSocketsProtocol_source",
+          "range": {
+            "@type": "ParameterRangeIntersection",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeWildcard"
+              },
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/UnsecureWebSocketsProtocol.jsonld#UnsecureWebSocketsProtocol__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/http/UnsecureWebSocketsProtocol.jsonld#UnsecureWebSocketsProtocol__member_path",
+          "memberFieldName": "path"
+        },
+        {
+          "@id": "css:dist/http/UnsecureWebSocketsProtocol.jsonld#UnsecureWebSocketsProtocol__member_listeners",
+          "memberFieldName": "listeners"
+        },
+        {
+          "@id": "css:dist/http/UnsecureWebSocketsProtocol.jsonld#UnsecureWebSocketsProtocol__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/UnsecureWebSocketsProtocol.jsonld#UnsecureWebSocketsProtocol__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/http/UnsecureWebSocketsProtocol.jsonld#UnsecureWebSocketsProtocol__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/http/UnsecureWebSocketsProtocol.jsonld#UnsecureWebSocketsProtocol__member_onResourceChanged",
+          "memberFieldName": "onResourceChanged"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/UnsecureWebSocketsProtocol.jsonld#UnsecureWebSocketsProtocol_source"
+        },
+        {
+          "@id": "css:dist/http/UnsecureWebSocketsProtocol.jsonld#UnsecureWebSocketsProtocol_baseUrl"
+        }
+      ]
+    }
+  ]
+}

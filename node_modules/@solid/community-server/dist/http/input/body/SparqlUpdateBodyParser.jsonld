@@ -1,0 +1,36 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/input/body/SparqlUpdateBodyParser.jsonld#SparqlUpdateBodyParser",
+      "@type": "Class",
+      "requireElement": "SparqlUpdateBodyParser",
+      "extends": [
+        "css:dist/http/input/body/BodyParser.jsonld#BodyParser"
+      ],
+      "comment": "{@link BodyParser} that supports `application/sparql-update` content. Will convert the incoming update string to algebra in a {@link SparqlUpdatePatch}.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/input/body/SparqlUpdateBodyParser.jsonld#SparqlUpdateBodyParser__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/http/input/body/SparqlUpdateBodyParser.jsonld#SparqlUpdateBodyParser__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/http/input/body/SparqlUpdateBodyParser.jsonld#SparqlUpdateBodyParser__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/locking/ReadWriteLocker.jsonld#ReadWriteLocker",
+      "@type": "AbstractClass",
+      "requireElement": "ReadWriteLocker",
+      "comment": "Allows the locking of resources which is needed for non-atomic {@link ResourceStore}s.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/locking/ReadWriteLocker.jsonld#ReadWriteLocker__member_withReadLock",
+          "memberFieldName": "withReadLock"
+        },
+        {
+          "@id": "css:dist/util/locking/ReadWriteLocker.jsonld#ReadWriteLocker__member_withWriteLock",
+          "memberFieldName": "withWriteLock"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

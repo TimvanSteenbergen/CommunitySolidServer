@@ -1,0 +1,32 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/output/metadata/RangeMetadataWriter.jsonld#RangeMetadataWriter",
+      "@type": "Class",
+      "requireElement": "RangeMetadataWriter",
+      "extends": [
+        "css:dist/http/output/metadata/MetadataWriter.jsonld#MetadataWriter"
+      ],
+      "comment": "Generates the necessary `content-range` header if there is range metadata. If the start or end is unknown, a `*` will be used instead. According to the RFC, this is incorrect, but is all we can do as long as we don't know the full length of the representation in advance. For the same reason, the total length of the representation will always be `*`.  This class also adds the content-length header. This will contain either the full size for standard requests, or the size of the slice for range requests.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/output/metadata/RangeMetadataWriter.jsonld#RangeMetadataWriter__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/http/output/metadata/RangeMetadataWriter.jsonld#RangeMetadataWriter__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

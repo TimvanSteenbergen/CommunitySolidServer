@@ -1,0 +1,25 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/input/preferences/AcceptPreferenceParser.jsonld#AcceptPreferenceParser",
+      "@type": "Class",
+      "requireElement": "AcceptPreferenceParser",
+      "extends": [
+        "css:dist/http/input/preferences/PreferenceParser.jsonld#PreferenceParser"
+      ],
+      "comment": "Extracts preferences from the Accept-* headers from an incoming {@link HttpRequest}. Supports Accept, Accept-Charset, Accept-Encoding, Accept-Language and Accept-DateTime.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/input/preferences/AcceptPreferenceParser.jsonld#AcceptPreferenceParser__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

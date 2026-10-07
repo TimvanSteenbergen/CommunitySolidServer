@@ -1,0 +1,64 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/keyvalue/MemoryMapStorage.jsonld#MemoryMapStorage",
+      "@type": "Class",
+      "requireElement": "MemoryMapStorage",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+          "genericTypeInstances": [
+            "xsd:string",
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/storage/keyvalue/MemoryMapStorage.jsonld#MemoryMapStorage__generic_TValue"
+            }
+          ]
+        }
+      ],
+      "comment": "A {@link KeyValueStorage} which uses a JavaScript Map for internal storage.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/storage/keyvalue/MemoryMapStorage.jsonld#MemoryMapStorage__generic_TValue"
+        }
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/keyvalue/MemoryMapStorage.jsonld#MemoryMapStorage__member_data",
+          "memberFieldName": "data"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/MemoryMapStorage.jsonld#MemoryMapStorage__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/MemoryMapStorage.jsonld#MemoryMapStorage__member_get",
+          "memberFieldName": "get"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/MemoryMapStorage.jsonld#MemoryMapStorage__member_has",
+          "memberFieldName": "has"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/MemoryMapStorage.jsonld#MemoryMapStorage__member_set",
+          "memberFieldName": "set"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/MemoryMapStorage.jsonld#MemoryMapStorage__member_delete",
+          "memberFieldName": "delete"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/MemoryMapStorage.jsonld#MemoryMapStorage__member_entries",
+          "memberFieldName": "entries"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

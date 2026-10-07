@@ -1,0 +1,115 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/pods/generate/TemplatedPodGenerator.jsonld#TemplatedPodGenerator",
+      "@type": "Class",
+      "requireElement": "TemplatedPodGenerator",
+      "extends": [
+        "css:dist/pods/generate/PodGenerator.jsonld#PodGenerator"
+      ],
+      "comment": "Creates a new ResourceStore when creating a pod based on a Components.js configuration.  Part of the dynamic pod creation. 1. It calls a VariableHandler to add necessary variable values. E.g. setting the base url variable for components.js to the pod identifier. 2. It filters/cleans the input agent values using {@link VariableHandler}s 3. It calls a ComponentsJsFactory with the variables and template location to instantiate a new ResourceStore. 4. It stores these values in the configuration storage, which is used as a permanent storage for pod configurations.",
+      "parameters": [
+        {
+          "@id": "css:dist/pods/generate/TemplatedPodGenerator.jsonld#TemplatedPodGenerator_baseUrl",
+          "range": "xsd:string",
+          "comment": "Base URL of the server."
+        },
+        {
+          "@id": "css:dist/pods/generate/TemplatedPodGenerator.jsonld#TemplatedPodGenerator_configTemplatePath",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Where to find the configuration templates."
+        },
+        {
+          "@id": "css:dist/pods/generate/TemplatedPodGenerator.jsonld#TemplatedPodGenerator_storeFactory",
+          "range": "css:dist/pods/generate/ComponentsJsFactory.jsonld#ComponentsJsFactory",
+          "comment": "Factory used for Components.js instantiation."
+        },
+        {
+          "@id": "css:dist/pods/generate/TemplatedPodGenerator.jsonld#TemplatedPodGenerator_variableHandler",
+          "range": "css:dist/pods/generate/variables/VariableHandler.jsonld#VariableHandler",
+          "comment": "Handler used for setting variable values."
+        },
+        {
+          "@id": "css:dist/pods/generate/TemplatedPodGenerator.jsonld#TemplatedPodGenerator_configStorage",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+            "genericTypeInstances": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          },
+          "comment": "Where to store the configuration values to instantiate the store for this pod."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/pods/generate/TemplatedPodGenerator.jsonld#TemplatedPodGenerator__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/pods/generate/TemplatedPodGenerator.jsonld#TemplatedPodGenerator__member_storeFactory",
+          "memberFieldName": "storeFactory"
+        },
+        {
+          "@id": "css:dist/pods/generate/TemplatedPodGenerator.jsonld#TemplatedPodGenerator__member_variableHandler",
+          "memberFieldName": "variableHandler"
+        },
+        {
+          "@id": "css:dist/pods/generate/TemplatedPodGenerator.jsonld#TemplatedPodGenerator__member_configStorage",
+          "memberFieldName": "configStorage"
+        },
+        {
+          "@id": "css:dist/pods/generate/TemplatedPodGenerator.jsonld#TemplatedPodGenerator__member_configTemplatePath",
+          "memberFieldName": "configTemplatePath"
+        },
+        {
+          "@id": "css:dist/pods/generate/TemplatedPodGenerator.jsonld#TemplatedPodGenerator__member_baseUrl",
+          "memberFieldName": "baseUrl"
+        },
+        {
+          "@id": "css:dist/pods/generate/TemplatedPodGenerator.jsonld#TemplatedPodGenerator__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/pods/generate/TemplatedPodGenerator.jsonld#TemplatedPodGenerator__member_generate",
+          "memberFieldName": "generate"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/pods/generate/TemplatedPodGenerator.jsonld#TemplatedPodGenerator_storeFactory"
+        },
+        {
+          "@id": "css:dist/pods/generate/TemplatedPodGenerator.jsonld#TemplatedPodGenerator_variableHandler"
+        },
+        {
+          "@id": "css:dist/pods/generate/TemplatedPodGenerator.jsonld#TemplatedPodGenerator_configStorage"
+        },
+        {
+          "@id": "css:dist/pods/generate/TemplatedPodGenerator.jsonld#TemplatedPodGenerator_baseUrl"
+        },
+        {
+          "@id": "css:dist/pods/generate/TemplatedPodGenerator.jsonld#TemplatedPodGenerator_configTemplatePath"
+        }
+      ]
+    }
+  ]
+}

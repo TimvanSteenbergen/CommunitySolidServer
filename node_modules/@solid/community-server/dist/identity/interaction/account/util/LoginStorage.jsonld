@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/account/util/LoginStorage.jsonld#LoginStorage",
+      "@type": "AbstractClass",
+      "requireElement": "LoginStorage",
+      "comment": "A {@link IndexedStorage} where the `defineType` function takes an extra parameter to indicate if the type corresponds to a login method. This is useful for storages that want to add extra requirements based on the data being edited.  In practice, we use this because we want to require accounts to have at least 1 login method.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/identity/interaction/account/util/LoginStorage.jsonld#LoginStorage__generic_T",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        }
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/account/util/LoginStorage.jsonld#LoginStorage__member_defineType",
+          "memberFieldName": "defineType"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

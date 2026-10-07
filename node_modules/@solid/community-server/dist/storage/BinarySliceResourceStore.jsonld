@@ -1,0 +1,82 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/BinarySliceResourceStore.jsonld#BinarySliceResourceStore",
+      "@type": "Class",
+      "requireElement": "BinarySliceResourceStore",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/storage/PassthroughStore.jsonld#PassthroughStore",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/storage/BinarySliceResourceStore.jsonld#BinarySliceResourceStore__generic_T"
+            }
+          ]
+        }
+      ],
+      "comment": "Resource store that slices the data stream if there are range preferences. Only works for `bytes` range preferences on binary data streams. Does not support multipart range requests.  If the slice happens, unit/start/end values will be written to the metadata to indicate such. The values are dependent on the preferences we got as an input, as we don't know the actual size of the data stream.  The `defaultSliceSize` parameter can be used to set how large a slice should be if the end of a range is not defined. Setting this to 0, which is the default, will cause the end of the stream to be used as the end of the slice.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/storage/BinarySliceResourceStore.jsonld#BinarySliceResourceStore__generic_T",
+          "range": "css:dist/storage/ResourceStore.jsonld#ResourceStore"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/storage/BinarySliceResourceStore.jsonld#BinarySliceResourceStore_source",
+          "range": {
+            "@type": "ParameterRangeGenericTypeReference",
+            "parameterRangeGenericType": "css:dist/storage/BinarySliceResourceStore.jsonld#BinarySliceResourceStore__generic_T"
+          }
+        },
+        {
+          "@id": "css:dist/storage/BinarySliceResourceStore.jsonld#BinarySliceResourceStore_defaultSliceSize",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/BinarySliceResourceStore.jsonld#BinarySliceResourceStore__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/storage/BinarySliceResourceStore.jsonld#BinarySliceResourceStore__member_defaultSliceSize",
+          "memberFieldName": "defaultSliceSize"
+        },
+        {
+          "@id": "css:dist/storage/BinarySliceResourceStore.jsonld#BinarySliceResourceStore__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/BinarySliceResourceStore.jsonld#BinarySliceResourceStore__member_getRepresentation",
+          "memberFieldName": "getRepresentation"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/BinarySliceResourceStore.jsonld#BinarySliceResourceStore_source"
+        },
+        {
+          "@id": "css:dist/storage/BinarySliceResourceStore.jsonld#BinarySliceResourceStore_defaultSliceSize"
+        }
+      ]
+    }
+  ]
+}

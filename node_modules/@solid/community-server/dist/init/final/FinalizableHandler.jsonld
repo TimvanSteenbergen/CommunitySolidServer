@@ -1,0 +1,43 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/init/final/FinalizableHandler.jsonld#FinalizableHandler",
+      "@type": "Class",
+      "requireElement": "FinalizableHandler",
+      "extends": [
+        "css:dist/init/final/Finalizer.jsonld#Finalizer"
+      ],
+      "comment": "Allows using a Finalizable as a Finalizer Handler.",
+      "parameters": [
+        {
+          "@id": "css:dist/init/final/FinalizableHandler.jsonld#FinalizableHandler_finalizable",
+          "range": "css:dist/init/final/Finalizable.jsonld#Finalizable"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/init/final/FinalizableHandler.jsonld#FinalizableHandler__member_finalizable",
+          "memberFieldName": "finalizable",
+          "range": "css:dist/init/final/Finalizable.jsonld#Finalizable"
+        },
+        {
+          "@id": "css:dist/init/final/FinalizableHandler.jsonld#FinalizableHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/init/final/FinalizableHandler.jsonld#FinalizableHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/init/final/FinalizableHandler.jsonld#FinalizableHandler_finalizable"
+        }
+      ]
+    }
+  ]
+}

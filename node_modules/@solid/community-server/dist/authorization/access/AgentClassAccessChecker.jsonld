@@ -1,0 +1,25 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/authorization/access/AgentClassAccessChecker.jsonld#AgentClassAccessChecker",
+      "@type": "Class",
+      "requireElement": "AgentClassAccessChecker",
+      "extends": [
+        "css:dist/authorization/access/AccessChecker.jsonld#AccessChecker"
+      ],
+      "comment": "Checks access based on the agent class.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/authorization/access/AgentClassAccessChecker.jsonld#AgentClassAccessChecker__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

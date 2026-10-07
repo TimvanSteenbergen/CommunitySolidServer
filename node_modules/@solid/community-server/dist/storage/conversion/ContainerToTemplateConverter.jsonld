@@ -1,0 +1,82 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/conversion/ContainerToTemplateConverter.jsonld#ContainerToTemplateConverter",
+      "@type": "Class",
+      "requireElement": "ContainerToTemplateConverter",
+      "extends": [
+        "css:dist/storage/conversion/BaseTypedRepresentationConverter.jsonld#BaseTypedRepresentationConverter"
+      ],
+      "comment": "A {@link RepresentationConverter} that creates a templated representation of a container.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/conversion/ContainerToTemplateConverter.jsonld#ContainerToTemplateConverter_templateEngine",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/storage/conversion/ContainerToTemplateConverter.jsonld#ContainerToTemplateConverter_contentType",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ContainerToTemplateConverter.jsonld#ContainerToTemplateConverter_identifierStrategy",
+          "range": "css:dist/util/identifiers/IdentifierStrategy.jsonld#IdentifierStrategy"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/conversion/ContainerToTemplateConverter.jsonld#ContainerToTemplateConverter__member_identifierStrategy",
+          "memberFieldName": "identifierStrategy"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ContainerToTemplateConverter.jsonld#ContainerToTemplateConverter__member_templateEngine",
+          "memberFieldName": "templateEngine"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ContainerToTemplateConverter.jsonld#ContainerToTemplateConverter__member_contentType",
+          "memberFieldName": "contentType"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ContainerToTemplateConverter.jsonld#ContainerToTemplateConverter__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ContainerToTemplateConverter.jsonld#ContainerToTemplateConverter__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ContainerToTemplateConverter.jsonld#ContainerToTemplateConverter__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ContainerToTemplateConverter.jsonld#ContainerToTemplateConverter__member_getChildResources",
+          "memberFieldName": "getChildResources"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ContainerToTemplateConverter.jsonld#ContainerToTemplateConverter__member_getParentContainers",
+          "memberFieldName": "getParentContainers"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ContainerToTemplateConverter.jsonld#ContainerToTemplateConverter__member_getLocalName",
+          "memberFieldName": "getLocalName"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/conversion/ContainerToTemplateConverter.jsonld#ContainerToTemplateConverter_templateEngine"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ContainerToTemplateConverter.jsonld#ContainerToTemplateConverter_contentType"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ContainerToTemplateConverter.jsonld#ContainerToTemplateConverter_identifierStrategy"
+        }
+      ]
+    }
+  ]
+}

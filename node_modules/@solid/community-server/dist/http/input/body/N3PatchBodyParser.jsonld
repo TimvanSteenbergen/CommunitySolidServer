@@ -1,0 +1,45 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/input/body/N3PatchBodyParser.jsonld#N3PatchBodyParser",
+      "@type": "Class",
+      "requireElement": "N3PatchBodyParser",
+      "extends": [
+        "css:dist/http/input/body/BodyParser.jsonld#BodyParser"
+      ],
+      "comment": "Parses an N3 Patch document and makes sure it conforms to the specification requirements. Requirements can be found at Solid Protocol, §5.3.1: https://solid.github.io/specification/protocol#n3-patch",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/input/body/N3PatchBodyParser.jsonld#N3PatchBodyParser__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/http/input/body/N3PatchBodyParser.jsonld#N3PatchBodyParser__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/http/input/body/N3PatchBodyParser.jsonld#N3PatchBodyParser__member_parsePatch",
+          "memberFieldName": "parsePatch"
+        },
+        {
+          "@id": "css:dist/http/input/body/N3PatchBodyParser.jsonld#N3PatchBodyParser__member_findQuads",
+          "memberFieldName": "findQuads"
+        },
+        {
+          "@id": "css:dist/http/input/body/N3PatchBodyParser.jsonld#N3PatchBodyParser__member_findVariables",
+          "memberFieldName": "findVariables"
+        },
+        {
+          "@id": "css:dist/http/input/body/N3PatchBodyParser.jsonld#N3PatchBodyParser__member_verifyQuads",
+          "memberFieldName": "verifyQuads"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

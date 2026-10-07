@@ -1,0 +1,81 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/errors/MethodNotAllowedHttpError.jsonld#MethodNotAllowedHttpError",
+      "@type": "Class",
+      "requireElement": "MethodNotAllowedHttpError",
+      "comment": "An error thrown when data was found for the requested identifier, but is not supported by the target resource. Can keep track of the methods that are not allowed.",
+      "parameters": [
+        {
+          "@id": "css:dist/util/errors/MethodNotAllowedHttpError.jsonld#MethodNotAllowedHttpError_message",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/util/errors/MethodNotAllowedHttpError.jsonld#MethodNotAllowedHttpError_options",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeWildcard"
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/util/errors/MethodNotAllowedHttpError.jsonld#MethodNotAllowedHttpError_methods",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": "xsd:string"
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/errors/MethodNotAllowedHttpError.jsonld#MethodNotAllowedHttpError__member_methods",
+          "memberFieldName": "methods",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/util/errors/MethodNotAllowedHttpError.jsonld#MethodNotAllowedHttpError__member_constructor",
+          "memberFieldName": "constructor"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/errors/MethodNotAllowedHttpError.jsonld#MethodNotAllowedHttpError_methods"
+        },
+        {
+          "@id": "css:dist/util/errors/MethodNotAllowedHttpError.jsonld#MethodNotAllowedHttpError_message"
+        },
+        {
+          "@id": "css:dist/util/errors/MethodNotAllowedHttpError.jsonld#MethodNotAllowedHttpError_options"
+        }
+      ]
+    }
+  ]
+}

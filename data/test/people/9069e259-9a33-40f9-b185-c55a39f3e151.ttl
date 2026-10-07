@@ -1,0 +1,8 @@
+<http://localhost:3000/test/people/9069e259-9a33-40f9-b185-c55a39f3e151.ttl> a <https://schema.org/Person>;
+    <https://schema.org/name> "Tim van Steenbergen";
+    <https://schema.org/givenName> "Tim";
+    <https://schema.org/familyName> "van Steenbergen";
+    <https://schema.org/email> "tim@tieka.nl";
+    <https://schema.org/telephone> "0612341234";
+    <https://schema.org/birthDate> "1969-08-19Z"^^<http://www.w3.org/2001/XMLSchema#date>;
+    <https://schema.org/image> <http://localhost:3000/test/images/470e30d5-5c15-411f-810d-7112df8428e0.ttl>.

@@ -1,0 +1,60 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/notifications/BaseStateHandler.jsonld#BaseStateHandler",
+      "@type": "Class",
+      "requireElement": "BaseStateHandler",
+      "extends": [
+        "css:dist/server/notifications/StateHandler.jsonld#StateHandler"
+      ],
+      "comment": "Handles the `state` feature by calling a {@link NotificationHandler} in case the {@link NotificationChannel} has a `state` value.  Deletes the `state` parameter from the channel afterwards.",
+      "parameters": [
+        {
+          "@id": "css:dist/server/notifications/BaseStateHandler.jsonld#BaseStateHandler_handler",
+          "range": "css:dist/server/notifications/NotificationHandler.jsonld#NotificationHandler"
+        },
+        {
+          "@id": "css:dist/server/notifications/BaseStateHandler.jsonld#BaseStateHandler_storage",
+          "range": "css:dist/server/notifications/NotificationChannelStorage.jsonld#NotificationChannelStorage"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/notifications/BaseStateHandler.jsonld#BaseStateHandler__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/server/notifications/BaseStateHandler.jsonld#BaseStateHandler__member_handler",
+          "memberFieldName": "handler"
+        },
+        {
+          "@id": "css:dist/server/notifications/BaseStateHandler.jsonld#BaseStateHandler__member_storage",
+          "memberFieldName": "storage"
+        },
+        {
+          "@id": "css:dist/server/notifications/BaseStateHandler.jsonld#BaseStateHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/notifications/BaseStateHandler.jsonld#BaseStateHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/notifications/BaseStateHandler.jsonld#BaseStateHandler_handler"
+        },
+        {
+          "@id": "css:dist/server/notifications/BaseStateHandler.jsonld#BaseStateHandler_storage"
+        }
+      ]
+    }
+  ]
+}

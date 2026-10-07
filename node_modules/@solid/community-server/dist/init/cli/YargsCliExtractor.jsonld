@@ -1,0 +1,135 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/init/cli/YargsCliExtractor.jsonld#YargsParameter",
+      "@type": "Class",
+      "requireElement": "YargsParameter",
+      "comment": "This class exists as wrapper around a yargs Options object, thereby allowing us to create these in a Components.js configuration.  Format details can be found at https://yargs.js.org/docs/#api-reference-optionskey-opt",
+      "parameters": [
+        {
+          "@id": "css:dist/init/cli/YargsCliExtractor.jsonld#YargsParameter_name",
+          "range": "xsd:string",
+          "comment": "Name of the parameter. Corresponds to the first parameter passed to the `yargs.options` function."
+        },
+        {
+          "@id": "css:dist/init/cli/YargsCliExtractor.jsonld#YargsParameter_options",
+          "range": "rdf:JSON",
+          "comment": "Options for a single parameter that should be parsed."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/init/cli/YargsCliExtractor.jsonld#YargsParameter__member_name",
+          "memberFieldName": "name",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/init/cli/YargsCliExtractor.jsonld#YargsParameter__member_options",
+          "memberFieldName": "options",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/init/cli/YargsCliExtractor.jsonld#YargsParameter__member_constructor",
+          "memberFieldName": "constructor"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/init/cli/YargsCliExtractor.jsonld#YargsParameter_name"
+        },
+        {
+          "@id": "css:dist/init/cli/YargsCliExtractor.jsonld#YargsParameter_options"
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/init/cli/YargsCliExtractor.jsonld#YargsCliExtractor",
+      "@type": "Class",
+      "requireElement": "YargsCliExtractor",
+      "extends": [
+        "css:dist/init/cli/CliExtractor.jsonld#CliExtractor"
+      ],
+      "comment": "Parses CLI args using the yargs library. Specific settings can be enabled through the provided options.",
+      "parameters": [
+        {
+          "@id": "css:dist/init/cli/YargsCliExtractor.jsonld#YargsCliExtractor_options",
+          "range": "rdf:JSON",
+          "comment": "Additional options to configure yargs."
+        },
+        {
+          "@id": "css:dist/init/cli/YargsCliExtractor.jsonld#YargsCliExtractor_parameters",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": "css:dist/init/cli/YargsCliExtractor.jsonld#YargsParameter"
+          },
+          "comment": "Parameters that should be parsed from the CLI."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/init/cli/YargsCliExtractor.jsonld#YargsCliExtractor__member_yargsArgOptions",
+          "memberFieldName": "yargsArgOptions",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/init/cli/YargsCliExtractor.jsonld#YargsCliExtractor__member_yargvOptions",
+          "memberFieldName": "yargvOptions",
+          "range": "css:dist/init/cli/YargsCliExtractor.jsonld#CliOptions"
+        },
+        {
+          "@id": "css:dist/init/cli/YargsCliExtractor.jsonld#YargsCliExtractor__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/init/cli/YargsCliExtractor.jsonld#YargsCliExtractor__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/init/cli/YargsCliExtractor.jsonld#YargsCliExtractor__member_createYArgv",
+          "memberFieldName": "createYArgv"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/init/cli/YargsCliExtractor.jsonld#YargsCliExtractor_parameters"
+        },
+        {
+          "@id": "css:dist/init/cli/YargsCliExtractor.jsonld#YargsCliExtractor_options"
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/init/cli/YargsCliExtractor.jsonld#CliOptions",
+      "@type": "AbstractClass",
+      "requireElement": "CliOptions",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/init/cli/YargsCliExtractor.jsonld#CliOptions__member_usage",
+          "memberFieldName": "usage"
+        },
+        {
+          "@id": "css:dist/init/cli/YargsCliExtractor.jsonld#CliOptions__member_strictMode",
+          "memberFieldName": "strictMode"
+        },
+        {
+          "@id": "css:dist/init/cli/YargsCliExtractor.jsonld#CliOptions__member_loadFromEnv",
+          "memberFieldName": "loadFromEnv"
+        },
+        {
+          "@id": "css:dist/init/cli/YargsCliExtractor.jsonld#CliOptions__member_envVarPrefix",
+          "memberFieldName": "envVarPrefix"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

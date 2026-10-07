@@ -1,0 +1,76 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/pod/util/PodCreator.jsonld#PodCreator",
+      "@type": "AbstractClass",
+      "requireElement": "PodCreator",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            "css:dist/identity/interaction/pod/util/PodCreator.jsonld#PodCreatorInput",
+            "css:dist/identity/interaction/pod/util/PodCreator.jsonld#PodCreatorOutput"
+          ]
+        }
+      ],
+      "comment": "Handles creating a pod and linking the created WebID.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "css:dist/identity/interaction/pod/util/PodCreator.jsonld#PodCreatorInput",
+      "@type": "AbstractClass",
+      "requireElement": "PodCreatorInput",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/pod/util/PodCreator.jsonld#PodCreatorInput__member_accountId",
+          "memberFieldName": "accountId"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/PodCreator.jsonld#PodCreatorInput__member_name",
+          "memberFieldName": "name"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/PodCreator.jsonld#PodCreatorInput__member_webId",
+          "memberFieldName": "webId"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/PodCreator.jsonld#PodCreatorInput__member_settings",
+          "memberFieldName": "settings"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "css:dist/identity/interaction/pod/util/PodCreator.jsonld#PodCreatorOutput",
+      "@type": "AbstractClass",
+      "requireElement": "PodCreatorOutput",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/pod/util/PodCreator.jsonld#PodCreatorOutput__member_podId",
+          "memberFieldName": "podId"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/PodCreator.jsonld#PodCreatorOutput__member_podUrl",
+          "memberFieldName": "podUrl"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/PodCreator.jsonld#PodCreatorOutput__member_webId",
+          "memberFieldName": "webId"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/util/PodCreator.jsonld#PodCreatorOutput__member_webIdLink",
+          "memberFieldName": "webIdLink"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

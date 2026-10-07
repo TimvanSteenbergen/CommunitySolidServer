@@ -1,0 +1,42 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/representation/RepresentationPreferences.jsonld#RepresentationPreferences",
+      "@type": "AbstractClass",
+      "requireElement": "RepresentationPreferences",
+      "comment": "Contains preferences along multiple content negotiation dimensions.  All dimensions are optional for ease of constructing; either `undefined` or an empty `ValuePreferences` can indicate that no preferences were specified.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/representation/RepresentationPreferences.jsonld#RepresentationPreferences__member_type",
+          "memberFieldName": "type"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationPreferences.jsonld#RepresentationPreferences__member_charset",
+          "memberFieldName": "charset"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationPreferences.jsonld#RepresentationPreferences__member_datetime",
+          "memberFieldName": "datetime"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationPreferences.jsonld#RepresentationPreferences__member_encoding",
+          "memberFieldName": "encoding"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationPreferences.jsonld#RepresentationPreferences__member_language",
+          "memberFieldName": "language"
+        },
+        {
+          "@id": "css:dist/http/representation/RepresentationPreferences.jsonld#RepresentationPreferences__member_range",
+          "memberFieldName": "range"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

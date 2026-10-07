@@ -1,0 +1,70 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/conversion/QuadToRdfConverter.jsonld#QuadToRdfConverter",
+      "@type": "Class",
+      "requireElement": "QuadToRdfConverter",
+      "extends": [
+        "css:dist/storage/conversion/BaseTypedRepresentationConverter.jsonld#BaseTypedRepresentationConverter"
+      ],
+      "comment": "Converts `internal/quads` to most major RDF serializations.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/conversion/QuadToRdfConverter.jsonld#QuadToRdfConverter_options_outputPreferences",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "css:dist/storage/conversion/QuadToRdfConverter.jsonld#QuadToRdfConverter_options_outputPreferences_key"
+              },
+              {
+                "@id": "css:dist/storage/conversion/QuadToRdfConverter.jsonld#QuadToRdfConverter_options_outputPreferences_value",
+                "range": "xsd:number"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/conversion/QuadToRdfConverter.jsonld#QuadToRdfConverter__member_outputPreferences",
+          "memberFieldName": "outputPreferences"
+        },
+        {
+          "@id": "css:dist/storage/conversion/QuadToRdfConverter.jsonld#QuadToRdfConverter__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/conversion/QuadToRdfConverter.jsonld#QuadToRdfConverter__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/conversion/QuadToRdfConverter.jsonld#QuadToRdfConverter_options__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "outputPreferences",
+              "value": {
+                "@id": "css:dist/storage/conversion/QuadToRdfConverter.jsonld#QuadToRdfConverter_options_outputPreferences__constructorArgument",
+                "fields": [
+                  {
+                    "collectEntries": "css:dist/storage/conversion/QuadToRdfConverter.jsonld#QuadToRdfConverter_options_outputPreferences",
+                    "key": "css:dist/storage/conversion/QuadToRdfConverter.jsonld#QuadToRdfConverter_options_outputPreferences_key",
+                    "value": {
+                      "@id": "css:dist/storage/conversion/QuadToRdfConverter.jsonld#QuadToRdfConverter_options_outputPreferences_value"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

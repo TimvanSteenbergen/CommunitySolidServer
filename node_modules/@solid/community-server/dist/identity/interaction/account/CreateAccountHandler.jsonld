@@ -1,0 +1,50 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/account/CreateAccountHandler.jsonld#CreateAccountHandler",
+      "@type": "Class",
+      "requireElement": "CreateAccountHandler",
+      "extends": [
+        "css:dist/identity/interaction/login/ResolveLoginHandler.jsonld#ResolveLoginHandler",
+        "css:dist/identity/interaction/JsonView.jsonld#JsonView"
+      ],
+      "comment": "Creates new accounts using an {@link AccountStore};",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/account/CreateAccountHandler.jsonld#CreateAccountHandler_accountStore",
+          "range": "css:dist/identity/interaction/account/util/AccountStore.jsonld#AccountStore"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/CreateAccountHandler.jsonld#CreateAccountHandler_cookieStore",
+          "range": "css:dist/identity/interaction/account/util/CookieStore.jsonld#CookieStore"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/account/CreateAccountHandler.jsonld#CreateAccountHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/CreateAccountHandler.jsonld#CreateAccountHandler__member_getView",
+          "memberFieldName": "getView"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/CreateAccountHandler.jsonld#CreateAccountHandler__member_login",
+          "memberFieldName": "login"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/account/CreateAccountHandler.jsonld#CreateAccountHandler_accountStore"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/CreateAccountHandler.jsonld#CreateAccountHandler_cookieStore"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/ldp/OperationHandler.jsonld#OperationHandler",
+      "@type": "AbstractClass",
+      "requireElement": "OperationHandler",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            "css:dist/http/ldp/OperationHandler.jsonld#OperationHandlerInput",
+            "css:dist/http/output/response/ResponseDescription.jsonld#ResponseDescription"
+          ]
+        }
+      ],
+      "comment": "Handler for a specific operation type.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "css:dist/http/ldp/OperationHandler.jsonld#OperationHandlerInput",
+      "@type": "AbstractClass",
+      "requireElement": "OperationHandlerInput",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/ldp/OperationHandler.jsonld#OperationHandlerInput__member_operation",
+          "memberFieldName": "operation"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

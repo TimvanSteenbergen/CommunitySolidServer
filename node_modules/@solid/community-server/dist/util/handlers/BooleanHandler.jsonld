@@ -1,0 +1,86 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/handlers/BooleanHandler.jsonld#BooleanHandler",
+      "@type": "Class",
+      "requireElement": "BooleanHandler",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/util/handlers/BooleanHandler.jsonld#BooleanHandler__generic_TIn"
+            },
+            "xsd:boolean"
+          ]
+        }
+      ],
+      "comment": "A composite handler that returns true if any of its handlers can handle the input and return true. Handler errors are interpreted as false results.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/util/handlers/BooleanHandler.jsonld#BooleanHandler__generic_TIn"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/util/handlers/BooleanHandler.jsonld#BooleanHandler_handlers",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": {
+              "@type": "ParameterRangeGenericComponent",
+              "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+              "genericTypeInstances": [
+                {
+                  "@type": "ParameterRangeGenericTypeReference",
+                  "parameterRangeGenericType": "css:dist/util/handlers/BooleanHandler.jsonld#BooleanHandler__generic_TIn"
+                },
+                "xsd:boolean"
+              ]
+            }
+          },
+          "comment": "Handlers over which it will run."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/handlers/BooleanHandler.jsonld#BooleanHandler__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/util/handlers/BooleanHandler.jsonld#BooleanHandler__member_handlers",
+          "memberFieldName": "handlers"
+        },
+        {
+          "@id": "css:dist/util/handlers/BooleanHandler.jsonld#BooleanHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/util/handlers/BooleanHandler.jsonld#BooleanHandler__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/util/handlers/BooleanHandler.jsonld#BooleanHandler__member_handleSafe",
+          "memberFieldName": "handleSafe"
+        },
+        {
+          "@id": "css:dist/util/handlers/BooleanHandler.jsonld#BooleanHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/handlers/BooleanHandler.jsonld#BooleanHandler_handlers"
+        }
+      ]
+    }
+  ]
+}

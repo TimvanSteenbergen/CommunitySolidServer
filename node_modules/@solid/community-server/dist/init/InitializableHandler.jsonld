@@ -1,0 +1,43 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/init/InitializableHandler.jsonld#InitializableHandler",
+      "@type": "Class",
+      "requireElement": "InitializableHandler",
+      "extends": [
+        "css:dist/init/Initializer.jsonld#Initializer"
+      ],
+      "comment": "Allows using an Initializable as an Initializer Handler.",
+      "parameters": [
+        {
+          "@id": "css:dist/init/InitializableHandler.jsonld#InitializableHandler_initializable",
+          "range": "css:dist/init/Initializable.jsonld#Initializable"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/init/InitializableHandler.jsonld#InitializableHandler__member_initializable",
+          "memberFieldName": "initializable",
+          "range": "css:dist/init/Initializable.jsonld#Initializable"
+        },
+        {
+          "@id": "css:dist/init/InitializableHandler.jsonld#InitializableHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/init/InitializableHandler.jsonld#InitializableHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/init/InitializableHandler.jsonld#InitializableHandler_initializable"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/locking/WrappedExpiringReadWriteLocker.jsonld#WrappedExpiringReadWriteLocker",
+      "@type": "Class",
+      "requireElement": "WrappedExpiringReadWriteLocker",
+      "extends": [
+        "css:dist/util/locking/ExpiringReadWriteLocker.jsonld#ExpiringReadWriteLocker"
+      ],
+      "comment": "Wraps around an existing {@link ReadWriteLocker} and adds expiration logic to prevent locks from getting stuck.",
+      "parameters": [
+        {
+          "@id": "css:dist/util/locking/WrappedExpiringReadWriteLocker.jsonld#WrappedExpiringReadWriteLocker_expiration",
+          "range": "xsd:number",
+          "comment": "Time in ms after which the lock expires."
+        },
+        {
+          "@id": "css:dist/util/locking/WrappedExpiringReadWriteLocker.jsonld#WrappedExpiringReadWriteLocker_locker",
+          "range": "css:dist/util/locking/ReadWriteLocker.jsonld#ReadWriteLocker",
+          "comment": "Instance of ResourceLocker to use for acquiring a lock."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/locking/WrappedExpiringReadWriteLocker.jsonld#WrappedExpiringReadWriteLocker__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/util/locking/WrappedExpiringReadWriteLocker.jsonld#WrappedExpiringReadWriteLocker__member_locker",
+          "memberFieldName": "locker",
+          "range": "css:dist/util/locking/ReadWriteLocker.jsonld#ReadWriteLocker"
+        },
+        {
+          "@id": "css:dist/util/locking/WrappedExpiringReadWriteLocker.jsonld#WrappedExpiringReadWriteLocker__member_expiration",
+          "memberFieldName": "expiration",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "css:dist/util/locking/WrappedExpiringReadWriteLocker.jsonld#WrappedExpiringReadWriteLocker__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/util/locking/WrappedExpiringReadWriteLocker.jsonld#WrappedExpiringReadWriteLocker__member_withReadLock",
+          "memberFieldName": "withReadLock"
+        },
+        {
+          "@id": "css:dist/util/locking/WrappedExpiringReadWriteLocker.jsonld#WrappedExpiringReadWriteLocker__member_withWriteLock",
+          "memberFieldName": "withWriteLock"
+        },
+        {
+          "@id": "css:dist/util/locking/WrappedExpiringReadWriteLocker.jsonld#WrappedExpiringReadWriteLocker__member_expiringPromise",
+          "memberFieldName": "expiringPromise"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/locking/WrappedExpiringReadWriteLocker.jsonld#WrappedExpiringReadWriteLocker_locker"
+        },
+        {
+          "@id": "css:dist/util/locking/WrappedExpiringReadWriteLocker.jsonld#WrappedExpiringReadWriteLocker_expiration"
+        }
+      ]
+    }
+  ]
+}

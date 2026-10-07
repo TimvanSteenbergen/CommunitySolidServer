@@ -1,0 +1,62 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/accessors/FilterMetadataDataAccessor.jsonld#FilterMetadataDataAccessor",
+      "@type": "Class",
+      "requireElement": "FilterMetadataDataAccessor",
+      "extends": [
+        "css:dist/storage/accessors/PassthroughDataAccessor.jsonld#PassthroughDataAccessor"
+      ],
+      "comment": "A FilterMetadataDataAccessor wraps a DataAccessor such that specific metadata properties can be filtered before passing on the call to the wrapped DataAccessor.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/accessors/FilterMetadataDataAccessor.jsonld#FilterMetadataDataAccessor_accessor",
+          "range": "css:dist/storage/accessors/DataAccessor.jsonld#DataAccessor",
+          "comment": "The DataAccessor to wrap."
+        },
+        {
+          "@id": "css:dist/storage/accessors/FilterMetadataDataAccessor.jsonld#FilterMetadataDataAccessor_filters",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": "css:dist/util/QuadUtil.jsonld#FilterPattern"
+          },
+          "comment": "Filter patterns to be used for metadata removal."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/accessors/FilterMetadataDataAccessor.jsonld#FilterMetadataDataAccessor__member_filters",
+          "memberFieldName": "filters"
+        },
+        {
+          "@id": "css:dist/storage/accessors/FilterMetadataDataAccessor.jsonld#FilterMetadataDataAccessor__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/accessors/FilterMetadataDataAccessor.jsonld#FilterMetadataDataAccessor__member_writeDocument",
+          "memberFieldName": "writeDocument"
+        },
+        {
+          "@id": "css:dist/storage/accessors/FilterMetadataDataAccessor.jsonld#FilterMetadataDataAccessor__member_writeContainer",
+          "memberFieldName": "writeContainer"
+        },
+        {
+          "@id": "css:dist/storage/accessors/FilterMetadataDataAccessor.jsonld#FilterMetadataDataAccessor__member_applyFilters",
+          "memberFieldName": "applyFilters"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/accessors/FilterMetadataDataAccessor.jsonld#FilterMetadataDataAccessor_accessor"
+        },
+        {
+          "@id": "css:dist/storage/accessors/FilterMetadataDataAccessor.jsonld#FilterMetadataDataAccessor_filters"
+        }
+      ]
+    }
+  ]
+}

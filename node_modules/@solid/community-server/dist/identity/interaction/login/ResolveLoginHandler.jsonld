@@ -1,0 +1,70 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/login/ResolveLoginHandler.jsonld#ResolveLoginHandler",
+      "@type": "AbstractClass",
+      "requireElement": "ResolveLoginHandler",
+      "extends": [
+        "css:dist/identity/interaction/JsonInteractionHandler.jsonld#JsonInteractionHandler"
+      ],
+      "comment": "A handler that takes care of all the necessary steps when logging a user in, such as generating a cookie and setting the necessary OIDC information. Classes that resolve login methods should extend this class and implement the `login` method.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/login/ResolveLoginHandler.jsonld#ResolveLoginHandler_accountStore",
+          "range": "css:dist/identity/interaction/account/util/AccountStore.jsonld#AccountStore"
+        },
+        {
+          "@id": "css:dist/identity/interaction/login/ResolveLoginHandler.jsonld#ResolveLoginHandler_cookieStore",
+          "range": "css:dist/identity/interaction/account/util/CookieStore.jsonld#CookieStore"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/login/ResolveLoginHandler.jsonld#ResolveLoginHandler__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/identity/interaction/login/ResolveLoginHandler.jsonld#ResolveLoginHandler__member_accountStore",
+          "memberFieldName": "accountStore",
+          "range": "css:dist/identity/interaction/account/util/AccountStore.jsonld#AccountStore"
+        },
+        {
+          "@id": "css:dist/identity/interaction/login/ResolveLoginHandler.jsonld#ResolveLoginHandler__member_cookieStore",
+          "memberFieldName": "cookieStore",
+          "range": "css:dist/identity/interaction/account/util/CookieStore.jsonld#CookieStore"
+        },
+        {
+          "@id": "css:dist/identity/interaction/login/ResolveLoginHandler.jsonld#ResolveLoginHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/login/ResolveLoginHandler.jsonld#ResolveLoginHandler__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/identity/interaction/login/ResolveLoginHandler.jsonld#ResolveLoginHandler__member_updateRememberSetting",
+          "memberFieldName": "updateRememberSetting"
+        },
+        {
+          "@id": "css:dist/identity/interaction/login/ResolveLoginHandler.jsonld#ResolveLoginHandler__member_login",
+          "memberFieldName": "login"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/login/ResolveLoginHandler.jsonld#ResolveLoginHandler_accountStore"
+        },
+        {
+          "@id": "css:dist/identity/interaction/login/ResolveLoginHandler.jsonld#ResolveLoginHandler_cookieStore"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/patch/N3Patcher.jsonld#N3Patcher",
+      "@type": "Class",
+      "requireElement": "N3Patcher",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/storage/patch/RepresentationPatcher.jsonld#RepresentationPatcher",
+          "genericTypeInstances": [
+            "css:dist/http/representation/RdfDatasetRepresentation.jsonld#RdfDatasetRepresentation"
+          ]
+        }
+      ],
+      "comment": "Applies an N3 Patch to a representation, or creates a new one if required. Follows all the steps from Solid, §5.3.1: https://solid.github.io/specification/protocol#n3-patch",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/patch/N3Patcher.jsonld#N3Patcher__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/storage/patch/N3Patcher.jsonld#N3Patcher__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/patch/N3Patcher.jsonld#N3Patcher__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/storage/patch/N3Patcher.jsonld#N3Patcher__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/storage/patch/N3Patcher.jsonld#N3Patcher__member_patch",
+          "memberFieldName": "patch"
+        },
+        {
+          "@id": "css:dist/storage/patch/N3Patcher.jsonld#N3Patcher__member_applyConditions",
+          "memberFieldName": "applyConditions"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

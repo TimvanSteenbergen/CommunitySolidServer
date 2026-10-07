@@ -1,0 +1,107 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/util/OperationRouterHandler.jsonld#OperationRouterHandler",
+      "@type": "Class",
+      "requireElement": "OperationRouterHandler",
+      "comment": "A {@link BaseRouterHandler} for an {@link OperationHttpHandler}.",
+      "parameters": [
+        {
+          "@id": "css:dist/server/util/OperationRouterHandler.jsonld#OperationRouterHandler_args_baseUrl",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "The base URL of the server. Not required if no value is provided for `allowedPathNames`."
+        },
+        {
+          "@id": "css:dist/server/util/OperationRouterHandler.jsonld#OperationRouterHandler_args_handler",
+          "range": "css:dist/server/OperationHttpHandler.jsonld#OperationHttpHandler",
+          "comment": "The handler to call if all checks pass."
+        },
+        {
+          "@id": "css:dist/server/util/OperationRouterHandler.jsonld#OperationRouterHandler_args_allowedMethods",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": "xsd:string"
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "The allowed method(s). `*` can be used to indicate all methods are allowed. Default is `[ '*' ]`."
+        },
+        {
+          "@id": "css:dist/server/util/OperationRouterHandler.jsonld#OperationRouterHandler_args_allowedPathNames",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": "xsd:string"
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Regular expression(s) used to match the target URL. The base URl without trailing slash will be stripped of before applying the regular expressions, so the input will always start with a `/`. Default is `[ '.*' ]`."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/util/OperationRouterHandler.jsonld#OperationRouterHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/util/OperationRouterHandler.jsonld#OperationRouterHandler__member_canHandle",
+          "memberFieldName": "canHandle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/util/OperationRouterHandler.jsonld#OperationRouterHandler_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "baseUrl",
+              "value": {
+                "@id": "css:dist/server/util/OperationRouterHandler.jsonld#OperationRouterHandler_args_baseUrl"
+              }
+            },
+            {
+              "keyRaw": "handler",
+              "value": {
+                "@id": "css:dist/server/util/OperationRouterHandler.jsonld#OperationRouterHandler_args_handler"
+              }
+            },
+            {
+              "keyRaw": "allowedMethods",
+              "value": {
+                "@id": "css:dist/server/util/OperationRouterHandler.jsonld#OperationRouterHandler_args_allowedMethods"
+              }
+            },
+            {
+              "keyRaw": "allowedPathNames",
+              "value": {
+                "@id": "css:dist/server/util/OperationRouterHandler.jsonld#OperationRouterHandler_args_allowedPathNames"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

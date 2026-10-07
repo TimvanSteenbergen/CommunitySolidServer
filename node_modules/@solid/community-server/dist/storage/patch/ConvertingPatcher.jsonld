@@ -1,0 +1,120 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/patch/ConvertingPatcher.jsonld#ConvertingPatcher",
+      "@type": "Class",
+      "requireElement": "ConvertingPatcher",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/storage/patch/RepresentationPatcher.jsonld#RepresentationPatcher",
+          "genericTypeInstances": [
+            "css:dist/http/representation/Representation.jsonld#Representation"
+          ]
+        }
+      ],
+      "comment": "A `ConvertingPatcher` converts a document to its `intermediateType`, sends the result to the wrapped patcher, and then converts back to its original type. No changes will take place if no `intermediateType` is provided.  In case there is no resource yet and a new one needs to be created, the result of the wrapped patcher will be converted to the provided `defaultType`. In case no `defaultType` is provided, the patcher output will be returned directly.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/patch/ConvertingPatcher.jsonld#ConvertingPatcher_intermediateType",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Content-type of the intermediate Representation if conversion is needed."
+        },
+        {
+          "@id": "css:dist/storage/patch/ConvertingPatcher.jsonld#ConvertingPatcher_defaultType",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Content-type in case a new resource gets created and needs to be converted."
+        },
+        {
+          "@id": "css:dist/storage/patch/ConvertingPatcher.jsonld#ConvertingPatcher_converter",
+          "range": "css:dist/storage/conversion/RepresentationConverter.jsonld#RepresentationConverter",
+          "comment": "Converter that will be used to generate intermediate Representation."
+        },
+        {
+          "@id": "css:dist/storage/patch/ConvertingPatcher.jsonld#ConvertingPatcher_patcher",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/patch/RepresentationPatcher.jsonld#RepresentationPatcher",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          },
+          "comment": "Patcher that will be called with the Representation."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/patch/ConvertingPatcher.jsonld#ConvertingPatcher__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/storage/patch/ConvertingPatcher.jsonld#ConvertingPatcher__member_patcher",
+          "memberFieldName": "patcher"
+        },
+        {
+          "@id": "css:dist/storage/patch/ConvertingPatcher.jsonld#ConvertingPatcher__member_converter",
+          "memberFieldName": "converter"
+        },
+        {
+          "@id": "css:dist/storage/patch/ConvertingPatcher.jsonld#ConvertingPatcher__member_intermediateType",
+          "memberFieldName": "intermediateType"
+        },
+        {
+          "@id": "css:dist/storage/patch/ConvertingPatcher.jsonld#ConvertingPatcher__member_defaultType",
+          "memberFieldName": "defaultType"
+        },
+        {
+          "@id": "css:dist/storage/patch/ConvertingPatcher.jsonld#ConvertingPatcher__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/patch/ConvertingPatcher.jsonld#ConvertingPatcher__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/storage/patch/ConvertingPatcher.jsonld#ConvertingPatcher__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/patch/ConvertingPatcher.jsonld#ConvertingPatcher_patcher"
+        },
+        {
+          "@id": "css:dist/storage/patch/ConvertingPatcher.jsonld#ConvertingPatcher_converter"
+        },
+        {
+          "@id": "css:dist/storage/patch/ConvertingPatcher.jsonld#ConvertingPatcher_intermediateType"
+        },
+        {
+          "@id": "css:dist/storage/patch/ConvertingPatcher.jsonld#ConvertingPatcher_defaultType"
+        }
+      ]
+    }
+  ]
+}

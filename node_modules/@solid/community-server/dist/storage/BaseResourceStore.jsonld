@@ -1,0 +1,45 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/BaseResourceStore.jsonld#BaseResourceStore",
+      "@type": "Class",
+      "requireElement": "BaseResourceStore",
+      "extends": [
+        "css:dist/storage/ResourceStore.jsonld#ResourceStore"
+      ],
+      "comment": "Base implementation of ResourceStore for implementers of custom stores.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/BaseResourceStore.jsonld#BaseResourceStore__member_hasResource",
+          "memberFieldName": "hasResource"
+        },
+        {
+          "@id": "css:dist/storage/BaseResourceStore.jsonld#BaseResourceStore__member_getRepresentation",
+          "memberFieldName": "getRepresentation"
+        },
+        {
+          "@id": "css:dist/storage/BaseResourceStore.jsonld#BaseResourceStore__member_setRepresentation",
+          "memberFieldName": "setRepresentation"
+        },
+        {
+          "@id": "css:dist/storage/BaseResourceStore.jsonld#BaseResourceStore__member_addResource",
+          "memberFieldName": "addResource"
+        },
+        {
+          "@id": "css:dist/storage/BaseResourceStore.jsonld#BaseResourceStore__member_deleteResource",
+          "memberFieldName": "deleteResource"
+        },
+        {
+          "@id": "css:dist/storage/BaseResourceStore.jsonld#BaseResourceStore__member_modifyResource",
+          "memberFieldName": "modifyResource"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

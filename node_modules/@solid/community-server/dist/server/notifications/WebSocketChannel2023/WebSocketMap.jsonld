@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocketMap.jsonld#WebSocketMap",
+      "@type": "Class",
+      "requireElement": "WebSocketMap",
+      "extends": [
+        "css:dist/init/cluster/SingleThreaded.jsonld#SingleThreaded"
+      ],
+      "comment": "A {@link SetMultiMap} linking identifiers to a set of WebSockets. An extension of {@link WrappedSetMultiMap} to make sure Components.js allows us to create this in the config, as {@link WrappedSetMultiMap} has a constructor not supported.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

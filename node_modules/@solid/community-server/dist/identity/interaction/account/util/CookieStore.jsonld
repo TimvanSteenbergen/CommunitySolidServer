@@ -1,0 +1,34 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/account/util/CookieStore.jsonld#CookieStore",
+      "@type": "AbstractClass",
+      "requireElement": "CookieStore",
+      "comment": "Used to generate and store cookies.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/account/util/CookieStore.jsonld#CookieStore__member_generate",
+          "memberFieldName": "generate"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/CookieStore.jsonld#CookieStore__member_get",
+          "memberFieldName": "get"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/CookieStore.jsonld#CookieStore__member_refresh",
+          "memberFieldName": "refresh"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/CookieStore.jsonld#CookieStore__member_delete",
+          "memberFieldName": "delete"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

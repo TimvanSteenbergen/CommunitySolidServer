@@ -1,0 +1,22 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/init/final/Finalizable.jsonld#Finalizable",
+      "@type": "AbstractClass",
+      "requireElement": "Finalizable",
+      "comment": "Allows for cleaning up an object and stopping relevant loops when the application needs to be stopped. Use this interface to add finalization logic to classes that already extend some other type. NOTE: classes without an existing extends-relation should extend from Finalizer instead!",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/init/final/Finalizable.jsonld#Finalizable__member_finalize",
+          "memberFieldName": "finalize"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

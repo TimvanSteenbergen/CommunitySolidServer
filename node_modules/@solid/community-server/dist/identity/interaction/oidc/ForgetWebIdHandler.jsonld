@@ -1,0 +1,50 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/oidc/ForgetWebIdHandler.jsonld#ForgetWebIdHandler",
+      "@type": "Class",
+      "requireElement": "ForgetWebIdHandler",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/identity/interaction/JsonInteractionHandler.jsonld#JsonInteractionHandler",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeWildcard"
+            }
+          ]
+        }
+      ],
+      "comment": "Forgets the chosen WebID in an OIDC interaction, causing the next policy trigger to be one where a new WebID has to be chosen.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/oidc/ForgetWebIdHandler.jsonld#ForgetWebIdHandler_providerFactory",
+          "range": "css:dist/identity/configuration/ProviderFactory.jsonld#ProviderFactory"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/oidc/ForgetWebIdHandler.jsonld#ForgetWebIdHandler__member_providerFactory",
+          "memberFieldName": "providerFactory"
+        },
+        {
+          "@id": "css:dist/identity/interaction/oidc/ForgetWebIdHandler.jsonld#ForgetWebIdHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/oidc/ForgetWebIdHandler.jsonld#ForgetWebIdHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/oidc/ForgetWebIdHandler.jsonld#ForgetWebIdHandler_providerFactory"
+        }
+      ]
+    }
+  ]
+}

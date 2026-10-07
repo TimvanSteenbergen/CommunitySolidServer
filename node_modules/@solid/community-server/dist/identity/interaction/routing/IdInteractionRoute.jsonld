@@ -1,0 +1,120 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/routing/IdInteractionRoute.jsonld#IdInteractionRoute",
+      "@type": "Class",
+      "requireElement": "IdInteractionRoute",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeUnion",
+              "parameterRangeElements": [
+                {
+                  "@type": "ParameterRangeGenericTypeReference",
+                  "parameterRangeGenericType": "css:dist/identity/interaction/routing/IdInteractionRoute.jsonld#IdInteractionRoute__generic_TBase"
+                },
+                {
+                  "@type": "ParameterRangeGenericTypeReference",
+                  "parameterRangeGenericType": "css:dist/identity/interaction/routing/IdInteractionRoute.jsonld#IdInteractionRoute__generic_TId"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "comment": "An {@link InteractionRoute} for routes that have a dynamic identifier in their path.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/identity/interaction/routing/IdInteractionRoute.jsonld#IdInteractionRoute__generic_TBase",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/IdInteractionRoute.jsonld#IdInteractionRoute__generic_TId",
+          "range": "xsd:string"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/routing/IdInteractionRoute.jsonld#IdInteractionRoute_idName",
+          "range": {
+            "@type": "ParameterRangeGenericTypeReference",
+            "parameterRangeGenericType": "css:dist/identity/interaction/routing/IdInteractionRoute.jsonld#IdInteractionRoute__generic_TId"
+          }
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/IdInteractionRoute.jsonld#IdInteractionRoute_ensureSlash",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/IdInteractionRoute.jsonld#IdInteractionRoute_base",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "css:dist/identity/interaction/routing/IdInteractionRoute.jsonld#IdInteractionRoute__generic_TBase"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/routing/IdInteractionRoute.jsonld#IdInteractionRoute__member_base",
+          "memberFieldName": "base"
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/IdInteractionRoute.jsonld#IdInteractionRoute__member_idName",
+          "memberFieldName": "idName"
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/IdInteractionRoute.jsonld#IdInteractionRoute__member_ensureSlash",
+          "memberFieldName": "ensureSlash"
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/IdInteractionRoute.jsonld#IdInteractionRoute__member_matchRegex",
+          "memberFieldName": "matchRegex"
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/IdInteractionRoute.jsonld#IdInteractionRoute__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/IdInteractionRoute.jsonld#IdInteractionRoute__member_getPath",
+          "memberFieldName": "getPath"
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/IdInteractionRoute.jsonld#IdInteractionRoute__member_matchPath",
+          "memberFieldName": "matchPath"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/routing/IdInteractionRoute.jsonld#IdInteractionRoute_base"
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/IdInteractionRoute.jsonld#IdInteractionRoute_idName"
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/IdInteractionRoute.jsonld#IdInteractionRoute_ensureSlash"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/patch/ImmutableMetadataPatcher.jsonld#ImmutableMetadataPatcher",
+      "@type": "Class",
+      "requireElement": "ImmutableMetadataPatcher",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/storage/patch/RepresentationPatcher.jsonld#RepresentationPatcher",
+          "genericTypeInstances": [
+            "css:dist/http/representation/RdfDatasetRepresentation.jsonld#RdfDatasetRepresentation"
+          ]
+        }
+      ],
+      "comment": "Guarantees that certain PATCH operations MUST NOT update certain triples in metadata resources. Furthermore, this class also handles the patching for metadata resources. List of triples that must not be updated are given during instantiation with the ImmutableTriple class. When there is a change to an Immutable Triple, then a ConflictError will be thrown.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/patch/ImmutableMetadataPatcher.jsonld#ImmutableMetadataPatcher_metadataStrategy",
+          "range": "css:dist/http/auxiliary/AuxiliaryStrategy.jsonld#AuxiliaryStrategy"
+        },
+        {
+          "@id": "css:dist/storage/patch/ImmutableMetadataPatcher.jsonld#ImmutableMetadataPatcher_immutablePatterns",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": "css:dist/util/QuadUtil.jsonld#FilterPattern"
+          }
+        },
+        {
+          "@id": "css:dist/storage/patch/ImmutableMetadataPatcher.jsonld#ImmutableMetadataPatcher_patcher",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/patch/RepresentationPatcher.jsonld#RepresentationPatcher",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/patch/ImmutableMetadataPatcher.jsonld#ImmutableMetadataPatcher__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/storage/patch/ImmutableMetadataPatcher.jsonld#ImmutableMetadataPatcher__member_patcher",
+          "memberFieldName": "patcher"
+        },
+        {
+          "@id": "css:dist/storage/patch/ImmutableMetadataPatcher.jsonld#ImmutableMetadataPatcher__member_metadataStrategy",
+          "memberFieldName": "metadataStrategy"
+        },
+        {
+          "@id": "css:dist/storage/patch/ImmutableMetadataPatcher.jsonld#ImmutableMetadataPatcher__member_immutablePatterns",
+          "memberFieldName": "immutablePatterns"
+        },
+        {
+          "@id": "css:dist/storage/patch/ImmutableMetadataPatcher.jsonld#ImmutableMetadataPatcher__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/patch/ImmutableMetadataPatcher.jsonld#ImmutableMetadataPatcher__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/storage/patch/ImmutableMetadataPatcher.jsonld#ImmutableMetadataPatcher__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/patch/ImmutableMetadataPatcher.jsonld#ImmutableMetadataPatcher_patcher"
+        },
+        {
+          "@id": "css:dist/storage/patch/ImmutableMetadataPatcher.jsonld#ImmutableMetadataPatcher_metadataStrategy"
+        },
+        {
+          "@id": "css:dist/storage/patch/ImmutableMetadataPatcher.jsonld#ImmutableMetadataPatcher_immutablePatterns"
+        }
+      ]
+    }
+  ]
+}

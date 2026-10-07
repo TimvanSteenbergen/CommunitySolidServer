@@ -1,0 +1,32 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/input/metadata/SlugParser.jsonld#SlugParser",
+      "@type": "Class",
+      "requireElement": "SlugParser",
+      "extends": [
+        "css:dist/http/input/metadata/MetadataParser.jsonld#MetadataParser"
+      ],
+      "comment": "Converts the contents of the slug header to metadata.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/input/metadata/SlugParser.jsonld#SlugParser__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/http/input/metadata/SlugParser.jsonld#SlugParser__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

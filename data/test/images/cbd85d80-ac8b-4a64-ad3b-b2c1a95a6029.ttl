@@ -1,0 +1,6 @@
+<http://localhost:3000/test/images/cbd85d80-ac8b-4a64-ad3b-b2c1a95a6029.ttl> a <https://schema.org/ImageObject>;
+    <https://schema.org/contentUrl> <http://localhost:3000/test/images/cbd85d80-ac8b-4a64-ad3b-b2c1a95a6029.png>;
+    <https://schema.org/width> 474;
+    <https://schema.org/height> 271;
+    <https://schema.org/encodingFormat> "image/png";
+    <https://schema.org/uploadDate> "2026-10-06T19:10:35.113Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>.

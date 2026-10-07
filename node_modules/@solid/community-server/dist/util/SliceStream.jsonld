@@ -1,0 +1,138 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/SliceStream.jsonld#SliceStream",
+      "@type": "Class",
+      "requireElement": "SliceStream",
+      "comment": "A stream that slices a part out of another stream. `start` and `end` are inclusive. If `end` is not defined it is until the end of the stream.  Negative `start` values can be used to instead slice that many streams off the end of the stream. This requires the `size` field to be defined.  Both object and non-object streams are supported. This needs to be explicitly specified, as the class makes no assumptions based on the object mode of the source stream.",
+      "parameters": [
+        {
+          "@id": "css:dist/util/SliceStream.jsonld#SliceStream_source",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/util/SliceStream.jsonld#SliceStream_options_start",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "css:dist/util/SliceStream.jsonld#SliceStream_options_end",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/util/SliceStream.jsonld#SliceStream_options_size",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/SliceStream.jsonld#SliceStream__member_source",
+          "memberFieldName": "source",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/util/SliceStream.jsonld#SliceStream__member_remainingSkip",
+          "memberFieldName": "remainingSkip",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "css:dist/util/SliceStream.jsonld#SliceStream__member_remainingRead",
+          "memberFieldName": "remainingRead",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "css:dist/util/SliceStream.jsonld#SliceStream__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/util/SliceStream.jsonld#SliceStream__member__transform",
+          "memberFieldName": "_transform"
+        },
+        {
+          "@id": "css:dist/util/SliceStream.jsonld#SliceStream__member_binarySlice",
+          "memberFieldName": "binarySlice"
+        },
+        {
+          "@id": "css:dist/util/SliceStream.jsonld#SliceStream__member_objectSlice",
+          "memberFieldName": "objectSlice"
+        },
+        {
+          "@id": "css:dist/util/SliceStream.jsonld#SliceStream__member_checkEnd",
+          "memberFieldName": "checkEnd"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/SliceStream.jsonld#SliceStream_source"
+        },
+        {
+          "@id": "css:dist/util/SliceStream.jsonld#SliceStream_options__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "start",
+              "value": {
+                "@id": "css:dist/util/SliceStream.jsonld#SliceStream_options_start"
+              }
+            },
+            {
+              "keyRaw": "end",
+              "value": {
+                "@id": "css:dist/util/SliceStream.jsonld#SliceStream_options_end"
+              }
+            },
+            {
+              "keyRaw": "size",
+              "value": {
+                "@id": "css:dist/util/SliceStream.jsonld#SliceStream_options_size"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/util/SliceStream.jsonld#SliceStreamOptions",
+      "@type": "AbstractClass",
+      "requireElement": "SliceStreamOptions",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/SliceStream.jsonld#SliceStreamOptions__member_start",
+          "memberFieldName": "start"
+        },
+        {
+          "@id": "css:dist/util/SliceStream.jsonld#SliceStreamOptions__member_end",
+          "memberFieldName": "end"
+        },
+        {
+          "@id": "css:dist/util/SliceStream.jsonld#SliceStreamOptions__member_size",
+          "memberFieldName": "size"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

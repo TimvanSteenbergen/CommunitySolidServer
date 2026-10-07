@@ -1,0 +1,143 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/keyvalue/WrappedExpiringStorage.jsonld#WrappedExpiringStorage",
+      "@type": "Class",
+      "requireElement": "WrappedExpiringStorage",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/storage/keyvalue/ExpiringStorage.jsonld#ExpiringStorage",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/storage/keyvalue/WrappedExpiringStorage.jsonld#WrappedExpiringStorage__generic_TKey"
+            },
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/storage/keyvalue/WrappedExpiringStorage.jsonld#WrappedExpiringStorage__generic_TValue"
+            }
+          ]
+        }
+      ],
+      "comment": "A storage that wraps around another storage and expires resources based on the given (optional) expiry date. Will delete expired entries when trying to get their value. Has a timer that will delete all expired data every hour (default value).",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedExpiringStorage.jsonld#WrappedExpiringStorage__generic_TKey"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedExpiringStorage.jsonld#WrappedExpiringStorage__generic_TValue"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedExpiringStorage.jsonld#WrappedExpiringStorage_timeout",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "How often the expired data needs to be checked in minutes."
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedExpiringStorage.jsonld#WrappedExpiringStorage_source",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "css:dist/storage/keyvalue/WrappedExpiringStorage.jsonld#WrappedExpiringStorage__generic_TKey"
+              },
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          },
+          "comment": "KeyValueStorage to actually store the data."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedExpiringStorage.jsonld#WrappedExpiringStorage__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedExpiringStorage.jsonld#WrappedExpiringStorage__member_source",
+          "memberFieldName": "source"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedExpiringStorage.jsonld#WrappedExpiringStorage__member_timer",
+          "memberFieldName": "timer"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedExpiringStorage.jsonld#WrappedExpiringStorage__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedExpiringStorage.jsonld#WrappedExpiringStorage__member_get",
+          "memberFieldName": "get"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedExpiringStorage.jsonld#WrappedExpiringStorage__member_has",
+          "memberFieldName": "has"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedExpiringStorage.jsonld#WrappedExpiringStorage__member_set",
+          "memberFieldName": "set"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedExpiringStorage.jsonld#WrappedExpiringStorage__member_set",
+          "memberFieldName": "set"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedExpiringStorage.jsonld#WrappedExpiringStorage__member_delete",
+          "memberFieldName": "delete"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedExpiringStorage.jsonld#WrappedExpiringStorage__member_entries",
+          "memberFieldName": "entries"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedExpiringStorage.jsonld#WrappedExpiringStorage__member_removeExpiredEntries",
+          "memberFieldName": "removeExpiredEntries"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedExpiringStorage.jsonld#WrappedExpiringStorage__member_getUnexpired",
+          "memberFieldName": "getUnexpired"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedExpiringStorage.jsonld#WrappedExpiringStorage__member_isExpired",
+          "memberFieldName": "isExpired"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedExpiringStorage.jsonld#WrappedExpiringStorage__member_toExpires",
+          "memberFieldName": "toExpires"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedExpiringStorage.jsonld#WrappedExpiringStorage__member_toData",
+          "memberFieldName": "toData"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedExpiringStorage.jsonld#WrappedExpiringStorage_source"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/WrappedExpiringStorage.jsonld#WrappedExpiringStorage_timeout"
+        }
+      ]
+    }
+  ]
+}

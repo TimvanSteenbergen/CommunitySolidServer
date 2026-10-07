@@ -1,0 +1,176 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandler",
+      "@type": "Class",
+      "requireElement": "LinkWebIdHandler",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/identity/interaction/JsonInteractionHandler.jsonld#JsonInteractionHandler",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeWildcard"
+            }
+          ]
+        },
+        "css:dist/identity/interaction/JsonView.jsonld#JsonView"
+      ],
+      "comment": "Handles the linking of WebIDs to account, thereby registering them to the server IDP.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandler_args_baseUrl",
+          "range": "xsd:string",
+          "comment": "Base URL of the server. Used to indicate in the response what the object of the `solid:oidcIssuer` triple should be."
+        },
+        {
+          "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandler_args_ownershipValidator",
+          "range": "css:dist/identity/ownership/OwnershipValidator.jsonld#OwnershipValidator",
+          "comment": "Validates whether the user trying to link the WebID is the actual owner of that WebID."
+        },
+        {
+          "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandler_args_podStore",
+          "range": "css:dist/identity/interaction/pod/util/PodStore.jsonld#PodStore",
+          "comment": "Pod store to find out if the account created the pod containing the WebID."
+        },
+        {
+          "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandler_args_webIdStore",
+          "range": "css:dist/identity/interaction/webid/util/WebIdStore.jsonld#WebIdStore",
+          "comment": "WebID store to store WebID links."
+        },
+        {
+          "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandler_args_webIdRoute",
+          "range": "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute",
+          "comment": "Route used to generate the WebID link resource URL."
+        },
+        {
+          "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandler_args_storageStrategy",
+          "range": "css:dist/server/description/StorageLocationStrategy.jsonld#StorageLocationStrategy",
+          "comment": "Before calling the {@link OwnershipValidator}, we first check if the target WebID is in a pod owned by the user."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandler__member_logger",
+          "memberFieldName": "logger"
+        },
+        {
+          "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandler__member_baseUrl",
+          "memberFieldName": "baseUrl"
+        },
+        {
+          "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandler__member_ownershipValidator",
+          "memberFieldName": "ownershipValidator"
+        },
+        {
+          "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandler__member_podStore",
+          "memberFieldName": "podStore"
+        },
+        {
+          "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandler__member_webIdStore",
+          "memberFieldName": "webIdStore"
+        },
+        {
+          "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandler__member_webIdRoute",
+          "memberFieldName": "webIdRoute"
+        },
+        {
+          "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandler__member_storageStrategy",
+          "memberFieldName": "storageStrategy"
+        },
+        {
+          "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandler__member_getView",
+          "memberFieldName": "getView"
+        },
+        {
+          "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandler_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "baseUrl",
+              "value": {
+                "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandler_args_baseUrl"
+              }
+            },
+            {
+              "keyRaw": "ownershipValidator",
+              "value": {
+                "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandler_args_ownershipValidator"
+              }
+            },
+            {
+              "keyRaw": "podStore",
+              "value": {
+                "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandler_args_podStore"
+              }
+            },
+            {
+              "keyRaw": "webIdStore",
+              "value": {
+                "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandler_args_webIdStore"
+              }
+            },
+            {
+              "keyRaw": "webIdRoute",
+              "value": {
+                "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandler_args_webIdRoute"
+              }
+            },
+            {
+              "keyRaw": "storageStrategy",
+              "value": {
+                "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandler_args_storageStrategy"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandlerArgs",
+      "@type": "AbstractClass",
+      "requireElement": "LinkWebIdHandlerArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandlerArgs__member_baseUrl",
+          "memberFieldName": "baseUrl"
+        },
+        {
+          "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandlerArgs__member_ownershipValidator",
+          "memberFieldName": "ownershipValidator"
+        },
+        {
+          "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandlerArgs__member_podStore",
+          "memberFieldName": "podStore"
+        },
+        {
+          "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandlerArgs__member_webIdStore",
+          "memberFieldName": "webIdStore"
+        },
+        {
+          "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandlerArgs__member_webIdRoute",
+          "memberFieldName": "webIdRoute"
+        },
+        {
+          "@id": "css:dist/identity/interaction/webid/LinkWebIdHandler.jsonld#LinkWebIdHandlerArgs__member_storageStrategy",
+          "memberFieldName": "storageStrategy"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

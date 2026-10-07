@@ -1,0 +1,94 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookEmitter.jsonld#WebhookEmitter",
+      "@type": "Class",
+      "requireElement": "WebhookEmitter",
+      "extends": [
+        "css:dist/server/notifications/NotificationEmitter.jsonld#NotificationEmitter"
+      ],
+      "comment": "Emits a notification representation using the WebhookChannel2023 specification.  At the time of writing it is not specified how exactly a notification sender should make its requests verifiable, so for now we use a token similar to those from Solid-OIDC, signed by the server itself.  Generates a DPoP token and proof, and adds those to the HTTP request that is sent to the target.  The `expiration` input parameter is how long the generated token should be valid in minutes. Default is 20.",
+      "parameters": [
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookEmitter.jsonld#WebhookEmitter_baseUrl",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookEmitter.jsonld#WebhookEmitter_expiration",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookEmitter.jsonld#WebhookEmitter_webIdRoute",
+          "range": "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookEmitter.jsonld#WebhookEmitter_jwkGenerator",
+          "range": "css:dist/identity/configuration/JwkGenerator.jsonld#JwkGenerator"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookEmitter.jsonld#WebhookEmitter__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookEmitter.jsonld#WebhookEmitter__member_issuer",
+          "memberFieldName": "issuer"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookEmitter.jsonld#WebhookEmitter__member_webId",
+          "memberFieldName": "webId"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookEmitter.jsonld#WebhookEmitter__member_jwkGenerator",
+          "memberFieldName": "jwkGenerator"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookEmitter.jsonld#WebhookEmitter__member_expiration",
+          "memberFieldName": "expiration"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookEmitter.jsonld#WebhookEmitter__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookEmitter.jsonld#WebhookEmitter__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookEmitter.jsonld#WebhookEmitter__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookEmitter.jsonld#WebhookEmitter_baseUrl"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookEmitter.jsonld#WebhookEmitter_webIdRoute"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookEmitter.jsonld#WebhookEmitter_jwkGenerator"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookEmitter.jsonld#WebhookEmitter_expiration"
+        }
+      ]
+    }
+  ]
+}

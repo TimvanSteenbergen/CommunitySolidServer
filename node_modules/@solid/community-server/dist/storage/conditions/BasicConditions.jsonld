@@ -1,0 +1,33 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/conditions/BasicConditions.jsonld#BasicConditionsOptions",
+      "@type": "AbstractClass",
+      "requireElement": "BasicConditionsOptions",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/conditions/BasicConditions.jsonld#BasicConditionsOptions__member_matchesETag",
+          "memberFieldName": "matchesETag"
+        },
+        {
+          "@id": "css:dist/storage/conditions/BasicConditions.jsonld#BasicConditionsOptions__member_notMatchesETag",
+          "memberFieldName": "notMatchesETag"
+        },
+        {
+          "@id": "css:dist/storage/conditions/BasicConditions.jsonld#BasicConditionsOptions__member_modifiedSince",
+          "memberFieldName": "modifiedSince"
+        },
+        {
+          "@id": "css:dist/storage/conditions/BasicConditions.jsonld#BasicConditionsOptions__member_unmodifiedSince",
+          "memberFieldName": "unmodifiedSince"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

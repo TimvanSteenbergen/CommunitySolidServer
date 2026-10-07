@@ -1,0 +1,17 @@
+{
+  "name": "css-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "community-solid-server -c @css:config/file.json -c ./config/longer-lock.json -f ./data -p 3000 -b http://localhost:3000/ --seedConfig ./seed.json",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@solid/community-server": "^7.2.0"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/conversion/ErrorToJsonConverter.jsonld#ErrorToJsonConverter",
+      "@type": "Class",
+      "requireElement": "ErrorToJsonConverter",
+      "extends": [
+        "css:dist/storage/conversion/BaseTypedRepresentationConverter.jsonld#BaseTypedRepresentationConverter"
+      ],
+      "comment": "Converts an Error object to JSON by copying its fields.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/conversion/ErrorToJsonConverter.jsonld#ErrorToJsonConverter__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ErrorToJsonConverter.jsonld#ErrorToJsonConverter__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ErrorToJsonConverter.jsonld#ErrorToJsonConverter__member_errorToJson",
+          "memberFieldName": "errorToJson"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

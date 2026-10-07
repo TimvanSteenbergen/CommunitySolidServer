@@ -1,0 +1,8 @@
+<http://localhost:3000/test/organizations/c777129b-919b-4457-95ae-eda05d43c490.ttl> a <https://schema.org/Organization>;
+    <https://schema.org/name> "Tieka";
+    <https://schema.org/description> "Mijn bedrijf";
+    <https://schema.org/email> "d@tieka.nl";
+    <https://schema.org/telephone> "012345678";
+    <https://schema.org/url> <https://www.tieka.nl>;
+    <https://schema.org/identifier> <https://www.tieka.nl//profile/card/#me>;
+    <https://schema.org/location> <http://localhost:3000/test/locations/e2a8a3ba-fcbf-420b-a53c-3c56e59214bd.ttl>.

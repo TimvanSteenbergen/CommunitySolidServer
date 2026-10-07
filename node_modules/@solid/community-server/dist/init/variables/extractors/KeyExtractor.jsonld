@@ -1,0 +1,63 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/init/variables/extractors/KeyExtractor.jsonld#KeyExtractor",
+      "@type": "Class",
+      "requireElement": "KeyExtractor",
+      "extends": [
+        "css:dist/init/variables/extractors/ShorthandExtractor.jsonld#ShorthandExtractor"
+      ],
+      "comment": "A simple {@link ShorthandExtractor} that extracts a single value from the input map. Returns the default value if it was defined in case no value was found in the map.",
+      "parameters": [
+        {
+          "@id": "css:dist/init/variables/extractors/KeyExtractor.jsonld#KeyExtractor_key",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/init/variables/extractors/KeyExtractor.jsonld#KeyExtractor_defaultValue",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeWildcard"
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/init/variables/extractors/KeyExtractor.jsonld#KeyExtractor__member_key",
+          "memberFieldName": "key"
+        },
+        {
+          "@id": "css:dist/init/variables/extractors/KeyExtractor.jsonld#KeyExtractor__member_defaultValue",
+          "memberFieldName": "defaultValue"
+        },
+        {
+          "@id": "css:dist/init/variables/extractors/KeyExtractor.jsonld#KeyExtractor__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/init/variables/extractors/KeyExtractor.jsonld#KeyExtractor__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/init/variables/extractors/KeyExtractor.jsonld#KeyExtractor_key"
+        },
+        {
+          "@id": "css:dist/init/variables/extractors/KeyExtractor.jsonld#KeyExtractor_defaultValue"
+        }
+      ]
+    }
+  ]
+}

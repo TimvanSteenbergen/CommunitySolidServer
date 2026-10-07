@@ -1,0 +1,46 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/authorization/UnionPermissionReader.jsonld#UnionPermissionReader",
+      "@type": "Class",
+      "requireElement": "UnionPermissionReader",
+      "comment": "Combines the results of multiple PermissionReaders. Every permission in every credential type is handled according to the rule `false` \\> `true` \\> `undefined`.",
+      "parameters": [
+        {
+          "@id": "css:dist/authorization/UnionPermissionReader.jsonld#UnionPermissionReader_readers",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": "css:dist/authorization/PermissionReader.jsonld#PermissionReader"
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/authorization/UnionPermissionReader.jsonld#UnionPermissionReader__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/authorization/UnionPermissionReader.jsonld#UnionPermissionReader__member_combine",
+          "memberFieldName": "combine"
+        },
+        {
+          "@id": "css:dist/authorization/UnionPermissionReader.jsonld#UnionPermissionReader__member_mergePermissionMaps",
+          "memberFieldName": "mergePermissionMaps"
+        },
+        {
+          "@id": "css:dist/authorization/UnionPermissionReader.jsonld#UnionPermissionReader__member_mergePermissions",
+          "memberFieldName": "mergePermissions"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/authorization/UnionPermissionReader.jsonld#UnionPermissionReader_readers"
+        }
+      ]
+    }
+  ]
+}

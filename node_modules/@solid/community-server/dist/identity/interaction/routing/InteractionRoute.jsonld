@@ -1,0 +1,32 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute",
+      "@type": "AbstractClass",
+      "requireElement": "InteractionRoute",
+      "comment": "Routes are used to handle the pathing for API calls.  They can have dynamic values in the paths they support. Typings are used to indicate the keys used to indicate what the corresponding values are.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute__generic_T",
+          "range": "xsd:string"
+        }
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute__member_getPath",
+          "memberFieldName": "getPath"
+        },
+        {
+          "@id": "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute__member_matchPath",
+          "memberFieldName": "matchPath"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

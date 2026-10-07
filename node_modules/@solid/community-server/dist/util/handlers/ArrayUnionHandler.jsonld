@@ -1,0 +1,91 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/handlers/ArrayUnionHandler.jsonld#ArrayUnionHandler",
+      "@type": "Class",
+      "requireElement": "ArrayUnionHandler",
+      "comment": "A utility handler that concatenates the results of all its handlers into a single result.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/util/handlers/ArrayUnionHandler.jsonld#ArrayUnionHandler__generic_T",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeWildcard"
+              },
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": {
+                  "@type": "ParameterRangeWildcard"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/util/handlers/ArrayUnionHandler.jsonld#ArrayUnionHandler_handlers",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/util/handlers/ArrayUnionHandler.jsonld#ArrayUnionHandler__generic_T"
+            }
+          }
+        },
+        {
+          "@id": "css:dist/util/handlers/ArrayUnionHandler.jsonld#ArrayUnionHandler_requireAll",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/util/handlers/ArrayUnionHandler.jsonld#ArrayUnionHandler_ignoreErrors",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/handlers/ArrayUnionHandler.jsonld#ArrayUnionHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/util/handlers/ArrayUnionHandler.jsonld#ArrayUnionHandler__member_combine",
+          "memberFieldName": "combine"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/handlers/ArrayUnionHandler.jsonld#ArrayUnionHandler_handlers"
+        },
+        {
+          "@id": "css:dist/util/handlers/ArrayUnionHandler.jsonld#ArrayUnionHandler_requireAll"
+        },
+        {
+          "@id": "css:dist/util/handlers/ArrayUnionHandler.jsonld#ArrayUnionHandler_ignoreErrors"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/init/migration/SingleContainerJsonStorage.jsonld#SingleContainerJsonStorage",
+      "@type": "Class",
+      "requireElement": "SingleContainerJsonStorage",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/storage/keyvalue/JsonResourceStorage.jsonld#JsonResourceStorage",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/init/migration/SingleContainerJsonStorage.jsonld#SingleContainerJsonStorage__generic_T"
+            }
+          ]
+        }
+      ],
+      "comment": "A variant of a {@link JsonResourceStorage} where the `entries()` call does not recursively iterate through all containers. Only the documents that are found in the root container are returned.  This class was created to support migration where different storages are nested in one main `.internal` container, and we specifically want to only return entries of one storage.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/init/migration/SingleContainerJsonStorage.jsonld#SingleContainerJsonStorage__generic_T"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/init/migration/SingleContainerJsonStorage.jsonld#SingleContainerJsonStorage_baseUrl",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/init/migration/SingleContainerJsonStorage.jsonld#SingleContainerJsonStorage_container",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/init/migration/SingleContainerJsonStorage.jsonld#SingleContainerJsonStorage_source",
+          "range": "css:dist/storage/ResourceStore.jsonld#ResourceStore"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/init/migration/SingleContainerJsonStorage.jsonld#SingleContainerJsonStorage__member_getResourceEntries",
+          "memberFieldName": "getResourceEntries"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/init/migration/SingleContainerJsonStorage.jsonld#SingleContainerJsonStorage_source"
+        },
+        {
+          "@id": "css:dist/init/migration/SingleContainerJsonStorage.jsonld#SingleContainerJsonStorage_baseUrl"
+        },
+        {
+          "@id": "css:dist/init/migration/SingleContainerJsonStorage.jsonld#SingleContainerJsonStorage_container"
+        }
+      ]
+    }
+  ]
+}

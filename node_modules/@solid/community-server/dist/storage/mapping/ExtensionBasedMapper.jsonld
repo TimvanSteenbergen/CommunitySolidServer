@@ -1,0 +1,114 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/mapping/ExtensionBasedMapper.jsonld#ExtensionBasedMapper",
+      "@type": "Class",
+      "requireElement": "ExtensionBasedMapper",
+      "extends": [
+        "css:dist/storage/mapping/BaseFileIdentifierMapper.jsonld#BaseFileIdentifierMapper"
+      ],
+      "comment": "Supports the behaviour described in https://www.w3.org/DesignIssues/HTTPFilenameMapping.html Determines content-type based on the file extension. In case an identifier does not end on an extension matching its content-type, the corresponding file will be appended with the correct extension, preceded by $.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/mapping/ExtensionBasedMapper.jsonld#ExtensionBasedMapper_base",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/storage/mapping/ExtensionBasedMapper.jsonld#ExtensionBasedMapper_rootFilepath",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/storage/mapping/ExtensionBasedMapper.jsonld#ExtensionBasedMapper_customTypes",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "css:dist/storage/mapping/ExtensionBasedMapper.jsonld#ExtensionBasedMapper_customTypes_key"
+              },
+              {
+                "@id": "css:dist/storage/mapping/ExtensionBasedMapper.jsonld#ExtensionBasedMapper_customTypes_value",
+                "range": "xsd:string"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/mapping/ExtensionBasedMapper.jsonld#ExtensionBasedMapper__member_customTypes",
+          "memberFieldName": "customTypes"
+        },
+        {
+          "@id": "css:dist/storage/mapping/ExtensionBasedMapper.jsonld#ExtensionBasedMapper__member_customExtensions",
+          "memberFieldName": "customExtensions"
+        },
+        {
+          "@id": "css:dist/storage/mapping/ExtensionBasedMapper.jsonld#ExtensionBasedMapper__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/mapping/ExtensionBasedMapper.jsonld#ExtensionBasedMapper__member_mapUrlToDocumentPath",
+          "memberFieldName": "mapUrlToDocumentPath"
+        },
+        {
+          "@id": "css:dist/storage/mapping/ExtensionBasedMapper.jsonld#ExtensionBasedMapper__member_getDocumentUrl",
+          "memberFieldName": "getDocumentUrl"
+        },
+        {
+          "@id": "css:dist/storage/mapping/ExtensionBasedMapper.jsonld#ExtensionBasedMapper__member_getContentTypeFromPath",
+          "memberFieldName": "getContentTypeFromPath"
+        },
+        {
+          "@id": "css:dist/storage/mapping/ExtensionBasedMapper.jsonld#ExtensionBasedMapper__member_stripExtension",
+          "memberFieldName": "stripExtension"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/mapping/ExtensionBasedMapper.jsonld#ExtensionBasedMapper_base"
+        },
+        {
+          "@id": "css:dist/storage/mapping/ExtensionBasedMapper.jsonld#ExtensionBasedMapper_rootFilepath"
+        },
+        {
+          "@id": "css:dist/storage/mapping/ExtensionBasedMapper.jsonld#ExtensionBasedMapper_customTypes__constructorArgument",
+          "fields": [
+            {
+              "collectEntries": "css:dist/storage/mapping/ExtensionBasedMapper.jsonld#ExtensionBasedMapper_customTypes",
+              "key": "css:dist/storage/mapping/ExtensionBasedMapper.jsonld#ExtensionBasedMapper_customTypes_key",
+              "value": {
+                "@id": "css:dist/storage/mapping/ExtensionBasedMapper.jsonld#ExtensionBasedMapper_customTypes_value"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/storage/mapping/ExtensionBasedMapper.jsonld#ExtensionBasedMapperFactory",
+      "@type": "Class",
+      "requireElement": "ExtensionBasedMapperFactory",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/storage/mapping/FileIdentifierMapper.jsonld#FileIdentifierMapperFactory",
+          "genericTypeInstances": [
+            "css:dist/storage/mapping/ExtensionBasedMapper.jsonld#ExtensionBasedMapper"
+          ]
+        }
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/mapping/ExtensionBasedMapper.jsonld#ExtensionBasedMapperFactory__member_create",
+          "memberFieldName": "create"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

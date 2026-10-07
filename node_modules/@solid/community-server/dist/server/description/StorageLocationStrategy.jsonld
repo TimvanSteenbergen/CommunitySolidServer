@@ -1,0 +1,22 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/description/StorageLocationStrategy.jsonld#StorageLocationStrategy",
+      "@type": "AbstractClass",
+      "requireElement": "StorageLocationStrategy",
+      "comment": "Interface used to find the storage a specific identifier is located in.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/description/StorageLocationStrategy.jsonld#StorageLocationStrategy__member_getStorageIdentifier",
+          "memberFieldName": "getStorageIdentifier"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/authorization/PermissionReader.jsonld#PermissionReader",
+      "@type": "AbstractClass",
+      "requireElement": "PermissionReader",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            "css:dist/authorization/PermissionReader.jsonld#PermissionReaderInput",
+            {
+              "@type": "ParameterRangeWildcard"
+            }
+          ]
+        }
+      ],
+      "comment": "Discovers the permissions of the given credentials on the given identifier. If the reader finds no permission for the requested identifiers and credentials, it can return an empty or incomplete map.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "css:dist/authorization/PermissionReader.jsonld#PermissionReaderInput",
+      "@type": "AbstractClass",
+      "requireElement": "PermissionReaderInput",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/authorization/PermissionReader.jsonld#PermissionReaderInput__member_credentials",
+          "memberFieldName": "credentials"
+        },
+        {
+          "@id": "css:dist/authorization/PermissionReader.jsonld#PermissionReaderInput__member_requestedModes",
+          "memberFieldName": "requestedModes"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

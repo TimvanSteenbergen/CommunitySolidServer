@@ -1,0 +1,91 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/authorization/AcpReader.jsonld#AcpReader",
+      "@type": "Class",
+      "requireElement": "AcpReader",
+      "extends": [
+        "css:dist/authorization/PermissionReader.jsonld#PermissionReader"
+      ],
+      "comment": "Finds the permissions of a resource as defined in the corresponding ACRs. Implementation based on https://solid.github.io/authorization-panel/acp-specification/.  Caches data so no duplicate calls are made to the {@link ResourceStore} for a single request.",
+      "parameters": [
+        {
+          "@id": "css:dist/authorization/AcpReader.jsonld#AcpReader_acrStrategy",
+          "range": "css:dist/http/auxiliary/AuxiliaryStrategy.jsonld#AuxiliaryStrategy"
+        },
+        {
+          "@id": "css:dist/authorization/AcpReader.jsonld#AcpReader_acrStore",
+          "range": "css:dist/storage/ResourceStore.jsonld#ResourceStore"
+        },
+        {
+          "@id": "css:dist/authorization/AcpReader.jsonld#AcpReader_identifierStrategy",
+          "range": "css:dist/util/identifiers/IdentifierStrategy.jsonld#IdentifierStrategy"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/authorization/AcpReader.jsonld#AcpReader__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/authorization/AcpReader.jsonld#AcpReader__member_acrStrategy",
+          "memberFieldName": "acrStrategy"
+        },
+        {
+          "@id": "css:dist/authorization/AcpReader.jsonld#AcpReader__member_acrStore",
+          "memberFieldName": "acrStore"
+        },
+        {
+          "@id": "css:dist/authorization/AcpReader.jsonld#AcpReader__member_identifierStrategy",
+          "memberFieldName": "identifierStrategy"
+        },
+        {
+          "@id": "css:dist/authorization/AcpReader.jsonld#AcpReader__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/authorization/AcpReader.jsonld#AcpReader__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/authorization/AcpReader.jsonld#AcpReader__member_extractPermissions",
+          "memberFieldName": "extractPermissions"
+        },
+        {
+          "@id": "css:dist/authorization/AcpReader.jsonld#AcpReader__member_createContext",
+          "memberFieldName": "createContext"
+        },
+        {
+          "@id": "css:dist/authorization/AcpReader.jsonld#AcpReader__member_getEffectivePolicies",
+          "memberFieldName": "getEffectivePolicies"
+        },
+        {
+          "@id": "css:dist/authorization/AcpReader.jsonld#AcpReader__member_getAncestorIdentifiers",
+          "memberFieldName": "getAncestorIdentifiers"
+        },
+        {
+          "@id": "css:dist/authorization/AcpReader.jsonld#AcpReader__member_readAcrData",
+          "memberFieldName": "readAcrData"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/authorization/AcpReader.jsonld#AcpReader_acrStrategy"
+        },
+        {
+          "@id": "css:dist/authorization/AcpReader.jsonld#AcpReader_acrStore"
+        },
+        {
+          "@id": "css:dist/authorization/AcpReader.jsonld#AcpReader_identifierStrategy"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/keyvalue/JsonResourceStorage.jsonld#JsonResourceStorage",
+      "@type": "Class",
+      "requireElement": "JsonResourceStorage",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+          "genericTypeInstances": [
+            "xsd:string",
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/storage/keyvalue/JsonResourceStorage.jsonld#JsonResourceStorage__generic_T"
+            }
+          ]
+        }
+      ],
+      "comment": "A {@link KeyValueStorage} for JSON-like objects using a {@link ResourceStore} as backend.  Creates a base URL by joining the input base URL with the container string. The storage assumes it has ownership over all entries in the target container so no other classes should access resources there to prevent issues.  Assumes the input keys can be safely used to generate identifiers, which will be appended to the stored base URL.  All non-404 errors will be re-thrown.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/storage/keyvalue/JsonResourceStorage.jsonld#JsonResourceStorage__generic_T"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/storage/keyvalue/JsonResourceStorage.jsonld#JsonResourceStorage_baseUrl",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/JsonResourceStorage.jsonld#JsonResourceStorage_container",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/JsonResourceStorage.jsonld#JsonResourceStorage_source",
+          "range": "css:dist/storage/ResourceStore.jsonld#ResourceStore"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/keyvalue/JsonResourceStorage.jsonld#JsonResourceStorage__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/JsonResourceStorage.jsonld#JsonResourceStorage__member_source",
+          "memberFieldName": "source",
+          "range": "css:dist/storage/ResourceStore.jsonld#ResourceStore"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/JsonResourceStorage.jsonld#JsonResourceStorage__member_container",
+          "memberFieldName": "container",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/JsonResourceStorage.jsonld#JsonResourceStorage__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/JsonResourceStorage.jsonld#JsonResourceStorage__member_get",
+          "memberFieldName": "get"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/JsonResourceStorage.jsonld#JsonResourceStorage__member_has",
+          "memberFieldName": "has"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/JsonResourceStorage.jsonld#JsonResourceStorage__member_set",
+          "memberFieldName": "set"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/JsonResourceStorage.jsonld#JsonResourceStorage__member_delete",
+          "memberFieldName": "delete"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/JsonResourceStorage.jsonld#JsonResourceStorage__member_entries",
+          "memberFieldName": "entries"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/JsonResourceStorage.jsonld#JsonResourceStorage__member_getResourceEntries",
+          "memberFieldName": "getResourceEntries"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/JsonResourceStorage.jsonld#JsonResourceStorage__member_safelyGetResource",
+          "memberFieldName": "safelyGetResource"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/JsonResourceStorage.jsonld#JsonResourceStorage__member_keyToIdentifier",
+          "memberFieldName": "keyToIdentifier"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/JsonResourceStorage.jsonld#JsonResourceStorage__member_identifierToKey",
+          "memberFieldName": "identifierToKey"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/keyvalue/JsonResourceStorage.jsonld#JsonResourceStorage_source"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/JsonResourceStorage.jsonld#JsonResourceStorage_baseUrl"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/JsonResourceStorage.jsonld#JsonResourceStorage_container"
+        }
+      ]
+    }
+  ]
+}

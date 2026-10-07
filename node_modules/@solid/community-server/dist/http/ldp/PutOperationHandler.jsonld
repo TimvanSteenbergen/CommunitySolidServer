@@ -1,0 +1,64 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/ldp/PutOperationHandler.jsonld#PutOperationHandler",
+      "@type": "Class",
+      "requireElement": "PutOperationHandler",
+      "extends": [
+        "css:dist/http/ldp/OperationHandler.jsonld#OperationHandler"
+      ],
+      "comment": "Handles PUT {@link Operation}s. Calls the setRepresentation function from a {@link ResourceStore}.",
+      "parameters": [
+        {
+          "@id": "css:dist/http/ldp/PutOperationHandler.jsonld#PutOperationHandler_store",
+          "range": "css:dist/storage/ResourceStore.jsonld#ResourceStore"
+        },
+        {
+          "@id": "css:dist/http/ldp/PutOperationHandler.jsonld#PutOperationHandler_metadataStrategy",
+          "range": "css:dist/http/auxiliary/AuxiliaryStrategy.jsonld#AuxiliaryStrategy"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/ldp/PutOperationHandler.jsonld#PutOperationHandler__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/http/ldp/PutOperationHandler.jsonld#PutOperationHandler__member_store",
+          "memberFieldName": "store"
+        },
+        {
+          "@id": "css:dist/http/ldp/PutOperationHandler.jsonld#PutOperationHandler__member_metadataStrategy",
+          "memberFieldName": "metadataStrategy"
+        },
+        {
+          "@id": "css:dist/http/ldp/PutOperationHandler.jsonld#PutOperationHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/ldp/PutOperationHandler.jsonld#PutOperationHandler__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/http/ldp/PutOperationHandler.jsonld#PutOperationHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/ldp/PutOperationHandler.jsonld#PutOperationHandler_store"
+        },
+        {
+          "@id": "css:dist/http/ldp/PutOperationHandler.jsonld#PutOperationHandler_metadataStrategy"
+        }
+      ]
+    }
+  ]
+}

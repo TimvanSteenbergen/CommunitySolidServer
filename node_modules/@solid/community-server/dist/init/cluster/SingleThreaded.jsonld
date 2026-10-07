@@ -1,0 +1,16 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/init/cluster/SingleThreaded.jsonld#SingleThreaded",
+      "@type": "AbstractClass",
+      "requireElement": "SingleThreaded",
+      "comment": "Indicates a class is only meant to work in singlethreaded setups and is thus not threadsafe.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

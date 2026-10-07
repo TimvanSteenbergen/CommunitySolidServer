@@ -1,0 +1,73 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/keyvalue/HashEncodingStorage.jsonld#HashEncodingStorage",
+      "@type": "Class",
+      "requireElement": "HashEncodingStorage",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/storage/keyvalue/PassthroughKeyValueStorage.jsonld#PassthroughKeyValueStorage",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/storage/keyvalue/HashEncodingStorage.jsonld#HashEncodingStorage__generic_T"
+            }
+          ]
+        }
+      ],
+      "comment": "Encodes the input key with SHA-256 hashing, to make sure there are no invalid or special path characters.  This class was created specifically to prevent the issue of identifiers being too long when storing data: https://github.com/CommunitySolidServer/CommunitySolidServer/issues/1013  This should eventually be replaced by a more structural approach once internal storage has been refactored and data migration from older versions and formats is supported.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/storage/keyvalue/HashEncodingStorage.jsonld#HashEncodingStorage__generic_T"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/storage/keyvalue/HashEncodingStorage.jsonld#HashEncodingStorage_source",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+            "genericTypeInstances": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "css:dist/storage/keyvalue/HashEncodingStorage.jsonld#HashEncodingStorage__generic_T"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/keyvalue/HashEncodingStorage.jsonld#HashEncodingStorage__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/HashEncodingStorage.jsonld#HashEncodingStorage__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/HashEncodingStorage.jsonld#HashEncodingStorage__member_toNewKey",
+          "memberFieldName": "toNewKey"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/HashEncodingStorage.jsonld#HashEncodingStorage__member_toOriginalKey",
+          "memberFieldName": "toOriginalKey"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/keyvalue/HashEncodingStorage.jsonld#HashEncodingStorage_source"
+        }
+      ]
+    }
+  ]
+}

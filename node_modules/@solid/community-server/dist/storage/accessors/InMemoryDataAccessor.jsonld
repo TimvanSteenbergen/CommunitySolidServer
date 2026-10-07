@@ -1,0 +1,90 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/accessors/InMemoryDataAccessor.jsonld#InMemoryDataAccessor",
+      "@type": "Class",
+      "requireElement": "InMemoryDataAccessor",
+      "extends": [
+        "css:dist/storage/accessors/DataAccessor.jsonld#DataAccessor",
+        "css:dist/init/cluster/SingleThreaded.jsonld#SingleThreaded"
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/storage/accessors/InMemoryDataAccessor.jsonld#InMemoryDataAccessor_identifierStrategy",
+          "range": "css:dist/util/identifiers/IdentifierStrategy.jsonld#IdentifierStrategy"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/accessors/InMemoryDataAccessor.jsonld#InMemoryDataAccessor__member_identifierStrategy",
+          "memberFieldName": "identifierStrategy"
+        },
+        {
+          "@id": "css:dist/storage/accessors/InMemoryDataAccessor.jsonld#InMemoryDataAccessor__member_store",
+          "memberFieldName": "store"
+        },
+        {
+          "@id": "css:dist/storage/accessors/InMemoryDataAccessor.jsonld#InMemoryDataAccessor__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/accessors/InMemoryDataAccessor.jsonld#InMemoryDataAccessor__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/storage/accessors/InMemoryDataAccessor.jsonld#InMemoryDataAccessor__member_getData",
+          "memberFieldName": "getData"
+        },
+        {
+          "@id": "css:dist/storage/accessors/InMemoryDataAccessor.jsonld#InMemoryDataAccessor__member_getMetadata",
+          "memberFieldName": "getMetadata"
+        },
+        {
+          "@id": "css:dist/storage/accessors/InMemoryDataAccessor.jsonld#InMemoryDataAccessor__member_getChildren",
+          "memberFieldName": "getChildren"
+        },
+        {
+          "@id": "css:dist/storage/accessors/InMemoryDataAccessor.jsonld#InMemoryDataAccessor__member_writeDocument",
+          "memberFieldName": "writeDocument"
+        },
+        {
+          "@id": "css:dist/storage/accessors/InMemoryDataAccessor.jsonld#InMemoryDataAccessor__member_writeContainer",
+          "memberFieldName": "writeContainer"
+        },
+        {
+          "@id": "css:dist/storage/accessors/InMemoryDataAccessor.jsonld#InMemoryDataAccessor__member_writeMetadata",
+          "memberFieldName": "writeMetadata"
+        },
+        {
+          "@id": "css:dist/storage/accessors/InMemoryDataAccessor.jsonld#InMemoryDataAccessor__member_deleteResource",
+          "memberFieldName": "deleteResource"
+        },
+        {
+          "@id": "css:dist/storage/accessors/InMemoryDataAccessor.jsonld#InMemoryDataAccessor__member_isDataEntry",
+          "memberFieldName": "isDataEntry"
+        },
+        {
+          "@id": "css:dist/storage/accessors/InMemoryDataAccessor.jsonld#InMemoryDataAccessor__member_getHierarchy",
+          "memberFieldName": "getHierarchy"
+        },
+        {
+          "@id": "css:dist/storage/accessors/InMemoryDataAccessor.jsonld#InMemoryDataAccessor__member_getParentEntry",
+          "memberFieldName": "getParentEntry"
+        },
+        {
+          "@id": "css:dist/storage/accessors/InMemoryDataAccessor.jsonld#InMemoryDataAccessor__member_getEntry",
+          "memberFieldName": "getEntry"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/accessors/InMemoryDataAccessor.jsonld#InMemoryDataAccessor_identifierStrategy"
+        }
+      ]
+    }
+  ]
+}

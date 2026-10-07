@@ -1,0 +1,109 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/handlers/ProcessHandler.jsonld#ProcessHandler",
+      "@type": "Class",
+      "requireElement": "ProcessHandler",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/util/handlers/ProcessHandler.jsonld#ProcessHandler__generic_TIn"
+            },
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/util/handlers/ProcessHandler.jsonld#ProcessHandler__generic_TOut"
+            }
+          ]
+        }
+      ],
+      "comment": "A wrapper handler that will only run the wrapped handler if it is executed from: * when running multithreaded: either the **primary** or a **worker process** * when running singlethreaded: **the only process** (i.e. always)",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/util/handlers/ProcessHandler.jsonld#ProcessHandler__generic_TIn"
+        },
+        {
+          "@id": "css:dist/util/handlers/ProcessHandler.jsonld#ProcessHandler__generic_TOut"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/util/handlers/ProcessHandler.jsonld#ProcessHandler_executeOnPrimary",
+          "range": "xsd:boolean",
+          "comment": "Whether to execute the source handler when the process is the _primary_ or a _worker_."
+        },
+        {
+          "@id": "css:dist/util/handlers/ProcessHandler.jsonld#ProcessHandler_clusterManager",
+          "range": "css:dist/init/cluster/ClusterManager.jsonld#ClusterManager",
+          "comment": "The ClusterManager in use"
+        },
+        {
+          "@id": "css:dist/util/handlers/ProcessHandler.jsonld#ProcessHandler_source",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "css:dist/util/handlers/ProcessHandler.jsonld#ProcessHandler__generic_TIn"
+              },
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "css:dist/util/handlers/ProcessHandler.jsonld#ProcessHandler__generic_TOut"
+              }
+            ]
+          },
+          "comment": "The wrapped handler"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/handlers/ProcessHandler.jsonld#ProcessHandler__member_clusterManager",
+          "memberFieldName": "clusterManager"
+        },
+        {
+          "@id": "css:dist/util/handlers/ProcessHandler.jsonld#ProcessHandler__member_source",
+          "memberFieldName": "source"
+        },
+        {
+          "@id": "css:dist/util/handlers/ProcessHandler.jsonld#ProcessHandler__member_executeOnPrimary",
+          "memberFieldName": "executeOnPrimary"
+        },
+        {
+          "@id": "css:dist/util/handlers/ProcessHandler.jsonld#ProcessHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/util/handlers/ProcessHandler.jsonld#ProcessHandler__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/util/handlers/ProcessHandler.jsonld#ProcessHandler__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/util/handlers/ProcessHandler.jsonld#ProcessHandler__member_canExecute",
+          "memberFieldName": "canExecute"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/handlers/ProcessHandler.jsonld#ProcessHandler_source"
+        },
+        {
+          "@id": "css:dist/util/handlers/ProcessHandler.jsonld#ProcessHandler_clusterManager"
+        },
+        {
+          "@id": "css:dist/util/handlers/ProcessHandler.jsonld#ProcessHandler_executeOnPrimary"
+        }
+      ]
+    }
+  ]
+}

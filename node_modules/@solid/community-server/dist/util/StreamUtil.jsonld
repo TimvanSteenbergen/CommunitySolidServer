@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/StreamUtil.jsonld#AsyncTransformOptions",
+      "@type": "AbstractClass",
+      "requireElement": "AsyncTransformOptions",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/util/StreamUtil.jsonld#AsyncTransformOptions__generic_T"
+        }
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/StreamUtil.jsonld#AsyncTransformOptions__member_transform",
+          "memberFieldName": "transform"
+        },
+        {
+          "@id": "css:dist/util/StreamUtil.jsonld#AsyncTransformOptions__member_flush",
+          "memberFieldName": "flush"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

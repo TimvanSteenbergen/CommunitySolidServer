@@ -1,0 +1,62 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/pod/UpdateOwnerHandler.jsonld#UpdateOwnerHandler",
+      "@type": "Class",
+      "requireElement": "UpdateOwnerHandler",
+      "extends": [
+        "css:dist/identity/interaction/JsonInteractionHandler.jsonld#JsonInteractionHandler",
+        "css:dist/identity/interaction/JsonView.jsonld#JsonView"
+      ],
+      "comment": "Responsible for adding/updating/deleting owners in pods.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/pod/UpdateOwnerHandler.jsonld#UpdateOwnerHandler_podStore",
+          "range": "css:dist/identity/interaction/pod/util/PodStore.jsonld#PodStore"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/UpdateOwnerHandler.jsonld#UpdateOwnerHandler_podRoute",
+          "range": "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/pod/UpdateOwnerHandler.jsonld#UpdateOwnerHandler__member_podStore",
+          "memberFieldName": "podStore"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/UpdateOwnerHandler.jsonld#UpdateOwnerHandler__member_podRoute",
+          "memberFieldName": "podRoute"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/UpdateOwnerHandler.jsonld#UpdateOwnerHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/UpdateOwnerHandler.jsonld#UpdateOwnerHandler__member_getView",
+          "memberFieldName": "getView"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/UpdateOwnerHandler.jsonld#UpdateOwnerHandler__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/UpdateOwnerHandler.jsonld#UpdateOwnerHandler__member_findVerifiedPod",
+          "memberFieldName": "findVerifiedPod"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/pod/UpdateOwnerHandler.jsonld#UpdateOwnerHandler_podStore"
+        },
+        {
+          "@id": "css:dist/identity/interaction/pod/UpdateOwnerHandler.jsonld#UpdateOwnerHandler_podRoute"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/templates/ExtensionBasedTemplateEngine.jsonld#ExtensionBasedTemplateEngine",
+      "@type": "AbstractClass",
+      "requireElement": "ExtensionBasedTemplateEngine",
+      "comment": "Parent class for template engines that accept handling based on whether the template extension is supported.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/util/templates/ExtensionBasedTemplateEngine.jsonld#ExtensionBasedTemplateEngine__generic_T",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/util/templates/ExtensionBasedTemplateEngine.jsonld#ExtensionBasedTemplateEngine_supportedExtensions",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": "xsd:string"
+          },
+          "comment": "Array of the extensions supported by the template engine (e.g. [ 'ejs' ])."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/templates/ExtensionBasedTemplateEngine.jsonld#ExtensionBasedTemplateEngine__member_supportedExtensions",
+          "memberFieldName": "supportedExtensions",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": "xsd:string"
+          }
+        },
+        {
+          "@id": "css:dist/util/templates/ExtensionBasedTemplateEngine.jsonld#ExtensionBasedTemplateEngine__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/util/templates/ExtensionBasedTemplateEngine.jsonld#ExtensionBasedTemplateEngine__member_canHandle",
+          "memberFieldName": "canHandle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/templates/ExtensionBasedTemplateEngine.jsonld#ExtensionBasedTemplateEngine_supportedExtensions"
+        }
+      ]
+    }
+  ]
+}

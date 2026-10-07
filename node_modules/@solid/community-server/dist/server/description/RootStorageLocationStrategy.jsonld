@@ -1,0 +1,42 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/description/RootStorageLocationStrategy.jsonld#RootStorageLocationStrategy",
+      "@type": "Class",
+      "requireElement": "RootStorageLocationStrategy",
+      "extends": [
+        "css:dist/server/description/StorageLocationStrategy.jsonld#StorageLocationStrategy"
+      ],
+      "comment": "A {@link StorageLocationStrategy} to be used when the server has one storage in the root container of the server.",
+      "parameters": [
+        {
+          "@id": "css:dist/server/description/RootStorageLocationStrategy.jsonld#RootStorageLocationStrategy_baseUrl",
+          "range": "xsd:string"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/description/RootStorageLocationStrategy.jsonld#RootStorageLocationStrategy__member_root",
+          "memberFieldName": "root"
+        },
+        {
+          "@id": "css:dist/server/description/RootStorageLocationStrategy.jsonld#RootStorageLocationStrategy__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/description/RootStorageLocationStrategy.jsonld#RootStorageLocationStrategy__member_getStorageIdentifier",
+          "memberFieldName": "getStorageIdentifier"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/description/RootStorageLocationStrategy.jsonld#RootStorageLocationStrategy_baseUrl"
+        }
+      ]
+    }
+  ]
+}

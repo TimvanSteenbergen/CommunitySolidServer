@@ -1,0 +1,28 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/input/preferences/PreferenceParser.jsonld#PreferenceParser",
+      "@type": "AbstractClass",
+      "requireElement": "PreferenceParser",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeWildcard"
+            },
+            "css:dist/http/representation/RepresentationPreferences.jsonld#RepresentationPreferences"
+          ]
+        }
+      ],
+      "comment": "Creates {@link RepresentationPreferences} based on the incoming HTTP headers in a {@link HttpRequest}.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

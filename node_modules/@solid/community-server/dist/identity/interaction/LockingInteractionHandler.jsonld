@@ -1,0 +1,68 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/LockingInteractionHandler.jsonld#LockingInteractionHandler",
+      "@type": "Class",
+      "requireElement": "LockingInteractionHandler",
+      "extends": [
+        "css:dist/identity/interaction/InteractionHandler.jsonld#InteractionHandler"
+      ],
+      "comment": "An {@link InteractionHandler} that locks the path generated with the stored route during an operation. If the route is the base account route, this can be used to prevent multiple operations on the same account.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/LockingInteractionHandler.jsonld#LockingInteractionHandler_locker",
+          "range": "css:dist/util/locking/ReadWriteLocker.jsonld#ReadWriteLocker"
+        },
+        {
+          "@id": "css:dist/identity/interaction/LockingInteractionHandler.jsonld#LockingInteractionHandler_accountRoute",
+          "range": "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute"
+        },
+        {
+          "@id": "css:dist/identity/interaction/LockingInteractionHandler.jsonld#LockingInteractionHandler_source",
+          "range": "css:dist/identity/interaction/InteractionHandler.jsonld#InteractionHandler"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/LockingInteractionHandler.jsonld#LockingInteractionHandler__member_locker",
+          "memberFieldName": "locker"
+        },
+        {
+          "@id": "css:dist/identity/interaction/LockingInteractionHandler.jsonld#LockingInteractionHandler__member_accountRoute",
+          "memberFieldName": "accountRoute"
+        },
+        {
+          "@id": "css:dist/identity/interaction/LockingInteractionHandler.jsonld#LockingInteractionHandler__member_source",
+          "memberFieldName": "source"
+        },
+        {
+          "@id": "css:dist/identity/interaction/LockingInteractionHandler.jsonld#LockingInteractionHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/LockingInteractionHandler.jsonld#LockingInteractionHandler__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/identity/interaction/LockingInteractionHandler.jsonld#LockingInteractionHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/LockingInteractionHandler.jsonld#LockingInteractionHandler_locker"
+        },
+        {
+          "@id": "css:dist/identity/interaction/LockingInteractionHandler.jsonld#LockingInteractionHandler_accountRoute"
+        },
+        {
+          "@id": "css:dist/identity/interaction/LockingInteractionHandler.jsonld#LockingInteractionHandler_source"
+        }
+      ]
+    }
+  ]
+}

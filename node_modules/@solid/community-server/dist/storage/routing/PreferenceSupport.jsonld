@@ -1,0 +1,231 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport",
+      "@type": "Class",
+      "requireElement": "PreferenceSupport",
+      "comment": "Helper class that checks if the stored {@link RepresentationConverter} and {@link RepresentationPreferences} support the given input {@link RepresentationPreferences} and {@link Representation}.  Creates a new object by combining the input arguments together with the stored preferences and checks if the converter can handle that object.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_type",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_type_key"
+              },
+              {
+                "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_type_value",
+                "range": "xsd:number"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_converter",
+          "range": "css:dist/storage/conversion/RepresentationConverter.jsonld#RepresentationConverter"
+        },
+        {
+          "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_charset",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_charset_key"
+              },
+              {
+                "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_charset_value",
+                "range": "xsd:number"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_datetime",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_datetime_key"
+              },
+              {
+                "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_datetime_value",
+                "range": "xsd:number"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_encoding",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_encoding_key"
+              },
+              {
+                "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_encoding_value",
+                "range": "xsd:number"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_language",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_language_key"
+              },
+              {
+                "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_language_value",
+                "range": "xsd:number"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_range_unit",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_range_parts",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": {
+              "@type": "ParameterRangeWildcard"
+            }
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport__member_preferences",
+          "memberFieldName": "preferences"
+        },
+        {
+          "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport__member_converter",
+          "memberFieldName": "converter"
+        },
+        {
+          "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport__member_supports",
+          "memberFieldName": "supports"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "type",
+              "value": {
+                "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_type__constructorArgument",
+                "fields": [
+                  {
+                    "collectEntries": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_type",
+                    "key": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_type_key",
+                    "value": {
+                      "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_type_value"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "keyRaw": "charset",
+              "value": {
+                "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_charset__constructorArgument",
+                "fields": [
+                  {
+                    "collectEntries": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_charset",
+                    "key": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_charset_key",
+                    "value": {
+                      "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_charset_value"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "keyRaw": "datetime",
+              "value": {
+                "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_datetime__constructorArgument",
+                "fields": [
+                  {
+                    "collectEntries": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_datetime",
+                    "key": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_datetime_key",
+                    "value": {
+                      "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_datetime_value"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "keyRaw": "encoding",
+              "value": {
+                "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_encoding__constructorArgument",
+                "fields": [
+                  {
+                    "collectEntries": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_encoding",
+                    "key": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_encoding_key",
+                    "value": {
+                      "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_encoding_value"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "keyRaw": "language",
+              "value": {
+                "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_language__constructorArgument",
+                "fields": [
+                  {
+                    "collectEntries": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_language",
+                    "key": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_language_key",
+                    "value": {
+                      "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_language_value"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "keyRaw": "range",
+              "value": {
+                "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_range__constructorArgument",
+                "fields": [
+                  {
+                    "keyRaw": "unit",
+                    "value": {
+                      "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_range_unit"
+                    }
+                  },
+                  {
+                    "keyRaw": "parts",
+                    "value": {
+                      "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_preferences_range_parts"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "@id": "css:dist/storage/routing/PreferenceSupport.jsonld#PreferenceSupport_converter"
+        }
+      ]
+    }
+  ]
+}

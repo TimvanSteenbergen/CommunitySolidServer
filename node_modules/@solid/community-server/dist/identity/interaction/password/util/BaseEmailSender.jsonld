@@ -1,0 +1,139 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/password/util/BaseEmailSender.jsonld#BaseEmailSender",
+      "@type": "Class",
+      "requireElement": "BaseEmailSender",
+      "extends": [
+        "css:dist/identity/interaction/password/util/EmailSender.jsonld#EmailSender"
+      ],
+      "comment": "Sends e-mails using nodemailer.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/password/util/BaseEmailSender.jsonld#BaseEmailSender_args_emailConfig_host",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/identity/interaction/password/util/BaseEmailSender.jsonld#BaseEmailSender_args_emailConfig_port",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "css:dist/identity/interaction/password/util/BaseEmailSender.jsonld#BaseEmailSender_args_emailConfig_auth_user",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/identity/interaction/password/util/BaseEmailSender.jsonld#BaseEmailSender_args_emailConfig_auth_pass",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/identity/interaction/password/util/BaseEmailSender.jsonld#BaseEmailSender_args_senderName",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/password/util/BaseEmailSender.jsonld#BaseEmailSender__member_logger",
+          "memberFieldName": "logger"
+        },
+        {
+          "@id": "css:dist/identity/interaction/password/util/BaseEmailSender.jsonld#BaseEmailSender__member_mailTransporter",
+          "memberFieldName": "mailTransporter"
+        },
+        {
+          "@id": "css:dist/identity/interaction/password/util/BaseEmailSender.jsonld#BaseEmailSender__member_senderName",
+          "memberFieldName": "senderName"
+        },
+        {
+          "@id": "css:dist/identity/interaction/password/util/BaseEmailSender.jsonld#BaseEmailSender__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/password/util/BaseEmailSender.jsonld#BaseEmailSender__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/password/util/BaseEmailSender.jsonld#BaseEmailSender_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "emailConfig",
+              "value": {
+                "@id": "css:dist/identity/interaction/password/util/BaseEmailSender.jsonld#BaseEmailSender_args_emailConfig__constructorArgument",
+                "fields": [
+                  {
+                    "keyRaw": "host",
+                    "value": {
+                      "@id": "css:dist/identity/interaction/password/util/BaseEmailSender.jsonld#BaseEmailSender_args_emailConfig_host"
+                    }
+                  },
+                  {
+                    "keyRaw": "port",
+                    "value": {
+                      "@id": "css:dist/identity/interaction/password/util/BaseEmailSender.jsonld#BaseEmailSender_args_emailConfig_port"
+                    }
+                  },
+                  {
+                    "keyRaw": "auth",
+                    "value": {
+                      "@id": "css:dist/identity/interaction/password/util/BaseEmailSender.jsonld#BaseEmailSender_args_emailConfig_auth__constructorArgument",
+                      "fields": [
+                        {
+                          "keyRaw": "user",
+                          "value": {
+                            "@id": "css:dist/identity/interaction/password/util/BaseEmailSender.jsonld#BaseEmailSender_args_emailConfig_auth_user"
+                          }
+                        },
+                        {
+                          "keyRaw": "pass",
+                          "value": {
+                            "@id": "css:dist/identity/interaction/password/util/BaseEmailSender.jsonld#BaseEmailSender_args_emailConfig_auth_pass"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "keyRaw": "senderName",
+              "value": {
+                "@id": "css:dist/identity/interaction/password/util/BaseEmailSender.jsonld#BaseEmailSender_args_senderName"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/identity/interaction/password/util/BaseEmailSender.jsonld#EmailSenderArgs",
+      "@type": "AbstractClass",
+      "requireElement": "EmailSenderArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/password/util/BaseEmailSender.jsonld#EmailSenderArgs__member_emailConfig",
+          "memberFieldName": "emailConfig"
+        },
+        {
+          "@id": "css:dist/identity/interaction/password/util/BaseEmailSender.jsonld#EmailSenderArgs__member_senderName",
+          "memberFieldName": "senderName"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/notifications/TypedNotificationHandler.jsonld#TypedNotificationHandler",
+      "@type": "Class",
+      "requireElement": "TypedNotificationHandler",
+      "extends": [
+        "css:dist/server/notifications/NotificationHandler.jsonld#NotificationHandler"
+      ],
+      "comment": "A {@link NotificationHandler} that only accepts input for a specific notification channel type.",
+      "parameters": [
+        {
+          "@id": "css:dist/server/notifications/TypedNotificationHandler.jsonld#TypedNotificationHandler_type",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/server/notifications/TypedNotificationHandler.jsonld#TypedNotificationHandler_source",
+          "range": "css:dist/server/notifications/NotificationHandler.jsonld#NotificationHandler"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/notifications/TypedNotificationHandler.jsonld#TypedNotificationHandler__member_type",
+          "memberFieldName": "type"
+        },
+        {
+          "@id": "css:dist/server/notifications/TypedNotificationHandler.jsonld#TypedNotificationHandler__member_source",
+          "memberFieldName": "source"
+        },
+        {
+          "@id": "css:dist/server/notifications/TypedNotificationHandler.jsonld#TypedNotificationHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/notifications/TypedNotificationHandler.jsonld#TypedNotificationHandler__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/server/notifications/TypedNotificationHandler.jsonld#TypedNotificationHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/notifications/TypedNotificationHandler.jsonld#TypedNotificationHandler_type"
+        },
+        {
+          "@id": "css:dist/server/notifications/TypedNotificationHandler.jsonld#TypedNotificationHandler_source"
+        }
+      ]
+    }
+  ]
+}

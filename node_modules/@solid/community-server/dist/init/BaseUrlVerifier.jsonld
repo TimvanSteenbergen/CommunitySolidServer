@@ -1,0 +1,75 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/init/BaseUrlVerifier.jsonld#BaseUrlVerifier",
+      "@type": "Class",
+      "requireElement": "BaseUrlVerifier",
+      "extends": [
+        "css:dist/init/Initializer.jsonld#Initializer"
+      ],
+      "comment": "Stores the `baseUrl` value that was used to start the server and warns the user in case it differs from the previous one.",
+      "parameters": [
+        {
+          "@id": "css:dist/init/BaseUrlVerifier.jsonld#BaseUrlVerifier_baseUrl",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/init/BaseUrlVerifier.jsonld#BaseUrlVerifier_storageKey",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/init/BaseUrlVerifier.jsonld#BaseUrlVerifier_storage",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+            "genericTypeInstances": [
+              "xsd:string",
+              "xsd:string"
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/init/BaseUrlVerifier.jsonld#BaseUrlVerifier__member_baseUrl",
+          "memberFieldName": "baseUrl"
+        },
+        {
+          "@id": "css:dist/init/BaseUrlVerifier.jsonld#BaseUrlVerifier__member_storageKey",
+          "memberFieldName": "storageKey"
+        },
+        {
+          "@id": "css:dist/init/BaseUrlVerifier.jsonld#BaseUrlVerifier__member_storage",
+          "memberFieldName": "storage"
+        },
+        {
+          "@id": "css:dist/init/BaseUrlVerifier.jsonld#BaseUrlVerifier__member_logger",
+          "memberFieldName": "logger"
+        },
+        {
+          "@id": "css:dist/init/BaseUrlVerifier.jsonld#BaseUrlVerifier__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/init/BaseUrlVerifier.jsonld#BaseUrlVerifier__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/init/BaseUrlVerifier.jsonld#BaseUrlVerifier_baseUrl"
+        },
+        {
+          "@id": "css:dist/init/BaseUrlVerifier.jsonld#BaseUrlVerifier_storageKey"
+        },
+        {
+          "@id": "css:dist/init/BaseUrlVerifier.jsonld#BaseUrlVerifier_storage"
+        }
+      ]
+    }
+  ]
+}

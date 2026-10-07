@@ -1,0 +1,79 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/templates/EjsTemplateEngine.jsonld#EjsTemplateEngine",
+      "@type": "Class",
+      "requireElement": "EjsTemplateEngine",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/templates/ExtensionBasedTemplateEngine.jsonld#ExtensionBasedTemplateEngine",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/util/templates/EjsTemplateEngine.jsonld#EjsTemplateEngine__generic_T"
+            }
+          ]
+        }
+      ],
+      "comment": "Fills in EJS templates.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/util/templates/EjsTemplateEngine.jsonld#EjsTemplateEngine__generic_T",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/util/templates/EjsTemplateEngine.jsonld#EjsTemplateEngine_baseUrl",
+          "range": "xsd:string",
+          "comment": "Base URL of the server."
+        },
+        {
+          "@id": "css:dist/util/templates/EjsTemplateEngine.jsonld#EjsTemplateEngine_supportedExtensions",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": "xsd:string"
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "The extensions that are supported by this template engine (defaults to 'ejs')."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/templates/EjsTemplateEngine.jsonld#EjsTemplateEngine__member_baseUrl",
+          "memberFieldName": "baseUrl"
+        },
+        {
+          "@id": "css:dist/util/templates/EjsTemplateEngine.jsonld#EjsTemplateEngine__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/util/templates/EjsTemplateEngine.jsonld#EjsTemplateEngine__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/templates/EjsTemplateEngine.jsonld#EjsTemplateEngine_baseUrl"
+        },
+        {
+          "@id": "css:dist/util/templates/EjsTemplateEngine.jsonld#EjsTemplateEngine_supportedExtensions"
+        }
+      ]
+    }
+  ]
+}

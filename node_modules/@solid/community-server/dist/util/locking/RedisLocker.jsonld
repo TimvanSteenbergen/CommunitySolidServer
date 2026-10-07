@@ -1,0 +1,285 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker",
+      "@type": "Class",
+      "requireElement": "RedisLocker",
+      "extends": [
+        "css:dist/util/locking/ReadWriteLocker.jsonld#ReadWriteLocker",
+        "css:dist/util/locking/ResourceLocker.jsonld#ResourceLocker",
+        "css:dist/init/Initializable.jsonld#Initializable",
+        "css:dist/init/final/Finalizable.jsonld#Finalizable"
+      ],
+      "comment": "A Redis Locker that can be used as both: *  a Read Write Locker that uses a (single) Redis server to store the locks and counts. *  a Resource Locker that uses a (single) Redis server to store the lock. This solution should be process-safe. The only references to locks are string keys derived from identifier paths.  The Read Write algorithm roughly goes as follows: * Acquire a read lock: allowed as long as there is no write lock. On acquiring the read counter goes up. * Acquire a write lock: allowed as long as there is no other write lock AND the read counter is 0. * Release a read lock: decreases the read counter with 1 * Release a write lock: unlocks the write lock  The Resource locking algorithm uses a single mutex/lock.  All operations, such as checking for a write lock AND read count, are executed in a single Lua script. These scripts are used by Redis as a single new command. Redis executes its operations in a single thread, as such, each such operation can be considered atomic.  The operation to (un)lock will always resolve with either 1/OK/true if succeeded or 0/false if not succeeded. Rejection with errors will be happen on actual failures. Retrying the (un)lock operations will be done by making use of the LockUtils' {@link retryFunctionUntil} function.  * @see [Redis Commands documentation](https://redis.io/commands/) * @see [Redis Lua scripting documentation](https://redis.io/docs/manual/programmability/) * @see [ioredis Lua scripting API](https://github.com/luin/ioredis#lua-scripting)",
+      "parameters": [
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker_redisClient",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Redis connection string of a standalone Redis node"
+        },
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker_attemptSettings_retryCount",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "How many times should an operation be retried. (-1 is indefinitely)."
+        },
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker_redisSettings_namespacePrefix",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker_attemptSettings_retryDelay",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "The how long should the next retry be delayed (+ some retryJitter) (in ms)."
+        },
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker_redisSettings_username",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker_attemptSettings_retryJitter",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Add a fraction of jitter to the original delay each attempt (in ms)."
+        },
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker_redisSettings_password",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker_redisSettings_db",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker__member_redis",
+          "memberFieldName": "redis"
+        },
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker__member_redisRw",
+          "memberFieldName": "redisRw"
+        },
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker__member_redisLock",
+          "memberFieldName": "redisLock"
+        },
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker__member_attemptSettings",
+          "memberFieldName": "attemptSettings"
+        },
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker__member_namespacePrefix",
+          "memberFieldName": "namespacePrefix"
+        },
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker__member_finalized",
+          "memberFieldName": "finalized"
+        },
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker__member_createRedisClient",
+          "memberFieldName": "createRedisClient"
+        },
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker__member_getReadWriteKey",
+          "memberFieldName": "getReadWriteKey"
+        },
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker__member_getResourceKey",
+          "memberFieldName": "getResourceKey"
+        },
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker__member_swallowFalse",
+          "memberFieldName": "swallowFalse"
+        },
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker__member_withReadLock",
+          "memberFieldName": "withReadLock"
+        },
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker__member_withWriteLock",
+          "memberFieldName": "withWriteLock"
+        },
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker__member_acquire",
+          "memberFieldName": "acquire"
+        },
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker__member_release",
+          "memberFieldName": "release"
+        },
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker__member_initialize",
+          "memberFieldName": "initialize"
+        },
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker__member_finalize",
+          "memberFieldName": "finalize"
+        },
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker__member_clearLocks",
+          "memberFieldName": "clearLocks"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker_redisClient"
+        },
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker_attemptSettings__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "retryCount",
+              "value": {
+                "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker_attemptSettings_retryCount"
+              }
+            },
+            {
+              "keyRaw": "retryDelay",
+              "value": {
+                "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker_attemptSettings_retryDelay"
+              }
+            },
+            {
+              "keyRaw": "retryJitter",
+              "value": {
+                "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker_attemptSettings_retryJitter"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker_redisSettings__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "namespacePrefix",
+              "value": {
+                "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker_redisSettings_namespacePrefix"
+              }
+            },
+            {
+              "keyRaw": "username",
+              "value": {
+                "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker_redisSettings_username"
+              }
+            },
+            {
+              "keyRaw": "password",
+              "value": {
+                "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker_redisSettings_password"
+              }
+            },
+            {
+              "keyRaw": "db",
+              "value": {
+                "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisLocker_redisSettings_db"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisSettings",
+      "@type": "AbstractClass",
+      "requireElement": "RedisSettings",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisSettings__member_namespacePrefix",
+          "memberFieldName": "namespacePrefix"
+        },
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisSettings__member_username",
+          "memberFieldName": "username"
+        },
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisSettings__member_password",
+          "memberFieldName": "password"
+        },
+        {
+          "@id": "css:dist/util/locking/RedisLocker.jsonld#RedisSettings__member_db",
+          "memberFieldName": "db"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

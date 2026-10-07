@@ -1,0 +1,37 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/auxiliary/AuxiliaryStrategy.jsonld#AuxiliaryStrategy",
+      "@type": "AbstractClass",
+      "requireElement": "AuxiliaryStrategy",
+      "extends": [
+        "css:dist/http/auxiliary/AuxiliaryIdentifierStrategy.jsonld#AuxiliaryIdentifierStrategy"
+      ],
+      "comment": "A strategy for handling one or more types of auxiliary resources. References to \"an auxiliary resource\" implicitly imply a specific type of auxiliary resources supported by this strategy.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/auxiliary/AuxiliaryStrategy.jsonld#AuxiliaryStrategy__member_usesOwnAuthorization",
+          "memberFieldName": "usesOwnAuthorization"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/AuxiliaryStrategy.jsonld#AuxiliaryStrategy__member_isRequiredInRoot",
+          "memberFieldName": "isRequiredInRoot"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/AuxiliaryStrategy.jsonld#AuxiliaryStrategy__member_addMetadata",
+          "memberFieldName": "addMetadata"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/AuxiliaryStrategy.jsonld#AuxiliaryStrategy__member_validate",
+          "memberFieldName": "validate"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

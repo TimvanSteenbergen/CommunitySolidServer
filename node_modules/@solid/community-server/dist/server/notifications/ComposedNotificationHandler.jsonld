@@ -1,0 +1,121 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/notifications/ComposedNotificationHandler.jsonld#ComposedNotificationHandler",
+      "@type": "Class",
+      "requireElement": "ComposedNotificationHandler",
+      "extends": [
+        "css:dist/server/notifications/NotificationHandler.jsonld#NotificationHandler"
+      ],
+      "comment": "Generates, serializes and emits a {@link Notification} using a {@link NotificationGenerator}, {@link NotificationSerializer} and {@link NotificationEmitter}.  Will not emit an event when it has the same state as the notification channel.",
+      "parameters": [
+        {
+          "@id": "css:dist/server/notifications/ComposedNotificationHandler.jsonld#ComposedNotificationHandler_args_generator",
+          "range": "css:dist/server/notifications/generate/NotificationGenerator.jsonld#NotificationGenerator"
+        },
+        {
+          "@id": "css:dist/server/notifications/ComposedNotificationHandler.jsonld#ComposedNotificationHandler_args_serializer",
+          "range": "css:dist/server/notifications/serialize/NotificationSerializer.jsonld#NotificationSerializer"
+        },
+        {
+          "@id": "css:dist/server/notifications/ComposedNotificationHandler.jsonld#ComposedNotificationHandler_args_emitter",
+          "range": "css:dist/server/notifications/NotificationEmitter.jsonld#NotificationEmitter"
+        },
+        {
+          "@id": "css:dist/server/notifications/ComposedNotificationHandler.jsonld#ComposedNotificationHandler_args_eTagHandler",
+          "range": "css:dist/storage/conditions/ETagHandler.jsonld#ETagHandler"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/notifications/ComposedNotificationHandler.jsonld#ComposedNotificationHandler__member_generator",
+          "memberFieldName": "generator"
+        },
+        {
+          "@id": "css:dist/server/notifications/ComposedNotificationHandler.jsonld#ComposedNotificationHandler__member_serializer",
+          "memberFieldName": "serializer"
+        },
+        {
+          "@id": "css:dist/server/notifications/ComposedNotificationHandler.jsonld#ComposedNotificationHandler__member_emitter",
+          "memberFieldName": "emitter"
+        },
+        {
+          "@id": "css:dist/server/notifications/ComposedNotificationHandler.jsonld#ComposedNotificationHandler__member_eTagHandler",
+          "memberFieldName": "eTagHandler"
+        },
+        {
+          "@id": "css:dist/server/notifications/ComposedNotificationHandler.jsonld#ComposedNotificationHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/notifications/ComposedNotificationHandler.jsonld#ComposedNotificationHandler__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/server/notifications/ComposedNotificationHandler.jsonld#ComposedNotificationHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/notifications/ComposedNotificationHandler.jsonld#ComposedNotificationHandler_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "generator",
+              "value": {
+                "@id": "css:dist/server/notifications/ComposedNotificationHandler.jsonld#ComposedNotificationHandler_args_generator"
+              }
+            },
+            {
+              "keyRaw": "serializer",
+              "value": {
+                "@id": "css:dist/server/notifications/ComposedNotificationHandler.jsonld#ComposedNotificationHandler_args_serializer"
+              }
+            },
+            {
+              "keyRaw": "emitter",
+              "value": {
+                "@id": "css:dist/server/notifications/ComposedNotificationHandler.jsonld#ComposedNotificationHandler_args_emitter"
+              }
+            },
+            {
+              "keyRaw": "eTagHandler",
+              "value": {
+                "@id": "css:dist/server/notifications/ComposedNotificationHandler.jsonld#ComposedNotificationHandler_args_eTagHandler"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/server/notifications/ComposedNotificationHandler.jsonld#ComposedNotificationHandlerArgs",
+      "@type": "AbstractClass",
+      "requireElement": "ComposedNotificationHandlerArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/notifications/ComposedNotificationHandler.jsonld#ComposedNotificationHandlerArgs__member_generator",
+          "memberFieldName": "generator"
+        },
+        {
+          "@id": "css:dist/server/notifications/ComposedNotificationHandler.jsonld#ComposedNotificationHandlerArgs__member_serializer",
+          "memberFieldName": "serializer"
+        },
+        {
+          "@id": "css:dist/server/notifications/ComposedNotificationHandler.jsonld#ComposedNotificationHandlerArgs__member_emitter",
+          "memberFieldName": "emitter"
+        },
+        {
+          "@id": "css:dist/server/notifications/ComposedNotificationHandler.jsonld#ComposedNotificationHandlerArgs__member_eTagHandler",
+          "memberFieldName": "eTagHandler"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

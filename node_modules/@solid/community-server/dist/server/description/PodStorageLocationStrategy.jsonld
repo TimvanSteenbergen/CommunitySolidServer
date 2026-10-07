@@ -1,0 +1,42 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/description/PodStorageLocationStrategy.jsonld#PodStorageLocationStrategy",
+      "@type": "Class",
+      "requireElement": "PodStorageLocationStrategy",
+      "extends": [
+        "css:dist/server/description/StorageLocationStrategy.jsonld#StorageLocationStrategy"
+      ],
+      "comment": "A {@link StorageLocationStrategy} to be used when the server has pods which each are a different storage. The {@link IdentifierGenerator} that is used to generate URLs for the pods is used here to determine what the root pod URL is.",
+      "parameters": [
+        {
+          "@id": "css:dist/server/description/PodStorageLocationStrategy.jsonld#PodStorageLocationStrategy_generator",
+          "range": "css:dist/pods/generate/IdentifierGenerator.jsonld#IdentifierGenerator"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/description/PodStorageLocationStrategy.jsonld#PodStorageLocationStrategy__member_generator",
+          "memberFieldName": "generator"
+        },
+        {
+          "@id": "css:dist/server/description/PodStorageLocationStrategy.jsonld#PodStorageLocationStrategy__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/description/PodStorageLocationStrategy.jsonld#PodStorageLocationStrategy__member_getStorageIdentifier",
+          "memberFieldName": "getStorageIdentifier"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/description/PodStorageLocationStrategy.jsonld#PodStorageLocationStrategy_generator"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/validators/QuotaValidator.jsonld#QuotaValidator",
+      "@type": "Class",
+      "requireElement": "QuotaValidator",
+      "extends": [
+        "css:dist/http/auxiliary/Validator.jsonld#Validator"
+      ],
+      "comment": "The QuotaValidator validates data streams by making sure they would not exceed the limits of a QuotaStrategy.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/validators/QuotaValidator.jsonld#QuotaValidator_strategy",
+          "range": "css:dist/storage/quota/QuotaStrategy.jsonld#QuotaStrategy"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/validators/QuotaValidator.jsonld#QuotaValidator__member_strategy",
+          "memberFieldName": "strategy"
+        },
+        {
+          "@id": "css:dist/storage/validators/QuotaValidator.jsonld#QuotaValidator__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/validators/QuotaValidator.jsonld#QuotaValidator__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/validators/QuotaValidator.jsonld#QuotaValidator_strategy"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/accessors/PassthroughDataAccessor.jsonld#PassthroughDataAccessor",
+      "@type": "Class",
+      "requireElement": "PassthroughDataAccessor",
+      "extends": [
+        "css:dist/storage/accessors/DataAccessor.jsonld#DataAccessor"
+      ],
+      "comment": "DataAccessor that calls the corresponding functions of the source DataAccessor. Can be extended by data accessors that do not want to override all functions by implementing a decorator pattern.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/accessors/PassthroughDataAccessor.jsonld#PassthroughDataAccessor_accessor",
+          "range": "css:dist/storage/accessors/DataAccessor.jsonld#DataAccessor"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/accessors/PassthroughDataAccessor.jsonld#PassthroughDataAccessor__member_accessor",
+          "memberFieldName": "accessor",
+          "range": "css:dist/storage/accessors/AtomicDataAccessor.jsonld#AtomicDataAccessor"
+        },
+        {
+          "@id": "css:dist/storage/accessors/PassthroughDataAccessor.jsonld#PassthroughDataAccessor__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/accessors/PassthroughDataAccessor.jsonld#PassthroughDataAccessor__member_writeDocument",
+          "memberFieldName": "writeDocument"
+        },
+        {
+          "@id": "css:dist/storage/accessors/PassthroughDataAccessor.jsonld#PassthroughDataAccessor__member_writeContainer",
+          "memberFieldName": "writeContainer"
+        },
+        {
+          "@id": "css:dist/storage/accessors/PassthroughDataAccessor.jsonld#PassthroughDataAccessor__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/storage/accessors/PassthroughDataAccessor.jsonld#PassthroughDataAccessor__member_getData",
+          "memberFieldName": "getData"
+        },
+        {
+          "@id": "css:dist/storage/accessors/PassthroughDataAccessor.jsonld#PassthroughDataAccessor__member_getMetadata",
+          "memberFieldName": "getMetadata"
+        },
+        {
+          "@id": "css:dist/storage/accessors/PassthroughDataAccessor.jsonld#PassthroughDataAccessor__member_writeMetadata",
+          "memberFieldName": "writeMetadata"
+        },
+        {
+          "@id": "css:dist/storage/accessors/PassthroughDataAccessor.jsonld#PassthroughDataAccessor__member_getChildren",
+          "memberFieldName": "getChildren"
+        },
+        {
+          "@id": "css:dist/storage/accessors/PassthroughDataAccessor.jsonld#PassthroughDataAccessor__member_deleteResource",
+          "memberFieldName": "deleteResource"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/accessors/PassthroughDataAccessor.jsonld#PassthroughDataAccessor_accessor"
+        }
+      ]
+    }
+  ]
+}

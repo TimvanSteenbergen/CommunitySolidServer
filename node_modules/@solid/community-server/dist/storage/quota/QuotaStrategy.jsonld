@@ -1,0 +1,98 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/quota/QuotaStrategy.jsonld#QuotaStrategy",
+      "@type": "AbstractClass",
+      "requireElement": "QuotaStrategy",
+      "comment": "A QuotaStrategy is used when we want to set a limit to the amount of data that can be stored on the server. This can range from a limit for the whole server to a limit on a per pod basis. The way the size of a resource is calculated is implemented by the implementing classes. This can be bytes, quads, file count, ...",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/quota/QuotaStrategy.jsonld#QuotaStrategy_limit_unit",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/storage/quota/QuotaStrategy.jsonld#QuotaStrategy_limit_amount",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "css:dist/storage/quota/QuotaStrategy.jsonld#QuotaStrategy_reporter",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/size-reporter/SizeReporter.jsonld#SizeReporter",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/quota/QuotaStrategy.jsonld#QuotaStrategy__member_reporter",
+          "memberFieldName": "reporter",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/size-reporter/SizeReporter.jsonld#SizeReporter",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/storage/quota/QuotaStrategy.jsonld#QuotaStrategy__member_limit",
+          "memberFieldName": "limit",
+          "range": "css:dist/storage/size-reporter/Size.jsonld#Size"
+        },
+        {
+          "@id": "css:dist/storage/quota/QuotaStrategy.jsonld#QuotaStrategy__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/quota/QuotaStrategy.jsonld#QuotaStrategy__member_getAvailableSpace",
+          "memberFieldName": "getAvailableSpace"
+        },
+        {
+          "@id": "css:dist/storage/quota/QuotaStrategy.jsonld#QuotaStrategy__member_getTotalSpaceUsed",
+          "memberFieldName": "getTotalSpaceUsed"
+        },
+        {
+          "@id": "css:dist/storage/quota/QuotaStrategy.jsonld#QuotaStrategy__member_estimateSize",
+          "memberFieldName": "estimateSize"
+        },
+        {
+          "@id": "css:dist/storage/quota/QuotaStrategy.jsonld#QuotaStrategy__member_createQuotaGuard",
+          "memberFieldName": "createQuotaGuard"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/quota/QuotaStrategy.jsonld#QuotaStrategy_reporter"
+        },
+        {
+          "@id": "css:dist/storage/quota/QuotaStrategy.jsonld#QuotaStrategy_limit__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "unit",
+              "value": {
+                "@id": "css:dist/storage/quota/QuotaStrategy.jsonld#QuotaStrategy_limit_unit"
+              }
+            },
+            {
+              "keyRaw": "amount",
+              "value": {
+                "@id": "css:dist/storage/quota/QuotaStrategy.jsonld#QuotaStrategy_limit_amount"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

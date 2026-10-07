@@ -1,0 +1,49 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpMetadataWriter.jsonld#StreamingHttpMetadataWriter",
+      "@type": "Class",
+      "requireElement": "StreamingHttpMetadataWriter",
+      "extends": [
+        "css:dist/http/output/metadata/MetadataWriter.jsonld#MetadataWriter"
+      ],
+      "comment": "A {@link MetadataWriter} that adds a link to the receiveFrom endpoint of the corresponding Streaming HTTP notifications channel",
+      "parameters": [
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpMetadataWriter.jsonld#StreamingHttpMetadataWriter_route",
+          "range": "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpMetadataWriter.jsonld#StreamingHttpMetadataWriter__member_route",
+          "memberFieldName": "route"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpMetadataWriter.jsonld#StreamingHttpMetadataWriter__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpMetadataWriter.jsonld#StreamingHttpMetadataWriter__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpMetadataWriter.jsonld#StreamingHttpMetadataWriter__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpMetadataWriter.jsonld#StreamingHttpMetadataWriter_route"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Handler.jsonld#WebSocket2023Handler",
+      "@type": "AbstractClass",
+      "requireElement": "WebSocket2023Handler",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Handler.jsonld#WebSocket2023HandlerInput"
+          ]
+        }
+      ],
+      "comment": "A handler that is called when a valid WebSocketChannel2023 connection has been made.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Handler.jsonld#WebSocket2023HandlerInput",
+      "@type": "AbstractClass",
+      "requireElement": "WebSocket2023HandlerInput",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Handler.jsonld#WebSocket2023HandlerInput__member_channel",
+          "memberFieldName": "channel"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Handler.jsonld#WebSocket2023HandlerInput__member_webSocket",
+          "memberFieldName": "webSocket"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/middleware/AcpHeaderHandler.jsonld#AcpHeaderHandler",
+      "@type": "Class",
+      "requireElement": "AcpHeaderHandler",
+      "extends": [
+        "css:dist/server/HttpHandler.jsonld#HttpHandler"
+      ],
+      "comment": "Handles all the required ACP headers as defined at https://solid.github.io/authorization-panel/acp-specification/#conforming-acp-server",
+      "parameters": [
+        {
+          "@id": "css:dist/server/middleware/AcpHeaderHandler.jsonld#AcpHeaderHandler_modes",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": "xsd:string"
+          }
+        },
+        {
+          "@id": "css:dist/server/middleware/AcpHeaderHandler.jsonld#AcpHeaderHandler_attributes",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": "xsd:string"
+          }
+        },
+        {
+          "@id": "css:dist/server/middleware/AcpHeaderHandler.jsonld#AcpHeaderHandler_targetExtractor",
+          "range": "css:dist/http/input/identifier/TargetExtractor.jsonld#TargetExtractor"
+        },
+        {
+          "@id": "css:dist/server/middleware/AcpHeaderHandler.jsonld#AcpHeaderHandler_strategy",
+          "range": "css:dist/http/auxiliary/AuxiliaryIdentifierStrategy.jsonld#AuxiliaryIdentifierStrategy"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/middleware/AcpHeaderHandler.jsonld#AcpHeaderHandler__member_targetExtractor",
+          "memberFieldName": "targetExtractor"
+        },
+        {
+          "@id": "css:dist/server/middleware/AcpHeaderHandler.jsonld#AcpHeaderHandler__member_strategy",
+          "memberFieldName": "strategy"
+        },
+        {
+          "@id": "css:dist/server/middleware/AcpHeaderHandler.jsonld#AcpHeaderHandler__member_modes",
+          "memberFieldName": "modes"
+        },
+        {
+          "@id": "css:dist/server/middleware/AcpHeaderHandler.jsonld#AcpHeaderHandler__member_attributes",
+          "memberFieldName": "attributes"
+        },
+        {
+          "@id": "css:dist/server/middleware/AcpHeaderHandler.jsonld#AcpHeaderHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/middleware/AcpHeaderHandler.jsonld#AcpHeaderHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/middleware/AcpHeaderHandler.jsonld#AcpHeaderHandler_targetExtractor"
+        },
+        {
+          "@id": "css:dist/server/middleware/AcpHeaderHandler.jsonld#AcpHeaderHandler_strategy"
+        },
+        {
+          "@id": "css:dist/server/middleware/AcpHeaderHandler.jsonld#AcpHeaderHandler_modes"
+        },
+        {
+          "@id": "css:dist/server/middleware/AcpHeaderHandler.jsonld#AcpHeaderHandler_attributes"
+        }
+      ]
+    }
+  ]
+}

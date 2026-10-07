@@ -1,0 +1,199 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriber",
+      "@type": "Class",
+      "requireElement": "NotificationSubscriber",
+      "extends": [
+        "css:dist/server/OperationHttpHandler.jsonld#OperationHttpHandler"
+      ],
+      "comment": "Handles notification subscriptions by creating a notification channel.  Uses the information from the provided {@link NotificationChannelType} to validate the input and verify the request has the required permissions available. If successful the generated channel will be stored in a {@link NotificationChannelStorage}.",
+      "parameters": [
+        {
+          "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriber_args_channelType",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          },
+          "comment": "The {@link NotificationChannelType} with all the necessary information."
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriber_args_converter",
+          "range": "css:dist/storage/conversion/RepresentationConverter.jsonld#RepresentationConverter",
+          "comment": "{@link RepresentationConverter} used to convert input data into RDF."
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriber_args_credentialsExtractor",
+          "range": "css:dist/authentication/CredentialsExtractor.jsonld#CredentialsExtractor",
+          "comment": "Used to extract the credentials from the request."
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriber_args_permissionReader",
+          "range": "css:dist/authorization/PermissionReader.jsonld#PermissionReader",
+          "comment": "Used to determine which permissions the found credentials have."
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriber_args_authorizer",
+          "range": "css:dist/authorization/Authorizer.jsonld#Authorizer",
+          "comment": "Used to determine if the request has the necessary permissions."
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriber_args_storage",
+          "range": "css:dist/server/notifications/NotificationChannelStorage.jsonld#NotificationChannelStorage",
+          "comment": "Storage used to store the channels."
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriber_args_maxDuration",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Overrides the expiration feature of channels, by making sure they always expire after the `maxDuration` value. If the expiration of the channel is shorter than `maxDuration`, the original value will be kept. Value is set in minutes. 0 is infinite. Defaults to 20160 minutes, which is 2 weeks."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriber__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriber__member_channelType",
+          "memberFieldName": "channelType"
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriber__member_converter",
+          "memberFieldName": "converter"
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriber__member_credentialsExtractor",
+          "memberFieldName": "credentialsExtractor"
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriber__member_permissionReader",
+          "memberFieldName": "permissionReader"
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriber__member_authorizer",
+          "memberFieldName": "authorizer"
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriber__member_storage",
+          "memberFieldName": "storage"
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriber__member_maxDuration",
+          "memberFieldName": "maxDuration"
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriber__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriber__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriber__member_authorize",
+          "memberFieldName": "authorize"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriber_args__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "channelType",
+              "value": {
+                "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriber_args_channelType"
+              }
+            },
+            {
+              "keyRaw": "converter",
+              "value": {
+                "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriber_args_converter"
+              }
+            },
+            {
+              "keyRaw": "credentialsExtractor",
+              "value": {
+                "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriber_args_credentialsExtractor"
+              }
+            },
+            {
+              "keyRaw": "permissionReader",
+              "value": {
+                "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriber_args_permissionReader"
+              }
+            },
+            {
+              "keyRaw": "authorizer",
+              "value": {
+                "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriber_args_authorizer"
+              }
+            },
+            {
+              "keyRaw": "storage",
+              "value": {
+                "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriber_args_storage"
+              }
+            },
+            {
+              "keyRaw": "maxDuration",
+              "value": {
+                "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriber_args_maxDuration"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriberArgs",
+      "@type": "AbstractClass",
+      "requireElement": "NotificationSubscriberArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriberArgs__member_channelType",
+          "memberFieldName": "channelType"
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriberArgs__member_converter",
+          "memberFieldName": "converter"
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriberArgs__member_credentialsExtractor",
+          "memberFieldName": "credentialsExtractor"
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriberArgs__member_permissionReader",
+          "memberFieldName": "permissionReader"
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriberArgs__member_authorizer",
+          "memberFieldName": "authorizer"
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriberArgs__member_storage",
+          "memberFieldName": "storage"
+        },
+        {
+          "@id": "css:dist/server/notifications/NotificationSubscriber.jsonld#NotificationSubscriberArgs__member_maxDuration",
+          "memberFieldName": "maxDuration"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

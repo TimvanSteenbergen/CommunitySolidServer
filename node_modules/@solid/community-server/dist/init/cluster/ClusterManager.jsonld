@@ -1,0 +1,59 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/init/cluster/ClusterManager.jsonld#ClusterManager",
+      "@type": "Class",
+      "requireElement": "ClusterManager",
+      "comment": "This class is responsible for deciding how many affective workers are needed. It also contains the logic for respawning workers when they are killed by the os.  The workers values are interpreted as follows: value | actual workers | ------|--------------| `-m` | `num_cores - m` workers _(autoscale)_ (`m < num_cores`) | `-1` | `num_cores - 1` workers _(autoscale)_ | `0` | `num_cores` workers _(autoscale)_ | `1` | `single threaded mode` _(default)_ | `n` | `n` workers |",
+      "parameters": [
+        {
+          "@id": "css:dist/init/cluster/ClusterManager.jsonld#ClusterManager_workers",
+          "range": "xsd:number"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/init/cluster/ClusterManager.jsonld#ClusterManager__member_logger",
+          "memberFieldName": "logger"
+        },
+        {
+          "@id": "css:dist/init/cluster/ClusterManager.jsonld#ClusterManager__member_workers",
+          "memberFieldName": "workers"
+        },
+        {
+          "@id": "css:dist/init/cluster/ClusterManager.jsonld#ClusterManager__member_clusterMode",
+          "memberFieldName": "clusterMode"
+        },
+        {
+          "@id": "css:dist/init/cluster/ClusterManager.jsonld#ClusterManager__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/init/cluster/ClusterManager.jsonld#ClusterManager__member_spawnWorkers",
+          "memberFieldName": "spawnWorkers"
+        },
+        {
+          "@id": "css:dist/init/cluster/ClusterManager.jsonld#ClusterManager__member_isSingleThreaded",
+          "memberFieldName": "isSingleThreaded"
+        },
+        {
+          "@id": "css:dist/init/cluster/ClusterManager.jsonld#ClusterManager__member_isPrimary",
+          "memberFieldName": "isPrimary"
+        },
+        {
+          "@id": "css:dist/init/cluster/ClusterManager.jsonld#ClusterManager__member_isWorker",
+          "memberFieldName": "isWorker"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/init/cluster/ClusterManager.jsonld#ClusterManager_workers"
+        }
+      ]
+    }
+  ]
+}

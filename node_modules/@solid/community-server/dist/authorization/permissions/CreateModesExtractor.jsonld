@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/authorization/permissions/CreateModesExtractor.jsonld#CreateModesExtractor",
+      "@type": "Class",
+      "requireElement": "CreateModesExtractor",
+      "extends": [
+        "css:dist/authorization/permissions/ModesExtractor.jsonld#ModesExtractor"
+      ],
+      "comment": "Adds the `create` access mode to the result of the source in case the target resource does not exist.",
+      "parameters": [
+        {
+          "@id": "css:dist/authorization/permissions/CreateModesExtractor.jsonld#CreateModesExtractor_source",
+          "range": "css:dist/authorization/permissions/ModesExtractor.jsonld#ModesExtractor"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/CreateModesExtractor.jsonld#CreateModesExtractor_resourceSet",
+          "range": "css:dist/storage/ResourceSet.jsonld#ResourceSet"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/authorization/permissions/CreateModesExtractor.jsonld#CreateModesExtractor__member_source",
+          "memberFieldName": "source"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/CreateModesExtractor.jsonld#CreateModesExtractor__member_resourceSet",
+          "memberFieldName": "resourceSet"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/CreateModesExtractor.jsonld#CreateModesExtractor__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/CreateModesExtractor.jsonld#CreateModesExtractor__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/CreateModesExtractor.jsonld#CreateModesExtractor__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/authorization/permissions/CreateModesExtractor.jsonld#CreateModesExtractor_source"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/CreateModesExtractor.jsonld#CreateModesExtractor_resourceSet"
+        }
+      ]
+    }
+  ]
+}

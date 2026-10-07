@@ -1,0 +1,71 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/authorization/permissions/IntermediateCreateExtractor.jsonld#IntermediateCreateExtractor",
+      "@type": "Class",
+      "requireElement": "IntermediateCreateExtractor",
+      "extends": [
+        "css:dist/authorization/permissions/ModesExtractor.jsonld#ModesExtractor"
+      ],
+      "comment": "Returns the required access modes from the source {@link ModesExtractor}. In case create permissions are required, verifies if any of the containers permissions also need to be created and adds the corresponding identifier/mode combinations.",
+      "parameters": [
+        {
+          "@id": "css:dist/authorization/permissions/IntermediateCreateExtractor.jsonld#IntermediateCreateExtractor_resourceSet",
+          "range": "css:dist/storage/ResourceSet.jsonld#ResourceSet",
+          "comment": "{@link ResourceSet} that can verify the target resource existence."
+        },
+        {
+          "@id": "css:dist/authorization/permissions/IntermediateCreateExtractor.jsonld#IntermediateCreateExtractor_strategy",
+          "range": "css:dist/util/identifiers/IdentifierStrategy.jsonld#IdentifierStrategy",
+          "comment": "{@link IdentifierStrategy} that will be used to determine parent containers."
+        },
+        {
+          "@id": "css:dist/authorization/permissions/IntermediateCreateExtractor.jsonld#IntermediateCreateExtractor_source",
+          "range": "css:dist/authorization/permissions/ModesExtractor.jsonld#ModesExtractor",
+          "comment": "The source {@link ModesExtractor}."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/authorization/permissions/IntermediateCreateExtractor.jsonld#IntermediateCreateExtractor__member_resourceSet",
+          "memberFieldName": "resourceSet"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/IntermediateCreateExtractor.jsonld#IntermediateCreateExtractor__member_strategy",
+          "memberFieldName": "strategy"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/IntermediateCreateExtractor.jsonld#IntermediateCreateExtractor__member_source",
+          "memberFieldName": "source"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/IntermediateCreateExtractor.jsonld#IntermediateCreateExtractor__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/IntermediateCreateExtractor.jsonld#IntermediateCreateExtractor__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/IntermediateCreateExtractor.jsonld#IntermediateCreateExtractor__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/authorization/permissions/IntermediateCreateExtractor.jsonld#IntermediateCreateExtractor_resourceSet"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/IntermediateCreateExtractor.jsonld#IntermediateCreateExtractor_strategy"
+        },
+        {
+          "@id": "css:dist/authorization/permissions/IntermediateCreateExtractor.jsonld#IntermediateCreateExtractor_source"
+        }
+      ]
+    }
+  ]
+}

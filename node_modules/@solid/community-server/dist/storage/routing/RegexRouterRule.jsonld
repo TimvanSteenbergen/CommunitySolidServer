@@ -1,0 +1,110 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/routing/RegexRouterRule.jsonld#RegexRule",
+      "@type": "Class",
+      "requireElement": "RegexRule",
+      "comment": "Utility class to easily configure Regex to ResourceStore mappings in the config files.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/routing/RegexRouterRule.jsonld#RegexRule_regex",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/storage/routing/RegexRouterRule.jsonld#RegexRule_store",
+          "range": "css:dist/storage/ResourceStore.jsonld#ResourceStore"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/routing/RegexRouterRule.jsonld#RegexRule__member_regex",
+          "memberFieldName": "regex",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/storage/routing/RegexRouterRule.jsonld#RegexRule__member_store",
+          "memberFieldName": "store",
+          "range": "css:dist/storage/ResourceStore.jsonld#ResourceStore"
+        },
+        {
+          "@id": "css:dist/storage/routing/RegexRouterRule.jsonld#RegexRule__member_constructor",
+          "memberFieldName": "constructor"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/routing/RegexRouterRule.jsonld#RegexRule_regex"
+        },
+        {
+          "@id": "css:dist/storage/routing/RegexRouterRule.jsonld#RegexRule_store"
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/storage/routing/RegexRouterRule.jsonld#RegexRouterRule",
+      "@type": "Class",
+      "requireElement": "RegexRouterRule",
+      "extends": [
+        "css:dist/storage/routing/RouterRule.jsonld#RouterRule"
+      ],
+      "comment": "Routes requests to a store based on the path of the identifier. The identifier will be stripped of the base URI after which regexes will be used to find the correct store. The trailing slash of the base URI will still be present so the first character a regex can match would be that `/`. This way regexes such as `/container/` can match containers in any position.  In case none of the regexes match an error will be thrown.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/routing/RegexRouterRule.jsonld#RegexRouterRule_base",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/storage/routing/RegexRouterRule.jsonld#RegexRouterRule_rules",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": "css:dist/storage/routing/RegexRouterRule.jsonld#RegexRule"
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/routing/RegexRouterRule.jsonld#RegexRouterRule__member_base",
+          "memberFieldName": "base"
+        },
+        {
+          "@id": "css:dist/storage/routing/RegexRouterRule.jsonld#RegexRouterRule__member_rules",
+          "memberFieldName": "rules"
+        },
+        {
+          "@id": "css:dist/storage/routing/RegexRouterRule.jsonld#RegexRouterRule__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/routing/RegexRouterRule.jsonld#RegexRouterRule__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/storage/routing/RegexRouterRule.jsonld#RegexRouterRule__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/storage/routing/RegexRouterRule.jsonld#RegexRouterRule__member_matchStore",
+          "memberFieldName": "matchStore"
+        },
+        {
+          "@id": "css:dist/storage/routing/RegexRouterRule.jsonld#RegexRouterRule__member_toRelative",
+          "memberFieldName": "toRelative"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/routing/RegexRouterRule.jsonld#RegexRouterRule_base"
+        },
+        {
+          "@id": "css:dist/storage/routing/RegexRouterRule.jsonld#RegexRouterRule_rules"
+        }
+      ]
+    }
+  ]
+}

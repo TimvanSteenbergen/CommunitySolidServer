@@ -1,0 +1,38 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/input/preferences/UnionPreferenceParser.jsonld#UnionPreferenceParser",
+      "@type": "Class",
+      "requireElement": "UnionPreferenceParser",
+      "comment": "Combines the results of multiple {@link PreferenceParser}s. Will throw an error if multiple parsers return a range as these can't logically be combined.",
+      "parameters": [
+        {
+          "@id": "css:dist/http/input/preferences/UnionPreferenceParser.jsonld#UnionPreferenceParser_parsers",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": "css:dist/http/input/preferences/PreferenceParser.jsonld#PreferenceParser"
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/input/preferences/UnionPreferenceParser.jsonld#UnionPreferenceParser__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/input/preferences/UnionPreferenceParser.jsonld#UnionPreferenceParser__member_combine",
+          "memberFieldName": "combine"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/input/preferences/UnionPreferenceParser.jsonld#UnionPreferenceParser_parsers"
+        }
+      ]
+    }
+  ]
+}

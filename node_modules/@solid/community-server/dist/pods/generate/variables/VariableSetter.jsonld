@@ -1,0 +1,72 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/pods/generate/variables/VariableSetter.jsonld#VariableSetter",
+      "@type": "Class",
+      "requireElement": "VariableSetter",
+      "extends": [
+        "css:dist/pods/generate/variables/VariableHandler.jsonld#VariableHandler"
+      ],
+      "comment": "A VariableHandler that will set the given variable to the given value, unless there already is a value for the variable and override is false.",
+      "parameters": [
+        {
+          "@id": "css:dist/pods/generate/variables/VariableSetter.jsonld#VariableSetter_variable",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/pods/generate/variables/VariableSetter.jsonld#VariableSetter_value",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/pods/generate/variables/VariableSetter.jsonld#VariableSetter_override",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/pods/generate/variables/VariableSetter.jsonld#VariableSetter__member_variable",
+          "memberFieldName": "variable"
+        },
+        {
+          "@id": "css:dist/pods/generate/variables/VariableSetter.jsonld#VariableSetter__member_value",
+          "memberFieldName": "value"
+        },
+        {
+          "@id": "css:dist/pods/generate/variables/VariableSetter.jsonld#VariableSetter__member_override",
+          "memberFieldName": "override"
+        },
+        {
+          "@id": "css:dist/pods/generate/variables/VariableSetter.jsonld#VariableSetter__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/pods/generate/variables/VariableSetter.jsonld#VariableSetter__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/pods/generate/variables/VariableSetter.jsonld#VariableSetter_variable"
+        },
+        {
+          "@id": "css:dist/pods/generate/variables/VariableSetter.jsonld#VariableSetter_value"
+        },
+        {
+          "@id": "css:dist/pods/generate/variables/VariableSetter.jsonld#VariableSetter_override"
+        }
+      ]
+    }
+  ]
+}

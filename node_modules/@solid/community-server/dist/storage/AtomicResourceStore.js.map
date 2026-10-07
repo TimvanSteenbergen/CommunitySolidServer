@@ -1,0 +1,1 @@
+{"version":3,"file":"AtomicResourceStore.js","sourceRoot":"","sources":["../../src/storage/AtomicResourceStore.ts"],"names":[],"mappings":"","sourcesContent":["import type { ResourceStore } from './ResourceStore';\n\n/**\n * A {@link ResourceStore} of which all operations are atomic.\n */\nexport interface AtomicResourceStore extends ResourceStore {}\n"]}

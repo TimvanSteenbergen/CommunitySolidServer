@@ -1,0 +1,117 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/HtmlViewHandler.jsonld#HtmlViewEntry",
+      "@type": "Class",
+      "requireElement": "HtmlViewEntry",
+      "comment": "Used to link file paths and URLs together. The reason we use a separate object instead of a key/value Record, is that this makes it easier to override the values in Components.js, which can be useful if someone wants to replace the HTML for certain URLs.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/HtmlViewHandler.jsonld#HtmlViewEntry_filePath",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/identity/interaction/HtmlViewHandler.jsonld#HtmlViewEntry_route",
+          "range": "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/HtmlViewHandler.jsonld#HtmlViewEntry__member_route",
+          "memberFieldName": "route",
+          "range": "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute"
+        },
+        {
+          "@id": "css:dist/identity/interaction/HtmlViewHandler.jsonld#HtmlViewEntry__member_filePath",
+          "memberFieldName": "filePath",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/identity/interaction/HtmlViewHandler.jsonld#HtmlViewEntry__member_constructor",
+          "memberFieldName": "constructor"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/HtmlViewHandler.jsonld#HtmlViewEntry_route"
+        },
+        {
+          "@id": "css:dist/identity/interaction/HtmlViewHandler.jsonld#HtmlViewEntry_filePath"
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/identity/interaction/HtmlViewHandler.jsonld#HtmlViewHandler",
+      "@type": "Class",
+      "requireElement": "HtmlViewHandler",
+      "extends": [
+        "css:dist/identity/interaction/InteractionHandler.jsonld#InteractionHandler"
+      ],
+      "comment": "Stores the HTML templates associated with specific InteractionRoutes.  This class will only handle GET operations for which there is a matching template, if HTML is more preferred than JSON. The reason for doing it like this instead of a standard content negotiation flow, is because we only want to return the HTML pages on GET requests.  Templates will receive the parameter `idpIndex` in their context pointing to the root index URL of the IDP API and an `authenticating` parameter indicating if this is an active OIDC interaction.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/HtmlViewHandler.jsonld#HtmlViewHandler_templateEngine",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/identity/interaction/HtmlViewHandler.jsonld#HtmlViewHandler_index",
+          "range": "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute"
+        },
+        {
+          "@id": "css:dist/identity/interaction/HtmlViewHandler.jsonld#HtmlViewHandler_templates",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": "css:dist/identity/interaction/HtmlViewHandler.jsonld#HtmlViewEntry"
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/HtmlViewHandler.jsonld#HtmlViewHandler__member_idpIndex",
+          "memberFieldName": "idpIndex"
+        },
+        {
+          "@id": "css:dist/identity/interaction/HtmlViewHandler.jsonld#HtmlViewHandler__member_templateEngine",
+          "memberFieldName": "templateEngine"
+        },
+        {
+          "@id": "css:dist/identity/interaction/HtmlViewHandler.jsonld#HtmlViewHandler__member_templates",
+          "memberFieldName": "templates"
+        },
+        {
+          "@id": "css:dist/identity/interaction/HtmlViewHandler.jsonld#HtmlViewHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/HtmlViewHandler.jsonld#HtmlViewHandler__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/identity/interaction/HtmlViewHandler.jsonld#HtmlViewHandler__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/identity/interaction/HtmlViewHandler.jsonld#HtmlViewHandler__member_findTemplate",
+          "memberFieldName": "findTemplate"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/HtmlViewHandler.jsonld#HtmlViewHandler_index"
+        },
+        {
+          "@id": "css:dist/identity/interaction/HtmlViewHandler.jsonld#HtmlViewHandler_templateEngine"
+        },
+        {
+          "@id": "css:dist/identity/interaction/HtmlViewHandler.jsonld#HtmlViewHandler_templates"
+        }
+      ]
+    }
+  ]
+}

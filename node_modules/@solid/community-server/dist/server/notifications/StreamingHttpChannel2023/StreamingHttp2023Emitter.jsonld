@@ -1,0 +1,72 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttp2023Emitter.jsonld#StreamingHttp2023Emitter",
+      "@type": "Class",
+      "requireElement": "StreamingHttp2023Emitter",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttp2023Emitter.jsonld#StreamingHttpEmitterInput"
+          ]
+        }
+      ],
+      "comment": "Emits notifications on StreamingHTTPChannel2023 streams. Uses the response streams found in the provided map. The key should be the identifier of the topic resource.",
+      "parameters": [
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttp2023Emitter.jsonld#StreamingHttp2023Emitter_streamMap",
+          "range": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttpMap.jsonld#StreamingHttpMap"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttp2023Emitter.jsonld#StreamingHttp2023Emitter__member_streamMap",
+          "memberFieldName": "streamMap"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttp2023Emitter.jsonld#StreamingHttp2023Emitter__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttp2023Emitter.jsonld#StreamingHttp2023Emitter__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttp2023Emitter.jsonld#StreamingHttp2023Emitter__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttp2023Emitter.jsonld#StreamingHttp2023Emitter_streamMap"
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttp2023Emitter.jsonld#StreamingHttpEmitterInput",
+      "@type": "AbstractClass",
+      "requireElement": "StreamingHttpEmitterInput",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttp2023Emitter.jsonld#StreamingHttpEmitterInput__member_channel",
+          "memberFieldName": "channel"
+        },
+        {
+          "@id": "css:dist/server/notifications/StreamingHttpChannel2023/StreamingHttp2023Emitter.jsonld#StreamingHttpEmitterInput__member_representation",
+          "memberFieldName": "representation"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

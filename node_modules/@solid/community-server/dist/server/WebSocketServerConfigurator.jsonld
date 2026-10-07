@@ -1,0 +1,49 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/WebSocketServerConfigurator.jsonld#WebSocketServerConfigurator",
+      "@type": "Class",
+      "requireElement": "WebSocketServerConfigurator",
+      "extends": [
+        "css:dist/server/ServerConfigurator.jsonld#ServerConfigurator"
+      ],
+      "comment": "{@link ServerConfigurator} that adds WebSocket functionality to an existing {@link Server}.  Listens for WebSocket requests and sends them to its handler.",
+      "parameters": [
+        {
+          "@id": "css:dist/server/WebSocketServerConfigurator.jsonld#WebSocketServerConfigurator_handler",
+          "range": "css:dist/server/WebSocketHandler.jsonld#WebSocketHandler"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/WebSocketServerConfigurator.jsonld#WebSocketServerConfigurator__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/server/WebSocketServerConfigurator.jsonld#WebSocketServerConfigurator__member_handler",
+          "memberFieldName": "handler"
+        },
+        {
+          "@id": "css:dist/server/WebSocketServerConfigurator.jsonld#WebSocketServerConfigurator__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/WebSocketServerConfigurator.jsonld#WebSocketServerConfigurator__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/WebSocketServerConfigurator.jsonld#WebSocketServerConfigurator_handler"
+        }
+      ]
+    }
+  ]
+}

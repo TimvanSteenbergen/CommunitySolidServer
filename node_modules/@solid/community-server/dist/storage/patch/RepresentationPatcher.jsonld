@@ -1,0 +1,69 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/patch/RepresentationPatcher.jsonld#RepresentationPatcher",
+      "@type": "AbstractClass",
+      "requireElement": "RepresentationPatcher",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeGenericComponent",
+              "component": "css:dist/storage/patch/RepresentationPatcher.jsonld#RepresentationPatcherInput",
+              "genericTypeInstances": [
+                {
+                  "@type": "ParameterRangeGenericTypeReference",
+                  "parameterRangeGenericType": "css:dist/storage/patch/RepresentationPatcher.jsonld#RepresentationPatcher__generic_T"
+                }
+              ]
+            },
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/storage/patch/RepresentationPatcher.jsonld#RepresentationPatcher__generic_T"
+            }
+          ]
+        }
+      ],
+      "comment": "Handles the patching of a specific Representation.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/storage/patch/RepresentationPatcher.jsonld#RepresentationPatcher__generic_T"
+        }
+      ],
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "css:dist/storage/patch/RepresentationPatcher.jsonld#RepresentationPatcherInput",
+      "@type": "AbstractClass",
+      "requireElement": "RepresentationPatcherInput",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/storage/patch/RepresentationPatcher.jsonld#RepresentationPatcherInput__generic_T"
+        }
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/patch/RepresentationPatcher.jsonld#RepresentationPatcherInput__member_identifier",
+          "memberFieldName": "identifier"
+        },
+        {
+          "@id": "css:dist/storage/patch/RepresentationPatcher.jsonld#RepresentationPatcherInput__member_patch",
+          "memberFieldName": "patch"
+        },
+        {
+          "@id": "css:dist/storage/patch/RepresentationPatcher.jsonld#RepresentationPatcherInput__member_representation",
+          "memberFieldName": "representation"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

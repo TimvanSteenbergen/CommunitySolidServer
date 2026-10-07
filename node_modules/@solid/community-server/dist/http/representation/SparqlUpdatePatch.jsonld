@@ -1,0 +1,25 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/representation/SparqlUpdatePatch.jsonld#SparqlUpdatePatch",
+      "@type": "AbstractClass",
+      "requireElement": "SparqlUpdatePatch",
+      "extends": [
+        "css:dist/http/representation/Patch.jsonld#Patch"
+      ],
+      "comment": "A specific type of {@link Patch} corresponding to a SPARQL update.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/representation/SparqlUpdatePatch.jsonld#SparqlUpdatePatch__member_algebra",
+          "memberFieldName": "algebra"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

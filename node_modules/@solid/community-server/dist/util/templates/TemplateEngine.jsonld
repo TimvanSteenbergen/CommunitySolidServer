@@ -1,0 +1,61 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/templates/TemplateEngine.jsonld#TemplateString",
+      "@type": "AbstractClass",
+      "requireElement": "TemplateString",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/templates/TemplateEngine.jsonld#TemplateString__member_templateString",
+          "memberFieldName": "templateString"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "css:dist/util/templates/TemplateEngine.jsonld#TemplatePath",
+      "@type": "AbstractClass",
+      "requireElement": "TemplatePath",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/templates/TemplateEngine.jsonld#TemplatePath__member_templateFile",
+          "memberFieldName": "templateFile"
+        },
+        {
+          "@id": "css:dist/util/templates/TemplateEngine.jsonld#TemplatePath__member_templatePath",
+          "memberFieldName": "templatePath"
+        }
+      ],
+      "constructorArguments": []
+    },
+    {
+      "@id": "css:dist/util/templates/TemplateEngine.jsonld#TemplateEngineInput",
+      "@type": "AbstractClass",
+      "requireElement": "TemplateEngineInput",
+      "comment": "Utility interface for representing TemplateEngine input.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/util/templates/TemplateEngine.jsonld#TemplateEngineInput__generic_T"
+        }
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/templates/TemplateEngine.jsonld#TemplateEngineInput__member_contents",
+          "memberFieldName": "contents"
+        },
+        {
+          "@id": "css:dist/util/templates/TemplateEngine.jsonld#TemplateEngineInput__member_template",
+          "memberFieldName": "template"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

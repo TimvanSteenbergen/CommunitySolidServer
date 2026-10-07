@@ -1,0 +1,60 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/output/metadata/StorageDescriptionAdvertiser.jsonld#StorageDescriptionAdvertiser",
+      "@type": "Class",
+      "requireElement": "StorageDescriptionAdvertiser",
+      "extends": [
+        "css:dist/http/output/metadata/MetadataWriter.jsonld#MetadataWriter"
+      ],
+      "comment": "Adds a link header pointing to the relevant storage description resource. Recursively checks parent containers until a storage container is found, and then appends the provided relative path to determine the storage description resource.",
+      "parameters": [
+        {
+          "@id": "css:dist/http/output/metadata/StorageDescriptionAdvertiser.jsonld#StorageDescriptionAdvertiser_relativePath",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/http/output/metadata/StorageDescriptionAdvertiser.jsonld#StorageDescriptionAdvertiser_storageStrategy",
+          "range": "css:dist/server/description/StorageLocationStrategy.jsonld#StorageLocationStrategy"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/output/metadata/StorageDescriptionAdvertiser.jsonld#StorageDescriptionAdvertiser__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/http/output/metadata/StorageDescriptionAdvertiser.jsonld#StorageDescriptionAdvertiser__member_storageStrategy",
+          "memberFieldName": "storageStrategy"
+        },
+        {
+          "@id": "css:dist/http/output/metadata/StorageDescriptionAdvertiser.jsonld#StorageDescriptionAdvertiser__member_relativePath",
+          "memberFieldName": "relativePath"
+        },
+        {
+          "@id": "css:dist/http/output/metadata/StorageDescriptionAdvertiser.jsonld#StorageDescriptionAdvertiser__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/output/metadata/StorageDescriptionAdvertiser.jsonld#StorageDescriptionAdvertiser__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/output/metadata/StorageDescriptionAdvertiser.jsonld#StorageDescriptionAdvertiser_storageStrategy"
+        },
+        {
+          "@id": "css:dist/http/output/metadata/StorageDescriptionAdvertiser.jsonld#StorageDescriptionAdvertiser_relativePath"
+        }
+      ]
+    }
+  ]
+}

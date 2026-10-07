@@ -1,0 +1,22 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/JsonView.jsonld#JsonView",
+      "@type": "AbstractClass",
+      "requireElement": "JsonView",
+      "comment": "An interface that can be used by classes that can provide a view besides doing an action. Designed to be used by a {@link JsonInteractionHandler} that has a view explaining what JSON input it supports.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/JsonView.jsonld#JsonView__member_getView",
+          "memberFieldName": "getView"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

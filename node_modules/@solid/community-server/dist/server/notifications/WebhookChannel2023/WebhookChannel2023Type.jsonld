@@ -1,0 +1,115 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookChannel2023Type.jsonld#WebhookChannel2023Type",
+      "@type": "Class",
+      "requireElement": "WebhookChannel2023Type",
+      "comment": "The notification channel type WebhookChannel2023 as described in https://solid.github.io/notifications/webhook-channel-2023  Requires read permissions on a resource to be able to receive notifications.  Also handles the `state` feature if present.",
+      "parameters": [
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookChannel2023Type.jsonld#WebhookChannel2023Type_route",
+          "range": "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute",
+          "comment": "The route corresponding to the URL of the subscription service of this channel type."
+        },
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookChannel2023Type.jsonld#WebhookChannel2023Type_webIdRoute",
+          "range": "css:dist/identity/interaction/routing/InteractionRoute.jsonld#InteractionRoute",
+          "comment": "The route to the WebID that needs to be used when generating DPoP tokens for notifications."
+        },
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookChannel2023Type.jsonld#WebhookChannel2023Type_stateHandler",
+          "range": "css:dist/server/notifications/StateHandler.jsonld#StateHandler",
+          "comment": "The {@link StateHandler} that will be called after a successful subscription."
+        },
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookChannel2023Type.jsonld#WebhookChannel2023Type_features",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": "xsd:string"
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "The features that need to be enabled for this channel type."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookChannel2023Type.jsonld#WebhookChannel2023Type__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookChannel2023Type.jsonld#WebhookChannel2023Type__member_stateHandler",
+          "memberFieldName": "stateHandler"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookChannel2023Type.jsonld#WebhookChannel2023Type__member_webId",
+          "memberFieldName": "webId"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookChannel2023Type.jsonld#WebhookChannel2023Type__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookChannel2023Type.jsonld#WebhookChannel2023Type__member_initChannel",
+          "memberFieldName": "initChannel"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookChannel2023Type.jsonld#WebhookChannel2023Type__member_toJsonLd",
+          "memberFieldName": "toJsonLd"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookChannel2023Type.jsonld#WebhookChannel2023Type__member_completeChannel",
+          "memberFieldName": "completeChannel"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookChannel2023Type.jsonld#WebhookChannel2023Type_route"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookChannel2023Type.jsonld#WebhookChannel2023Type_webIdRoute"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookChannel2023Type.jsonld#WebhookChannel2023Type_stateHandler"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookChannel2023Type.jsonld#WebhookChannel2023Type_features"
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookChannel2023Type.jsonld#WebhookChannel2023",
+      "@type": "AbstractClass",
+      "requireElement": "WebhookChannel2023",
+      "extends": [
+        "css:dist/server/notifications/NotificationChannel.jsonld#NotificationChannel"
+      ],
+      "comment": "A {@link NotificationChannel} containing the necessary fields for a WebhookChannel2023 channel.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookChannel2023Type.jsonld#WebhookChannel2023__member_type",
+          "memberFieldName": "type"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebhookChannel2023/WebhookChannel2023Type.jsonld#WebhookChannel2023__member_sendTo",
+          "memberFieldName": "sendTo"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

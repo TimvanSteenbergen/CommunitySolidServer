@@ -1,0 +1,60 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/pods/GeneratedPodManager.jsonld#GeneratedPodManager",
+      "@type": "Class",
+      "requireElement": "GeneratedPodManager",
+      "extends": [
+        "css:dist/pods/PodManager.jsonld#PodManager"
+      ],
+      "comment": "Pod manager that uses an {@link IdentifierGenerator} and {@link ResourcesGenerator} to create the default resources and identifier for a new pod.",
+      "parameters": [
+        {
+          "@id": "css:dist/pods/GeneratedPodManager.jsonld#GeneratedPodManager_store",
+          "range": "css:dist/storage/ResourceStore.jsonld#ResourceStore"
+        },
+        {
+          "@id": "css:dist/pods/GeneratedPodManager.jsonld#GeneratedPodManager_resourcesGenerator",
+          "range": "css:dist/pods/generate/ResourcesGenerator.jsonld#ResourcesGenerator"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/pods/GeneratedPodManager.jsonld#GeneratedPodManager__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/pods/GeneratedPodManager.jsonld#GeneratedPodManager__member_store",
+          "memberFieldName": "store"
+        },
+        {
+          "@id": "css:dist/pods/GeneratedPodManager.jsonld#GeneratedPodManager__member_resourcesGenerator",
+          "memberFieldName": "resourcesGenerator"
+        },
+        {
+          "@id": "css:dist/pods/GeneratedPodManager.jsonld#GeneratedPodManager__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/pods/GeneratedPodManager.jsonld#GeneratedPodManager__member_createPod",
+          "memberFieldName": "createPod"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/pods/GeneratedPodManager.jsonld#GeneratedPodManager_store"
+        },
+        {
+          "@id": "css:dist/pods/GeneratedPodManager.jsonld#GeneratedPodManager_resourcesGenerator"
+        }
+      ]
+    }
+  ]
+}

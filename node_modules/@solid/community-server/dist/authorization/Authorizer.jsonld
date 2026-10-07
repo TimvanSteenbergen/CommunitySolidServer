@@ -1,0 +1,46 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/authorization/Authorizer.jsonld#Authorizer",
+      "@type": "AbstractClass",
+      "requireElement": "Authorizer",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            "css:dist/authorization/Authorizer.jsonld#AuthorizerInput"
+          ]
+        }
+      ],
+      "comment": "Verifies whether the credentials provide access with the given permissions on the resource. An {@link Error} with the necessary explanation will be thrown if permissions are not granted.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "css:dist/authorization/Authorizer.jsonld#AuthorizerInput",
+      "@type": "AbstractClass",
+      "requireElement": "AuthorizerInput",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/authorization/Authorizer.jsonld#AuthorizerInput__member_credentials",
+          "memberFieldName": "credentials"
+        },
+        {
+          "@id": "css:dist/authorization/Authorizer.jsonld#AuthorizerInput__member_requestedModes",
+          "memberFieldName": "requestedModes"
+        },
+        {
+          "@id": "css:dist/authorization/Authorizer.jsonld#AuthorizerInput__member_availablePermissions",
+          "memberFieldName": "availablePermissions"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

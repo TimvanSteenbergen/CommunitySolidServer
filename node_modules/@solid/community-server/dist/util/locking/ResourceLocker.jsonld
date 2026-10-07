@@ -1,0 +1,26 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/locking/ResourceLocker.jsonld#ResourceLocker",
+      "@type": "AbstractClass",
+      "requireElement": "ResourceLocker",
+      "comment": "An interface for classes that only have 1 way to lock interfaces. In general this should only be used by components implementing the {@link ReadWriteLocker} interface. Other components that require locking of resources should use that interface.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/locking/ResourceLocker.jsonld#ResourceLocker__member_acquire",
+          "memberFieldName": "acquire"
+        },
+        {
+          "@id": "css:dist/util/locking/ResourceLocker.jsonld#ResourceLocker__member_release",
+          "memberFieldName": "release"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

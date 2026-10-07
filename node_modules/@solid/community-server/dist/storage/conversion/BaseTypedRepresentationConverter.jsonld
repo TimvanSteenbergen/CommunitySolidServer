@@ -1,0 +1,67 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/conversion/BaseTypedRepresentationConverter.jsonld#BaseTypedRepresentationConverter",
+      "@type": "AbstractClass",
+      "requireElement": "BaseTypedRepresentationConverter",
+      "extends": [
+        "css:dist/storage/conversion/TypedRepresentationConverter.jsonld#TypedRepresentationConverter"
+      ],
+      "comment": "A base {@link TypedRepresentationConverter} implementation for converters that can convert from all its input types to all its output types.  This base class handles the `canHandle` call by comparing the input content type to the stored input types and the output preferences to the stored output types.  Output weights are determined by multiplying all stored output weights with the weight of the input type.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/conversion/BaseTypedRepresentationConverter.jsonld#BaseTypedRepresentationConverter_inputTypes",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/storage/conversion/BaseTypedRepresentationConverter.jsonld#BaseTypedRepresentationConverter_outputTypes",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/conversion/BaseTypedRepresentationConverter.jsonld#BaseTypedRepresentationConverter__member_inputTypes",
+          "memberFieldName": "inputTypes",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/storage/conversion/BaseTypedRepresentationConverter.jsonld#BaseTypedRepresentationConverter__member_outputTypes",
+          "memberFieldName": "outputTypes",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/storage/conversion/BaseTypedRepresentationConverter.jsonld#BaseTypedRepresentationConverter__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/conversion/BaseTypedRepresentationConverter.jsonld#BaseTypedRepresentationConverter__member_getOutputTypes",
+          "memberFieldName": "getOutputTypes"
+        },
+        {
+          "@id": "css:dist/storage/conversion/BaseTypedRepresentationConverter.jsonld#BaseTypedRepresentationConverter__member_canHandle",
+          "memberFieldName": "canHandle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/conversion/BaseTypedRepresentationConverter.jsonld#BaseTypedRepresentationConverter_inputTypes"
+        },
+        {
+          "@id": "css:dist/storage/conversion/BaseTypedRepresentationConverter.jsonld#BaseTypedRepresentationConverter_outputTypes"
+        }
+      ]
+    }
+  ]
+}

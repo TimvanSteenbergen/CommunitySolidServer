@@ -1,0 +1,107 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/LockingResourceStore.jsonld#LockingResourceStore",
+      "@type": "Class",
+      "requireElement": "LockingResourceStore",
+      "extends": [
+        "css:dist/storage/AtomicResourceStore.jsonld#AtomicResourceStore"
+      ],
+      "comment": "Store that for every call acquires a lock before executing it on the requested resource, and releases it afterwards. In case the request returns a Representation the lock will only be released when the data stream is finished.  For auxiliary resources the lock will be applied to the subject resource. The actual operation is still executed on the auxiliary resource.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/LockingResourceStore.jsonld#LockingResourceStore_source",
+          "range": "css:dist/storage/ResourceStore.jsonld#ResourceStore"
+        },
+        {
+          "@id": "css:dist/storage/LockingResourceStore.jsonld#LockingResourceStore_locks",
+          "range": "css:dist/util/locking/ExpiringReadWriteLocker.jsonld#ExpiringReadWriteLocker"
+        },
+        {
+          "@id": "css:dist/storage/LockingResourceStore.jsonld#LockingResourceStore_auxiliaryStrategy",
+          "range": "css:dist/http/auxiliary/AuxiliaryIdentifierStrategy.jsonld#AuxiliaryIdentifierStrategy"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/LockingResourceStore.jsonld#LockingResourceStore__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/storage/LockingResourceStore.jsonld#LockingResourceStore__member_source",
+          "memberFieldName": "source"
+        },
+        {
+          "@id": "css:dist/storage/LockingResourceStore.jsonld#LockingResourceStore__member_locks",
+          "memberFieldName": "locks"
+        },
+        {
+          "@id": "css:dist/storage/LockingResourceStore.jsonld#LockingResourceStore__member_auxiliaryStrategy",
+          "memberFieldName": "auxiliaryStrategy"
+        },
+        {
+          "@id": "css:dist/storage/LockingResourceStore.jsonld#LockingResourceStore__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/LockingResourceStore.jsonld#LockingResourceStore__member_hasResource",
+          "memberFieldName": "hasResource"
+        },
+        {
+          "@id": "css:dist/storage/LockingResourceStore.jsonld#LockingResourceStore__member_getRepresentation",
+          "memberFieldName": "getRepresentation"
+        },
+        {
+          "@id": "css:dist/storage/LockingResourceStore.jsonld#LockingResourceStore__member_addResource",
+          "memberFieldName": "addResource"
+        },
+        {
+          "@id": "css:dist/storage/LockingResourceStore.jsonld#LockingResourceStore__member_setRepresentation",
+          "memberFieldName": "setRepresentation"
+        },
+        {
+          "@id": "css:dist/storage/LockingResourceStore.jsonld#LockingResourceStore__member_deleteResource",
+          "memberFieldName": "deleteResource"
+        },
+        {
+          "@id": "css:dist/storage/LockingResourceStore.jsonld#LockingResourceStore__member_modifyResource",
+          "memberFieldName": "modifyResource"
+        },
+        {
+          "@id": "css:dist/storage/LockingResourceStore.jsonld#LockingResourceStore__member_getLockIdentifier",
+          "memberFieldName": "getLockIdentifier"
+        },
+        {
+          "@id": "css:dist/storage/LockingResourceStore.jsonld#LockingResourceStore__member_lockedRepresentationRun",
+          "memberFieldName": "lockedRepresentationRun"
+        },
+        {
+          "@id": "css:dist/storage/LockingResourceStore.jsonld#LockingResourceStore__member_createExpiringRepresentation",
+          "memberFieldName": "createExpiringRepresentation"
+        },
+        {
+          "@id": "css:dist/storage/LockingResourceStore.jsonld#LockingResourceStore__member_waitForStreamToEnd",
+          "memberFieldName": "waitForStreamToEnd"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/LockingResourceStore.jsonld#LockingResourceStore_source"
+        },
+        {
+          "@id": "css:dist/storage/LockingResourceStore.jsonld#LockingResourceStore_locks"
+        },
+        {
+          "@id": "css:dist/storage/LockingResourceStore.jsonld#LockingResourceStore_auxiliaryStrategy"
+        }
+      ]
+    }
+  ]
+}

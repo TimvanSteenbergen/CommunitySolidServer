@@ -1,0 +1,168 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/account/util/BaseLoginAccountStorage.jsonld#BaseLoginAccountStorage",
+      "@type": "Class",
+      "requireElement": "BaseLoginAccountStorage",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/identity/interaction/account/util/LoginStorage.jsonld#LoginStorage",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/identity/interaction/account/util/BaseLoginAccountStorage.jsonld#BaseLoginAccountStorage__generic_T"
+            }
+          ]
+        }
+      ],
+      "comment": "A {@link LoginStorage} that wraps around another {@link IndexedStorage} to add specific account requirements. * New accounts will be removed after expiration time, in seconds, default is 1800, if no login method was added to them in that time. * Non-login types can not be created until the associated account has at least 1 login method. * Login types can not be deleted if they are the last login of the associated account.  All of this is tracked by adding a new field to the account object, that keeps track of how many login objects are associated with the account.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseLoginAccountStorage.jsonld#BaseLoginAccountStorage__generic_T",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseLoginAccountStorage.jsonld#BaseLoginAccountStorage_expiration",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseLoginAccountStorage.jsonld#BaseLoginAccountStorage_storage",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/IndexedStorage.jsonld#IndexedStorage",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "css:dist/identity/interaction/account/util/BaseLoginAccountStorage.jsonld#BaseLoginAccountStorage__generic_T"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseLoginAccountStorage.jsonld#BaseLoginAccountStorage__member_logger",
+          "memberFieldName": "logger"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseLoginAccountStorage.jsonld#BaseLoginAccountStorage__member_loginTypes",
+          "memberFieldName": "loginTypes",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": "xsd:string"
+          }
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseLoginAccountStorage.jsonld#BaseLoginAccountStorage__member_storage",
+          "memberFieldName": "storage",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/IndexedStorage.jsonld#IndexedStorage",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeGenericTypeReference",
+                "parameterRangeGenericType": "css:dist/identity/interaction/account/util/BaseLoginAccountStorage.jsonld#BaseLoginAccountStorage__generic_T"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseLoginAccountStorage.jsonld#BaseLoginAccountStorage__member_expiration",
+          "memberFieldName": "expiration"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseLoginAccountStorage.jsonld#BaseLoginAccountStorage__member_accountKeys",
+          "memberFieldName": "accountKeys",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseLoginAccountStorage.jsonld#BaseLoginAccountStorage__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseLoginAccountStorage.jsonld#BaseLoginAccountStorage__member_defineType",
+          "memberFieldName": "defineType"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseLoginAccountStorage.jsonld#BaseLoginAccountStorage__member_createIndex",
+          "memberFieldName": "createIndex"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseLoginAccountStorage.jsonld#BaseLoginAccountStorage__member_create",
+          "memberFieldName": "create"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseLoginAccountStorage.jsonld#BaseLoginAccountStorage__member_has",
+          "memberFieldName": "has"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseLoginAccountStorage.jsonld#BaseLoginAccountStorage__member_get",
+          "memberFieldName": "get"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseLoginAccountStorage.jsonld#BaseLoginAccountStorage__member_find",
+          "memberFieldName": "find"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseLoginAccountStorage.jsonld#BaseLoginAccountStorage__member_findIds",
+          "memberFieldName": "findIds"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseLoginAccountStorage.jsonld#BaseLoginAccountStorage__member_set",
+          "memberFieldName": "set"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseLoginAccountStorage.jsonld#BaseLoginAccountStorage__member_setField",
+          "memberFieldName": "setField"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseLoginAccountStorage.jsonld#BaseLoginAccountStorage__member_delete",
+          "memberFieldName": "delete"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseLoginAccountStorage.jsonld#BaseLoginAccountStorage__member_entries",
+          "memberFieldName": "entries"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseLoginAccountStorage.jsonld#BaseLoginAccountStorage__member_createAccountTimeout",
+          "memberFieldName": "createAccountTimeout"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseLoginAccountStorage.jsonld#BaseLoginAccountStorage__member_checkAccount",
+          "memberFieldName": "checkAccount"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseLoginAccountStorage.jsonld#BaseLoginAccountStorage__member_cleanOutput",
+          "memberFieldName": "cleanOutput"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseLoginAccountStorage.jsonld#BaseLoginAccountStorage_storage"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/BaseLoginAccountStorage.jsonld#BaseLoginAccountStorage_expiration"
+        }
+      ]
+    }
+  ]
+}

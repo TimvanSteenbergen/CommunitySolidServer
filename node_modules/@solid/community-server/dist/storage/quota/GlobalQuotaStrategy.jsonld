@@ -1,0 +1,82 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/quota/GlobalQuotaStrategy.jsonld#GlobalQuotaStrategy",
+      "@type": "Class",
+      "requireElement": "GlobalQuotaStrategy",
+      "extends": [
+        "css:dist/storage/quota/QuotaStrategy.jsonld#QuotaStrategy"
+      ],
+      "comment": "The GlobalQuotaStrategy sets a limit on the amount of data stored on the server globally.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/quota/GlobalQuotaStrategy.jsonld#GlobalQuotaStrategy_limit_unit",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/storage/quota/GlobalQuotaStrategy.jsonld#GlobalQuotaStrategy_base",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/storage/quota/GlobalQuotaStrategy.jsonld#GlobalQuotaStrategy_limit_amount",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "css:dist/storage/quota/GlobalQuotaStrategy.jsonld#GlobalQuotaStrategy_reporter",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/size-reporter/SizeReporter.jsonld#SizeReporter",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/quota/GlobalQuotaStrategy.jsonld#GlobalQuotaStrategy__member_base",
+          "memberFieldName": "base"
+        },
+        {
+          "@id": "css:dist/storage/quota/GlobalQuotaStrategy.jsonld#GlobalQuotaStrategy__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/quota/GlobalQuotaStrategy.jsonld#GlobalQuotaStrategy__member_getTotalSpaceUsed",
+          "memberFieldName": "getTotalSpaceUsed"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/quota/GlobalQuotaStrategy.jsonld#GlobalQuotaStrategy_limit__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "unit",
+              "value": {
+                "@id": "css:dist/storage/quota/GlobalQuotaStrategy.jsonld#GlobalQuotaStrategy_limit_unit"
+              }
+            },
+            {
+              "keyRaw": "amount",
+              "value": {
+                "@id": "css:dist/storage/quota/GlobalQuotaStrategy.jsonld#GlobalQuotaStrategy_limit_amount"
+              }
+            }
+          ]
+        },
+        {
+          "@id": "css:dist/storage/quota/GlobalQuotaStrategy.jsonld#GlobalQuotaStrategy_reporter"
+        },
+        {
+          "@id": "css:dist/storage/quota/GlobalQuotaStrategy.jsonld#GlobalQuotaStrategy_base"
+        }
+      ]
+    }
+  ]
+}

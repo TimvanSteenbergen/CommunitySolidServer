@@ -1,0 +1,22 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/logging/LoggerFactory.jsonld#LoggerFactory",
+      "@type": "AbstractClass",
+      "requireElement": "LoggerFactory",
+      "comment": "Instantiates new logger instances.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/logging/LoggerFactory.jsonld#LoggerFactory__member_createLogger",
+          "memberFieldName": "createLogger"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

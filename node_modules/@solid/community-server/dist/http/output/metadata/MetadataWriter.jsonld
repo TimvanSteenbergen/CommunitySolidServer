@@ -1,0 +1,42 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/output/metadata/MetadataWriter.jsonld#MetadataWriter",
+      "@type": "AbstractClass",
+      "requireElement": "MetadataWriter",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            "css:dist/http/output/metadata/MetadataWriter.jsonld#MetadataWriterInput"
+          ]
+        }
+      ],
+      "comment": "A serializer that converts metadata to headers for an HttpResponse.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "css:dist/http/output/metadata/MetadataWriter.jsonld#MetadataWriterInput",
+      "@type": "AbstractClass",
+      "requireElement": "MetadataWriterInput",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/output/metadata/MetadataWriter.jsonld#MetadataWriterInput__member_response",
+          "memberFieldName": "response"
+        },
+        {
+          "@id": "css:dist/http/output/metadata/MetadataWriter.jsonld#MetadataWriterInput__member_metadata",
+          "memberFieldName": "metadata"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

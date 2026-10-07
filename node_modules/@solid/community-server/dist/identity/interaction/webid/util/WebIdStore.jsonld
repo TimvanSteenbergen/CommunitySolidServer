@@ -1,0 +1,38 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/webid/util/WebIdStore.jsonld#WebIdStore",
+      "@type": "AbstractClass",
+      "requireElement": "WebIdStore",
+      "comment": "Stores and updates WebID to Account links.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/webid/util/WebIdStore.jsonld#WebIdStore__member_get",
+          "memberFieldName": "get"
+        },
+        {
+          "@id": "css:dist/identity/interaction/webid/util/WebIdStore.jsonld#WebIdStore__member_isLinked",
+          "memberFieldName": "isLinked"
+        },
+        {
+          "@id": "css:dist/identity/interaction/webid/util/WebIdStore.jsonld#WebIdStore__member_findLinks",
+          "memberFieldName": "findLinks"
+        },
+        {
+          "@id": "css:dist/identity/interaction/webid/util/WebIdStore.jsonld#WebIdStore__member_create",
+          "memberFieldName": "create"
+        },
+        {
+          "@id": "css:dist/identity/interaction/webid/util/WebIdStore.jsonld#WebIdStore__member_delete",
+          "memberFieldName": "delete"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

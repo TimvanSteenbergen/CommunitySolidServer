@@ -1,0 +1,60 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/init/ModuleVersionVerifier.jsonld#ModuleVersionVerifier",
+      "@type": "Class",
+      "requireElement": "ModuleVersionVerifier",
+      "extends": [
+        "css:dist/init/Initializer.jsonld#Initializer"
+      ],
+      "comment": "This initializer simply writes the version number of the server to the storage. This will be relevant in the future when we look into migration initializers.  It automatically parses the version number from the `package.json`.",
+      "parameters": [
+        {
+          "@id": "css:dist/init/ModuleVersionVerifier.jsonld#ModuleVersionVerifier_storageKey",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/init/ModuleVersionVerifier.jsonld#ModuleVersionVerifier_storage",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+            "genericTypeInstances": [
+              "xsd:string",
+              "xsd:string"
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/init/ModuleVersionVerifier.jsonld#ModuleVersionVerifier__member_storageKey",
+          "memberFieldName": "storageKey"
+        },
+        {
+          "@id": "css:dist/init/ModuleVersionVerifier.jsonld#ModuleVersionVerifier__member_storage",
+          "memberFieldName": "storage"
+        },
+        {
+          "@id": "css:dist/init/ModuleVersionVerifier.jsonld#ModuleVersionVerifier__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/init/ModuleVersionVerifier.jsonld#ModuleVersionVerifier__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/init/ModuleVersionVerifier.jsonld#ModuleVersionVerifier_storageKey"
+        },
+        {
+          "@id": "css:dist/init/ModuleVersionVerifier.jsonld#ModuleVersionVerifier_storage"
+        }
+      ]
+    }
+  ]
+}

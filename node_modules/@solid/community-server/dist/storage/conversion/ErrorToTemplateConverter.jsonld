@@ -1,0 +1,162 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/conversion/ErrorToTemplateConverter.jsonld#ErrorToTemplateConverter",
+      "@type": "Class",
+      "requireElement": "ErrorToTemplateConverter",
+      "extends": [
+        "css:dist/storage/conversion/BaseTypedRepresentationConverter.jsonld#BaseTypedRepresentationConverter"
+      ],
+      "comment": "Serializes an Error by filling in the provided template. Content-type is based on the constructor parameter.  In case the input Error has an `errorCode` value, the converter will look in the `descriptions` for a file with the exact same name as that error code + `extension`. The templating engine will then be applied to that file. That result will be passed as an additional parameter to the main templating call, using the variable `codeMessage`.",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/conversion/ErrorToTemplateConverter.jsonld#ErrorToTemplateConverter_templateEngine",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/storage/conversion/ErrorToTemplateConverter.jsonld#ErrorToTemplateConverter_templateOptions_mainTemplatePath",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/storage/conversion/ErrorToTemplateConverter.jsonld#ErrorToTemplateConverter_templateOptions_codeTemplatesPath",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/storage/conversion/ErrorToTemplateConverter.jsonld#ErrorToTemplateConverter_templateOptions_extension",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/storage/conversion/ErrorToTemplateConverter.jsonld#ErrorToTemplateConverter_templateOptions_contentType",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/conversion/ErrorToTemplateConverter.jsonld#ErrorToTemplateConverter__member_templateEngine",
+          "memberFieldName": "templateEngine"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ErrorToTemplateConverter.jsonld#ErrorToTemplateConverter__member_mainTemplatePath",
+          "memberFieldName": "mainTemplatePath"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ErrorToTemplateConverter.jsonld#ErrorToTemplateConverter__member_codeTemplatesPath",
+          "memberFieldName": "codeTemplatesPath"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ErrorToTemplateConverter.jsonld#ErrorToTemplateConverter__member_extension",
+          "memberFieldName": "extension"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ErrorToTemplateConverter.jsonld#ErrorToTemplateConverter__member_contentType",
+          "memberFieldName": "contentType"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ErrorToTemplateConverter.jsonld#ErrorToTemplateConverter__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ErrorToTemplateConverter.jsonld#ErrorToTemplateConverter__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/conversion/ErrorToTemplateConverter.jsonld#ErrorToTemplateConverter_templateEngine"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ErrorToTemplateConverter.jsonld#ErrorToTemplateConverter_templateOptions__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "mainTemplatePath",
+              "value": {
+                "@id": "css:dist/storage/conversion/ErrorToTemplateConverter.jsonld#ErrorToTemplateConverter_templateOptions_mainTemplatePath"
+              }
+            },
+            {
+              "keyRaw": "codeTemplatesPath",
+              "value": {
+                "@id": "css:dist/storage/conversion/ErrorToTemplateConverter.jsonld#ErrorToTemplateConverter_templateOptions_codeTemplatesPath"
+              }
+            },
+            {
+              "keyRaw": "extension",
+              "value": {
+                "@id": "css:dist/storage/conversion/ErrorToTemplateConverter.jsonld#ErrorToTemplateConverter_templateOptions_extension"
+              }
+            },
+            {
+              "keyRaw": "contentType",
+              "value": {
+                "@id": "css:dist/storage/conversion/ErrorToTemplateConverter.jsonld#ErrorToTemplateConverter_templateOptions_contentType"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/storage/conversion/ErrorToTemplateConverter.jsonld#TemplateOptions",
+      "@type": "AbstractClass",
+      "requireElement": "TemplateOptions",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/conversion/ErrorToTemplateConverter.jsonld#TemplateOptions__member_mainTemplatePath",
+          "memberFieldName": "mainTemplatePath"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ErrorToTemplateConverter.jsonld#TemplateOptions__member_codeTemplatesPath",
+          "memberFieldName": "codeTemplatesPath"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ErrorToTemplateConverter.jsonld#TemplateOptions__member_extension",
+          "memberFieldName": "extension"
+        },
+        {
+          "@id": "css:dist/storage/conversion/ErrorToTemplateConverter.jsonld#TemplateOptions__member_contentType",
+          "memberFieldName": "contentType"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

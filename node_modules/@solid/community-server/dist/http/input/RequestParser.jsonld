@@ -1,0 +1,35 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/input/RequestParser.jsonld#RequestParser",
+      "@type": "AbstractClass",
+      "requireElement": "RequestParser",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeIntersection",
+              "parameterRangeElements": [
+                {
+                  "@type": "ParameterRangeGenericTypeReference",
+                  "parameterRangeGenericType": "css:dist/util/GuardedStream.jsonld#Guarded__generic_T"
+                },
+                "css:dist/util/GuardedStream.jsonld#Guard"
+              ]
+            },
+            "css:dist/http/Operation.jsonld#Operation"
+          ]
+        }
+      ],
+      "comment": "Converts an incoming HttpRequest to an Operation.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/input/metadata/AuthorizationParser.jsonld#AuthorizationParser",
+      "@type": "Class",
+      "requireElement": "AuthorizationParser",
+      "extends": [
+        "css:dist/http/input/metadata/MetadataParser.jsonld#MetadataParser"
+      ],
+      "comment": "Parses specific authorization schemes and stores their value as metadata. The keys of the input `authMap` should be the schemes, and the values the corresponding predicate that should be used to store the value in the metadata. The scheme will be sliced off the value, after which it is used as the object in the metadata triple.  This should be used for custom authorization schemes, for things like OIDC tokens a {@link CredentialsExtractor} should be used.",
+      "parameters": [
+        {
+          "@id": "css:dist/http/input/metadata/AuthorizationParser.jsonld#AuthorizationParser_authMap",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "css:dist/http/input/metadata/AuthorizationParser.jsonld#AuthorizationParser_authMap_key"
+              },
+              {
+                "@id": "css:dist/http/input/metadata/AuthorizationParser.jsonld#AuthorizationParser_authMap_value",
+                "range": "xsd:string"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/input/metadata/AuthorizationParser.jsonld#AuthorizationParser__member_authMap",
+          "memberFieldName": "authMap"
+        },
+        {
+          "@id": "css:dist/http/input/metadata/AuthorizationParser.jsonld#AuthorizationParser__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/http/input/metadata/AuthorizationParser.jsonld#AuthorizationParser__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/http/input/metadata/AuthorizationParser.jsonld#AuthorizationParser_authMap__constructorArgument",
+          "fields": [
+            {
+              "collectEntries": "css:dist/http/input/metadata/AuthorizationParser.jsonld#AuthorizationParser_authMap",
+              "key": "css:dist/http/input/metadata/AuthorizationParser.jsonld#AuthorizationParser_authMap_key",
+              "value": {
+                "@id": "css:dist/http/input/metadata/AuthorizationParser.jsonld#AuthorizationParser_authMap_value"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

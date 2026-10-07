@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/JsonConversionHandler.jsonld#JsonConversionHandler",
+      "@type": "Class",
+      "requireElement": "JsonConversionHandler",
+      "extends": [
+        "css:dist/identity/interaction/InteractionHandler.jsonld#InteractionHandler"
+      ],
+      "comment": "An {@link InteractionHandler} that sits in-between an {@link InteractionHandler} and a {@link JsonInteractionHandler}. It converts the input data stream into a JSON object to be used by the stored handler.  Since the JSON body is only made during the `handle` call, it can not be used during the `canHandle`, so the `canHandle` call of the stored handler is not called, meaning this class accepts all input that can be converted to JSON.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/JsonConversionHandler.jsonld#JsonConversionHandler_source",
+          "range": "css:dist/identity/interaction/JsonInteractionHandler.jsonld#JsonInteractionHandler"
+        },
+        {
+          "@id": "css:dist/identity/interaction/JsonConversionHandler.jsonld#JsonConversionHandler_converter",
+          "range": "css:dist/storage/conversion/RepresentationConverter.jsonld#RepresentationConverter"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/JsonConversionHandler.jsonld#JsonConversionHandler__member_source",
+          "memberFieldName": "source"
+        },
+        {
+          "@id": "css:dist/identity/interaction/JsonConversionHandler.jsonld#JsonConversionHandler__member_converter",
+          "memberFieldName": "converter"
+        },
+        {
+          "@id": "css:dist/identity/interaction/JsonConversionHandler.jsonld#JsonConversionHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/JsonConversionHandler.jsonld#JsonConversionHandler__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/identity/interaction/JsonConversionHandler.jsonld#JsonConversionHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/JsonConversionHandler.jsonld#JsonConversionHandler_source"
+        },
+        {
+          "@id": "css:dist/identity/interaction/JsonConversionHandler.jsonld#JsonConversionHandler_converter"
+        }
+      ]
+    }
+  ]
+}

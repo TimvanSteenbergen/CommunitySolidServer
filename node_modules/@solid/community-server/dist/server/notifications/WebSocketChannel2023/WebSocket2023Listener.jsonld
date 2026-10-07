@@ -1,0 +1,75 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Listener.jsonld#WebSocket2023Listener",
+      "@type": "Class",
+      "requireElement": "WebSocket2023Listener",
+      "extends": [
+        "css:dist/server/WebSocketHandler.jsonld#WebSocketHandler"
+      ],
+      "comment": "Listens for WebSocket connections and verifies whether they are valid WebSocketChannel2023 connections, in which case its {@link WebSocket2023Handler} will be alerted.",
+      "parameters": [
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Listener.jsonld#WebSocket2023Listener_baseUrl",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Listener.jsonld#WebSocket2023Listener_storage",
+          "range": "css:dist/server/notifications/NotificationChannelStorage.jsonld#NotificationChannelStorage"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Listener.jsonld#WebSocket2023Listener_handler",
+          "range": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Handler.jsonld#WebSocket2023Handler"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Listener.jsonld#WebSocket2023Listener__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Listener.jsonld#WebSocket2023Listener__member_storage",
+          "memberFieldName": "storage"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Listener.jsonld#WebSocket2023Listener__member_handler",
+          "memberFieldName": "handler"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Listener.jsonld#WebSocket2023Listener__member_baseUrl",
+          "memberFieldName": "baseUrl"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Listener.jsonld#WebSocket2023Listener__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Listener.jsonld#WebSocket2023Listener__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Listener.jsonld#WebSocket2023Listener__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Listener.jsonld#WebSocket2023Listener_storage"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Listener.jsonld#WebSocket2023Listener_handler"
+        },
+        {
+          "@id": "css:dist/server/notifications/WebSocketChannel2023/WebSocket2023Listener.jsonld#WebSocket2023Listener_baseUrl"
+        }
+      ]
+    }
+  ]
+}

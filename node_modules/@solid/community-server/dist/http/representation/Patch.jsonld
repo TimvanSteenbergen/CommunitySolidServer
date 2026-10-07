@@ -1,0 +1,19 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/representation/Patch.jsonld#Patch",
+      "@type": "AbstractClass",
+      "requireElement": "Patch",
+      "extends": [
+        "css:dist/http/representation/Representation.jsonld#Representation"
+      ],
+      "comment": "Represents the changes needed for a PATCH request.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

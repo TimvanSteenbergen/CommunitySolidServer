@@ -1,0 +1,22 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/pods/generate/TemplatedResourcesGenerator.jsonld#TemplatedResourcesGenerator",
+      "@type": "AbstractClass",
+      "requireElement": "TemplatedResourcesGenerator",
+      "comment": "Generator used to create resources relative to a given base identifier. Similar to {@link ResourcesGenerator}, but takes as input a string indicating where the templates are stored that need to be used for resource generation.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/pods/generate/TemplatedResourcesGenerator.jsonld#TemplatedResourcesGenerator__member_generate",
+          "memberFieldName": "generate"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

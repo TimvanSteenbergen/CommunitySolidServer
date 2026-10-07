@@ -1,0 +1,13 @@
+<http://localhost:3000/test/locations/fc22cc53-5b4d-46f0-b393-1612c525e901.ttl#address> a <https://schema.org/PostalAddress>;
+    <https://schema.org/streetAddress> "h 12";
+    <https://schema.org/postalCode> "1212aa";
+    <https://schema.org/addressLocality> "Diemen";
+    <https://schema.org/addressCountry> "NL".
+<http://localhost:3000/test/locations/fc22cc53-5b4d-46f0-b393-1612c525e901.ttl#geo> a <https://schema.org/GeoCoordinates>;
+    <https://schema.org/latitude> "54"^^<http://www.w3.org/2001/XMLSchema#decimal>;
+    <https://schema.org/longitude> 4.5.
+<http://localhost:3000/test/locations/fc22cc53-5b4d-46f0-b393-1612c525e901.ttl> a <https://schema.org/Place>;
+    <https://schema.org/name> "q";
+    <https://schema.org/description> "q";
+    <https://schema.org/address> <http://localhost:3000/test/locations/fc22cc53-5b4d-46f0-b393-1612c525e901.ttl#address>;
+    <https://schema.org/geo> <http://localhost:3000/test/locations/fc22cc53-5b4d-46f0-b393-1612c525e901.ttl#geo>.

@@ -1,0 +1,62 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/middleware/HeaderHandler.jsonld#HeaderHandler",
+      "@type": "Class",
+      "requireElement": "HeaderHandler",
+      "extends": [
+        "css:dist/server/HttpHandler.jsonld#HttpHandler"
+      ],
+      "comment": "Handler that sets custom headers on the response.",
+      "parameters": [
+        {
+          "@id": "css:dist/server/middleware/HeaderHandler.jsonld#HeaderHandler_headers",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "css:dist/server/middleware/HeaderHandler.jsonld#HeaderHandler_headers_key"
+              },
+              {
+                "@id": "css:dist/server/middleware/HeaderHandler.jsonld#HeaderHandler_headers_value",
+                "range": "xsd:string"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/middleware/HeaderHandler.jsonld#HeaderHandler__member_headers",
+          "memberFieldName": "headers"
+        },
+        {
+          "@id": "css:dist/server/middleware/HeaderHandler.jsonld#HeaderHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/middleware/HeaderHandler.jsonld#HeaderHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/middleware/HeaderHandler.jsonld#HeaderHandler_headers__constructorArgument",
+          "fields": [
+            {
+              "collectEntries": "css:dist/server/middleware/HeaderHandler.jsonld#HeaderHandler_headers",
+              "key": "css:dist/server/middleware/HeaderHandler.jsonld#HeaderHandler_headers_key",
+              "value": {
+                "@id": "css:dist/server/middleware/HeaderHandler.jsonld#HeaderHandler_headers_value"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

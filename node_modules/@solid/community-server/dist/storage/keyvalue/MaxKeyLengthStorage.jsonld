@@ -1,0 +1,151 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/keyvalue/MaxKeyLengthStorage.jsonld#MaxKeyLengthStorage",
+      "@type": "Class",
+      "requireElement": "MaxKeyLengthStorage",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+          "genericTypeInstances": [
+            "xsd:string",
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/storage/keyvalue/MaxKeyLengthStorage.jsonld#MaxKeyLengthStorage__generic_T"
+            }
+          ]
+        }
+      ],
+      "comment": "A {@link KeyValueStorage} that hashes keys in case they would be longer than the set limit. Hashed keys are prefixed with a certain value to prevent issues with incoming keys that are already hashed. The default max length is 150 and the default prefix is `$hash$`.  This class mostly exists to prevent issues when writing storage entries to disk. Keys that are too long would cause issues with the file name limit. For this reason, only the part after the last `/` in a key is hashed, to preserve the expected file structure.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/storage/keyvalue/MaxKeyLengthStorage.jsonld#MaxKeyLengthStorage__generic_T"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/storage/keyvalue/MaxKeyLengthStorage.jsonld#MaxKeyLengthStorage_maxKeyLength",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/MaxKeyLengthStorage.jsonld#MaxKeyLengthStorage_hashPrefix",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/MaxKeyLengthStorage.jsonld#MaxKeyLengthStorage_source",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+            "genericTypeInstances": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/keyvalue/MaxKeyLengthStorage.jsonld#MaxKeyLengthStorage__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/MaxKeyLengthStorage.jsonld#MaxKeyLengthStorage__member_source",
+          "memberFieldName": "source",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+            "genericTypeInstances": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/MaxKeyLengthStorage.jsonld#MaxKeyLengthStorage__member_maxKeyLength",
+          "memberFieldName": "maxKeyLength",
+          "range": "xsd:number"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/MaxKeyLengthStorage.jsonld#MaxKeyLengthStorage__member_hashPrefix",
+          "memberFieldName": "hashPrefix",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/MaxKeyLengthStorage.jsonld#MaxKeyLengthStorage__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/MaxKeyLengthStorage.jsonld#MaxKeyLengthStorage__member_has",
+          "memberFieldName": "has"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/MaxKeyLengthStorage.jsonld#MaxKeyLengthStorage__member_get",
+          "memberFieldName": "get"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/MaxKeyLengthStorage.jsonld#MaxKeyLengthStorage__member_set",
+          "memberFieldName": "set"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/MaxKeyLengthStorage.jsonld#MaxKeyLengthStorage__member_delete",
+          "memberFieldName": "delete"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/MaxKeyLengthStorage.jsonld#MaxKeyLengthStorage__member_entries",
+          "memberFieldName": "entries"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/MaxKeyLengthStorage.jsonld#MaxKeyLengthStorage__member_wrapPayload",
+          "memberFieldName": "wrapPayload"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/MaxKeyLengthStorage.jsonld#MaxKeyLengthStorage__member_getKeyWithCheck",
+          "memberFieldName": "getKeyWithCheck"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/MaxKeyLengthStorage.jsonld#MaxKeyLengthStorage__member_getKey",
+          "memberFieldName": "getKey"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/keyvalue/MaxKeyLengthStorage.jsonld#MaxKeyLengthStorage_source"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/MaxKeyLengthStorage.jsonld#MaxKeyLengthStorage_maxKeyLength"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/MaxKeyLengthStorage.jsonld#MaxKeyLengthStorage_hashPrefix"
+        }
+      ]
+    }
+  ]
+}

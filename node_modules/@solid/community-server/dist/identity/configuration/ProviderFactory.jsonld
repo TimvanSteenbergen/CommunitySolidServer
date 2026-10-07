@@ -1,0 +1,22 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/configuration/ProviderFactory.jsonld#ProviderFactory",
+      "@type": "AbstractClass",
+      "requireElement": "ProviderFactory",
+      "comment": "Returns a Provider of OIDC interactions.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/configuration/ProviderFactory.jsonld#ProviderFactory__member_getProvider",
+          "memberFieldName": "getProvider"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,119 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/account/util/GenericAccountStore.jsonld#GenericAccountStore",
+      "@type": "Class",
+      "requireElement": "GenericAccountStore",
+      "extends": [
+        "css:dist/init/Initializer.jsonld#Initializer",
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/identity/interaction/account/util/AccountStore.jsonld#AccountStore",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/identity/interaction/account/util/GenericAccountStore.jsonld#GenericAccountStore__generic_TDesc"
+            }
+          ]
+        }
+      ],
+      "comment": "A {@link AccountStore} that uses an {@link AccountLoginStorage} to keep track of the accounts. Needs to be initialized before it can be used.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/identity/interaction/account/util/GenericAccountStore.jsonld#GenericAccountStore__generic_TDesc",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/identity/interaction/account/util/GenericAccountStore.jsonld#GenericAccountStore_description",
+          "range": {
+            "@type": "ParameterRangeGenericTypeReference",
+            "parameterRangeGenericType": "css:dist/identity/interaction/account/util/GenericAccountStore.jsonld#GenericAccountStore__generic_TDesc"
+          }
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/GenericAccountStore.jsonld#GenericAccountStore_storage",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/identity/interaction/account/util/LoginStorage.jsonld#LoginStorage",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/account/util/GenericAccountStore.jsonld#GenericAccountStore__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/GenericAccountStore.jsonld#GenericAccountStore__member_description",
+          "memberFieldName": "description",
+          "range": {
+            "@type": "ParameterRangeGenericTypeReference",
+            "parameterRangeGenericType": "css:dist/identity/interaction/account/util/GenericAccountStore.jsonld#GenericAccountStore__generic_TDesc"
+          }
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/GenericAccountStore.jsonld#GenericAccountStore__member_storage",
+          "memberFieldName": "storage",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/identity/interaction/account/util/LoginStorage.jsonld#LoginStorage",
+            "genericTypeInstances": [
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/GenericAccountStore.jsonld#GenericAccountStore__member_initialized",
+          "memberFieldName": "initialized",
+          "range": "xsd:boolean"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/GenericAccountStore.jsonld#GenericAccountStore__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/GenericAccountStore.jsonld#GenericAccountStore__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/GenericAccountStore.jsonld#GenericAccountStore__member_create",
+          "memberFieldName": "create"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/GenericAccountStore.jsonld#GenericAccountStore__member_getSetting",
+          "memberFieldName": "getSetting"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/GenericAccountStore.jsonld#GenericAccountStore__member_updateSetting",
+          "memberFieldName": "updateSetting"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/interaction/account/util/GenericAccountStore.jsonld#GenericAccountStore_storage"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/GenericAccountStore.jsonld#GenericAccountStore_description"
+        }
+      ]
+    }
+  ]
+}

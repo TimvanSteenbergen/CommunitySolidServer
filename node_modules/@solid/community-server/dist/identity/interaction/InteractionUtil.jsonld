@@ -1,0 +1,34 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/InteractionUtil.jsonld#JsonRepresentation",
+      "@type": "AbstractClass",
+      "requireElement": "JsonRepresentation",
+      "comment": "Contains a JSON object and any associated metadata. Similar to a {@link Representation} but with all the data in memory instead of as a stream and specific to JSON.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/identity/interaction/InteractionUtil.jsonld#JsonRepresentation__generic_T",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        }
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/InteractionUtil.jsonld#JsonRepresentation__member_json",
+          "memberFieldName": "json"
+        },
+        {
+          "@id": "css:dist/identity/interaction/InteractionUtil.jsonld#JsonRepresentation__member_metadata",
+          "memberFieldName": "metadata"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

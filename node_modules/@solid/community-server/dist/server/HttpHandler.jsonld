@@ -1,0 +1,42 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/HttpHandler.jsonld#HttpHandler",
+      "@type": "AbstractClass",
+      "requireElement": "HttpHandler",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            "css:dist/server/HttpHandler.jsonld#HttpHandlerInput"
+          ]
+        }
+      ],
+      "comment": "An HTTP request handler.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "css:dist/server/HttpHandler.jsonld#HttpHandlerInput",
+      "@type": "AbstractClass",
+      "requireElement": "HttpHandlerInput",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/HttpHandler.jsonld#HttpHandlerInput__member_request",
+          "memberFieldName": "request"
+        },
+        {
+          "@id": "css:dist/server/HttpHandler.jsonld#HttpHandlerInput__member_response",
+          "memberFieldName": "response"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

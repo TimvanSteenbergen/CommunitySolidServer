@@ -1,0 +1,50 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/keyvalue/ExpiringStorage.jsonld#ExpiringStorage",
+      "@type": "AbstractClass",
+      "requireElement": "ExpiringStorage",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/storage/keyvalue/ExpiringStorage.jsonld#ExpiringStorage__generic_TKey"
+            },
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/storage/keyvalue/ExpiringStorage.jsonld#ExpiringStorage__generic_TValue"
+            }
+          ]
+        }
+      ],
+      "comment": "A KeyValueStorage in which the values can expire. Entries with no expiration date never expire.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/storage/keyvalue/ExpiringStorage.jsonld#ExpiringStorage__generic_TKey"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/ExpiringStorage.jsonld#ExpiringStorage__generic_TValue"
+        }
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/keyvalue/ExpiringStorage.jsonld#ExpiringStorage__member_set",
+          "memberFieldName": "set"
+        },
+        {
+          "@id": "css:dist/storage/keyvalue/ExpiringStorage.jsonld#ExpiringStorage__member_set",
+          "memberFieldName": "set"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

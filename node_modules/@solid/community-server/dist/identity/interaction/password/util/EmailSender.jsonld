@@ -1,0 +1,50 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/password/util/EmailSender.jsonld#EmailSender",
+      "@type": "AbstractClass",
+      "requireElement": "EmailSender",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            "css:dist/identity/interaction/password/util/EmailSender.jsonld#EmailArgs"
+          ]
+        }
+      ],
+      "comment": "A class that can send an e-mail.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "css:dist/identity/interaction/password/util/EmailSender.jsonld#EmailArgs",
+      "@type": "AbstractClass",
+      "requireElement": "EmailArgs",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/password/util/EmailSender.jsonld#EmailArgs__member_recipient",
+          "memberFieldName": "recipient"
+        },
+        {
+          "@id": "css:dist/identity/interaction/password/util/EmailSender.jsonld#EmailArgs__member_subject",
+          "memberFieldName": "subject"
+        },
+        {
+          "@id": "css:dist/identity/interaction/password/util/EmailSender.jsonld#EmailArgs__member_text",
+          "memberFieldName": "text"
+        },
+        {
+          "@id": "css:dist/identity/interaction/password/util/EmailSender.jsonld#EmailArgs__member_html",
+          "memberFieldName": "html"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

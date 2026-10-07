@@ -1,0 +1,50 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/accessors/DataAccessor.jsonld#DataAccessor",
+      "@type": "AbstractClass",
+      "requireElement": "DataAccessor",
+      "comment": "A DataAccessor is the building block closest to the actual data storage. It should not worry about most Solid logic, most of that will be handled before it is called. There are a few things it still needs to do, and it is very important every implementation does this: * If the input identifier ends with a slash, it should be assumed the identifier is targeting a container. * Similarly, if there is no trailing slash it should assume a document. * It should always throw a NotFoundHttpError if it does not have data matching the input identifier. * DataAccessors should not generate containment triples. This will be done externally using `getChildren`.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/accessors/DataAccessor.jsonld#DataAccessor__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/storage/accessors/DataAccessor.jsonld#DataAccessor__member_getData",
+          "memberFieldName": "getData"
+        },
+        {
+          "@id": "css:dist/storage/accessors/DataAccessor.jsonld#DataAccessor__member_getMetadata",
+          "memberFieldName": "getMetadata"
+        },
+        {
+          "@id": "css:dist/storage/accessors/DataAccessor.jsonld#DataAccessor__member_getChildren",
+          "memberFieldName": "getChildren"
+        },
+        {
+          "@id": "css:dist/storage/accessors/DataAccessor.jsonld#DataAccessor__member_writeDocument",
+          "memberFieldName": "writeDocument"
+        },
+        {
+          "@id": "css:dist/storage/accessors/DataAccessor.jsonld#DataAccessor__member_writeContainer",
+          "memberFieldName": "writeContainer"
+        },
+        {
+          "@id": "css:dist/storage/accessors/DataAccessor.jsonld#DataAccessor__member_writeMetadata",
+          "memberFieldName": "writeMetadata"
+        },
+        {
+          "@id": "css:dist/storage/accessors/DataAccessor.jsonld#DataAccessor__member_deleteResource",
+          "memberFieldName": "deleteResource"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/errors/ForbiddenHttpError.jsonld#ForbiddenHttpError",
+      "@type": "Class",
+      "requireElement": "ForbiddenHttpError",
+      "comment": "An error thrown when an agent is not allowed to access data.",
+      "parameters": [
+        {
+          "@id": "css:dist/util/errors/ForbiddenHttpError.jsonld#ForbiddenHttpError_message",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/util/errors/ForbiddenHttpError.jsonld#ForbiddenHttpError_options",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeWildcard"
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/errors/ForbiddenHttpError.jsonld#ForbiddenHttpError__member_constructor",
+          "memberFieldName": "constructor"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/errors/ForbiddenHttpError.jsonld#ForbiddenHttpError_message"
+        },
+        {
+          "@id": "css:dist/util/errors/ForbiddenHttpError.jsonld#ForbiddenHttpError_options"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/init/ServerInitializer.jsonld#ServerInitializer",
+      "@type": "Class",
+      "requireElement": "ServerInitializer",
+      "extends": [
+        "css:dist/init/Initializer.jsonld#Initializer",
+        "css:dist/init/final/Finalizable.jsonld#Finalizable"
+      ],
+      "comment": "Creates and starts an HTTP server.",
+      "parameters": [
+        {
+          "@id": "css:dist/init/ServerInitializer.jsonld#ServerInitializer_port",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/init/ServerInitializer.jsonld#ServerInitializer_socketPath",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/init/ServerInitializer.jsonld#ServerInitializer_serverFactory",
+          "range": "css:dist/server/HttpServerFactory.jsonld#HttpServerFactory"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/init/ServerInitializer.jsonld#ServerInitializer__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/init/ServerInitializer.jsonld#ServerInitializer__member_serverFactory",
+          "memberFieldName": "serverFactory"
+        },
+        {
+          "@id": "css:dist/init/ServerInitializer.jsonld#ServerInitializer__member_port",
+          "memberFieldName": "port"
+        },
+        {
+          "@id": "css:dist/init/ServerInitializer.jsonld#ServerInitializer__member_socketPath",
+          "memberFieldName": "socketPath"
+        },
+        {
+          "@id": "css:dist/init/ServerInitializer.jsonld#ServerInitializer__member_server",
+          "memberFieldName": "server"
+        },
+        {
+          "@id": "css:dist/init/ServerInitializer.jsonld#ServerInitializer__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/init/ServerInitializer.jsonld#ServerInitializer__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/init/ServerInitializer.jsonld#ServerInitializer__member_finalize",
+          "memberFieldName": "finalize"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/init/ServerInitializer.jsonld#ServerInitializer_serverFactory"
+        },
+        {
+          "@id": "css:dist/init/ServerInitializer.jsonld#ServerInitializer_port"
+        },
+        {
+          "@id": "css:dist/init/ServerInitializer.jsonld#ServerInitializer_socketPath"
+        }
+      ]
+    }
+  ]
+}

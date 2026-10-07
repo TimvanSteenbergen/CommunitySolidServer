@@ -1,0 +1,47 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/InteractionHandler.jsonld#InteractionHandler",
+      "@type": "AbstractClass",
+      "requireElement": "InteractionHandler",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            "css:dist/identity/interaction/InteractionHandler.jsonld#InteractionHandlerInput",
+            "css:dist/http/representation/Representation.jsonld#Representation"
+          ]
+        }
+      ],
+      "comment": "Handler used for IDP interactions.",
+      "parameters": [],
+      "constructorArguments": []
+    },
+    {
+      "@id": "css:dist/identity/interaction/InteractionHandler.jsonld#InteractionHandlerInput",
+      "@type": "AbstractClass",
+      "requireElement": "InteractionHandlerInput",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/InteractionHandler.jsonld#InteractionHandlerInput__member_operation",
+          "memberFieldName": "operation"
+        },
+        {
+          "@id": "css:dist/identity/interaction/InteractionHandler.jsonld#InteractionHandlerInput__member_oidcInteraction",
+          "memberFieldName": "oidcInteraction"
+        },
+        {
+          "@id": "css:dist/identity/interaction/InteractionHandler.jsonld#InteractionHandlerInput__member_accountId",
+          "memberFieldName": "accountId"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

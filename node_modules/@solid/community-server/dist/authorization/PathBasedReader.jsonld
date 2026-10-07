@@ -1,0 +1,88 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/authorization/PathBasedReader.jsonld#PathBasedReader",
+      "@type": "Class",
+      "requireElement": "PathBasedReader",
+      "extends": [
+        "css:dist/authorization/PermissionReader.jsonld#PermissionReader"
+      ],
+      "comment": "Redirects requests to specific PermissionReaders based on their identifier. The keys are regular expression strings. The regular expressions should all start with a slash and will be evaluated relative to the base URL.  Will error if no match is found.",
+      "parameters": [
+        {
+          "@id": "css:dist/authorization/PathBasedReader.jsonld#PathBasedReader_baseUrl",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/authorization/PathBasedReader.jsonld#PathBasedReader_paths",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "css:dist/authorization/PathBasedReader.jsonld#PathBasedReader_paths_key"
+              },
+              {
+                "@id": "css:dist/authorization/PathBasedReader.jsonld#PathBasedReader_paths_value",
+                "range": "css:dist/authorization/PermissionReader.jsonld#PermissionReader"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/authorization/PathBasedReader.jsonld#PathBasedReader__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/authorization/PathBasedReader.jsonld#PathBasedReader__member_baseUrl",
+          "memberFieldName": "baseUrl"
+        },
+        {
+          "@id": "css:dist/authorization/PathBasedReader.jsonld#PathBasedReader__member_paths",
+          "memberFieldName": "paths"
+        },
+        {
+          "@id": "css:dist/authorization/PathBasedReader.jsonld#PathBasedReader__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/authorization/PathBasedReader.jsonld#PathBasedReader__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/authorization/PathBasedReader.jsonld#PathBasedReader__member_matchReaders",
+          "memberFieldName": "matchReaders"
+        },
+        {
+          "@id": "css:dist/authorization/PathBasedReader.jsonld#PathBasedReader__member_findReader",
+          "memberFieldName": "findReader"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/authorization/PathBasedReader.jsonld#PathBasedReader_baseUrl"
+        },
+        {
+          "@id": "css:dist/authorization/PathBasedReader.jsonld#PathBasedReader_paths__constructorArgument",
+          "fields": [
+            {
+              "collectEntries": "css:dist/authorization/PathBasedReader.jsonld#PathBasedReader_paths",
+              "key": "css:dist/authorization/PathBasedReader.jsonld#PathBasedReader_paths_key",
+              "value": {
+                "@id": "css:dist/authorization/PathBasedReader.jsonld#PathBasedReader_paths_value"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

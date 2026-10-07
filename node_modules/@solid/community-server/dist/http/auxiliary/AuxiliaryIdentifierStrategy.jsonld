@@ -1,0 +1,34 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/http/auxiliary/AuxiliaryIdentifierStrategy.jsonld#AuxiliaryIdentifierStrategy",
+      "@type": "AbstractClass",
+      "requireElement": "AuxiliaryIdentifierStrategy",
+      "comment": "A strategy for handling auxiliary related ResourceIdentifiers.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/http/auxiliary/AuxiliaryIdentifierStrategy.jsonld#AuxiliaryIdentifierStrategy__member_getAuxiliaryIdentifier",
+          "memberFieldName": "getAuxiliaryIdentifier"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/AuxiliaryIdentifierStrategy.jsonld#AuxiliaryIdentifierStrategy__member_getAuxiliaryIdentifiers",
+          "memberFieldName": "getAuxiliaryIdentifiers"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/AuxiliaryIdentifierStrategy.jsonld#AuxiliaryIdentifierStrategy__member_isAuxiliaryIdentifier",
+          "memberFieldName": "isAuxiliaryIdentifier"
+        },
+        {
+          "@id": "css:dist/http/auxiliary/AuxiliaryIdentifierStrategy.jsonld#AuxiliaryIdentifierStrategy__member_getSubjectIdentifier",
+          "memberFieldName": "getSubjectIdentifier"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

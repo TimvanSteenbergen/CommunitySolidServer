@@ -1,0 +1,328 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore",
+      "@type": "Class",
+      "requireElement": "RepresentationConvertingStore",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/storage/PassthroughStore.jsonld#PassthroughStore",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeGenericTypeReference",
+              "parameterRangeGenericType": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore__generic_T"
+            }
+          ]
+        }
+      ],
+      "comment": "Store that provides (optional) conversion of incoming and outgoing {@link Representation}s.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore__generic_T",
+          "range": "css:dist/storage/ResourceStore.jsonld#ResourceStore"
+        }
+      ],
+      "parameters": [
+        {
+          "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_source",
+          "range": {
+            "@type": "ParameterRangeGenericTypeReference",
+            "parameterRangeGenericType": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore__generic_T"
+          },
+          "comment": "Store we retrieve data from and send data to."
+        },
+        {
+          "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_metadataStrategy",
+          "range": "css:dist/http/auxiliary/AuxiliaryStrategy.jsonld#AuxiliaryStrategy",
+          "comment": "Used to distinguish regular resources (which may be converted) from metadata resources (which always need conversion)."
+        },
+        {
+          "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_outConverter",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "css:dist/storage/conversion/RepresentationConverter.jsonld#RepresentationConverter",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inConverter",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "css:dist/storage/conversion/RepresentationConverter.jsonld#RepresentationConverter",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_type",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_type_key"
+              },
+              {
+                "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_type_value",
+                "range": "xsd:number"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_charset",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_charset_key"
+              },
+              {
+                "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_charset_value",
+                "range": "xsd:number"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_datetime",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_datetime_key"
+              },
+              {
+                "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_datetime_value",
+                "range": "xsd:number"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_encoding",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_encoding_key"
+              },
+              {
+                "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_encoding_value",
+                "range": "xsd:number"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_language",
+          "range": {
+            "@type": "ParameterRangeCollectEntries",
+            "parameterRangeCollectEntriesParameters": [
+              {
+                "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_language_key"
+              },
+              {
+                "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_language_value",
+                "range": "xsd:number"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_range_unit",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_range_parts",
+          "range": {
+            "@type": "ParameterRangeArray",
+            "parameterRangeValue": {
+              "@type": "ParameterRangeWildcard"
+            }
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore__member_metadataStrategy",
+          "memberFieldName": "metadataStrategy"
+        },
+        {
+          "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore__member_inConverter",
+          "memberFieldName": "inConverter"
+        },
+        {
+          "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore__member_outConverter",
+          "memberFieldName": "outConverter"
+        },
+        {
+          "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore__member_inPreferences",
+          "memberFieldName": "inPreferences"
+        },
+        {
+          "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore__member_getRepresentation",
+          "memberFieldName": "getRepresentation"
+        },
+        {
+          "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore__member_addResource",
+          "memberFieldName": "addResource"
+        },
+        {
+          "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore__member_setRepresentation",
+          "memberFieldName": "setRepresentation"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_source"
+        },
+        {
+          "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_metadataStrategy"
+        },
+        {
+          "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "outConverter",
+              "value": {
+                "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_outConverter"
+              }
+            },
+            {
+              "keyRaw": "inConverter",
+              "value": {
+                "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inConverter"
+              }
+            },
+            {
+              "keyRaw": "inPreferences",
+              "value": {
+                "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences__constructorArgument",
+                "fields": [
+                  {
+                    "keyRaw": "type",
+                    "value": {
+                      "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_type__constructorArgument",
+                      "fields": [
+                        {
+                          "collectEntries": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_type",
+                          "key": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_type_key",
+                          "value": {
+                            "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_type_value"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "keyRaw": "charset",
+                    "value": {
+                      "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_charset__constructorArgument",
+                      "fields": [
+                        {
+                          "collectEntries": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_charset",
+                          "key": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_charset_key",
+                          "value": {
+                            "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_charset_value"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "keyRaw": "datetime",
+                    "value": {
+                      "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_datetime__constructorArgument",
+                      "fields": [
+                        {
+                          "collectEntries": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_datetime",
+                          "key": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_datetime_key",
+                          "value": {
+                            "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_datetime_value"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "keyRaw": "encoding",
+                    "value": {
+                      "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_encoding__constructorArgument",
+                      "fields": [
+                        {
+                          "collectEntries": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_encoding",
+                          "key": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_encoding_key",
+                          "value": {
+                            "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_encoding_value"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "keyRaw": "language",
+                    "value": {
+                      "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_language__constructorArgument",
+                      "fields": [
+                        {
+                          "collectEntries": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_language",
+                          "key": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_language_key",
+                          "value": {
+                            "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_language_value"
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  {
+                    "keyRaw": "range",
+                    "value": {
+                      "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_range__constructorArgument",
+                      "fields": [
+                        {
+                          "keyRaw": "unit",
+                          "value": {
+                            "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_range_unit"
+                          }
+                        },
+                        {
+                          "keyRaw": "parts",
+                          "value": {
+                            "@id": "css:dist/storage/RepresentationConvertingStore.jsonld#RepresentationConvertingStore_options_inPreferences_range_parts"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

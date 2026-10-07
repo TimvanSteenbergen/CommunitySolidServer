@@ -1,0 +1,7 @@
+<http://localhost:3000/test/events/31d6a5f6-74e5-4168-a42c-ad93a893911b.ttl> a <https://schema.org/Event>;
+    <https://schema.org/name> "koffie";
+    <https://schema.org/description> "koffie";
+    <https://schema.org/startDate> "2026-10-08T09:24:00.000Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    <https://schema.org/endDate> "2026-10-08T09:26:00.000Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>;
+    <https://schema.org/location> <http://localhost:3000/test/locations/e2a8a3ba-fcbf-420b-a53c-3c56e59214bd.ttl>;
+    <https://schema.org/eventSchedule> <http://localhost:3000/test/schedules/cb6a26f4-9590-4b2f-81b8-16215607fcbf.ttl>.

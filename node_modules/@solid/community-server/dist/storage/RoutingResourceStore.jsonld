@@ -1,0 +1,66 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/storage/RoutingResourceStore.jsonld#RoutingResourceStore",
+      "@type": "Class",
+      "requireElement": "RoutingResourceStore",
+      "extends": [
+        "css:dist/storage/ResourceStore.jsonld#ResourceStore"
+      ],
+      "comment": "Store that routes the incoming request to a specific store based on the stored ResourceRouter. In case no store was found for one of the functions that take no data (GET/PATCH/DELETE), a 404 will be thrown. In the other cases the error of the router will be thrown (which would probably be 400).",
+      "parameters": [
+        {
+          "@id": "css:dist/storage/RoutingResourceStore.jsonld#RoutingResourceStore_rule",
+          "range": "css:dist/storage/routing/RouterRule.jsonld#RouterRule"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/storage/RoutingResourceStore.jsonld#RoutingResourceStore__member_rule",
+          "memberFieldName": "rule"
+        },
+        {
+          "@id": "css:dist/storage/RoutingResourceStore.jsonld#RoutingResourceStore__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/storage/RoutingResourceStore.jsonld#RoutingResourceStore__member_hasResource",
+          "memberFieldName": "hasResource"
+        },
+        {
+          "@id": "css:dist/storage/RoutingResourceStore.jsonld#RoutingResourceStore__member_getRepresentation",
+          "memberFieldName": "getRepresentation"
+        },
+        {
+          "@id": "css:dist/storage/RoutingResourceStore.jsonld#RoutingResourceStore__member_addResource",
+          "memberFieldName": "addResource"
+        },
+        {
+          "@id": "css:dist/storage/RoutingResourceStore.jsonld#RoutingResourceStore__member_setRepresentation",
+          "memberFieldName": "setRepresentation"
+        },
+        {
+          "@id": "css:dist/storage/RoutingResourceStore.jsonld#RoutingResourceStore__member_deleteResource",
+          "memberFieldName": "deleteResource"
+        },
+        {
+          "@id": "css:dist/storage/RoutingResourceStore.jsonld#RoutingResourceStore__member_modifyResource",
+          "memberFieldName": "modifyResource"
+        },
+        {
+          "@id": "css:dist/storage/RoutingResourceStore.jsonld#RoutingResourceStore__member_getStore",
+          "memberFieldName": "getStore"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/storage/RoutingResourceStore.jsonld#RoutingResourceStore_rule"
+        }
+      ]
+    }
+  ]
+}

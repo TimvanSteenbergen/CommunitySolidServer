@@ -1,0 +1,193 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/middleware/CorsHandler.jsonld#CorsHandler",
+      "@type": "Class",
+      "requireElement": "CorsHandler",
+      "extends": [
+        "css:dist/server/HttpHandler.jsonld#HttpHandler"
+      ],
+      "comment": "Handler that sets CORS options on the response. In case of an OPTIONS request this handler will close the connection after adding its headers if `preflightContinue` is set to `false`.  Solid, §8.1: \"A server MUST implement the CORS protocol [FETCH] such that, to the extent possible, the browser allows Solid apps to send any request and combination of request headers to the server, and the Solid app can read any response and response headers received from the server.\" Full details: https://solidproject.org/TR/2021/protocol-20211217#cors-server",
+      "parameters": [
+        {
+          "@id": "css:dist/server/middleware/CorsHandler.jsonld#CorsHandler_options_origin",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/server/middleware/CorsHandler.jsonld#CorsHandler_options_methods",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": "xsd:string"
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/server/middleware/CorsHandler.jsonld#CorsHandler_options_allowedHeaders",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": "xsd:string"
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/server/middleware/CorsHandler.jsonld#CorsHandler_options_exposedHeaders",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              {
+                "@type": "ParameterRangeArray",
+                "parameterRangeValue": "xsd:string"
+              },
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/server/middleware/CorsHandler.jsonld#CorsHandler_options_credentials",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/server/middleware/CorsHandler.jsonld#CorsHandler_options_maxAge",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/server/middleware/CorsHandler.jsonld#CorsHandler_options_preflightContinue",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:boolean",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/server/middleware/CorsHandler.jsonld#CorsHandler_options_optionsSuccessStatus",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:number",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/middleware/CorsHandler.jsonld#CorsHandler__member_corsHandler",
+          "memberFieldName": "corsHandler"
+        },
+        {
+          "@id": "css:dist/server/middleware/CorsHandler.jsonld#CorsHandler__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/middleware/CorsHandler.jsonld#CorsHandler__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/middleware/CorsHandler.jsonld#CorsHandler_options__constructorArgument",
+          "fields": [
+            {
+              "keyRaw": "origin",
+              "value": {
+                "@id": "css:dist/server/middleware/CorsHandler.jsonld#CorsHandler_options_origin"
+              }
+            },
+            {
+              "keyRaw": "methods",
+              "value": {
+                "@id": "css:dist/server/middleware/CorsHandler.jsonld#CorsHandler_options_methods"
+              }
+            },
+            {
+              "keyRaw": "allowedHeaders",
+              "value": {
+                "@id": "css:dist/server/middleware/CorsHandler.jsonld#CorsHandler_options_allowedHeaders"
+              }
+            },
+            {
+              "keyRaw": "exposedHeaders",
+              "value": {
+                "@id": "css:dist/server/middleware/CorsHandler.jsonld#CorsHandler_options_exposedHeaders"
+              }
+            },
+            {
+              "keyRaw": "credentials",
+              "value": {
+                "@id": "css:dist/server/middleware/CorsHandler.jsonld#CorsHandler_options_credentials"
+              }
+            },
+            {
+              "keyRaw": "maxAge",
+              "value": {
+                "@id": "css:dist/server/middleware/CorsHandler.jsonld#CorsHandler_options_maxAge"
+              }
+            },
+            {
+              "keyRaw": "preflightContinue",
+              "value": {
+                "@id": "css:dist/server/middleware/CorsHandler.jsonld#CorsHandler_options_preflightContinue"
+              }
+            },
+            {
+              "keyRaw": "optionsSuccessStatus",
+              "value": {
+                "@id": "css:dist/server/middleware/CorsHandler.jsonld#CorsHandler_options_optionsSuccessStatus"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

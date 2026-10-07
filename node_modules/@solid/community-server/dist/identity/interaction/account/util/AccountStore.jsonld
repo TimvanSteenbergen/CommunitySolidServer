@@ -1,0 +1,38 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/interaction/account/util/AccountStore.jsonld#AccountStore",
+      "@type": "AbstractClass",
+      "requireElement": "AccountStore",
+      "comment": "Used to store account data.",
+      "genericTypeParameters": [
+        {
+          "@id": "css:dist/identity/interaction/account/util/AccountStore.jsonld#AccountStore__generic_TSettings",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        }
+      ],
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/interaction/account/util/AccountStore.jsonld#AccountStore__member_create",
+          "memberFieldName": "create"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/AccountStore.jsonld#AccountStore__member_getSetting",
+          "memberFieldName": "getSetting"
+        },
+        {
+          "@id": "css:dist/identity/interaction/account/util/AccountStore.jsonld#AccountStore__member_updateSetting",
+          "memberFieldName": "updateSetting"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

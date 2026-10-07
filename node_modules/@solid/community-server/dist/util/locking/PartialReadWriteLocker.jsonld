@@ -1,0 +1,46 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/locking/PartialReadWriteLocker.jsonld#PartialReadWriteLocker",
+      "@type": "Class",
+      "requireElement": "PartialReadWriteLocker",
+      "extends": [
+        "css:dist/util/locking/BaseReadWriteLocker.jsonld#BaseReadWriteLocker"
+      ],
+      "comment": "A {@link BaseReadWriteLocker} that stores the counter and its associated locks in memory. The consequence of this is that multiple read requests are possible as long as they occur on the same worker thread. A read request from a different worker thread will have to wait until those from the current worker thread are finished.  The main reason for this class is due to the file locker that we use only allowing locks to be released by the same worker thread that acquired them.",
+      "parameters": [
+        {
+          "@id": "css:dist/util/locking/PartialReadWriteLocker.jsonld#PartialReadWriteLocker_locker",
+          "range": "css:dist/util/locking/ResourceLocker.jsonld#ResourceLocker"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/locking/PartialReadWriteLocker.jsonld#PartialReadWriteLocker__member_readCount",
+          "memberFieldName": "readCount"
+        },
+        {
+          "@id": "css:dist/util/locking/PartialReadWriteLocker.jsonld#PartialReadWriteLocker__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/util/locking/PartialReadWriteLocker.jsonld#PartialReadWriteLocker__member_getCountLockIdentifier",
+          "memberFieldName": "getCountLockIdentifier"
+        },
+        {
+          "@id": "css:dist/util/locking/PartialReadWriteLocker.jsonld#PartialReadWriteLocker__member_modifyCount",
+          "memberFieldName": "modifyCount"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/locking/PartialReadWriteLocker.jsonld#PartialReadWriteLocker_locker"
+        }
+      ]
+    }
+  ]
+}

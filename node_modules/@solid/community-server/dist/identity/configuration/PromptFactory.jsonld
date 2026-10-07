@@ -1,0 +1,27 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/configuration/PromptFactory.jsonld#PromptFactory",
+      "@type": "AbstractClass",
+      "requireElement": "PromptFactory",
+      "extends": [
+        {
+          "@type": "GenericComponentExtension",
+          "component": "css:dist/util/handlers/AsyncHandler.jsonld#AsyncHandler",
+          "genericTypeInstances": [
+            {
+              "@type": "ParameterRangeWildcard"
+            }
+          ]
+        }
+      ],
+      "comment": "Used to generate custom {@link interactionPolicy.Prompt}s.",
+      "parameters": [],
+      "constructorArguments": []
+    }
+  ]
+}

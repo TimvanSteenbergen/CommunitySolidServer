@@ -1,0 +1,30 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/configuration/JwkGenerator.jsonld#JwkGenerator",
+      "@type": "AbstractClass",
+      "requireElement": "JwkGenerator",
+      "comment": "Generates an asymmetric JWK.  The functions always need to return the same value.",
+      "parameters": [],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/configuration/JwkGenerator.jsonld#JwkGenerator__member_alg",
+          "memberFieldName": "alg"
+        },
+        {
+          "@id": "css:dist/identity/configuration/JwkGenerator.jsonld#JwkGenerator__member_getPublicKey",
+          "memberFieldName": "getPublicKey"
+        },
+        {
+          "@id": "css:dist/identity/configuration/JwkGenerator.jsonld#JwkGenerator__member_getPrivateKey",
+          "memberFieldName": "getPrivateKey"
+        }
+      ],
+      "constructorArguments": []
+    }
+  ]
+}

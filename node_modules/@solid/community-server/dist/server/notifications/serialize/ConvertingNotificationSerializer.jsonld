@@ -1,0 +1,57 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/server/notifications/serialize/ConvertingNotificationSerializer.jsonld#ConvertingNotificationSerializer",
+      "@type": "Class",
+      "requireElement": "ConvertingNotificationSerializer",
+      "extends": [
+        "css:dist/server/notifications/serialize/NotificationSerializer.jsonld#NotificationSerializer"
+      ],
+      "comment": "Converts a serialization based on the provided `accept` feature value. In case none was provided no conversion takes place.",
+      "parameters": [
+        {
+          "@id": "css:dist/server/notifications/serialize/ConvertingNotificationSerializer.jsonld#ConvertingNotificationSerializer_source",
+          "range": "css:dist/server/notifications/serialize/NotificationSerializer.jsonld#NotificationSerializer"
+        },
+        {
+          "@id": "css:dist/server/notifications/serialize/ConvertingNotificationSerializer.jsonld#ConvertingNotificationSerializer_converter",
+          "range": "css:dist/storage/conversion/RepresentationConverter.jsonld#RepresentationConverter"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/server/notifications/serialize/ConvertingNotificationSerializer.jsonld#ConvertingNotificationSerializer__member_source",
+          "memberFieldName": "source"
+        },
+        {
+          "@id": "css:dist/server/notifications/serialize/ConvertingNotificationSerializer.jsonld#ConvertingNotificationSerializer__member_converter",
+          "memberFieldName": "converter"
+        },
+        {
+          "@id": "css:dist/server/notifications/serialize/ConvertingNotificationSerializer.jsonld#ConvertingNotificationSerializer__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/server/notifications/serialize/ConvertingNotificationSerializer.jsonld#ConvertingNotificationSerializer__member_canHandle",
+          "memberFieldName": "canHandle"
+        },
+        {
+          "@id": "css:dist/server/notifications/serialize/ConvertingNotificationSerializer.jsonld#ConvertingNotificationSerializer__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/server/notifications/serialize/ConvertingNotificationSerializer.jsonld#ConvertingNotificationSerializer_source"
+        },
+        {
+          "@id": "css:dist/server/notifications/serialize/ConvertingNotificationSerializer.jsonld#ConvertingNotificationSerializer_converter"
+        }
+      ]
+    }
+  ]
+}

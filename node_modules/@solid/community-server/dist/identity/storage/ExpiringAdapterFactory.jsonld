@@ -1,0 +1,149 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/identity/storage/ExpiringAdapterFactory.jsonld#ExpiringAdapter",
+      "@type": "Class",
+      "requireElement": "ExpiringAdapter",
+      "comment": "An IDP storage adapter that uses an ExpiringStorage to persist data.",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/storage/ExpiringAdapterFactory.jsonld#ExpiringAdapter_name",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/identity/storage/ExpiringAdapterFactory.jsonld#ExpiringAdapter_storage",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/ExpiringStorage.jsonld#ExpiringStorage",
+            "genericTypeInstances": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/storage/ExpiringAdapterFactory.jsonld#ExpiringAdapter__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/identity/storage/ExpiringAdapterFactory.jsonld#ExpiringAdapter__member_name",
+          "memberFieldName": "name"
+        },
+        {
+          "@id": "css:dist/identity/storage/ExpiringAdapterFactory.jsonld#ExpiringAdapter__member_storage",
+          "memberFieldName": "storage"
+        },
+        {
+          "@id": "css:dist/identity/storage/ExpiringAdapterFactory.jsonld#ExpiringAdapter__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/storage/ExpiringAdapterFactory.jsonld#ExpiringAdapter__member_grantKeyFor",
+          "memberFieldName": "grantKeyFor"
+        },
+        {
+          "@id": "css:dist/identity/storage/ExpiringAdapterFactory.jsonld#ExpiringAdapter__member_userCodeKeyFor",
+          "memberFieldName": "userCodeKeyFor"
+        },
+        {
+          "@id": "css:dist/identity/storage/ExpiringAdapterFactory.jsonld#ExpiringAdapter__member_uidKeyFor",
+          "memberFieldName": "uidKeyFor"
+        },
+        {
+          "@id": "css:dist/identity/storage/ExpiringAdapterFactory.jsonld#ExpiringAdapter__member_keyFor",
+          "memberFieldName": "keyFor"
+        },
+        {
+          "@id": "css:dist/identity/storage/ExpiringAdapterFactory.jsonld#ExpiringAdapter__member_upsert",
+          "memberFieldName": "upsert"
+        },
+        {
+          "@id": "css:dist/identity/storage/ExpiringAdapterFactory.jsonld#ExpiringAdapter__member_find",
+          "memberFieldName": "find"
+        },
+        {
+          "@id": "css:dist/identity/storage/ExpiringAdapterFactory.jsonld#ExpiringAdapter__member_findByUserCode",
+          "memberFieldName": "findByUserCode"
+        },
+        {
+          "@id": "css:dist/identity/storage/ExpiringAdapterFactory.jsonld#ExpiringAdapter__member_findByUid",
+          "memberFieldName": "findByUid"
+        },
+        {
+          "@id": "css:dist/identity/storage/ExpiringAdapterFactory.jsonld#ExpiringAdapter__member_destroy",
+          "memberFieldName": "destroy"
+        },
+        {
+          "@id": "css:dist/identity/storage/ExpiringAdapterFactory.jsonld#ExpiringAdapter__member_revokeByGrantId",
+          "memberFieldName": "revokeByGrantId"
+        },
+        {
+          "@id": "css:dist/identity/storage/ExpiringAdapterFactory.jsonld#ExpiringAdapter__member_consume",
+          "memberFieldName": "consume"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/storage/ExpiringAdapterFactory.jsonld#ExpiringAdapter_name"
+        },
+        {
+          "@id": "css:dist/identity/storage/ExpiringAdapterFactory.jsonld#ExpiringAdapter_storage"
+        }
+      ]
+    },
+    {
+      "@id": "css:dist/identity/storage/ExpiringAdapterFactory.jsonld#ExpiringAdapterFactory",
+      "@type": "Class",
+      "requireElement": "ExpiringAdapterFactory",
+      "extends": [
+        "css:dist/identity/storage/AdapterFactory.jsonld#AdapterFactory"
+      ],
+      "comment": "The factory for a ExpiringStorageAdapter",
+      "parameters": [
+        {
+          "@id": "css:dist/identity/storage/ExpiringAdapterFactory.jsonld#ExpiringAdapterFactory_storage",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/ExpiringStorage.jsonld#ExpiringStorage",
+            "genericTypeInstances": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeWildcard"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/identity/storage/ExpiringAdapterFactory.jsonld#ExpiringAdapterFactory__member_storage",
+          "memberFieldName": "storage"
+        },
+        {
+          "@id": "css:dist/identity/storage/ExpiringAdapterFactory.jsonld#ExpiringAdapterFactory__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/identity/storage/ExpiringAdapterFactory.jsonld#ExpiringAdapterFactory__member_createStorageAdapter",
+          "memberFieldName": "createStorageAdapter"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/identity/storage/ExpiringAdapterFactory.jsonld#ExpiringAdapterFactory_storage"
+        }
+      ]
+    }
+  ]
+}

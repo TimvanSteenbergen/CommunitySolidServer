@@ -1,0 +1,8 @@
+<http://localhost:3000/test/images/470e30d5-5c15-411f-810d-7112df8428e0.ttl> a <https://schema.org/ImageObject>;
+    <https://schema.org/contentUrl> <http://localhost:3000/test/images/470e30d5-5c15-411f-810d-7112df8428e0.png>;
+    <https://schema.org/caption> "meInPreviousLife";
+    <https://schema.org/description> "Newton";
+    <https://schema.org/width> 286;
+    <https://schema.org/height> 260;
+    <https://schema.org/encodingFormat> "image/png";
+    <https://schema.org/uploadDate> "2026-10-07T08:43:59.579Z"^^<http://www.w3.org/2001/XMLSchema#dateTime>.

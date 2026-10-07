@@ -1,0 +1,68 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/authorization/AuxiliaryReader.jsonld#AuxiliaryReader",
+      "@type": "Class",
+      "requireElement": "AuxiliaryReader",
+      "extends": [
+        "css:dist/authorization/PermissionReader.jsonld#PermissionReader"
+      ],
+      "comment": "Determines the permissions of auxiliary resources by finding those of the corresponding subject resources.",
+      "parameters": [
+        {
+          "@id": "css:dist/authorization/AuxiliaryReader.jsonld#AuxiliaryReader_reader",
+          "range": "css:dist/authorization/PermissionReader.jsonld#PermissionReader"
+        },
+        {
+          "@id": "css:dist/authorization/AuxiliaryReader.jsonld#AuxiliaryReader_auxiliaryStrategy",
+          "range": "css:dist/http/auxiliary/AuxiliaryStrategy.jsonld#AuxiliaryStrategy"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/authorization/AuxiliaryReader.jsonld#AuxiliaryReader__member_logger",
+          "memberFieldName": "logger",
+          "range": {
+            "@type": "ParameterRangeWildcard"
+          }
+        },
+        {
+          "@id": "css:dist/authorization/AuxiliaryReader.jsonld#AuxiliaryReader__member_reader",
+          "memberFieldName": "reader"
+        },
+        {
+          "@id": "css:dist/authorization/AuxiliaryReader.jsonld#AuxiliaryReader__member_auxiliaryStrategy",
+          "memberFieldName": "auxiliaryStrategy"
+        },
+        {
+          "@id": "css:dist/authorization/AuxiliaryReader.jsonld#AuxiliaryReader__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/authorization/AuxiliaryReader.jsonld#AuxiliaryReader__member_handle",
+          "memberFieldName": "handle"
+        },
+        {
+          "@id": "css:dist/authorization/AuxiliaryReader.jsonld#AuxiliaryReader__member_findAuxiliaries",
+          "memberFieldName": "findAuxiliaries"
+        },
+        {
+          "@id": "css:dist/authorization/AuxiliaryReader.jsonld#AuxiliaryReader__member_isDependentAuxiliary",
+          "memberFieldName": "isDependentAuxiliary"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/authorization/AuxiliaryReader.jsonld#AuxiliaryReader_reader"
+        },
+        {
+          "@id": "css:dist/authorization/AuxiliaryReader.jsonld#AuxiliaryReader_auxiliaryStrategy"
+        }
+      ]
+    }
+  ]
+}

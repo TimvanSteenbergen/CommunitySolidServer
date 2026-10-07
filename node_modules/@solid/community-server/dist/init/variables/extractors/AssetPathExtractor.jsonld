@@ -1,0 +1,61 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/init/variables/extractors/AssetPathExtractor.jsonld#AssetPathExtractor",
+      "@type": "Class",
+      "requireElement": "AssetPathExtractor",
+      "extends": [
+        "css:dist/init/variables/extractors/ShorthandExtractor.jsonld#ShorthandExtractor"
+      ],
+      "comment": "A {@link ShorthandExtractor} that converts a path value to an absolute asset path by making use of `resolveAssetPath`. Returns the default path in case it is defined and no path was found in the map.",
+      "parameters": [
+        {
+          "@id": "css:dist/init/variables/extractors/AssetPathExtractor.jsonld#AssetPathExtractor_key",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/init/variables/extractors/AssetPathExtractor.jsonld#AssetPathExtractor_defaultPath",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          }
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/init/variables/extractors/AssetPathExtractor.jsonld#AssetPathExtractor__member_key",
+          "memberFieldName": "key"
+        },
+        {
+          "@id": "css:dist/init/variables/extractors/AssetPathExtractor.jsonld#AssetPathExtractor__member_defaultPath",
+          "memberFieldName": "defaultPath"
+        },
+        {
+          "@id": "css:dist/init/variables/extractors/AssetPathExtractor.jsonld#AssetPathExtractor__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/init/variables/extractors/AssetPathExtractor.jsonld#AssetPathExtractor__member_handle",
+          "memberFieldName": "handle"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/init/variables/extractors/AssetPathExtractor.jsonld#AssetPathExtractor_key"
+        },
+        {
+          "@id": "css:dist/init/variables/extractors/AssetPathExtractor.jsonld#AssetPathExtractor_defaultPath"
+        }
+      ]
+    }
+  ]
+}

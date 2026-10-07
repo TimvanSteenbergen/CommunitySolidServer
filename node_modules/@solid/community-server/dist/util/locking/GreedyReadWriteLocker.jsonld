@@ -1,0 +1,116 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/util/locking/GreedyReadWriteLocker.jsonld#GreedyReadWriteLocker",
+      "@type": "Class",
+      "requireElement": "GreedyReadWriteLocker",
+      "extends": [
+        "css:dist/util/locking/BaseReadWriteLocker.jsonld#BaseReadWriteLocker"
+      ],
+      "comment": "A {@link BaseReadWriteLocker} that uses the same locker for the main lock and the count lock, and uses a {@link KeyValueStorage} for keeping track of the counter.  Since it is completely dependent on other implementations, this locker is threadsafe if its inputs are as well.",
+      "parameters": [
+        {
+          "@id": "css:dist/util/locking/GreedyReadWriteLocker.jsonld#GreedyReadWriteLocker_readSuffix",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Used to generate the identifier for the lock that is applied when updating the counter."
+        },
+        {
+          "@id": "css:dist/util/locking/GreedyReadWriteLocker.jsonld#GreedyReadWriteLocker_countSuffix",
+          "range": {
+            "@type": "ParameterRangeUnion",
+            "parameterRangeElements": [
+              "xsd:string",
+              {
+                "@type": "ParameterRangeUndefined"
+              }
+            ]
+          },
+          "comment": "Used to generate the identifier that will be used in the storage for storing the counter."
+        },
+        {
+          "@id": "css:dist/util/locking/GreedyReadWriteLocker.jsonld#GreedyReadWriteLocker_locker",
+          "range": "css:dist/util/locking/ResourceLocker.jsonld#ResourceLocker",
+          "comment": "Used for creating read and write locks."
+        },
+        {
+          "@id": "css:dist/util/locking/GreedyReadWriteLocker.jsonld#GreedyReadWriteLocker_storage",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+            "genericTypeInstances": [
+              "xsd:string",
+              "xsd:number"
+            ]
+          },
+          "comment": "Used for storing the amount of active read operations on a resource."
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/util/locking/GreedyReadWriteLocker.jsonld#GreedyReadWriteLocker__member_storage",
+          "memberFieldName": "storage",
+          "range": {
+            "@type": "ParameterRangeGenericComponent",
+            "component": "css:dist/storage/keyvalue/KeyValueStorage.jsonld#KeyValueStorage",
+            "genericTypeInstances": [
+              "xsd:string",
+              "xsd:number"
+            ]
+          }
+        },
+        {
+          "@id": "css:dist/util/locking/GreedyReadWriteLocker.jsonld#GreedyReadWriteLocker__member_readSuffix",
+          "memberFieldName": "readSuffix",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/util/locking/GreedyReadWriteLocker.jsonld#GreedyReadWriteLocker__member_countSuffix",
+          "memberFieldName": "countSuffix",
+          "range": "xsd:string"
+        },
+        {
+          "@id": "css:dist/util/locking/GreedyReadWriteLocker.jsonld#GreedyReadWriteLocker__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/util/locking/GreedyReadWriteLocker.jsonld#GreedyReadWriteLocker__member_getCountLockIdentifier",
+          "memberFieldName": "getCountLockIdentifier"
+        },
+        {
+          "@id": "css:dist/util/locking/GreedyReadWriteLocker.jsonld#GreedyReadWriteLocker__member_getCountKey",
+          "memberFieldName": "getCountKey"
+        },
+        {
+          "@id": "css:dist/util/locking/GreedyReadWriteLocker.jsonld#GreedyReadWriteLocker__member_modifyCount",
+          "memberFieldName": "modifyCount"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/util/locking/GreedyReadWriteLocker.jsonld#GreedyReadWriteLocker_locker"
+        },
+        {
+          "@id": "css:dist/util/locking/GreedyReadWriteLocker.jsonld#GreedyReadWriteLocker_storage"
+        },
+        {
+          "@id": "css:dist/util/locking/GreedyReadWriteLocker.jsonld#GreedyReadWriteLocker_readSuffix"
+        },
+        {
+          "@id": "css:dist/util/locking/GreedyReadWriteLocker.jsonld#GreedyReadWriteLocker_countSuffix"
+        }
+      ]
+    }
+  ]
+}

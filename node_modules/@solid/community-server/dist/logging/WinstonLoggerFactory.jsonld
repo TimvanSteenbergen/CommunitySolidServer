@@ -1,0 +1,50 @@
+{
+  "@context": [
+    "https://linkedsoftwaredependencies.org/bundles/npm/@solid/community-server/^7.0.0/components/context.jsonld"
+  ],
+  "@id": "npmd:@solid/community-server",
+  "components": [
+    {
+      "@id": "css:dist/logging/WinstonLoggerFactory.jsonld#WinstonLoggerFactory",
+      "@type": "Class",
+      "requireElement": "WinstonLoggerFactory",
+      "extends": [
+        "css:dist/logging/LoggerFactory.jsonld#LoggerFactory"
+      ],
+      "comment": "Uses the winston library to create loggers for the given logging level. By default, it will print to the console with colorized logging levels.  This creates instances of {@link WinstonLogger}.",
+      "parameters": [
+        {
+          "@id": "css:dist/logging/WinstonLoggerFactory.jsonld#WinstonLoggerFactory_level",
+          "range": "xsd:string"
+        }
+      ],
+      "memberFields": [
+        {
+          "@id": "css:dist/logging/WinstonLoggerFactory.jsonld#WinstonLoggerFactory__member_level",
+          "memberFieldName": "level"
+        },
+        {
+          "@id": "css:dist/logging/WinstonLoggerFactory.jsonld#WinstonLoggerFactory__member_constructor",
+          "memberFieldName": "constructor"
+        },
+        {
+          "@id": "css:dist/logging/WinstonLoggerFactory.jsonld#WinstonLoggerFactory__member_clusterInfo",
+          "memberFieldName": "clusterInfo"
+        },
+        {
+          "@id": "css:dist/logging/WinstonLoggerFactory.jsonld#WinstonLoggerFactory__member_createLogger",
+          "memberFieldName": "createLogger"
+        },
+        {
+          "@id": "css:dist/logging/WinstonLoggerFactory.jsonld#WinstonLoggerFactory__member_createTransports",
+          "memberFieldName": "createTransports"
+        }
+      ],
+      "constructorArguments": [
+        {
+          "@id": "css:dist/logging/WinstonLoggerFactory.jsonld#WinstonLoggerFactory_level"
+        }
+      ]
+    }
+  ]
+}
